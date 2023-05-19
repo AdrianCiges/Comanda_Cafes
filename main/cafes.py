@@ -17,6 +17,7 @@ if nuevos > 0:
 
 def gente():
     personas = ['Sergio', 'Alvaro Bayón', 'Álvaro Delgado', 'Álvaro Saez', 'Adrián', 'Ana Murillo', 'Ana García', 'Carlos', 'Dani A.', 'Dani S.', 'Dasha', 'Iván', 'Inés MG', 'Inés ML', 'Javi Brenes', 'Javi Nieto', 'María', 'Maxi', 'Mercedes', 'Lucía', 'Rafa', 'Víctor']
+    personas = sorted(personas)
     try:
         return personas + gente_nueva
     except:
