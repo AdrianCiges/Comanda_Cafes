@@ -23,6 +23,7 @@ def gente():
         return personas
 
 st.header("¿Quiénes bajamos?")
+st.write('')
 bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
 con = ['Leche 🥛', 'Sin Lactosa', 'Cortado', 'Solo', '']
 
