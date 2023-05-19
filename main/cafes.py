@@ -1,7 +1,7 @@
 import streamlit as st
 from collections import Counter
 
-st.set_page_config(layout="wide", page_icon="☕", page_title="Coffees")
+st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe_icono.png")
 st.markdown('<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
 
 # Botón para añadir una persona más
