@@ -16,8 +16,7 @@ if nuevos > 0:
     gente_nueva = [g for g in gente_nueva if g != '']
 
 def gente():
-    personas = ['Sergio', 'Alvaro Bayón', 'Álvaro Delgado', 'Álvaro Saez', 'Adrián', 'Ana Murillo', 'Ana García', 'Carlos', 'Dani A.', 'Dani S.', 'Dasha', 'Iván', 'Inés MG', 'Inés ML', 'Javi Brenes', 'Javi Nieto', 'María', 'Maxi', 'Mercedes', 'Lucía', 'Rafa', 'Víctor']
-    personas = sorted(personas)
+    personas = ['Adrián', 'Álvaro Bayón', 'Álvaro Delgado', 'Álvaro Saez', 'Ana García', 'Ana Murillo', 'Carlos', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Iván', 'Javi Brenes', 'Javi Nieto', 'Lucía', 'María', 'Maxi', 'Mercedes', 'Rafa', 'Sergio', 'Víctor' ]    personas = sorted(personas)
     try:
         return personas + gente_nueva
     except:
