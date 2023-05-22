@@ -27,7 +27,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown('<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
+image_inicio = Image.open("./img/havas.png")
+with io.BytesIO() as output:
+    image_inicio.save(output, format="PNG")
+    b64_1 = base64.b64encode(output.getvalue()).decode()
+    
+st.markdown(f'<h1 style="text-align:center"><span style="font-size: 40px;">{b64_1}</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
 
 # Botón para añadir una persona más
 col1, col2 = st.sidebar.columns(2)
