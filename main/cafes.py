@@ -7,21 +7,31 @@ import io
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
 # -------------------------------------------------------------------------------------------------------------------
+import streamlit as st
 import time as ti
 from datetime import datetime, time, timedelta
+import threading
 
-hora_objetivo = time(18, 30)
+def countdown_timer():
+    hora_objetivo = time(10, 30)
+    while True:
+        hora_actual = datetime.now().time()
+        if hora_actual >= hora_objetivo:
+            break
+        tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
+        mm, ss = divmod(tiempo_restante.seconds, 60)
+        ph.metric("Countdown", f"{mm:02d}:{ss:02d}")
+        ti.sleep(1)
 
+# Crear un placeholder para mostrar el contador
 ph = st.empty()
-while True:
-    hora_actual = datetime.now().time()
-    if hora_actual >= hora_objetivo:
-        break
-    tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
-    mm, ss = divmod(tiempo_restante.seconds, 60)
-    ph.metric("Countdown", f"{mm:02d}:{ss:02d}")
-#     ti.sleep(30)
 
+# Iniciar el contador en segundo plano utilizando hilos
+t = threading.Thread(target=countdown_timer)
+t.start()
+
+# Aquí puedes colocar el resto de tu código
+# El contador de tiempo se ejecutará en segundo plano mientras el resto del código sigue funcionando
 # -------------------------------------------------------------------------------------------------------------------
 
 # Cambiar el tema de la barra lateral
