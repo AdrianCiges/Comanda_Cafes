@@ -43,30 +43,30 @@ st.markdown(f'<h1 style="text-align:center"><span style="font-size: 40px;">☕</
 
 LOGO_IMAGE = "./img/havas.png"
 
-st.markdown(
-    """
-    <style>
-    .container {
-        display: flex;
-    }
-    .logo-text {
-        font-weight:70 !important;
-        font-size:50px !important;
-        color: #f9a01b !important;
-        padding-top: 40px !important;
-    }
-    .logo-img {
-        float:right;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     """
+#     <style>
+#     .container {
+#         display: flex;
+#     }
+#     .logo-text {
+#         font-weight:70 !important;
+#         font-size:50px !important;
+#         color: #f9a01b !important;
+#         padding-top: 40px !important;
+#     }
+#     .logo-img {
+#         float:right;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 st.markdown(
     f"""
     <div class="container">
-        <p class="logo-text"> LA RUTA DEL BUEN CAFÉ</p>
+        <p class="logo-text"> LA RUTA DEL BUEN CAFÉ  </p>
         <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
     </div>
     """,
