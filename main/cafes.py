@@ -13,7 +13,9 @@ hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
 hora_sumada = hora_actual_dt + timedelta(hours=2)
 
 hora_actual = hora_sumada.time()
-hora_objetivo = time(18, 30)
+hora_objetivo = time(10, 30)
+primer_cafe = time(11, 00)
+segundo_cafe = time(14, 45)
 
 if hora_actual < hora_objetivo:
     tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
@@ -24,7 +26,11 @@ else:
 horas_restantes = tiempo_restante.seconds // 3600
 minutos_restantes = (tiempo_restante.seconds % 3600) // 60
 
-st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos")
+if hora_actual < primer_cafe:
+    st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
+if hora_actual < segundo_cafe:
+    st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 14:45")
+
 # -------------------------------------------------------------------------------------------------------------------
 
 # Cambiar el tema de la barra lateral
