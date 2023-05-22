@@ -30,6 +30,8 @@ if hora_actual < primer_cafe:
     st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
 if hora_actual < segundo_cafe:
     st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 14:45")
+else:
+    st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
 
 # -------------------------------------------------------------------------------------------------------------------
 
