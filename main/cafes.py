@@ -6,9 +6,9 @@ st.markdown('<h1 style="text-align:center"><span style="font-size: 40px;">☕</s
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------
 
-from "streamlit-component-lib import Streamlit
-from "streamlit-component-lib import StreamlitComponentBase
-from "streamlit-component-lib import  withStreamlitConnection
+from streamlit-component-lib import Streamlit
+from streamlit-component-lib import StreamlitComponentBase
+from streamlit-component-lib import  withStreamlitConnection
 from react import React
 
 interface State {
