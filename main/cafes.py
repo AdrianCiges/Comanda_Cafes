@@ -76,7 +76,7 @@ try:
 
         col1, col2, col3, col4 = st.columns(4)
 
-        seleccion = col1.checkbox(persona)
+        seleccion = col1.checkbox(persona, value=False)
 
         if seleccion:
             seleccionados.append(persona)
