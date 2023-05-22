@@ -11,7 +11,7 @@ from datetime import datetime, time, timedelta
 
 hora_actual = datetime.now().time()
 st.write(hora_actual)
-hora_objetivo = time(10, 30)
+hora_objetivo = time(18, 30)
 
 if hora_actual < hora_objetivo:
     tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
