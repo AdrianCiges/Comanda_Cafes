@@ -14,7 +14,7 @@ hora_sumada = hora_actual_dt + timedelta(hours=2)
 
 hora_actual = hora_sumada.time()
 hora_objetivo = time(10, 30)
-primer_cafe = time(11, 00)
+primer_cafe = time(10, 30)
 segundo_cafe = time(14, 45)
 
 if hora_actual < hora_objetivo:
@@ -26,12 +26,16 @@ else:
 horas_restantes = tiempo_restante.seconds // 3600
 minutos_restantes = (tiempo_restante.seconds % 3600) // 60
 
-if hora_actual < primer_cafe:
-    st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
-if hora_actual < segundo_cafe:
-    st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 14:45")
+if hora_actual > time(18, 00):
+    st.sidebar.write('Mira que horas son, no deberías estar aquí')
+elif hora_actual < primer_cafe:
+    st.sidebar.write(f"{horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
+elif hora_actual < time(11, 00):
+    st.sidebar.write('Ya deberías estar tomándote un café con los compis')
+elif hora_actual < segundo_cafe:
+    st.sidebar.write(f"{horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 14:45")
 else:
-    st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
+    st.sidebar.write('No hay más cafés hoy ☹')
 
 # -------------------------------------------------------------------------------------------------------------------
 
