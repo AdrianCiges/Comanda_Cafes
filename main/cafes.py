@@ -65,7 +65,7 @@ estilos_css = f"""
 
 # Mostrar el texto principal y el logo
 st.markdown(estilos_css, unsafe_allow_html=True)
-st.markdown(f'<div class="logo-container">{texto_principal}<img src="{data:image/png;base64,{b64_1}}" class="logo-img"></div>', unsafe_allow_html=True)
+st.markdown(f'<div class="logo-container">{texto_principal}<img src=""data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}" class="logo-img"></div>', unsafe_allow_html=True)
 
 
 # ----------------------------------------------------------------------------------------
