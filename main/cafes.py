@@ -35,7 +35,7 @@ with io.BytesIO() as output:
     image_inicio.save(output, format="PNG")
     b64_1 = base64.b64encode(output.getvalue()).decode()
     
-st.markdown(f'<h1 style="text-align:center"><span style="font-size: 40px;">{data:image/png;base64,{b64_1}}</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="text-align:center"><span style="font-size: 40px;">{st.image(f"data:image/png;base64,{b64_1}", use_column_width=True)}</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
 
 # Botón para añadir una persona más
 col1, col2 = st.sidebar.columns(2)
