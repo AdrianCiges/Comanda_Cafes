@@ -8,12 +8,13 @@ st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.p
 
 # -------------------------------------------------------------------------------------------------------------------
 import streamlit as st
-import time as ti
+import time
 from datetime import datetime, time, timedelta
 import threading
 
 def countdown_timer():
-    hora_objetivo = time(18, 30)
+    hora_objetivo = time(10, 30)
+    ph = st.empty()
     while True:
         hora_actual = datetime.now().time()
         if hora_actual >= hora_objetivo:
@@ -21,10 +22,7 @@ def countdown_timer():
         tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
         mm, ss = divmod(tiempo_restante.seconds, 60)
         ph.metric("Countdown", f"{mm:02d}:{ss:02d}")
-        ti.sleep(1)
-
-# Crear un placeholder para mostrar el contador
-ph = st.empty()
+        time.sleep(1)
 
 # Iniciar el contador en segundo plano utilizando hilos
 t = threading.Thread(target=countdown_timer)
