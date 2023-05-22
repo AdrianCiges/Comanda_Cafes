@@ -35,7 +35,7 @@ with io.BytesIO() as output:
     image_inicio.save(output, format="PNG")
     b64_1 = base64.b64encode(output.getvalue()).decode()
     
-st.image(f"data:image/png;base64,{b64_1}", use_column_width=False)
+# st.image(f"data:image/png;base64,{b64_1}", use_column_width=False)
     
 st.markdown(f'<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
 
@@ -53,7 +53,7 @@ st.markdown(
         font-weight:700 !important;
         font-size:50px !important;
         color: #f9a01b !important;
-        padding-top: 75px !important;
+        padding-top: 40px !important;
     }
     .logo-img {
         float:right;
