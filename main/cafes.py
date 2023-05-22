@@ -7,29 +7,22 @@ import io
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
 # -------------------------------------------------------------------------------------------------------------------
-import streamlit as st
-import time
 from datetime import datetime, time, timedelta
-import threading
 
-def countdown_timer():
-    hora_objetivo = time(18, 30)
-    ph = st.empty()
-    while True:
-        hora_actual = datetime.now().time()
-        if hora_actual >= hora_objetivo:
-            break
-        tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
-        mm, ss = divmod(tiempo_restante.seconds, 60)
-        ph.metric("Countdown", f"{mm:02d}:{ss:02d}")
-        time.sleep(1)
+hora_actual = datetime.now().time()
+st.write(hora_actual)
+hora_objetivo = time(10, 30)
 
-# Iniciar el contador en segundo plano utilizando hilos
-t = threading.Thread(target=countdown_timer)
-t.start()
+if hora_actual < hora_objetivo:
+    tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
+else:
+    # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
+    tiempo_restante = datetime.combine(datetime.today() + timedelta(days=1), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
 
-# Aquí puedes colocar el resto de tu código
-# El contador de tiempo se ejecutará en segundo plano mientras el resto del código sigue funcionando
+horas_restantes = tiempo_restante.seconds // 3600
+minutos_restantes = (tiempo_restante.seconds % 3600) // 60
+
+st.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos")
 # -------------------------------------------------------------------------------------------------------------------
 
 # Cambiar el tema de la barra lateral
