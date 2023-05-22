@@ -41,37 +41,32 @@ st.markdown(f'<h1 style="text-align:center"><span style="font-size: 40px;">☕</
 
 # ----------------------------------------------------------------------------------------
 
+# Ruta de la imagen del logo
 LOGO_IMAGE = "./img/havas.png"
 
-# st.markdown(
-#     """
-#     <style>
-#     .container {
-#         display: flex;
-#     }
-#     .logo-text {
-#         font-weight:70 !important;
-#         font-size:50px !important;
-#         color: #f9a01b !important;
-#         padding-top: 40px !important;
-#     }
-#     .logo-img {
-#         float:right;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+# Texto principal
+texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>'
 
-st.markdown(
-    f"""
-    <div class="container">
-        <p class="logo-text"> LA RUTA DEL BUEN CAFÉ  </p>
-        <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Estilos CSS para el logo
+estilos_css = f"""
+    <style>
+    .logo-container {{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }}
+
+    .logo-img {{
+        max-height: 100px;
+        margin-left: 20px;
+    }}
+    </style>
+    """
+
+# Mostrar el texto principal y el logo
+st.markdown(estilos_css, unsafe_allow_html=True)
+st.markdown(f'<div class="logo-container">{texto_principal}<img src="{LOGO_IMAGE}" class="logo-img"></div>', unsafe_allow_html=True)
+
 
 # ----------------------------------------------------------------------------------------
 
