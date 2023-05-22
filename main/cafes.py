@@ -29,6 +29,7 @@ st.markdown(
 
 st.markdown('<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
 
+# Aplicar estilos CSS personalizados
 st.markdown(
     """
     <style>
@@ -39,6 +40,13 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# Crear un checkbox con el estilo modificado
+checkbox = st.checkbox("Selecciona", value=False)
+
+# Verificar el estado del checkbox
+if checkbox:
+    st.write("¡Checkbox seleccionado!")
 
 # Botón para añadir una persona más
 col1, col2 = st.sidebar.columns(2)
@@ -76,7 +84,7 @@ try:
 
         col1, col2, col3, col4 = st.columns(4)
 
-        seleccion = col1.checkbox(persona, value=False)
+        seleccion = col1.checkbox(persona)
 
         if seleccion:
             seleccionados.append(persona)
