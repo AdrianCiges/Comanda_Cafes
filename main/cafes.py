@@ -29,6 +29,17 @@ st.markdown(
 
 st.markdown('<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
 
+st.markdown(
+    """
+    <style>
+    .css-2trqyj {
+        color: green !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Botón para añadir una persona más
 col1, col2 = st.sidebar.columns(2)
 nuevos = st.sidebar.selectbox("¿Añadir gente nueva? ¿Cuántos?", [0,1,2,3,4,5,6,7,8,9,10])
