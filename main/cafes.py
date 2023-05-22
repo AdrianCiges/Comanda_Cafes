@@ -27,7 +27,7 @@ horas_restantes = tiempo_restante.seconds // 3600
 minutos_restantes = (tiempo_restante.seconds % 3600) // 60
 
 if hora_actual > time(18, 00):
-    st.sidebar.write('Mira que horas son, no deberías estar aquí')
+    st.sidebar.write(f'Mira que horas son, no deberías estar aquí, pero faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30')
 elif hora_actual < primer_cafe:
     st.sidebar.write(f"{horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
 elif hora_actual < time(11, 00):
