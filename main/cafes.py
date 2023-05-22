@@ -7,7 +7,7 @@ import io
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
 # -------------------------------------------------------------------------------------------------------------------
-import time
+import time as ti
 from datetime import datetime, time, timedelta
 
 hora_objetivo = time(18, 30)
@@ -20,7 +20,7 @@ while True:
     tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
     mm, ss = divmod(tiempo_restante.seconds, 60)
     ph.metric("Countdown", f"{mm:02d}:{ss:02d}")
-    time.sleep(1)
+    ti.sleep(1)
 
 # -------------------------------------------------------------------------------------------------------------------
 
