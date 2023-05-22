@@ -6,6 +6,25 @@ import io
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
+# -------------------------------------------------------------------------------------------------------------------
+from datetime import datetime, time, timedelta
+
+# Obtener la hora actual
+hora_actual = datetime.now().time()
+
+# Obtener la hora objetivo (10:30 de la mañana)
+hora_objetivo = time(10, 30)
+
+# Calcular la diferencia de tiempo entre la hora actual y la hora objetivo
+if hora_actual < hora_objetivo:
+    tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
+else:
+    tiempo_restante = timedelta(hours=24) - (datetime.combine(datetime.today(), hora_actual) - datetime.combine(datetime.today(), hora_objetivo))
+
+# Mostrar el contador de tiempo restante
+st.write(f"Tiempo restante hasta las 10:30 AM: {tiempo_restante}")
+# -------------------------------------------------------------------------------------------------------------------
+
 # Cambiar el tema de la barra lateral
 st.markdown(
     """
