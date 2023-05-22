@@ -10,7 +10,7 @@ st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.p
 import time
 from datetime import datetime, time, timedelta
 
-hora_objetivo = time(10, 30)
+hora_objetivo = time(18, 30)
 
 ph = st.empty()
 while True:
