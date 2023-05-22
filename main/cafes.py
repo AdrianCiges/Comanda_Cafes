@@ -13,7 +13,7 @@ from datetime import datetime, time, timedelta
 import threading
 
 def countdown_timer():
-    hora_objetivo = time(10, 30)
+    hora_objetivo = time(18, 30)
     ph = st.empty()
     while True:
         hora_actual = datetime.now().time()
