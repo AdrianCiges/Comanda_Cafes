@@ -20,7 +20,7 @@ while True:
     tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
     mm, ss = divmod(tiempo_restante.seconds, 60)
     ph.metric("Countdown", f"{mm:02d}:{ss:02d}")
-    ti.sleep(30)
+#     ti.sleep(30)
 
 # -------------------------------------------------------------------------------------------------------------------
 
