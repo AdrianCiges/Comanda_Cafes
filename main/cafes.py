@@ -71,7 +71,7 @@ try:
             seleccionados.append(persona)
 
             if persona == 'Álvaro Delgado':
-                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'), label_visibility=collapsed)
+                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'), label_visibility=hidden)
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
                 extras = col4.text_input(f"Extras de {persona}", 'Largo Doble')            
 
