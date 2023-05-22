@@ -24,7 +24,7 @@ else:
 horas_restantes = tiempo_restante.seconds // 3600
 minutos_restantes = (tiempo_restante.seconds % 3600) // 60
 
-st.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos")
+st.sidebar.write(f"Faltan {horas_restantes} horas y {minutos_restantes} minutos")
 # -------------------------------------------------------------------------------------------------------------------
 
 # Cambiar el tema de la barra lateral
