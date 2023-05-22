@@ -8,8 +8,11 @@ st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.p
 
 # -------------------------------------------------------------------------------------------------------------------
 from datetime import datetime, time, timedelta
+hora_actual = datetime.now().time()
+hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
+hora_sumada = hora_actual_dt + timedelta(hours=2)
 
-hora_actual = datetime.now().time() + 2
+hora_actual = hora_sumada.time()
 hora_objetivo = time(18, 30)
 
 if hora_actual < hora_objetivo:
