@@ -121,7 +121,7 @@ try:
 
     st.write('')
     st.write('')
-    para_llevar = st.checkbox('PARA LLEVAR')
+    para_llevar = st.radio('¿PARA LLEVAR?', ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
 
     # st.write(x_bebidas, x_con, x_extras)
 
@@ -159,7 +159,7 @@ try:
         for key, value in conteo.items():
             pedido_str += "• {} {}\n".format(value, key)
 
-        if para_llevar:
+        if para_llevar == "Sí, el trabajo nos reclama 💻":
             pedido_str += '\n(Todos para llevar y con leche templada)\n'
         else:
             pedido_str += '\n(Todos con leche templada)\n'
