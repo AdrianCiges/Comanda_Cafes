@@ -41,31 +41,31 @@ with io.BytesIO() as output:
 
 # ----------------------------------------------------------------------------------------
 
-# Ruta de la imagen del logo
-LOGO_IMAGE = "./img/havas.png"
+# # Ruta de la imagen del logo
+# LOGO_IMAGE = "./img/havas.png"
 
-# Texto principal
-texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>'
+# # Texto principal
+# texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>'
 
-# Estilos CSS para el logo
-estilos_css = f"""
-    <style>
-    .logo-container {{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }}
+# # Estilos CSS para el logo
+# estilos_css = f"""
+#     <style>
+#     .logo-container {{
+#         display: flex;
+#         align-items: center;
+#         justify-content: center;
+#     }}
 
-    .logo-img {{
-        max-height: 100px;
-        margin-left: 20px;
-    }}
-    </style>
-    """
+#     .logo-img {{
+#         max-height: 100px;
+#         margin-left: 20px;
+#     }}
+#     </style>
+#     """
 
-# Mostrar el texto principal y el logo
-st.markdown(estilos_css, unsafe_allow_html=True)
-st.markdown(f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}" class="logo-img"></div>', unsafe_allow_html=True)
+# # Mostrar el texto principal y el logo
+# st.markdown(estilos_css, unsafe_allow_html=True)
+# st.markdown(f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}" class="logo-img"></div>', unsafe_allow_html=True)
 
 # ----------------------------------------------------------------------------------------
 
