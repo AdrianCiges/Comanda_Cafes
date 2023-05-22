@@ -2,6 +2,31 @@ import streamlit as st
 from collections import Counter
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
+
+# Cambiar el tema de la barra lateral
+st.markdown(
+    """
+    <style>
+    .sidebar .sidebar-content {
+        background-color: #f8f9fa;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Cambiar el tema de la página principal
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #e9ecef;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown('<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL BUEN CAFÉ</u></h1>', unsafe_allow_html=True)
 
 # Botón para añadir una persona más
