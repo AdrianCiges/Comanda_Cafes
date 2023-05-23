@@ -169,7 +169,7 @@ def gente():
 
 st.header("¿Quiénes bajamos?")
 st.write('')
-bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
+bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
 con = ['Leche 🥛', 'Sin Lactosa', 'Cortado', 'Solo', '']
 
 x_bebidas = []
@@ -216,7 +216,7 @@ try:
                 extras = col4.text_input(f"Extras de {persona}", 'Largo') 
 
             elif persona == 'Dani S.':
-                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Té Negro ⚫'))
+                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Manzanilla 🍵'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index(''))
                 extras = col4.text_input(f"Extras de {persona}") 
 
@@ -323,6 +323,8 @@ try:
         colacao = 0
 
         zumo = 0
+        
+        manzanilla = 0
 
         otros = 0
 
@@ -371,6 +373,9 @@ try:
 
             elif "Zumo" in k:
                 zumo += v
+                
+            elif "Manzanilla 🍵" in k:
+                manzanilla += v
 
             else:
                 otros += v
@@ -444,6 +449,9 @@ try:
 
         if zumo > 0:
             output.append(f'• {zumo} zumo de naranja')
+            
+        if manzanilla > 0:
+            output.append(f'• {manzanilla} manzanilla')
 
         if otros > 0:
             info = str(tuple([f'{v} {k}' for k, v in que.items()])).replace("'", "")
