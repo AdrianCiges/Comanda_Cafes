@@ -211,10 +211,15 @@ try:
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index(''))
                 extras = col4.text_input(f"Extras de {persona}") 
 
-            elif persona == 'Javi Nieto*' or persona == 'Mercedes':
+            elif persona == 'Mercedes':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Cola Cao 🥜'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index(''))
                 extras = col4.text_input(f"Extras de {persona}") 
+             
+            elif persona == 'Javi Nieto*':
+                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Zumo 🍊'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index(''))
+                extras = col4.text_input(f"Extras de {persona}")                
 
             elif persona == 'Lucía':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Descafeinado ☕'))
