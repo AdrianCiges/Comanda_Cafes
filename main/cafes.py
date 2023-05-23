@@ -460,7 +460,7 @@ try:
             output.append(f'• {otros} otros: {info}')
 
 
-        if para_llevar:
+        if para_llevar == "Sí, el trabajo nos reclama 💻":
             output.append('\n(Todos para llevar y con leche templada)')
         else:
             output.append('\n(Todos con leche templada)')
