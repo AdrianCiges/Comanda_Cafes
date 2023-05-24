@@ -305,8 +305,10 @@ try:
         for key, value in conteo.items():
             pedido_str += "• {} {}\n".format(value, key)
             
-        for key, value in n_tostadas.items():
-            pedido_str += "• {} {}\n".format(value, key)
+        if len(n_tostadas) > 0:
+            pedido_str +='\nBarritas de pan:\n'
+            for key, value in n_tostadas.items():
+                pedido_str += "• {} {}\n".format(value, key)
 
         if para_llevar == "Sí, el trabajo nos reclama 💻":
             pedido_str += '\n(Todos para llevar y con leche templada)\n'
