@@ -346,7 +346,7 @@ try:
                 elif "Desnatada" in k:
                     dcl_desnat += v
 
-            elif (("Café" in k or "Descafeinado" in k) and ("Solo" in k)) or (k.strip() == '1 Café ☕'):
+            elif ("Café" in k or "Descafeinado" in k) and ("Solo" in k):
                 solo += v
                 if "Largo" in k and "Doble" in k:
                     lardob += v
@@ -354,7 +354,15 @@ try:
                     largo += v
                 elif "Doble" in k:
                     doble += v
-
+            elif k.strip() == '1 Café ☕':
+                solo += v
+                if "Largo" in k and "Doble" in k:
+                    lardob += v
+                elif "Largo" in k:
+                    largo += v
+                elif "Doble" in k:
+                    doble += v
+                    
             elif "Té" in k:
                 te += v
                 if "Rojo" in k:
