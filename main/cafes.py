@@ -296,7 +296,7 @@ try:
         conteo = dict(sorted(conteo.items()))
         n_tostadas = Counter(x_tostadas)
         n_tostadas = dict(sorted(n_tostadas.items()))
-        n_tostadas = {clave: valor for clave, valor in n_tostadas if clave != ""}
+        # n_tostadas = {clave: valor for clave, valor in n_tostadas if clave != ""}
 
         st.write(n_tostadas)
 
