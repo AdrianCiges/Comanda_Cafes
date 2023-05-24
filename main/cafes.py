@@ -298,11 +298,14 @@ try:
         n_tostadas = dict(sorted(n_tostadas.items()))
         n_tostadas = {clave: valor for clave, valor in n_tostadas.items() if clave != ""}
 
-        st.write(n_tostadas)
+        # st.write(n_tostadas)
 
         pedido_str = 'Hola! Os hago un pedido:\n\n'
 
         for key, value in conteo.items():
+            pedido_str += "• {} {}\n".format(value, key)
+            
+        for key, value in n_tostadas.items():
             pedido_str += "• {} {}\n".format(value, key)
 
         if para_llevar == "Sí, el trabajo nos reclama 💻":
