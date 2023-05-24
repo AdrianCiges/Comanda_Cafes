@@ -259,6 +259,7 @@ try:
             x_bebidas.append(bebida_seleccionada)
             x_con.append(con_seleccionada)
             x_extras.append(extras)
+            x_tostadas.append(barrita)
 
     st.write('')
     st.write('')
@@ -279,7 +280,7 @@ try:
 
         else:
             coffees.append(f'{e} {x_con[i]} {x_extras[i]}')
-
+            
 
     # st.write(sorted(coffees))
 
@@ -292,8 +293,10 @@ try:
         st.markdown('##### Comanda Versión Emoji')
         conteo = Counter(coffees)
         conteo = dict(sorted(conteo.items()))
+        n_tostadas = Counter(x_tostadas)
+        n_tostadas = dict(sorted(n_tostadas.items()))
 
-        # st.write(conteo)
+        st.write(n_tostadas)
 
         pedido_str = 'Hola! Os hago un pedido:\n\n'
 
