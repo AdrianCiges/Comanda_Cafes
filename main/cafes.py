@@ -176,6 +176,7 @@ tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔', 'Otro']
 x_bebidas = []
 x_con = []
 x_extras = []
+x_tostadas = []
 
 seleccionados = []
 
