@@ -171,7 +171,7 @@ st.header("¿Quiénes bajamos?")
 st.write('')
 bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
 con = ['Leche 🥛', 'Sin Lactosa', 'Cortado', 'Solo', '']
-tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔', 'Otro']
+tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
 
 x_bebidas = []
 x_con = []
@@ -406,6 +406,19 @@ try:
             else:
                 otros += v
                 que[k] = v
+                
+        cereal = 0
+        blanco = 0
+        integral = 0
+        
+        for k, v in n_tostadas.items():
+            if "Cereales" in k:
+                cereal += v
+            elif "Blanco" in k:
+                blanco += v
+            elif "Integral" in k:
+                integral += v
+                
 
         # ----------------------------------------------------------------------------------------
 
@@ -499,7 +512,15 @@ try:
             if len(que) < 2:
                 info = info.replace(',','')
             output.append(f'• {otros} otros: {info}')
-
+            
+        if len(n_tostadas) > 0:
+            output.append('\nBarritas de pan:\n')
+            if cereal > 0:
+                output.append(f'• {cereal} de cereales')
+            if blanco > 0:
+                output.append(f'• {blanco} blanco')
+            if integral > 0:
+                output.append(f'• {integral} integral')
 
         if para_llevar == "Sí, el trabajo nos reclama 💻":
             output.append('\n(Todos para llevar y con leche templada)')
