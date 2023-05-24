@@ -346,7 +346,7 @@ try:
                 elif "Desnatada" in k:
                     dcl_desnat += v
 
-            elif ("Café" in k or "Descafeinado" in k) and ("Solo" in k):
+            elif (("Café" in k or "Descafeinado" in k) and ("Solo" in k)) or (k == '1 Café ☕ '):
                 solo += v
                 if "Largo" in k and "Doble" in k:
                     lardob += v
@@ -423,7 +423,7 @@ try:
                     output.append(f'   - {doble} doble')
 
             else:
-                output.append(f'• {solo} café solos')
+                output.append(f'• {solo} café solo')
 
 
         if te > 0:
