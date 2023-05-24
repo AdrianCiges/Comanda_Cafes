@@ -514,7 +514,7 @@ try:
             output.append(f'• {otros} otros: {info}')
             
         if len(n_tostadas) > 0:
-            output.append('\nBarritas de pan:\n')
+            output.append('\nBarritas de pan:')
             if cereal > 0:
                 output.append(f'• {cereal} de cereales')
             if blanco > 0:
