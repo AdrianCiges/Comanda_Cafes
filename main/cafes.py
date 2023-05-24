@@ -248,13 +248,13 @@ try:
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas)
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con)
                 extras = col4.text_input(f"Extras de {persona}")
-                barrita = col5.selectbox(f"Tostada de {persona}", tostadas, )
+                barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Cereales 🌾'))
 
             else:
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas)
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con)
                 extras = col4.text_input(f"Extras de {persona}")
-                barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Cereales 🌾'))
+                barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
             x_bebidas.append(bebida_seleccionada)
             x_con.append(con_seleccionada)
