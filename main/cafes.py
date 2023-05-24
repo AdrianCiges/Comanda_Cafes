@@ -171,6 +171,7 @@ st.header("¿Quiénes bajamos?")
 st.write('')
 bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
 con = ['Leche 🥛', 'Sin Lactosa', 'Cortado', 'Solo', '']
+tostadas = ['Cereales', 'Blanco', 'Integral']
 
 x_bebidas = []
 x_con = []
@@ -182,8 +183,7 @@ try:
 
     for persona in gente():
 
-
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3, col4, col5 = st.columns(5)
 
         seleccion = col1.checkbox(persona)
 
@@ -193,7 +193,8 @@ try:
             if persona == 'Álvaro Delgado*':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
-                extras = col4.text_input(f"Extras de {persona}", 'Largo Doble')            
+                extras = col4.text_input(f"Extras de {persona}", 'Largo Doble') 
+                barrita = col5.selectbox(f"'Tostada' de {persona}", tostadas)
 
             elif persona == 'Adrián*':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Té Rojo 🔴'))
@@ -354,15 +355,7 @@ try:
                     largo += v
                 elif "Doble" in k:
                     doble += v
-            elif k.strip() == '1 Café ☕':
-                solo += v
-                if "Largo" in k and "Doble" in k:
-                    lardob += v
-                elif "Largo" in k:
-                    largo += v
-                elif "Doble" in k:
-                    doble += v
-                    
+                                       
             elif "Té" in k:
                 te += v
                 if "Rojo" in k:
