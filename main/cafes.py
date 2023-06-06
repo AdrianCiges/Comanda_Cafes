@@ -201,7 +201,10 @@ try:
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Té Rojo 🔴'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Sin Lactosa'))
                 extras = col4.text_input(f"Extras de {persona}")
-                barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Cereales 🌾'))
+                if hora_actual < time(14, 00):
+                    barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Cereales 🌾'))
+                else:
+                    barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
             elif persona == 'Ana Murillo' or persona == 'Dasha' or persona == 'Inés MG' or persona == 'Inés ML*' or persona == 'María':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
@@ -249,7 +252,10 @@ try:
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas)
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con)
                 extras = col4.text_input(f"Extras de {persona}")
-                barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Cereales 🌾'))
+                if hora_actual < time(14, 00):
+                    barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Cereales 🌾'))
+                else:
+                    barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
             else:
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas)
