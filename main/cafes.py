@@ -551,7 +551,7 @@ except:
 
 
 for n in seleccionados:
-    st.write(seleccionados)
+    st.write(n.replace('*','')
 
 
 
