@@ -549,9 +549,11 @@ try:
 except: 
     pass
 
-
+s = ''
 for n in seleccionados:
-    st.write(n.replace('*',''))
+    s += "- " + n.replace('*','') + "\n"
+#     st.write(n.replace('*',''))
+    st.markdown(s)
 
 
 
