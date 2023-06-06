@@ -566,8 +566,8 @@ perc_hab = int((len(seleccionados)/6)*100)
 
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Cafeteros hoy", n_cafeteros, f"{n_cafeteros-6} de lo habitual")
-col2.metric("% Hoy", f'{perc_total}%', f"{perc_total-100}% del total")
-col3.metric("% Hoy", f'{perc_hab}%', f"{perc_hab-100}% de lo habitual")
+col2.metric("% Hoy vs Total", f'{perc_total}%', f"{perc_total-100}% del total")
+col3.metric("% Hoy vs Habitual", f'{perc_hab}%', f"{perc_hab-100}% de lo habitual")
 col4.metric("Media habitual", 6)
 
 
