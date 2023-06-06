@@ -550,8 +550,8 @@ except:
     pass
 
 
-
-st.write(seleccionados)
+for n in seleccionados:
+    st.write(seleccionados)
 
 
 
