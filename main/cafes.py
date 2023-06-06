@@ -306,7 +306,7 @@ try:
 
         st.write('')
         st.write('')
-        st.markdown('##### Comanda Versión Emoji')
+        st.markdown('##### 📝 Comanda Versión Emoji')
         conteo = Counter(coffees)
         conteo = dict(sorted(conteo.items()))
         n_tostadas = Counter(x_tostadas)
@@ -338,7 +338,7 @@ try:
 
         st.write('')
         st.write('')
-        st.markdown('##### Comanda Versión Esquema')
+        st.markdown('##### 📑 Comanda Versión Esquema')
 
         ccl = 0
         ccl_sinlact = 0
@@ -552,7 +552,7 @@ except:
 st.write('')
 st.write('')
 
-st.markdown('#### Los cafeteros de hoy son:')
+st.markdown('#### 🙋‍♀️🙋‍♀️ Los cafeteros de hoy son:')
 s = ''
 for n in seleccionados:
     s += "- " + n.replace('*','') + "\n"
