@@ -551,7 +551,7 @@ except:
 
 
 
-
+st.write(seleccionados)
 
 
 
