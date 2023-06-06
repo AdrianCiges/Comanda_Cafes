@@ -206,7 +206,7 @@ try:
                 else:
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
                     
-             elif persona == 'Álvaro Bayón':
+            elif persona == 'Álvaro Bayón':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas)
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con)
                 extras = col4.text_input(f"Extras de {persona}")
