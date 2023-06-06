@@ -560,7 +560,7 @@ st.markdown(s)
 st.write(f'(Somos {len(seleccionados)})')
 
 n_cafeteros = len(seleccionados)
-perc_total = len(seleccionados)/len(personas)*100
+perc_total = (len(seleccionados)/len(personas))*100
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Cafeteros hoy", n_cafeteros, f"{perc_total}%")
