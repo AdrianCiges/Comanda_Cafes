@@ -553,7 +553,7 @@ s = ''
 for n in seleccionados:
     s += "- " + n.replace('*','') + "\n"
 #     st.write(n.replace('*',''))
-    st.markdown(s)
+st.markdown(s)
 
 
 
