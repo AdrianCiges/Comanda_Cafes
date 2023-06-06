@@ -557,7 +557,7 @@ s = ''
 for n in seleccionados:
     s += "- " + n.replace('*','') + "\n"
 st.markdown(s)
-st.write(f'(Somos {len(seleccionados)}')
+st.write(f'(Somos {len(seleccionados)})')
 
 
 
