@@ -565,6 +565,6 @@ perc_total = int((len(seleccionados)/len(gente()))*100)
 col1, col2, col3 = st.columns(3)
 col1.metric("Cafeteros hoy", n_cafeteros, n_cafeteros-6)
 col2.metric("Media habitual", 6)
-col3.metric("% Hoy", perc_total, f"{100-perc_total}% del total")
+col3.metric("% Hoy", f'{perc_total}%', f"{100-perc_total}% del total", delta_color="inverse")
 
 
