@@ -557,14 +557,18 @@ s = ''
 for n in seleccionados:
     s += "- " + n.replace('*','') + "\n"
 st.markdown(s)
-st.write(f'(Somos {len(seleccionados)})')
+st.write('')
+st.write('')
 
 n_cafeteros = len(seleccionados)
 perc_total = int((len(seleccionados)/len(gente()))*100)
+perc_hab = int((len(seleccionados)/6)*100)
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 col1.metric("Cafeteros hoy", n_cafeteros, n_cafeteros-6)
-col2.metric("Media habitual", 6)
-col3.metric("% Hoy", f'{perc_total}%', f"{perc_total-100}% del total")
+col2.metric("% Hoy", f'{perc_total}%', f"{perc_total-100}% del total")
+col3.metric("% Hoy", f'{perc_hab}%', f"{perc_hab-100}% de lo habitual")
+col4.metric("Media habitual", 6)
+
 
 
