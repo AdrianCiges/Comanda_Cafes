@@ -161,7 +161,7 @@ if nuevos > 0:
     gente_nueva = [g for g in gente_nueva if g != '']
 
 def gente():
-    personas = ['Adrián*', 'Álvaro Bayón', 'Álvaro Delgado*', 'Álvaro Saez', 'Ana García*', 'Ana Murillo', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML*', 'Iván', 'Javi Brenes', 'Javi Nieto*', 'Lucía', 'María E.', 'María C.', 'Maxi', 'Mercedes*', 'Rafa', 'Sergio*', 'Víctor' ]   
+    personas = ['Adrián*', 'Álvaro Bayón', 'Álvaro Delgado*', 'Álvaro Saez', 'Ana García*', 'Ana Murillo', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML*', 'Javi Brenes', 'Javi Nieto*', 'Lucía', 'María E.', 'María C.', 'Maxi', 'Mercedes*', 'Rafa', 'Sergio*', 'Víctor' ]   
     try:
         return personas + gente_nueva
     except:
