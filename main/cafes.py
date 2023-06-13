@@ -552,7 +552,8 @@ except:
 st.write('')
 st.write('')
 
-st.markdown('#### 🙋‍♀️🙋‍♂️ Los cafeteros de hoy son:')
+if len(seleccionados) > 0:
+    st.markdown('#### 🙋‍♀️🙋‍♂️ Los cafeteros de hoy son:')
 s = ''
 for n in seleccionados:
     s += "- " + n.replace('*','') + "\n"
