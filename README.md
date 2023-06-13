@@ -15,7 +15,7 @@
 
 🔠 Usamos python para tratar "strings" y crear 2 opciones de comanda: una en versión emojis y otra en versión esquema.<br />
 
-✂ Programaos una opción de copiado para la comanda y la pegamos-enviamos como mensaje al WhatsApp de la cafetería (previa petición del teléfono y acuerdo para este procedimiento).<br />
+✂ Programamos una opción de copiado para la comanda y la pegamos-enviamos como mensaje al WhatsApp de la cafetería (previa petición del teléfono y acuerdo para este procedimiento).<br />
 
 ⏫ Deployamos el código en Streamlit.app, con las liberías y dependencias necesarias y... ¡a disfrutar!
 
