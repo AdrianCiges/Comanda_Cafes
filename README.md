@@ -13,7 +13,7 @@
 
 🙋‍♀️ Recopilamos las opciones de cada "cafetero" y programamos una opción por defecto (la más habitual: café con leche) con condicionales para las más específicas.<br />
 
-🔠 Usamos python para tratar strings y crear 2 opciones de comanda: una en versión emojis y otra en versión esquema.<br />
+🔠 Usamos python para tratar "strings" y crear 2 opciones de comanda: una en versión emojis y otra en versión esquema.<br />
 
 ✂ Programaos una opción de copiado para la comanda y la pegamos-enviamos como mensaje al WhatsApp de la cafetería (previa petición del teléfono y acuerdo para este procedimiento).<br />
 
