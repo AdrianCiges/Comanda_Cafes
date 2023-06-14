@@ -456,18 +456,22 @@ try:
 
         output.append('Hola! Os hago un pedido:\n')
         
-        normales = ccl - ccl_sinlact - ccl_desnat
+        ccl_normales = ccl - ccl_sinlact - ccl_desnat
+        dcl_normales = dcl - dcl_sinlact - dcl_desnat
+        solo_normales = solo - lardob - largo - doble
+
 
         if ccl > 0:
 
             if ccl_sinlact > 0 or ccl_desnat > 0:
                 output.append(f'• {ccl} café con leche, de los cuales:')
+                if ccl_normales > 0:
+                    output.append(f'   - {ccl_normales} normal')
                 if ccl_sinlact > 0:
                     output.append(f'   - {ccl_sinlact} sin lactosa')
                 if ccl_desnat > 0:
                     output.append(f'   - {ccl_desnat} desnatada')
-                if normales > 0:
-                    output.append(f'   - {normales} normales')
+
 
             else:
                 output.append(f'• {ccl} café con leche')
@@ -476,6 +480,8 @@ try:
 
             if dcl_sinlact > 0 or dcl_desnat > 0:
                 output.append(f'• {dcl} descafeinado con leche, de los cuales:')
+                if dcl_normales > 0:
+                    output.append(f'   - {dcl_normales} normal')
                 if dcl_sinlact > 0:
                     output.append(f'   - {dcl_sinlact} sin lactosa')
                 if ccl_desnat > 0:
@@ -487,7 +493,8 @@ try:
         if solo > 0:
             if lardob > 0 or largo > 0 or doble > 0:
                 output.append(f'• {solo} café solo, de los cuales:')
-
+                if solo_normales > 0:
+                    output.append(f'   - {solo_normales} normal')
                 if lardob > 0:
                     output.append(f'   - {lardob} largo doble')
                 if largo > 0:
