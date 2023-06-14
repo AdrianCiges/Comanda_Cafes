@@ -275,7 +275,7 @@ try:
             elif persona == 'Sergio*':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas)
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con)
-                extras = col4.text_input(f"Extras de {persona}")
+                extras = col4.text_input(f"Extras de {persona}", 'Desnatada') 
                 if hora_actual < time(14, 00):
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Cereales 🌾'))
                 else:
