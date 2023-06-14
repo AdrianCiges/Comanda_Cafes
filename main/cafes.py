@@ -464,7 +464,8 @@ try:
                     output.append(f'   - {ccl_sinlact} sin lactosa')
                 if ccl_desnat > 0:
                     output.append(f'   - {ccl_desnat} desnatada')
-
+                if (ccl - (ccl_sinlat+ccl_desnat)) > 0:
+                    output.append(f'   - {(ccl - (ccl_sinlat+ccl_desnat))} normales')
             else:
                 output.append(f'• {ccl} café con leche')
 
