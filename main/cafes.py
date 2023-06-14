@@ -373,8 +373,8 @@ try:
         verde = 0
         negro = 0
 
-        tcl = 0
-        tsl = 0
+#         tcl = 0
+#         tsl = 0
 
         colacao = 0
 
@@ -419,10 +419,10 @@ try:
                     verde += v
                 if "Negro" in k:
                     negro += v 
-                if "Sin Lactosa" in k:
-                    tsl += v
-                if "Leche" in k:
-                    tcl += v
+#                 if "Sin Lactosa" in k:
+#                     tsl += v
+#                 if "Leche" in k:
+#                     tcl += v
 
             elif "Cola Cao" in k:
                 colacao += v
@@ -512,31 +512,31 @@ try:
                     output.append(f'• {te} té, de los cuales:')
 
                     if rojo > 0:
-                        if tsl > 0:
-                            output.append(f'   - {tsl} té rojo con leche sin lactosa')
-                        elif tcl > 0:
-                            output.append(f'   - {tcl} té rojo con leche')
-                        else:
-                            output.append(f'   - {rojo} té rojo')
+#                         if tsl > 0:
+#                             output.append(f'   - {tsl} té rojo con leche sin lactosa')
+#                         elif tcl > 0:
+#                             output.append(f'   - {tcl} té rojo con leche')
+#                         else:
+                        output.append(f'   - {rojo} té rojo')
 
                     if verde > 0:
                         output.append(f'   - {verde} té verde')
                     if negro > 0:
                         output.append(f'   - {negro} té negro')
             else:
-#                 if rojo > 0 or verde > 0 or negro > 0:
-                if rojo > 0:
-                    if tsl > 0:
-                        output.append(f'• {tsl} té rojo con leche sin lactosa')
-                    elif tcl > 0:
-                        output.append(f'• {tcl} té rojo con leche')
-                    else:
+                 if rojo > 0 or verde > 0 or negro > 0:
+                    if rojo > 0:
+#                         if tsl > 0:
+#                             output.append(f'• {tsl} té rojo con leche sin lactosa')
+#                         elif tcl > 0:
+#                             output.append(f'• {tcl} té rojo con leche')
+#                         else:
                         output.append(f'• {rojo} té rojo')
 
-                if verde > 0:
-                    output.append(f'• {verde} té verde')
-                if negro > 0:
-                    output.append(f'• {negro} té negro')
+                    if verde > 0:
+                        output.append(f'• {verde} té verde')
+                    if negro > 0:
+                        output.append(f'• {negro} té negro')
 
 
         if colacao > 0:
