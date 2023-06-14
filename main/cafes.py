@@ -161,7 +161,7 @@ if nuevos > 0:
     gente_nueva = [g for g in gente_nueva if g != '']
 
 def gente():
-    personas = ['Adrián*', 'Álvaro Bayón', 'Álvaro Delgado*', 'Álvaro Saez', 'Ana García*', 'Ana Murillo', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML*', 'Javi Brenes', 'Javi Nieto*', 'Lucía', 'María E.', 'María C.', 'Maxi', 'Mercedes*', 'Rafa', 'Sergio*', 'Víctor' ]   
+    personas = ['Adrián*', 'Álvaro Bayón', 'Álvaro Delgado*', 'Álvaro Saez', 'Ana García*', 'Ana Murillo', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML*', 'Javi Brenes', 'Javi Nieto*', 'Lucas', 'Lucía', 'María E.', 'María C.', 'Maxi', 'Mercedes*', 'Rafa', 'Sergio*', 'Víctor' ]   
     try:
         return personas + gente_nueva
     except:
@@ -215,15 +215,21 @@ try:
                 else:
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas)                   
 
-            elif persona == 'Ana Murillo' or persona == 'Dasha' or persona == 'Inés MG' or persona == 'Inés ML*' or persona == 'María E.':
+            elif persona == 'Ana Murillo' or persona == 'Dasha' or persona == 'Inés MG' or persona == 'María E.':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche 🥛'))
                 extras = col4.text_input(f"Extras de {persona}", 'Desnatada') 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
-            elif persona == 'Ana García*':
+            elif persona == 'Inés ML*':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Sin Lactosa'))
+                extras = col4.text_input(f"Extras de {persona}") 
+                barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
+                
+            elif persona == 'Ana García*':
+                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
                 extras = col4.text_input(f"Extras de {persona}") 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
@@ -232,6 +238,15 @@ try:
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
                 extras = col4.text_input(f"Extras de {persona}", 'Largo') 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
+                
+            elif persona == 'Lucas':
+                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
+                extras = col4.text_input(f"Extras de {persona}", 'Largo') 
+                if hora_actual < time(14, 00):
+                    barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Blanco 🥖'))
+                else:
+                    barrita = col5.selectbox(f"Tostada de {persona}", tostadas)  
 
             elif persona == 'Dani S.':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Manzanilla 🍵'))
