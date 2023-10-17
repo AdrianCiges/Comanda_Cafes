@@ -381,6 +381,7 @@ try:
                     ccl_almendra += v   
                 elif "Leche Avena" in k:
                     ccl_avena += v   
+                st.write(ccl, ccl_sinlact, ccl_desnat, ccl_almendra, ccl_avena)
 
             elif "Descafeinado" in k:
                 dcl += v
