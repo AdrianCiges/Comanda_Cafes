@@ -462,7 +462,9 @@ try:
 
         if ccl > 0:
 
+            st.write('Funciono aún')
             st.write(f'{output}')
+            st.write(f'{ccl}')
 
             if ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
                 output.append(f'• {ccl} café con leche, de los cuales:')
