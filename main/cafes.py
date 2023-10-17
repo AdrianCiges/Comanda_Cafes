@@ -321,7 +321,6 @@ try:
         st.write('')
         st.write('')
         st.markdown('##### 📑 Comanda Versión Esquema')
-        st.write('Funciono aún')
 
         ccl = 0
         ccl_sinlact = 0
@@ -360,6 +359,9 @@ try:
         otros = 0
 
         que = {}
+
+        st.write('Funciono aún')
+
 
         for k, v in conteo.items():
 
