@@ -369,15 +369,15 @@ try:
 
         for k, v in conteo.items():
 
-            if "Café" in k and ("Leche" in k or "Sin Lactosa" in k or "Almendra" in k or "Avena" in k):
+            if "Café" in k and ("Leche" in k or "Sin Lactosa" in k or "Leche Almendra" in k or "Leche Avena" in k):
                 ccl += v
                 if "Sin Lactosa" in k:
                     ccl_sinlact += v
                 elif "Desnatada" in k:
                     ccl_desnat += v
-                elif "Almendra" in k:
+                elif "Leche Almendra" in k:
                     ccl_almendra += v   
-                elif "Avena" in k:
+                elif "Leche Avena" in k:
                     ccl_avena += v   
 
             elif "Descafeinado" in k:
@@ -386,9 +386,9 @@ try:
                     dcl_sinlact += v
                 elif "Desnatada" in k:
                     dcl_desnat += v
-                elif "Almendra" in k:
+                elif "Leche Almendra" in k:
                     dcl_almendra += v   
-                elif "Avena" in k:
+                elif "Leche Avena" in k:
                     dcl_avena += v   
 
             elif ("Café" in k or "Descafeinado" in k) and ("Solo" in k):
@@ -407,9 +407,9 @@ try:
                         rojo_leche += v
                     elif "Sin Lactosa" in k:
                         rojo_sinlac += v
-                    elif "Almendra" in k:
+                    elif "Leche Almendra" in k:
                         rojo_almendra += v
-                    elif "Avena" in k:
+                    elif "Leche Avena" in k:
                         rojo_avena += v
                     else:
                         rojo += v
@@ -419,9 +419,9 @@ try:
                         verde_leche += v
                     elif "Sin Lactosa" in k:
                         verde_sinlac += v
-                    elif "Almendra" in k:
+                    elif "Leche Almendra" in k:
                         verde_almendra += v
-                    elif "Avena" in k:
+                    elif "Leche Avena" in k:
                         verde_avena += v
                     else:
                         verde += v
@@ -431,9 +431,9 @@ try:
                         negro_leche += v
                     elif "Sin Lactosa" in k:
                         negro_sinlac += v
-                    elif "Almendra" in k:
+                    elif "Leche Almendra" in k:
                         negro_almendra += v
-                    elif "Avena" in k:
+                    elif "Leche Avena" in k:
                         negro_Avena += v
                     else:
                         negro += v
