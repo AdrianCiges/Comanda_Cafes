@@ -268,7 +268,7 @@ try:
     coffees = []
     for i,e in enumerate(x_bebidas):
         if e == 'Café ☕' and x_con[i] == '':
-            coffees.append(f'{e} solo {x_extras[i]}')
+            coffees.append(f'{e} Solo {x_extras[i]}')
         
         elif x_con[i] != 'Cortado' and x_con[i] != 'Solo' and x_con[i] != '' and x_extras[i] != '':
             coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
