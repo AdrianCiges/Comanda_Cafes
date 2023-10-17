@@ -453,6 +453,7 @@ try:
 
         st.write('Funciono aún')
         st.write(f'{output}')
+        st.write(f'{ccl'})
 
         
         ccl_normales = ccl - ccl_sinlact - ccl_desnat - ccl_almendra - ccl_avena
@@ -480,7 +481,7 @@ try:
             else:
                 output.append(f'• {ccl} café con leche')
         
-        st.write(f'{output}')
+        st.write(f'Ahora es {output}')
 
 
         if dcl > 0:
