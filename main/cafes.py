@@ -499,22 +499,46 @@ try:
         
 
         if dcl > 0:
+            if dcl > 1:
+                if dcl_sinlact > 0 and (dcl_desnat + dcl_almendra + dcl_avena == 0):
+                    output.append(f'• {dcl} descafeinado con leche sin lactosa')
 
-            if dcl_sinlact > 0 or dcl_desnat > 0 or dcl_almendra > 0 or dcl_avena > 0:
-                output.append(f'• {dcl} descafeinado con leche, de los cuales:')
-                if dcl_normales > 0:
-                    output.append(f'   - {dcl_normales} normal')
-                if dcl_sinlact > 0:
-                    output.append(f'   - {dcl_sinlact} sin lactosa')
-                if dcl_desnat > 0:
-                    output.append(f'   - {dcl_desnat} desnatada')
-                if dcl_almendra > 0:
-                    output.append(f'   - {dcl_almendra} almendra')
-                if dcl_avena > 0:
-                    output.append(f'   - {dcl_avena} avena')
+                elif dcl_desnat > 0 and (dcl_sinlact + dcl_almendra + dcl_avena == 0):
+                    output.append(f'• {dcl} descafeinado con leche desnatada')
+                    
+                elif dcl_almendra > 0 and (dcl_desnat + dcl_sinlact + dcl_avena == 0):
+                    output.append(f'• {dcl} descafeinado con leche de almendra')
 
+                elif dcl_avena > 0 and (dcl_desnat + dcl_sinlact + dcl_almendra == 0):
+                    output.append(f'• {dcl} descafeinado con leche de avena')
+                    
+                elif dcl_sinlact > 0 or dcl_desnat > 0 or dcl_almendra > 0 or dcl_avena > 0:
+                    output.append(f'• {dcl} descafeinado con leche, de los cuales:')
+                    if dcl_normales > 0:
+                        output.append(f'   - {dcl_normales} normal')
+                    if dcl_sinlact > 0:
+                        output.append(f'   - {dcl_sinlact} sin lactosa')
+                    if dcl_desnat > 0:
+                        output.append(f'   - {dcl_desnat} desnatada')
+                    if dcl_almendra > 0:
+                        output.append(f'   - {dcl_almendra} almendra')
+                    if dcl_avena > 0:
+                        output.append(f'   - {dcl_avena} avena')
+                else:
+                    output.append(f'• {dcl} descafeinado con leche')
+    
             else:
-                output.append(f'• {dcl} descafeinado con leche')
+                if dcl_normales > 0 or dcl_sinlact > 0 or dcl_desnat > 0 or dcl_almendra > 0 or dcl_avena > 0:
+                    if dcl_normales > 0:
+                        output.append(f'• {dcl_normales} descafeinado con leche')
+                    if dcl_sinlact > 0:
+                        output.append(f'• {dcl_sinlact} descafeinado con leche sin lactosa')
+                    if dcl_desnat > 0:
+                        output.append(f'• {dcl_desnat} descafeinado con leche desnatada')
+                    if dcl_almendra > 0:
+                        output.append(f'• {dcl_almendra} descafeinado con leche de almendra')
+                    if dcl_avena > 0:
+                        output.append(f'• {dcl_avena} descafeinado con leche de avena')
 
         if solo > 0:
             if lardob > 0 or largo > 0 or doble > 0:
