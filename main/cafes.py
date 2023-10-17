@@ -360,8 +360,6 @@ try:
 
         que = {}
 
-        st.write(conteo)
-
         for k, v in conteo.items():
 
             if "Café" in k and ("Leche" in k or "Sin Lactosa" in k or "Almendra" in k or "Avena" in k):
@@ -446,8 +444,6 @@ try:
             elif "Integral" in k:
                 integral += v
                 
-        st.write(f'Variables: {ccl}')
-                               #, ccl_sinlact, ccl_almedra, ccl_avena, ccl_desnat, dcl, dcl_sinlact, dcl_almendra, dcl_avena, dcl_desnat, solo, lardob, largo, doble, te, rojo, rojo_leche, rojo_sinlac, verde, verde_leche, verde_sinlac, negro, negro_leche, negro_sinlac, colacao, zumo, manzanilla, otros, que}')
         # ----------------------------------------------------------------------------------------
 
         output = []
