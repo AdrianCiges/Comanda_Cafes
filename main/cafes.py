@@ -585,7 +585,7 @@ try:
                 elif negro_sinlac > 0 and (rojo_leche + rojo_sinlac + rojo + verde_leche + verde_sinlac + verde + negro_leche + negro == 0):
                     output.append(f'• {negro_sinlac} té negro con leche sin lactosa')
                     
-                if rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_sinlac > 0:
+                elif rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_sinlac > 0:
                     output.append(f'• {te} té, de los cuales:')
 
                     if rojo > 0:
