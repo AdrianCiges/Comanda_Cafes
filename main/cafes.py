@@ -470,7 +470,7 @@ try:
                     if ccl_avena > 0:
                         output.append(f'   - {ccl_avena} avena')
                 else:
-                    output.append(f'• {ccl} café con leche)
+                    output.append(f'• {ccl} café con leche')
     
             else:
                 if ccl_normales > 0 or ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
