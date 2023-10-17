@@ -485,7 +485,7 @@ try:
                 elif ccl_desnat > 0 and (ccl_sinlact + ccl_almendra + ccl_avena == 0):
                     output.append(f'• {ccl_desnat} café con leche desnatada')
                     
-                elif ccl_almendra > 0 and (ccl_desnat + ccl_sinlact + ccl_avena + ccl_normales) == 0):
+                elif ccl_almendra > 0 and (ccl_desnat + ccl_sinlact + ccl_avena + ccl_normales == 0):
                     output.append(f'• {ccl_almendra} café con leche de almendra')
 
                 elif ccl_avena > 0 and (ccl_desnat + ccl_sinlact + ccl_almendra == 0):
