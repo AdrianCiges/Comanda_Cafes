@@ -591,7 +591,7 @@ try:
             else:
                 if solos_normales > 0 or lardob > 0 or largo > 0 or doble > 0:
                     if solos_normales > 0:
-                        output.append(f'• {solos_normales} solos')
+                        output.append(f'• {solos_normales} café solo')
                     if lardob > 0:
                         output.append(f'• {lardob} café solo largo doble')
                     if largo > 0:
