@@ -563,13 +563,13 @@ try:
         if solo > 0:
             if solo > 1:
                 if lardob > 0 or largo > 0 or doble > 0:
-                    if solo > 1 and (largodob + largo + doble == 0):
+                    if solo > 1 and (lardob + largo + doble == 0):
                         output.append(f'• {solo} café solo')
                     elif lardob > 1 and (solo + largo + doble == 0):
                         output.append(f'• {lardob} café solo largo doble')
-                    elif largo > 1 and (largodob + solo + doble == 0):
+                    elif largo > 1 and (lardob + solo + doble == 0):
                         output.append(f'• {largo} café solo largo')
-                    elif doble > 1 and (largodob + largo + solo == 0):
+                    elif doble > 1 and (lardob + largo + solo == 0):
                         output.append(f'• {doble} café solo doble')
                     
                 else:
