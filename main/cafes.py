@@ -572,16 +572,16 @@ try:
                     if doble > 1 and (largodob + largo + solo == 0):
                         output.append(f'• {doble} café solo doble')
                     
-            else:
-                output.append(f'• {solo} café solo, de los cuales:')
-                if solo_normales > 0:
-                    output.append(f'   - {solo_normales} normal')
-                if lardob > 0:
-                    output.append(f'   - {lardob} largo doble')
-                if largo > 0:
-                    output.append(f'   - {largo} largo')
-                if doble > 0:
-                    output.append(f'   - {doble} doble')
+                else:
+                    output.append(f'• {solo} café solo, de los cuales:')
+                    if solo_normales > 0:
+                        output.append(f'   - {solo_normales} normal')
+                    if lardob > 0:
+                        output.append(f'   - {lardob} largo doble')
+                    if largo > 0:
+                        output.append(f'   - {largo} largo')
+                    if doble > 0:
+                        output.append(f'   - {doble} doble')
 
             else:
                 output.append(f'• {solo} café solo')
