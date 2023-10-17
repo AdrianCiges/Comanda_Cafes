@@ -186,11 +186,11 @@ try:
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
             elif persona == 'Rosalía':
-                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Descafeinado'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche Almendra'))
-                extras = col4.text_input(f"Extras de {persona}") 
+                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Descafeinado ☕'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche Almendras'))
+                extras = col4.text_input(f"Extras de {persona}")
                 if hora_actual < time(14, 00):
-                    barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Integral 🥔'))
+                    barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Integral 🥔''))
                 else:
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas)   
                 
