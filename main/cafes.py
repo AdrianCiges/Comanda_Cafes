@@ -453,7 +453,7 @@ try:
 
         st.write('Funciono aún')
         st.write(f'{output}')
-        st.write(f'{ccl'})
+        st.write(f'{ccl}')
 
         
         ccl_normales = ccl - ccl_sinlact - ccl_desnat - ccl_almendra - ccl_avena
