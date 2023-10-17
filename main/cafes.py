@@ -446,8 +446,8 @@ try:
             elif "Integral" in k:
                 integral += v
                 
-        st.write(f"Variables: {ccl, ccl_sinlact, ccl_almedra, ccl_avena, ccl_desnat, dcl, dcl_sinlact, dcl_almendra, dcl_avena, dcl_desnat, solo, lardob, largo, doble, te,
-                 rojo, rojo_leche, rojo_sinlac, verde, verde_leche, verde_sinlac, negro, negro_leche, negro_sinlac, colacao, zumo, manzanilla, otros, que}")
+        st.write(f'Variables: {ccl}')
+                               #, ccl_sinlact, ccl_almedra, ccl_avena, ccl_desnat, dcl, dcl_sinlact, dcl_almendra, dcl_avena, dcl_desnat, solo, lardob, largo, doble, te, rojo, rojo_leche, rojo_sinlac, verde, verde_leche, verde_sinlac, negro, negro_leche, negro_sinlac, colacao, zumo, manzanilla, otros, que}')
         # ----------------------------------------------------------------------------------------
 
         output = []
