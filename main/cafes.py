@@ -452,6 +452,8 @@ try:
         output.append('Hola! Os hago un pedido:\n')
 
         st.write('Funciono aún')
+        st.write(f'{output}')
+
         
         ccl_normales = ccl - ccl_sinlact - ccl_desnat - ccl_almendra - ccl_avena
         dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_almendra - dcl_avena
