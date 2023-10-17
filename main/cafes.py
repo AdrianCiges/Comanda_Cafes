@@ -454,6 +454,7 @@ try:
         dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_almendra - dcl_avena
         solo_normales = solo - lardob - largo - doble
 
+        st.write(output)
 
         if ccl > 0:
 
