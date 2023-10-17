@@ -561,15 +561,15 @@ try:
                         output.append(f'• {dcl_avena} descafeinado con leche de avena')
 
         if solo > 0:
-            if solo >1:
+            if solo > 1:
                 if lardob > 0 or largo > 0 or doble > 0:
                     if solo > 1 and (largodob + largo + doble == 0):
                         output.append(f'• {solo} café solo')
-                    if largodob > 1 and (solo + largo + doble == 0):
-                        output.append(f'• {largodob} café solo largo doble')
-                    if largo > 1 and (largodob + solo + doble == 0):
+                    elif lardob > 1 and (solo + largo + doble == 0):
+                        output.append(f'• {lardob} café solo largo doble')
+                    elif largo > 1 and (largodob + solo + doble == 0):
                         output.append(f'• {largo} café solo largo')
-                    if doble > 1 and (largodob + largo + solo == 0):
+                    elif doble > 1 and (largodob + largo + solo == 0):
                         output.append(f'• {doble} café solo doble')
                     
                 else:
