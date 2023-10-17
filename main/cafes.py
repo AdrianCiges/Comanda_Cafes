@@ -381,7 +381,6 @@ try:
                     ccl_almendra += v   
                 elif "Leche Avena" in k:
                     ccl_avena += v   
-                st.write(ccl, ccl_sinlact, ccl_desnat, ccl_almendra, ccl_avena)
 
             elif "Descafeinado" in k:
                 dcl += v
@@ -475,6 +474,8 @@ try:
         ccl_normales = ccl - ccl_sinlact - ccl_desnat - ccl_almendra - ccl_avena
         dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_almendra - dcl_avena
         solo_normales = solo - lardob - largo - doble
+
+        st.write(ccl_normales, ccl, ccl_sinlact, ccl_desnat, ccl_almendra, ccl_avena)
 
         if ccl > 0:
             if ccl > 1:
