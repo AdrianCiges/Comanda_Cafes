@@ -134,7 +134,7 @@ if nuevos > 0:
     gente_nueva = [g for g in gente_nueva if g != '']
 
 def gente():
-    personas = ['Adrián*', 'Álvaro Saez', 'Ana García*', 'Ana Murillo', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML*', 'Javi Brenes', 'Javi Nieto*', 'Lucas', 'Lucía', 'María E.', 'María C.', 'Maxi', 'Mercedes*', 'Rafa', 'Rosalía', 'Sergio*', 'Víctor' ]   
+    personas = ['Adrián*', 'Álvaro Delgado', 'Álvaro Saez', 'Ana García*', 'Ana Murillo', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML*', 'Javi Brenes', 'Javi Nieto*', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes*', 'Rafa', 'Rosalía', 'Sergio*', 'Víctor' ]   
     try:
         return personas + gente_nueva
     except:
@@ -200,7 +200,7 @@ try:
                 extras = col4.text_input(f"Extras de {persona}") 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
-            elif persona == 'Carlos' or persona == 'Rafa':
+            elif persona == 'Rafa':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
                 extras = col4.text_input(f"Extras de {persona}", 'Largo') 
