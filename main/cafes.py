@@ -324,7 +324,7 @@ try:
 
         ccl = 0
         ccl_sinlact = 0
-        ccl_almedra = 0
+        ccl_almendra = 0
         ccl_avena = 0
         ccl_desnat = 0
 
