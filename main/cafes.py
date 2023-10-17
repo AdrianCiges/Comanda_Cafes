@@ -455,24 +455,32 @@ try:
         dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_almendra - dcl_avena
         solo_normales = solo - lardob - largo - doble
 
-        if int(ccl) > 0:
-
-            if ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
-                output.append(f'• {ccl} café con leche, de los cuales:')
-                if ccl_normales > 0:
-                    output.append(f'   - {ccl_normales} normal')
-                if ccl_sinlact > 0:
-                    output.append(f'   - {ccl_sinlact} sin lactosa')
-                if ccl_desnat > 0:
-                    output.append(f'   - {ccl_desnat} desnatada')
-                if ccl_almendra > 0:
-                    output.append(f'   - {ccl_almendra} almendra')
-                if ccl_avena > 0:
-                    output.append(f'   - {ccl_avena} avena')
-
-
-            else:
-                output.append(f'• {ccl} café con leche')
+        if ccl > 0:
+            if ccl > 1:
+                if ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
+                    output.append(f'• {ccl} café con leche, de los cuales:')
+                    if ccl_normales > 0:
+                        output.append(f'   - {ccl_normales} normal')
+                    if ccl_sinlact > 0:
+                        output.append(f'   - {ccl_sinlact} sin lactosa')
+                    if ccl_desnat > 0:
+                        output.append(f'   - {ccl_desnat} desnatada')
+                    if ccl_almendra > 0:
+                        output.append(f'   - {ccl_almendra} almendra')
+                    if ccl_avena > 0:
+                        output.append(f'   - {ccl_avena} avena')
+    
+                else:
+                    if ccl_normales > 0:
+                        output.append(f'• {ccl_normales} café con leche')
+                    if ccl_sinlact > 0:
+                        output.append(f'• {ccl_sinlact} café con leche sin lactosa')
+                    if ccl_desnat > 0:
+                        output.append(f'• {ccl_desnat} café con leche desnatada')
+                    if ccl_almendra > 0:
+                        output.append(f'• {ccl_almendra} café con leche de almendra')
+                    if ccl_avena > 0:
+                        output.append(f'• {ccl_avena} café con leche de avena')
         
 
         if dcl > 0:
