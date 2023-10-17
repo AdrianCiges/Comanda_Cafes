@@ -450,19 +450,10 @@ try:
         output = []
 
         output.append('Hola! Os hago un pedido:\n')
-
-        # st.write('Funciono aún')
-        # st.write(f'{output}')
-        # st.write(f'{ccl}')
-
         
         ccl_normales = ccl - ccl_sinlact - ccl_desnat - ccl_almendra - ccl_avena
-        dcl_normales = dcl - dcl_sinlact - dcl_desnat #- dcl_almendra - dcl_avena
+        dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_almendra - dcl_avena
         solo_normales = solo - lardob - largo - doble
-
-        st.write('Funciono aún')
-        st.write(f'{output}')
-        st.write(f'{ccl}')
 
         if int(ccl) > 0:
 
