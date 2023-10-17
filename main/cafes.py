@@ -362,8 +362,6 @@ try:
 
         que = {}
 
-        st.write(conteo)
-
         for k, v in conteo.items():
 
             if "Café" in k and ("Leche" in k or "Sin Lactosa" in k):
