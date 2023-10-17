@@ -499,7 +499,7 @@ try:
 
         if te > 0:
             if te > 1:
-                if rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_leche > 0:
+                if rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_leche > 0:
                     output.append(f'• {te} té, de los cuales:')
 
                     if rojo > 0:
@@ -530,7 +530,7 @@ try:
                         output.append(f'   - {negro_sinlac} té negro con leche sin lactosa')
             
             else:
-                 if rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_leche > 0:
+                 if rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_leche > 0:
                     if rojo > 0:
                         output.append(f'   - {rojo} té rojo')
 
