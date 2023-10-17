@@ -369,7 +369,7 @@ try:
 
         for k, v in conteo.items():
 
-            if "Café" in k and ("Leche" in k or "Sin Lactosa" in k or "Leche Almendra" in k or "Leche Avena" in k):
+            if "Café" in k and ("Leche 🥛 " in k or "Sin Lactosa" in k or "Leche Almendra" in k or "Leche Avena" in k):
                 ccl += v
                 if "Sin Lactosa" in k:
                     ccl_sinlact += v
@@ -403,7 +403,7 @@ try:
             elif "Té" in k:
                 te += v
                 if "Rojo" in k:
-                    if "Leche" in k:
+                    if "Leche 🥛" in k:
                         rojo_leche += v
                     elif "Sin Lactosa" in k:
                         rojo_sinlac += v
@@ -415,7 +415,7 @@ try:
                         rojo += v
                     
                 if "Verde" in k:
-                    if "Leche" in k:
+                    if "Leche 🥛" in k:
                         verde_leche += v
                     elif "Sin Lactosa" in k:
                         verde_sinlac += v
@@ -427,7 +427,7 @@ try:
                         verde += v
                     
                 if "Negro" in k:
-                    if "Leche" in k:
+                    if "Leche 🥛" in k:
                         negro_leche += v
                     elif "Sin Lactosa" in k:
                         negro_sinlac += v
