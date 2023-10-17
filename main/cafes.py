@@ -321,6 +321,7 @@ try:
         st.write('')
         st.write('')
         st.markdown('##### 📑 Comanda Versión Esquema')
+        st.write('Funciono aún')
 
         ccl = 0
         ccl_sinlact = 0
