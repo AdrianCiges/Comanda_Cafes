@@ -474,8 +474,6 @@ try:
             else:
                 output.append(f'• {ccl} café con leche')
         
-        st.write(f'Ahora es {output}')
-
 
         if dcl > 0:
 
