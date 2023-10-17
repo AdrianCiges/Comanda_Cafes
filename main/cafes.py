@@ -352,9 +352,6 @@ try:
         negro_leche = 0
         negro_sinlac = 0
 
-#         tcl = 0
-#         tsl = 0
-
         colacao = 0
 
         zumo = 0
@@ -398,7 +395,7 @@ try:
                     if "Leche" in k:
                         rojo_leche += v
                     elif "Sin Lactosa" in k:
-                        rojo_sinlac = += v
+                        rojo_sinlac += v
                     else:
                         rojo += v
                     
@@ -406,7 +403,7 @@ try:
                     if "Leche" in k:
                         verde_leche += v
                     elif "Sin Lactosa" in k:
-                        verde_sinlac = += v
+                        verde_sinlac += v
                     else:
                         verde += v
                     
@@ -414,7 +411,7 @@ try:
                     if "Leche" in k:
                         negro_leche += v
                     elif "Sin Lactosa" in k:
-                        negro_sinlac = += v
+                        negro_sinlac += v
                     else:
                         negro += v
 
