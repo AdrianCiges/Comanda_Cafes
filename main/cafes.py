@@ -164,7 +164,7 @@ try:
         if seleccion:
             seleccionados.append(persona)
 
-            elif persona == 'Adrián*':
+            if persona == 'Adrián*':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Té Rojo 🔴'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Sin Lactosa'))
                 extras = col4.text_input(f"Extras de {persona}")
