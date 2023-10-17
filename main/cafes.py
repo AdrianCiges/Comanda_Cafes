@@ -343,12 +343,18 @@ try:
         rojo = 0
         rojo_leche = 0
         rojo_sinlac= 0
+        rojo_almendra = 0
+        rojo_avena = 0
         verde = 0
         verde_leche = 0
         verde_sinlac= 0
+        verde_almendra = 0
+        verde_avena = 0
         negro = 0
         negro_leche = 0
         negro_sinlac = 0
+        negro_almendra = 0
+        negro_avena = 0
 
         colacao = 0
 
@@ -401,6 +407,10 @@ try:
                         rojo_leche += v
                     elif "Sin Lactosa" in k:
                         rojo_sinlac += v
+                    elif "Almendra" in k:
+                        rojo_almendra += v
+                    elif "Avena" in k:
+                        rojo_avena += v
                     else:
                         rojo += v
                     
@@ -409,6 +419,10 @@ try:
                         verde_leche += v
                     elif "Sin Lactosa" in k:
                         verde_sinlac += v
+                    elif "Almendra" in k:
+                        verde_almendra += v
+                    elif "Avena" in k:
+                        verde_avena += v
                     else:
                         verde += v
                     
@@ -417,6 +431,10 @@ try:
                         negro_leche += v
                     elif "Sin Lactosa" in k:
                         negro_sinlac += v
+                    elif "Almendra" in k:
+                        negro_almendra += v
+                    elif "Avena" in k:
+                        negro_Avena += v
                     else:
                         negro += v
 
@@ -558,32 +576,50 @@ try:
 
         if te > 0:
             if te > 1:
-                if rojo > 0 and (rojo_leche + rojo_sinlac + verde + verde_leche + verde_sinlac + negro + negro_leche + negro_sinlac == 0):
+                if rojo > 0 and (rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
                     output.append(f'• {rojo} té rojo')
 
-                elif rojo_leche > 0 and (rojo + rojo_sinlac + verde + verde_leche + verde_sinlac + negro + negro_leche + negro_sinlac == 0):
+                elif rojo_leche > 0 and (rojo + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
                     output.append(f'• {rojo_leche} té rojo con leche')
                     
-                elif rojo_sinlac > 0 and (rojo_leche + rojo + verde + verde_leche + verde_sinlac + negro + negro_leche + negro_sinlac == 0):
+                elif rojo_sinlac > 0 and (rojo + rojo_leche + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
                     output.append(f'• {rojo_sinlac} té rojo con leche sin lactosa')
 
-                elif verde > 0 and (rojo_leche + rojo_sinlac + rojo + verde_leche + verde_sinlac + negro + negro_leche + negro_sinlac == 0):
+                elif rojo_almendra > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
+                    output.append(f'• {rojo_almendra} té rojo con leche de almendra')
+
+                elif rojo_avena > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra+ verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
+                    output.append(f'• {rojo_avena} té rojo con leche de avena')
+
+                elif verde > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
                     output.append(f'• {verde} té verde')
 
-                elif verde_leche > 0 and (rojo_leche + rojo_sinlac + rojo + verde + verde_sinlac + negro + negro_leche + negro_sinlac == 0):
+                elif verde_leche > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
                     output.append(f'• {verde_leche} té verde con leche')
                     
-                elif verde_sinlac > 0 and (rojo_leche + rojo_sinlac + rojo + verde_leche + verde + negro + negro_leche + negro_sinlac == 0):
+                elif verde_sinlac > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
                     output.append(f'• {verde_sinlac} té verde con leche sin lactosa')
 
-                elif negro > 0 and (rojo_leche + rojo_sinlac + rojo + verde_leche + verde_sinlac + verde + negro_leche + negro_sinlac == 0):
+                elif verde_almendra > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
+                    output.append(f'• {verde_almendra} té verde con leche de almendra')
+
+                elif verde_avena > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + negro + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
+                    output.append(f'• {verde_avena} té verde con leche de avena')
+
+                elif negro > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro_leche + negro_sinlac + negro_almendra + negro_avena == 0):
                     output.append(f'• {negro} té negro')
 
-                elif negro_leche > 0 and (rojo_leche + rojo_sinlac + rojo + verde_leche + verde_sinlac + verde + negro + negro_sinlac == 0):
+                elif negro_leche > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_sinlac + negro_almendra + negro_avena == 0):
                     output.append(f'• {negro_leche} té negro con leche')
                     
-                elif negro_sinlac > 0 and (rojo_leche + rojo_sinlac + rojo + verde_leche + verde_sinlac + verde + negro_leche + negro == 0):
+                elif negro_sinlac > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_almendra + negro_avena == 0):
                     output.append(f'• {negro_sinlac} té negro con leche sin lactosa')
+
+                elif negro_almendra > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_avena == 0):
+                    output.append(f'• {negro_almendra} té negro con leche de almendra')
+
+                elif negro_avena > 0 and (rojo + rojo_leche + rojo_sinlac + rojo_almendra + rojo_avena + verde + verde_leche + verde_sinlac + verde_almendra + verde_avena + negro + negro_leche + negro_sinlac + negro_almendra == 0):
+                    output.append(f'• {negro_avena} té negro con leche de avena')
                     
                 elif rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_sinlac > 0:
                     output.append(f'• {te} té, de los cuales:')
@@ -594,39 +630,63 @@ try:
                         output.append(f'   - {rojo_leche} té rojo con leche')
                     if rojo_sinlac > 0:
                         output.append(f'   - {rojo_sinlac} té rojo con leche sin lactosa')
+                    if rojo_almendra > 0:
+                        output.append(f'   - {rojo_almendra} té rojo con leche de almendra')
+                    if rojo_avena > 0:
+                        output.append(f'   - {rojo_avena} té rojo con leche de avena')
                     if verde > 0:
                         output.append(f'   - {verde} té verde')
                     if verde_leche > 0:
                         output.append(f'   - {verde_leche} té verde con leche')
                     if verde_sinlac > 0:
                         output.append(f'   - {verde_sinlac} té verde con leche sin lactosa')
+                    if verde_almendra > 0:
+                        output.append(f'   - {verde_almendra} té verde con leche de almendra')
+                    if verde_avena > 0:
+                        output.append(f'   - {verde_avena} té verde con leche de avena')
                     if negro > 0:
                         output.append(f'   - {negro} té negro')
                     if negro_leche > 0:
                         output.append(f'   - {negro_leche} té negro con leche')
                     if negro_sinlac > 0:
                         output.append(f'   - {negro_sinlac} té negro con leche sin lactosa')
+                    if negro_almendra > 0:
+                        output.append(f'   - {negro_almendra} té negro con leche de almendra')
+                    if negro_avena > 0:
+                        output.append(f'   - {negro_avena} té negro con leche de avena')
             
             else:
-                 if rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_sinlac > 0:
+                 if rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or rojo_almendra > 0 or rojo_avena > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or verde_almendra > 0 or verde_avena > 0 or negro > 0 or negro_leche > 0 or negro_sinlac > 0  or negro_almendra > 0  or negro_avena > 0:
                     if rojo > 0:
                         output.append(f'• {rojo} té rojo')
                     if rojo_leche > 0:
                         output.append(f'• {rojo_leche} té rojo con leche')
                     if rojo_sinlac > 0:
                         output.append(f'• {rojo_sinlac} té rojo con leche sin lactosa')
+                    if rojo_almendra > 0:
+                        output.append(f'• {rojo_almendra} té rojo con leche de almendra')
+                    if rojo_avena > 0:
+                        output.append(f'• {rojo_avena} té rojo con leche de avena')
                     if verde > 0:
                         output.append(f'• {verde} té verde')
                     if verde_leche > 0:
                         output.append(f'• {verde_leche} té verde con leche')
                     if verde_sinlac > 0:
-                        output.append(f'• {verde_sinlac} té verde con leche sin lactosa')                
+                        output.append(f'• {verde_sinlac} té verde con leche sin lactosa')        
+                    if verde_almendra > 0:
+                        output.append(f'• {verde_almendra} té verde con leche de almendra')
+                    if verde_avena > 0:
+                        output.append(f'• {verde_avena} té verde con leche de avena')
                     if negro > 0:
                         output.append(f'• {negro} té negro')
                     if negro_leche > 0:
                         output.append(f'• {negro_leche} té negro con leche')
                     if negro_sinlac > 0:
                         output.append(f'• {negro_sinlac} té negro con leche sin lactosa')
+                    if negro_almendra > 0:
+                        output.append(f'• {negro_almendra} té negro con leche de almendra')
+                    if negro_avena > 0:
+                        output.append(f'• {negro_avena} té negro con leche de avena')
 
 
         if colacao > 0:
