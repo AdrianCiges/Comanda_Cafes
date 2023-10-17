@@ -560,32 +560,71 @@ try:
                     if dcl_avena > 0:
                         output.append(f'• {dcl_avena} descafeinado con leche de avena')
 
+# --------------- solos ----------------------------------------------------------------------------------------
+        
+        solos_normales = solo - lardob - largo - doble
+        
         if solo > 0:
-            st.write(solo, lardob, largo, doble)
             if solo > 1:
-                if lardob > 0 or largo > 0 or doble > 0:
-                    if solo > 1 and (lardob + largo + doble == 0):
-                        output.append(f'• {solo} café solo')
-                    elif lardob > 1 and (solo + largo + doble == 0):
-                        output.append(f'• {lardob} café solo largo doble')
-                    elif largo > 1 and (lardob + solo + doble == 0):
-                        output.append(f'• {largo} café solo largo')
-                    elif doble > 1 and (lardob + largo + solo == 0):
-                        output.append(f'• {doble} café solo doble')
+                if lardob > 0 and (largo + doble + solos_normales == 0):
+                    output.append(f'• {lardob} café solo largo doble')
+
+                elif largo > 0 and (lardob + doble + solos_normales == 0):
+                    output.append(f'• {largo} café solo largo')
                     
-                else:
+                elif doble > 0 and (largo + lardob + solos_normales == 0):
+                    output.append(f'• {doble} café solo doble')
+                    
+                elif lardob > 0 or largo > 0 or doble > 0:
                     output.append(f'• {solo} café solo, de los cuales:')
-                    if solo_normales > 0:
-                        output.append(f'   - {solo_normales} normal')
+                    if solos_normales > 0:
+                        output.append(f'   - {solos_normales} normal')
                     if lardob > 0:
                         output.append(f'   - {lardob} largo doble')
                     if largo > 0:
                         output.append(f'   - {largo} largo')
                     if doble > 0:
                         output.append(f'   - {doble} doble')
-
+                else:
+                    output.append(f'• {solo} café solo')
+    
             else:
-                output.append(f'• {solo} café solo')
+                if solos_normales > 0 or lardob > 0 or largo > 0 or doble > 0:
+                    if solos_normales > 0:
+                        output.append(f'• {solos_normales} solos')
+                    if lardob > 0:
+                        output.append(f'• {lardob} café solo largo doble')
+                    if largo > 0:
+                        output.append(f'• {largo} café largo')
+                    if doble > 0:
+                        output.append(f'• {doble} café doble')
+                        
+        # if solo > 0:
+        #     st.write(solo, lardob, largo, doble)
+        #     if solo > 1:
+        #         if lardob > 0 or largo > 0 or doble > 0:
+        #             if solo > 1 and (lardob + largo + doble == 0):
+        #                 output.append(f'• {solo} café solo')
+        #             elif lardob > 1 and (solo + largo + doble == 0):
+        #                 output.append(f'• {lardob} café solo largo doble')
+        #             elif largo > 1 and (lardob + solo + doble == 0):
+        #                 output.append(f'• {largo} café solo largo')
+        #             elif doble > 1 and (lardob + largo + solo == 0):
+        #                 output.append(f'• {doble} café solo doble')
+                    
+        #         else:
+        #             output.append(f'• {solo} café solo, de los cuales:')
+        #             if solo_normales > 0:
+        #                 output.append(f'   - {solo_normales} normal')
+        #             if lardob > 0:
+        #                 output.append(f'   - {lardob} largo doble')
+        #             if largo > 0:
+        #                 output.append(f'   - {largo} largo')
+        #             if doble > 0:
+        #                 output.append(f'   - {doble} doble')
+
+        #     else:
+        #         output.append(f'• {solo} café solo')
 
 
         if te > 0:
