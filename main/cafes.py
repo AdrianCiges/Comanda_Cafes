@@ -134,7 +134,7 @@ if nuevos > 0:
     gente_nueva = [g for g in gente_nueva if g != '']
 
 def gente():
-    personas = ['Adrián*', 'Álvaro Saez', 'Ana García*', 'Ana Murillo', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML*', 'Javi Brenes', 'Javi Nieto*', 'Lucas', 'Lucía', 'María E.', 'María C.', 'Maxi', 'Mercedes*', 'Rafa', 'Sergio*', 'Víctor' ]   
+    personas = ['Adrián*', 'Álvaro Saez', 'Ana García*', 'Ana Murillo', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML*', 'Javi Brenes', 'Javi Nieto*', 'Lucas', 'Lucía', 'María E.', 'María C.', 'Maxi', 'Mercedes*', 'Rafa', 'Rosalía', 'Sergio*', 'Víctor' ]   
     try:
         return personas + gente_nueva
     except:
@@ -143,7 +143,7 @@ def gente():
 st.header("¿Quiénes bajamos?")
 st.write('')
 bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
-con = ['Leche 🥛', 'Sin Lactosa', 'Cortado', 'Solo', '']
+con = ['Leche 🥛', 'Sin Lactosa', 'Leche Almendras','Leche Avena','Cortado', 'Solo', '']
 tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
 
 x_bebidas = []
@@ -315,10 +315,14 @@ try:
 
         ccl = 0
         ccl_sinlact = 0
+        ccl_almedra = 0
+        ccl_avena = 0
         ccl_desnat = 0
 
         dcl = 0
         dcl_sinlact = 0
+        dcl_almendra = 0
+        dcl_avena = 0
         dcl_desnat = 0
 
         solo = 0
@@ -349,7 +353,7 @@ try:
 
         for k, v in conteo.items():
 
-            if "Café" in k and ("Leche" in k or "Sin Lactosa" in k):
+            if "Café" in k and ("Leche" in k or "Sin Lactosa" in k or "Almendra" in k or "Avena" in k):
                 ccl += v
                 if "Sin Lactosa" in k:
                     ccl_sinlact += v
@@ -515,31 +519,31 @@ try:
             else:
                  if rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_leche > 0:
                     if rojo > 0:
-                        output.append(f'   - {rojo} té rojo')
+                        output.append(f'• {rojo} té rojo')
 
                     if rojo_leche > 0:
-                        output.append(f'   - {rojo_leche} té rojo con leche')
+                        output.append(f'• {rojo_leche} té rojo con leche')
 
                     if rojo_sinlac > 0:
-                        output.append(f'   - {rojo_sinlac} té rojo con leche sin lactosa')
+                        output.append(f'• {rojo_sinlac} té rojo con leche sin lactosa')
 
                     if verde > 0:
-                        output.append(f'   - {verde} té verde')
+                        output.append(f'• {verde} té verde')
 
                     if verde_leche > 0:
-                        output.append(f'   - {verde_leche} té verde con leche')
+                        output.append(f'• {verde_leche} té verde con leche')
 
                     if verde_sinlac > 0:
-                        output.append(f'   - {verde_sinlac} té verde con leche sin lactosa')
+                        output.append(f'• {verde_sinlac} té verde con leche sin lactosa')
                         
                     if negro > 0:
-                        output.append(f'   - {negro} té negro')
+                        output.append(f'• {negro} té negro')
 
                     if negro_leche > 0:
-                        output.append(f'   - {negro_leche} té negro con leche')
+                        output.append(f'• {negro_leche} té negro con leche')
 
                     if negro_sinlac > 0:
-                        output.append(f'   - {negro_sinlac} té negro con leche sin lactosa')
+                        output.append(f'• {negro_sinlac} té negro con leche sin lactosa')
 
 
         if colacao > 0:
