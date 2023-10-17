@@ -143,7 +143,7 @@ def gente():
 st.header("¿Quiénes bajamos?")
 st.write('')
 bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
-con = ['Leche 🥛', 'Sin Lactosa', 'Leche Almendras','Leche Avena','Cortado', 'Solo', '']
+con = ['Leche 🥛', 'Sin Lactosa', 'Leche Almendra','Leche Avena','Cortado', 'Solo', '']
 tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
 
 x_bebidas = []
@@ -359,6 +359,8 @@ try:
         otros = 0
 
         que = {}
+
+        st.write(conteo)
 
         for k, v in conteo.items():
 
