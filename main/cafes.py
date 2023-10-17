@@ -460,7 +460,7 @@ try:
                 if ccl_sinlact > 0 and (ccl_desnat + ccl_almendra + ccl_avena == 0):
                     output.append(f'• {ccl} café con leche sin lactosa')
 
-                if ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
+                elif ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
                     output.append(f'• {ccl} café con leche, de los cuales:')
                     if ccl_normales > 0:
                         output.append(f'   - {ccl_normales} normal')
