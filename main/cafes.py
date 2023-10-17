@@ -460,7 +460,7 @@ try:
         dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_almendra - dcl_avena
         solo_normales = solo - lardob - largo - doble
 
-        if ccl > 0:
+        if int(ccl) > 0:
 
             st.write('Funciono aún')
             st.write(f'{output}')
