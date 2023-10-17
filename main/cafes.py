@@ -457,7 +457,7 @@ try:
 
         if ccl > 0:
             if ccl > 1:
-                if ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
+                if ccl_normales > 0 or ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
                     output.append(f'• {ccl} café con leche, de los cuales:')
                     if ccl_normales > 0:
                         output.append(f'   - {ccl_normales} normal')
@@ -471,7 +471,7 @@ try:
                         output.append(f'   - {ccl_avena} avena')
     
                 else:
-                    if ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
+                    if ccl_normales > 0 or ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
                         if ccl_normales > 0:
                             output.append(f'• {ccl_normales} café con leche')
                         if ccl_sinlact > 0:
