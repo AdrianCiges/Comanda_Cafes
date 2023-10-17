@@ -393,7 +393,7 @@ try:
                 elif "Leche Avena" in k:
                     dcl_avena += v   
 
-            elif ("Café" in k or "Descafeinado" in k) and ("Solo" in k):
+            elif ("Café" in k or "Descafeinado" in k) and ("Solo" in k or '  ' in k):
                 solo += v
                 if "Largo" in k and "Doble" in k:
                     lardob += v
@@ -474,8 +474,6 @@ try:
         ccl_normales = ccl - ccl_sinlact - ccl_desnat - ccl_almendra - ccl_avena
         dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_almendra - dcl_avena
         solo_normales = solo - lardob - largo - doble
-
-        st.write(ccl_normales, ccl, ccl_sinlact, ccl_desnat, ccl_almendra, ccl_avena)
 
         if ccl > 0:
             if ccl > 1:
@@ -563,7 +561,18 @@ try:
                         output.append(f'• {dcl_avena} descafeinado con leche de avena')
 
         if solo > 0:
-            if lardob > 0 or largo > 0 or doble > 0:
+            if solo >1:
+                if lardob > 0 or largo > 0 or doble > 0:
+                    if solo > 1 and (largodob + largo + doble == 0):
+                        output.append(f'• {solo} café solo')
+                    if largodob > 1 and (solo + largo + doble == 0):
+                        output.append(f'• {largodob} café solo largo doble')
+                    if largo > 1 and (largodob + solo + doble == 0):
+                        output.append(f'• {largo} café solo largo')
+                    if doble > 1 and (largodob + largo + solo == 0):
+                        output.append(f'• {doble} café solo doble')
+                    
+            else:
                 output.append(f'• {solo} café solo, de los cuales:')
                 if solo_normales > 0:
                     output.append(f'   - {solo_normales} normal')
