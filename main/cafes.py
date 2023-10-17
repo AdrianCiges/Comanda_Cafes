@@ -360,8 +360,6 @@ try:
 
         que = {}
 
-        st.write('Funciono aún')
-
 
         for k, v in conteo.items():
 
@@ -438,7 +436,8 @@ try:
         cereal = 0
         blanco = 0
         integral = 0
-        
+        st.write('Funciono aún')
+
         for k, v in n_tostadas.items():
             if "Cereales" in k:
                 cereal += v
