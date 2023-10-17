@@ -479,16 +479,16 @@ try:
 
         if ccl > 0:
             if ccl > 1:
-                if ccl_sinlact > 0 and (ccl_desnat + ccl_almendra + ccl_avena == 0):
+                if ccl_sinlact > 0 and (ccl_desnat + ccl_almendra + ccl_avena + ccl_normales == 0):
                     output.append(f'• {ccl_sinlact} café con leche sin lactosa')
 
-                elif ccl_desnat > 0 and (ccl_sinlact + ccl_almendra + ccl_avena == 0):
+                elif ccl_desnat > 0 and (ccl_sinlact + ccl_almendra + ccl_avena + ccl_normales == 0):
                     output.append(f'• {ccl_desnat} café con leche desnatada')
                     
                 elif ccl_almendra > 0 and (ccl_desnat + ccl_sinlact + ccl_avena + ccl_normales == 0):
                     output.append(f'• {ccl_almendra} café con leche de almendra')
 
-                elif ccl_avena > 0 and (ccl_desnat + ccl_sinlact + ccl_almendra == 0):
+                elif ccl_avena > 0 and (ccl_desnat + ccl_sinlact + ccl_almendra + ccl_normales == 0):
                     output.append(f'• {ccl_avena} café con leche de avena')
                     
                 elif ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
