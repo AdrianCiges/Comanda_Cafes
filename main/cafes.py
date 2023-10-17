@@ -561,6 +561,7 @@ try:
                         output.append(f'• {dcl_avena} descafeinado con leche de avena')
 
         if solo > 0:
+            st.write(solo, lardob, largo, doble)
             if solo > 1:
                 if lardob > 0 or largo > 0 or doble > 0:
                     if solo > 1 and (lardob + largo + doble == 0):
