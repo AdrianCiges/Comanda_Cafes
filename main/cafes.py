@@ -267,10 +267,10 @@ try:
 
     coffees = []
     for i,e in enumerate(x_bebidas):
-        if x_con[i] == '':
-            st.write('cazado!')
+        if e == 'Café ☕' and x_con[i] == '':
+            coffees.append(f'{e} solo {x_extras[i]}')
         
-        if x_con[i] != 'Cortado' and x_con[i] != 'Solo' and x_con[i] != '' and x_extras[i] != '':
+        elif x_con[i] != 'Cortado' and x_con[i] != 'Solo' and x_con[i] != '' and x_extras[i] != '':
             coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
 
         elif x_con[i] != 'Cortado' and x_con[i] != 'Solo' and x_con[i] != '':
