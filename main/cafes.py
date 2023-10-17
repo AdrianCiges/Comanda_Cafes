@@ -263,7 +263,7 @@ try:
     st.write('')
     para_llevar = st.radio('¿PARA LLEVAR?', ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
 
-    st.write(x_bebidas, x_con, x_extras)
+    # st.write(x_bebidas, x_con, x_extras)
 
     coffees = []
     for i,e in enumerate(x_bebidas):
