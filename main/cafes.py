@@ -143,7 +143,7 @@ def gente():
 st.header("¿Quiénes bajamos?")
 st.write('')
 bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
-con = ['Leche 🥛', 'Sin Lactosa', 'Leche Almendra 🌰','Leche Avena','Cortado', 'Solo', '']
+con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Almendra 🌰','Leche Avena','Cortado', 'Solo', '']
 tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
 
 x_bebidas = []
@@ -166,7 +166,7 @@ try:
 
             if persona == 'Adrián*':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Té Rojo 🔴'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Sin Lactosa'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Sin Lactosa 🆓'))
                 extras = col4.text_input(f"Extras de {persona}")
                 if hora_actual < time(14, 00):
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Cereales 🌾'))
@@ -181,7 +181,7 @@ try:
 
             elif persona == 'Inés ML*':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Sin Lactosa'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Sin Lactosa 🆓'))
                 extras = col4.text_input(f"Extras de {persona}") 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
