@@ -223,7 +223,7 @@ try:
 
             elif persona == 'Mercedes':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Cola Cao 🥜'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index(''))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche 🥛'))
                 extras = col4.text_input(f"Extras de {persona}") 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
              
@@ -360,7 +360,11 @@ try:
         negro_avena = 0
 
         colacao = 0
-
+        colacao_sinlact = 0
+        colacao_almendra = 0
+        colacao_avena = 0
+        colacao_desnat = 0
+        
         zumo = 0
         
         manzanilla = 0
@@ -445,6 +449,14 @@ try:
 
             elif "Cola Cao" in k:
                 colacao += v
+                if "Sin Lactosa" in k:
+                    colacao_sinlact += v
+                elif "Desnatada" in k:
+                    colacao_desnat += v
+                elif "Leche Almendra" in k:
+                    colacao_almendra += v   
+                elif "Leche Avena" in k:
+                    colacao_avena += v   
 
             elif "Zumo" in k:
                 zumo += v
@@ -718,8 +730,48 @@ try:
                         output.append(f'• {negro_avena} té negro con leche de avena')
 
 
+        # if colacao > 0:
+        #     output.append(f'• {colacao} cola cao')
+
         if colacao > 0:
-            output.append(f'• {colacao} cola cao')
+            if colacao > 1:
+                if colacao_sinlact > 0 and (colacao_desnat + colacao_almendra + colacao_avena + colacao == 0):
+                    output.append(f'• {colacao_sinlact} Cola Cao con leche sin lactosa')
+
+                elif colacao_desnat > 0 and (colacao_sinlact + colacao_almendra + colacao_avena + colacao == 0):
+                    output.append(f'• {colacao_desnat} Cola Cao con leche desnatada')
+                    
+                elif colacao_almendra > 0 and (colacao_desnat + colacao_sinlact + colacao_avena + colacao == 0):
+                    output.append(f'• {colacao_almendra} Cola Cao con leche de almendra')
+
+                elif colacao_avena > 0 and (colacao_desnat + colacao_sinlact + colacao_almendra + colacao_normales == 0):
+                    output.append(f'• {colacao_avena} Cola Cao con leche de avena')
+                    
+                elif colacao_sinlact > 0 or colacao_desnat > 0 or colacao_almendra > 0 or colacao_avena > 0:
+                    output.append(f'• {colacao} Cola Cao, de los cuales:')
+                    if colacao_sinlact > 0:
+                        output.append(f'   - {colacao_sinlact} sin lactosa')
+                    if colacao_desnat > 0:
+                        output.append(f'   - {colacao_desnat} desnatada')
+                    if colacao_almendra > 0:
+                        output.append(f'   - {colacao_almendra} almendra')
+                    if colacao_avena > 0:
+                        output.append(f'   - {colacao_avena} avena')
+                else:
+                    output.append(f'• {colacao} Cola Cao')
+    
+            else:
+                if colacao > 0 or colacao_sinlact > 0 or colacao_desnat > 0 or colacao_almendra > 0 or colacao_avena > 0:
+                    if colacao > 0:
+                        output.append(f'• {colacao} Cola Cao')
+                    if colacao_sinlact > 0:
+                        output.append(f'• {colacao_sinlact} Cola Cao con leche sin lactosa')
+                    if colacao_desnat > 0:
+                        output.append(f'• {colacao_desnat} Cola Cao con leche desnatada')
+                    if colacao_almendra > 0:
+                        output.append(f'• {colacao_almendra} Cola Cao con leche de almendra')
+                    if colacao_avena > 0:
+                        output.append(f'• {colacao_avena} Cola Cao con leche de avena')
 
         if zumo > 0:
             output.append(f'• {zumo} zumo de naranja')
