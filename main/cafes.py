@@ -143,7 +143,7 @@ def gente():
 st.header("¿Quiénes bajamos?")
 st.write('')
 bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
-con = ['Leche 🥛', 'Sin Lactosa', 'Leche Almendra','Leche Avena','Cortado', 'Solo', '']
+con = ['Leche 🥛', 'Sin Lactosa', 'Leche Almendra 🌰','Leche Avena','Cortado', 'Solo', '']
 tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
 
 x_bebidas = []
@@ -187,7 +187,7 @@ try:
 
             elif persona == 'Rosalía':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Descafeinado ☕'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche Almendra'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche Almendra 🌰'))
                 extras = col4.text_input(f"Extras de {persona}")
                 if hora_actual < time(14, 00):
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Integral 🥔'))
@@ -372,7 +372,7 @@ try:
 
         for k, v in conteo.items():
 
-            if "Café" in k and ("Leche 🥛" in k or "Sin Lactosa" in k or "Leche Almendra" in k or "Leche Avena" in k):
+            if "Café" in k and ("Leche 🥛" in k or "Sin Lactosa" in k or "Leche Almendra 🌰" in k or "Leche Avena" in k):
                 ccl += v
                 if "Leche 🥛" in k:
                     pass
@@ -380,7 +380,7 @@ try:
                     ccl_sinlact += v
                 elif "Desnatada" in k:
                     ccl_desnat += v
-                elif "Leche Almendra" in k:
+                elif "Leche Almendra 🌰" in k:
                     ccl_almendra += v   
                 elif "Leche Avena" in k:
                     ccl_avena += v   
@@ -391,7 +391,7 @@ try:
                     dcl_sinlact += v
                 elif "Desnatada" in k:
                     dcl_desnat += v
-                elif "Leche Almendra" in k:
+                elif "Leche Almendra 🌰" in k:
                     dcl_almendra += v   
                 elif "Leche Avena" in k:
                     dcl_avena += v   
@@ -412,7 +412,7 @@ try:
                         rojo_leche += v
                     elif "Sin Lactosa" in k:
                         rojo_sinlac += v
-                    elif "Leche Almendra" in k:
+                    elif "Leche Almendra 🌰" in k:
                         rojo_almendra += v
                     elif "Leche Avena" in k:
                         rojo_avena += v
@@ -424,7 +424,7 @@ try:
                         verde_leche += v
                     elif "Sin Lactosa" in k:
                         verde_sinlac += v
-                    elif "Leche Almendra" in k:
+                    elif "Leche Almendra 🌰" in k:
                         verde_almendra += v
                     elif "Leche Avena" in k:
                         verde_avena += v
@@ -436,7 +436,7 @@ try:
                         negro_leche += v
                     elif "Sin Lactosa" in k:
                         negro_sinlac += v
-                    elif "Leche Almendra" in k:
+                    elif "Leche Almendra 🌰" in k:
                         negro_almendra += v
                     elif "Leche Avena" in k:
                         negro_Avena += v
@@ -601,33 +601,6 @@ try:
                         output.append(f'• {largo} café largo')
                     if doble > 0:
                         output.append(f'• {doble} café doble')
-                        
-        # if solo > 0:
-        #     st.write(solo, lardob, largo, doble)
-        #     if solo > 1:
-        #         if lardob > 0 or largo > 0 or doble > 0:
-        #             if solo > 1 and (lardob + largo + doble == 0):
-        #                 output.append(f'• {solo} café solo')
-        #             elif lardob > 1 and (solo + largo + doble == 0):
-        #                 output.append(f'• {lardob} café solo largo doble')
-        #             elif largo > 1 and (lardob + solo + doble == 0):
-        #                 output.append(f'• {largo} café solo largo')
-        #             elif doble > 1 and (lardob + largo + solo == 0):
-        #                 output.append(f'• {doble} café solo doble')
-                    
-        #         else:
-        #             output.append(f'• {solo} café solo, de los cuales:')
-        #             if solo_normales > 0:
-        #                 output.append(f'   - {solo_normales} normal')
-        #             if lardob > 0:
-        #                 output.append(f'   - {lardob} largo doble')
-        #             if largo > 0:
-        #                 output.append(f'   - {largo} largo')
-        #             if doble > 0:
-        #                 output.append(f'   - {doble} doble')
-
-        #     else:
-        #         output.append(f'• {solo} café solo')
 
 
         if te > 0:
