@@ -493,7 +493,7 @@ try:
                     output.append(f'• {ccl_avena} café con leche de avena')
                     
                 elif ccl_sinlact > 0 or ccl_desnat > 0 or ccl_almendra > 0 or ccl_avena > 0:
-                    output.append(f'• {ccl} café con leche, de los cuales:')
+                    output.append(f'• {ccl} cafés con leche, de los cuales:')
                     if ccl_normales > 0:
                         output.append(f'   - {ccl_normales} normal')
                     if ccl_sinlact > 0:
@@ -536,7 +536,7 @@ try:
                     output.append(f'• {dcl_avena} descafeinado con leche de avena')
                     
                 elif dcl_sinlact > 0 or dcl_desnat > 0 or dcl_almendra > 0 or dcl_avena > 0:
-                    output.append(f'• {dcl} descafeinado con leche, de los cuales:')
+                    output.append(f'• {dcl} descafeinados con leche, de los cuales:')
                     if dcl_normales > 0:
                         output.append(f'   - {dcl_normales} normal')
                     if dcl_sinlact > 0:
@@ -579,7 +579,7 @@ try:
                     output.append(f'• {doble} café solo doble')
                     
                 elif lardob > 0 or largo > 0 or doble > 0:
-                    output.append(f'• {solo} café solo, de los cuales:')
+                    output.append(f'• {solo} cafés solo, de los cuales:')
                     if solos_normales > 0:
                         output.append(f'   - {solos_normales} normal')
                     if lardob > 0:
@@ -651,7 +651,7 @@ try:
                     output.append(f'• {negro_avena} té negro con leche de avena')
                     
                 elif rojo > 0 or rojo_leche > 0 or rojo_sinlac > 0 or verde > 0 or verde_leche > 0 or verde_sinlac > 0 or negro > 0 or negro_leche > 0 or negro_sinlac > 0:
-                    output.append(f'• {te} té, de los cuales:')
+                    output.append(f'• {te} tés, de los cuales:')
 
                     if rojo > 0:
                         output.append(f'   - {rojo} té rojo')
