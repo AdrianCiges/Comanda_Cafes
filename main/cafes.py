@@ -733,15 +733,17 @@ try:
         # if colacao > 0:
         #     output.append(f'• {colacao} cola cao')
 
+        colacao_normales = colacao - colacao_sinlact - colacao_desnat - colacao_almendra - colacao_avena
+
         if colacao > 0:
             if colacao > 1:
-                if colacao_sinlact > 0 and (colacao_desnat + colacao_almendra + colacao_avena + colacao == 0):
+                if colacao_sinlact > 0 and (colacao_desnat + colacao_almendra + colacao_avena + colacao_normales == 0):
                     output.append(f'• {colacao_sinlact} Cola Cao con leche sin lactosa')
 
-                elif colacao_desnat > 0 and (colacao_sinlact + colacao_almendra + colacao_avena + colacao == 0):
+                elif colacao_desnat > 0 and (colacao_sinlact + colacao_almendra + colacao_avena + colacao_normales == 0):
                     output.append(f'• {colacao_desnat} Cola Cao con leche desnatada')
                     
-                elif colacao_almendra > 0 and (colacao_desnat + colacao_sinlact + colacao_avena + colacao == 0):
+                elif colacao_almendra > 0 and (colacao_desnat + colacao_sinlact + colacao_avena + colacao_normales == 0):
                     output.append(f'• {colacao_almendra} Cola Cao con leche de almendra')
 
                 elif colacao_avena > 0 and (colacao_desnat + colacao_sinlact + colacao_almendra + colacao_normales == 0):
@@ -749,6 +751,8 @@ try:
                     
                 elif colacao_sinlact > 0 or colacao_desnat > 0 or colacao_almendra > 0 or colacao_avena > 0:
                     output.append(f'• {colacao} Cola Cao, de los cuales:')
+                    if colacao_normales > 0:
+                        output.append(f'   - {colacao_normales} leche normal')
                     if colacao_sinlact > 0:
                         output.append(f'   - {colacao_sinlact} sin lactosa')
                     if colacao_desnat > 0:
@@ -762,8 +766,8 @@ try:
     
             else:
                 if colacao > 0 or colacao_sinlact > 0 or colacao_desnat > 0 or colacao_almendra > 0 or colacao_avena > 0:
-                    # if colacao > 0:
-                    #     output.append(f'• {colacao} Cola Cao')
+                    if colacao_normales > 0:
+                        output.append(f'• {colacao_normales} Cola Cao con leche normal')
                     if colacao_sinlact > 0:
                         output.append(f'• {colacao_sinlact} Cola Cao con leche sin lactosa')
                     if colacao_desnat > 0:
