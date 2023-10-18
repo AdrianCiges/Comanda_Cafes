@@ -143,7 +143,7 @@ def gente():
 st.header("¿Quiénes bajamos?")
 st.write('')
 bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
-con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Almendra 🌰','Leche Avena 🥣','Cortado ✂️', 'Solo', '']
+con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Almendra 🌰','Leche Avena 🥣','Cortado ✂️', 'Solo ❌', '']
 tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
 
 x_bebidas = []
@@ -196,19 +196,19 @@ try:
                 
             elif persona == 'Ana García*':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo ❌'))
                 extras = col4.text_input(f"Extras de {persona}") 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
             elif persona == 'Rafa':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo ❌'))
                 extras = col4.text_input(f"Extras de {persona}", 'Largo') 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
                 
             elif persona == 'Lucas':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo'))
+                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Solo ❌'))
                 extras = col4.text_input(f"Extras de {persona}", 'Largo') 
                 if hora_actual < time(14, 00):
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Blanco 🥖'))
@@ -270,10 +270,10 @@ try:
         if e == 'Café ☕' and x_con[i] == '':
             coffees.append(f'{e} Solo {x_extras[i]}')
         
-        elif x_con[i] != 'Cortado' and x_con[i] != 'Solo' and x_con[i] != '' and x_extras[i] != '':
+        elif x_con[i] != 'Cortado ✂️' and x_con[i] != 'Solo ❌' and x_con[i] != '' and x_extras[i] != '':
             coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
 
-        elif x_con[i] != 'Cortado' and x_con[i] != 'Solo' and x_con[i] != '':
+        elif x_con[i] != 'Cortado ✂️' and x_con[i] != 'Solo ❌' and x_con[i] != '':
             coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
 
         elif e == 'Otro':
