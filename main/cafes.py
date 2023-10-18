@@ -762,8 +762,8 @@ try:
     
             else:
                 if colacao > 0 or colacao_sinlact > 0 or colacao_desnat > 0 or colacao_almendra > 0 or colacao_avena > 0:
-                    if colacao > 0:
-                        output.append(f'• {colacao} Cola Cao')
+                    # if colacao > 0:
+                    #     output.append(f'• {colacao} Cola Cao')
                     if colacao_sinlact > 0:
                         output.append(f'• {colacao_sinlact} Cola Cao con leche sin lactosa')
                     if colacao_desnat > 0:
