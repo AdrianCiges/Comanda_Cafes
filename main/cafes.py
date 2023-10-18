@@ -378,9 +378,7 @@ try:
 
             if "Café" in k and ("Leche 🥛" in k or "Sin Lactosa" in k or "Leche Almendra" in k or "Leche Avena" in k):
                 ccl += v
-                if "Leche 🥛" in k:
-                    pass
-                elif "Sin Lactosa" in k:
+                if "Sin Lactosa" in k:
                     ccl_sinlact += v
                 elif "Desnatada" in k:
                     ccl_desnat += v
