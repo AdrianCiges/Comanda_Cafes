@@ -142,7 +142,7 @@ def gente():
 
 st.header("¿Quiénes bajamos?")
 st.write('')
-bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro']
+bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro 🤔']
 con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Almendra 🌰','Leche Avena 🥣','Cortado ✂️', 'Solo ❌', '']
 tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
 
@@ -276,7 +276,7 @@ try:
         elif x_con[i] != 'Cortado ✂️' and x_con[i] != 'Solo ❌' and x_con[i] != '':
             coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
 
-        elif e == 'Otro':
+        elif e == 'Otro 🤔':
             coffees.append(f'{x_extras[i]}')
 
         else:
