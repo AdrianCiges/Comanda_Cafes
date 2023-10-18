@@ -1,2 +1,2 @@
 streamlit==1.4.0
-pywhatkit==4.1.0
+pywhatkit==5.0.0
