@@ -9,13 +9,6 @@ import re
 import streamlit.components.v1 as components
 #import pywhatkit
 
-# Cargue el componente personalizado
-my_component = components.declare_component(
-    "my_component",
-    path="my_component/frontend",
-)
-my_component()
-
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
 hora_actual = datetime.now().time()
@@ -897,16 +890,6 @@ with tab1:
 # -------------------------------------------------------------------------------------------------------------------
 
 with tab2:
-    st.markdown("""
-        <script>
-            var clickme = window.parent.document.querySelectorAll("button");
-            clickme[1].click();
-        </script>
-        """,
-        unsafe_allow_html=True
-    )
-    
-    streamlit_js_eval(js_expressions=js1)
 
     # Ruta de la imagen del logo
     LOGO_IMAGE = "./img/granos.png"
