@@ -10,7 +10,6 @@ import re
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
-
 hora_actual = datetime.now().time()
 hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
 hora_sumada = hora_actual_dt + timedelta(hours=2)
@@ -898,9 +897,16 @@ with tab1:
 
 with tab2:
     
-    # ----------------------------------------------------------------------------------------
-    st.sidebar.write('No sois de HAVAS')
-
+    # Ocultar barra lateral mediante inyección de JavaScript
+    st.markdown("""
+        <style>
+            div[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
+                display: none !important;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.header("¿Quiénes bajamos?")
     user_input = st.text_input("Nombres aquí", "")
     user_input = user_input.split(',')
