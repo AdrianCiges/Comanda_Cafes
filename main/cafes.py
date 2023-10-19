@@ -37,24 +37,61 @@ else:
 horas_restantes2 = tiempo_restante2.seconds // 3600
 minutos_restantes2 = (tiempo_restante2.seconds % 3600) // 60
 
-        
+if hora_actual > time(18, 00):
+    st.sidebar.write(f'Mira que horas son, no deberías estar aquí, pero faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30')
+elif hora_actual < primer_cafe:
+    st.sidebar.write(f"{horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
+elif hora_actual < time(11, 00):
+    st.sidebar.write('Ya deberías estar tomándote un café con los compis')
+elif hora_actual < segundo_cafe:
+    st.sidebar.write(f"{horas_restantes2} horas y {minutos_restantes2} minutos para el ☕ de las 14:45")
+else:
+    st.sidebar.write('No hay más cafés hoy ☹')
+
+# Botón para añadir una persona más
+col1, col2 = st.sidebar.columns(2)
+# nuevos = st.sidebar.selectbox("¿Añadir gente nueva? ¿Cuántos?", [0,1,2,3,4,5,6,7,8,9,10])
+nuevos = st.sidebar.number_input(label = '¿Añadir gente nueva? ¿Cuántos?', min_value=0, value=0, step=1)
+
+col1, col2 = st.sidebar.columns(2)
+if nuevos > 0:
+    gente_nueva = []
+    for i in range(nuevos):
+        gente_nueva.append(col1.text_input(f'Nombre {i+1}'))
+    gente_nueva = [g for g in gente_nueva if g != '']
+
+# Cambiar el tema de la barra lateral
+st.markdown(
+    """
+    <style>
+    .sidebar .sidebar-content {
+        background-color: #f8f9fa;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Cambiar el tema de la página principal
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #e9ecef;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # -------------------------------------------------------------------------------------------------------------------
+
 
 tab1, tab2 = st.tabs(["Havas", "Others"])
 
 with tab1:
 
-    if hora_actual > time(18, 00):
-        st.sidebar.write(f'Mira que horas son, no deberías estar aquí, pero faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30')
-    elif hora_actual < primer_cafe:
-        st.sidebar.write(f"{horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
-    elif hora_actual < time(11, 00):
-        st.sidebar.write('Ya deberías estar tomándote un café con los compis')
-    elif hora_actual < segundo_cafe:
-        st.sidebar.write(f"{horas_restantes2} horas y {minutos_restantes2} minutos para el ☕ de las 14:45")
-    else:
-        st.sidebar.write('No hay más cafés hoy ☹')
-        
     # Ruta de la imagen del logo
     LOGO_IMAGE = "./img/havas.png"
     
@@ -88,50 +125,7 @@ with tab1:
         f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
         unsafe_allow_html=True
     )
-    
-    # Cambiar el tema de la barra lateral
-    st.markdown(
-        """
-        <style>
-        .sidebar .sidebar-content {
-            background-color: #f8f9fa;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-    
-    # Cambiar el tema de la página principal
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background-color: #e9ecef;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-    
-    # image_inicio = Image.open("./img/havas.png")
-    # with io.BytesIO() as output:
-    #     image_inicio.save(output, format="PNG")
-    #     b64_1 = base64.b64encode(output.getvalue()).decode()
-    
-        # ----------------------------------------------------------------------------------------
-    
-    # Botón para añadir una persona más
-    col1, col2 = st.sidebar.columns(2)
-    # nuevos = st.sidebar.selectbox("¿Añadir gente nueva? ¿Cuántos?", [0,1,2,3,4,5,6,7,8,9,10])
-    nuevos = st.sidebar.number_input(label = '¿Añadir gente nueva? ¿Cuántos?', min_value=0, value=0, step=1)
-    
-    col1, col2 = st.sidebar.columns(2)
-    if nuevos > 0:
-        gente_nueva = []
-        for i in range(nuevos):
-            gente_nueva.append(col1.text_input(f'Nombre {i+1}'))
-        gente_nueva = [g for g in gente_nueva if g != '']
+        
         
     # ----------------------------------------------------------------------------------------
     
