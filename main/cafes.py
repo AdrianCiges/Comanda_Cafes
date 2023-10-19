@@ -965,8 +965,10 @@ with tab2:
     )
     
     # ----------------------------------------------------------------------------------------
+
+    gente_nueva = []
     
-    def gente():
+    def gente2():
         personas = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]   
         try:
             return personas + gente_nueva
@@ -988,7 +990,7 @@ with tab2:
     
     try:
     
-        for persona in gente():
+        for persona in gente2():
     
             col1, col2, col3, col4, col5 = st.columns(5)
     
