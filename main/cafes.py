@@ -126,7 +126,6 @@ with tab1:
         unsafe_allow_html=True
     )
         
-        
     # ----------------------------------------------------------------------------------------
     
     def gente():
@@ -891,18 +890,15 @@ with tab1:
 
 with tab2:
     
-    # Ocultar barra lateral mediante inyección de JavaScript
     st.markdown("""
-        <style>
-            div[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-                display: none !important;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    <style>
+     .css-1iyw2u1 {
+            display: none;
+        }
+    </style>
+    "", unsafe_allow_html=True).
 
-        # Ruta de la imagen del logo
+    # Ruta de la imagen del logo
     LOGO_IMAGE = "./img/granos.png"
     
     # Texto principal
