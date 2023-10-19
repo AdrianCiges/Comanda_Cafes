@@ -6,7 +6,15 @@ import io
 import datetime
 from datetime import datetime, time, timedelta
 import re
+import streamlit.components.v1 as components
 #import pywhatkit
+
+# Cargue el componente personalizado
+my_component = components.declare_component(
+    "my_component",
+    path="my_component/frontend",
+)
+my_component()
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
