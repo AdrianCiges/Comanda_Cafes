@@ -890,6 +890,19 @@ with tab1:
 
 with tab2:
 
+    st.markdown("""
+
+    <style>
+    
+    
+     .css-1iyw2u1 {
+            display: none;
+        }
+    
+    </style>
+    
+    "", unsafe_allow_html=True).
+
     # Ruta de la imagen del logo
     LOGO_IMAGE = "./img/granos.png"
     
