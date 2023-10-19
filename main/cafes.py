@@ -935,7 +935,7 @@ with tab2:
     
     
     # Ruta de la imagen del logo
-    LOGO_IMAGE = "./img/havas.png"
+    # LOGO_IMAGE = "./img/havas.png"
     
     # Texto principal
     texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
@@ -958,15 +958,15 @@ with tab2:
         """
         
     # Leer la imagen del logo y codificarla en base64
-    with open(LOGO_IMAGE, "rb") as image_file:
-        encoded_image = base64.b64encode(image_file.read()).decode()
+    # with open(LOGO_IMAGE, "rb") as image_file:
+    #     encoded_image = base64.b64encode(image_file.read()).decode()
     
     # Mostrar el texto principal y el logo
-    st.markdown(estilos_css, unsafe_allow_html=True)
-    st.markdown(
-        f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
-        unsafe_allow_html=True
-    )
+    # st.markdown(estilos_css, unsafe_allow_html=True)
+    # st.markdown(
+    #     f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
+    #     unsafe_allow_html=True
+    # )
     
     # ----------------------------------------------------------------------------------------
     
