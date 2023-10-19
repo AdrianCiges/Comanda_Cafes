@@ -966,11 +966,6 @@ with tab2:
     
     # ----------------------------------------------------------------------------------------
     
-    # Botón para añadir una persona más
-    col1, col2 = st.sidebar.columns(2)
-    # nuevos = st.sidebar.selectbox("¿Añadir gente nueva? ¿Cuántos?", [0,1,2,3,4,5,6,7,8,9,10])
-    nuevos = st.sidebar.number_input(label = '¿Añadir gente nueva? ¿Cuántos?', min_value=0, value=0, step=1)
-    
     col1, col2 = st.sidebar.columns(2)
     if nuevos > 0:
         gente_nueva = []
