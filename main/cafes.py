@@ -979,7 +979,7 @@ with tab2:
         patron = r'[a-zA-Z]'
         clean = []
         for persona in user_input:
-            if re.search(patron, texto) and texto.strip() != "":
+            if re.search(patron, persona) and persona.strip() != "":
                 clean.append(persona.strip())
         return clean
         
