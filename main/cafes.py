@@ -895,44 +895,6 @@ with tab1:
 
 with tab2:
     
-    hora_actual = datetime.now().time()
-    hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
-    hora_sumada = hora_actual_dt + timedelta(hours=2)
-    
-    hora_actual = hora_sumada.time()
-    hora_objetivo = time(10, 30)
-    primer_cafe = time(10, 30)
-    segundo_cafe = time(14, 45)
-    
-    if hora_actual < hora_objetivo:
-        tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
-    else:
-        # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
-        tiempo_restante = datetime.combine(datetime.today() + timedelta(days=1), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
-    
-    horas_restantes = tiempo_restante.seconds // 3600
-    minutos_restantes = (tiempo_restante.seconds % 3600) // 60
-    
-    if hora_actual < segundo_cafe:
-        tiempo_restante2 = datetime.combine(datetime.today(), segundo_cafe) - datetime.combine(datetime.today(), hora_actual)
-    else:
-        # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
-        tiempo_restante2 = datetime.combine(datetime.today() + timedelta(days=1), segundo_cafe) - datetime.combine(datetime.today(), hora_actual)
-    
-    horas_restantes2 = tiempo_restante2.seconds // 3600
-    minutos_restantes2 = (tiempo_restante2.seconds % 3600) // 60
-    
-    if hora_actual > time(18, 00):
-        st.sidebar.write(f'Mira que horas son, no deberías estar aquí, pero faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30')
-    elif hora_actual < primer_cafe:
-        st.sidebar.write(f"{horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30")
-    elif hora_actual < time(11, 00):
-        st.sidebar.write('Ya deberías estar tomándote un café con los compis')
-    elif hora_actual < segundo_cafe:
-        st.sidebar.write(f"{horas_restantes2} horas y {minutos_restantes2} minutos para el ☕ de las 14:45")
-    else:
-        st.sidebar.write('No hay más cafés hoy ☹')
-    
     # -------------------------------------------------------------------------------------------------------------------
     
     # Cambiar el tema de la barra lateral
