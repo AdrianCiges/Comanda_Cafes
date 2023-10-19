@@ -908,8 +908,7 @@ with tab2:
         f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
         unsafe_allow_html=True
     )
-
-    st.sidebar.write('No necesitas añadir gente aquí')
+    
     st.header("¿Quién quiere café?")
     user_input = st.text_input("Nombres aquí", "")
     user_input = user_input.split(',')
