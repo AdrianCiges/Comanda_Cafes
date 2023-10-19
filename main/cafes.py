@@ -1024,7 +1024,7 @@ with tab2:
                 x_tostadas.append(barrita)
 
         except:
-            st.warning(f'*{persona2.strip()}* ya ha sido añadido a la lista.')
+            st.warning(f'**{persona2.strip()}** ya ha sido añadido a la lista.')
 
     st.write('')
     st.write('')
