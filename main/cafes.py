@@ -902,6 +902,7 @@ with tab1:
     col4.metric("Media habitual", 6)
 
 with tab2:
+    havas = False
     
     # -------------------------------------------------------------------------------------------------------------------
     
@@ -928,11 +929,6 @@ with tab2:
         """,
         unsafe_allow_html=True
     )
-    
-    image_inicio = Image.open("./img/havas.png")
-    with io.BytesIO() as output:
-        image_inicio.save(output, format="PNG")
-        b64_1 = base64.b64encode(output.getvalue()).decode()
     
     
     # ----------------------------------------------------------------------------------------
@@ -973,10 +969,6 @@ with tab2:
     )
     
     # ----------------------------------------------------------------------------------------
-
-    gente_nueva2 = []
-    
-
     
     st.header("¿Quiénes bajamos?")
     user_input = st.text_input("Nombres aquí", "")
