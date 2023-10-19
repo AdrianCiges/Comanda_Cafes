@@ -981,7 +981,7 @@ with tab2:
         for persona in user_input:
             if re.search(patron, persona) and persona.strip() != "":
                 if persona in ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]:
-                    clean.append(persona.strip().title().replace('  ',' ')+"2")
+                    clean.append(persona.strip().title().replace('  ',' ')+" ")
                 else:
                     clean.append(persona.strip().title().replace('  ',' '))
 
@@ -1004,22 +1004,27 @@ with tab2:
     
     for persona2 in clean_user_input():
 
-        col10, col20, col30, col40, col50 = st.columns(5)
+        try:
 
-        seleccion2 = col10.checkbox(persona2)
+            col10, col20, col30, col40, col50 = st.columns(5)
+    
+            seleccion2 = col10.checkbox(persona2)
+    
+            if seleccion2:
+                seleccionados.append(persona2)
+    
+                bebida_seleccionada = col20.selectbox(f"Bebida de {persona2}", bebidas)
+                con_seleccionada = col30.selectbox(f"'Con' de {persona2}", con)
+                extras = col40.text_input(f"Extras de {persona2}")
+                barrita = col50.selectbox(f"Tostada de {persona2}", tostadas)
+    
+                x_bebidas.append(bebida_seleccionada)
+                x_con.append(con_seleccionada)
+                x_extras.append(extras)
+                x_tostadas.append(barrita)
 
-        if seleccion2:
-            seleccionados.append(persona2)
-
-            bebida_seleccionada = col20.selectbox(f"Bebida de {persona2}", bebidas)
-            con_seleccionada = col30.selectbox(f"'Con' de {persona2}", con)
-            extras = col40.text_input(f"Extras de {persona2}")
-            barrita = col50.selectbox(f"Tostada de {persona2}", tostadas)
-
-            x_bebidas.append(bebida_seleccionada)
-            x_con.append(con_seleccionada)
-            x_extras.append(extras)
-            x_tostadas.append(barrita)
+        except:
+            st.warning('Hay algún nombre no admitido. Modifícalo y prueba de nuevo')
 
     st.write('')
     st.write('')
