@@ -12,22 +12,6 @@ import time as timee
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
-if 'handler' not in st.session_state:
-    st.session_state.handler = []
-
-if len(st.session_state.handler) > 0:
-    state = st.session_state.handler.pop(0)
-    st.set_page_config(initial_sidebar_state=state)
-    if len(st.session_state.handler) > 0:
-        # A little extra wait time as without it sometimes the backend moves "too fast" for the front
-        timee.sleep(.1)
-        st.experimental_rerun()
-
-# st.button('Open', on_click=st.session_state.handler.append, args=['expanded'])
-# st.button('Close', on_click=st.session_state.handler.append, args=['collapsed'])
-st.button('Force Open', on_click=st.session_state.handler.extend, args=[['collapsed','expanded']])
-st.button('Force Close', on_click=st.session_state.handler.extend, args=[['expanded','collapsed']])
-
 hora_actual = datetime.now().time()
 hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
 hora_sumada = hora_actual_dt + timedelta(hours=2)
@@ -924,7 +908,8 @@ with tab2:
         f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
         unsafe_allow_html=True
     )
-        
+
+    st.sidebar.write('No necesitas añadir gente aquí')
     st.header("¿Quién quiere café?")
     user_input = st.text_input("Nombres aquí", "")
     user_input = user_input.split(',')
