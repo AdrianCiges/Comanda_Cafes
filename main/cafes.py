@@ -908,23 +908,6 @@ with tab2:
     
     # Texto principal
     texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
-    
-    # Estilos CSS para el logo y el contenedor
-    estilos_css = f"""
-        <style>
-            .logo-container {{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }}
-    
-        .logo-img {{
-            height: 40px;
-            width: auto;
-            margin-left: 20px;
-        }}
-        </style>
-        """
         
     # Leer la imagen del logo y codificarla en base64
     with open(LOGO_IMAGE, "rb") as image_file:
