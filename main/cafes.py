@@ -508,6 +508,8 @@ try:
         dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_soja - dcl_almendra - dcl_avena
         solo_normales = solo - lardob - largo - doble
 
+        st.write('ok')
+
         if ccl > 0:
             if ccl > 1:
                 if ccl_sinlact > 0 and (ccl_desnat + ccl_soja + ccl_almendra + ccl_avena + ccl_normales == 0):
