@@ -992,17 +992,17 @@ with tab2:
     
     for persona2 in gente2():
 
-        col1, col2, col3, col4, col5 = st.columns(5)
+        col10, col20, col30, col40, col50 = st.columns(5)
 
-        seleccion2 = col1.checkbox(persona2)
+        seleccion2 = col10.checkbox(persona2)
 
         if seleccion2:
             seleccionados.append(persona2)
 
-            bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas)
-            con_seleccionada = col3.selectbox(f"'Con' de {persona}", con)
-            extras = col4.text_input(f"Extras de {persona}")
-            barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
+            bebida_seleccionada = col20.selectbox(f"Bebida de {persona}", bebidas)
+            con_seleccionada = col30.selectbox(f"'Con' de {persona}", con)
+            extras = col40.text_input(f"Extras de {persona}")
+            barrita = col50.selectbox(f"Tostada de {persona}", tostadas)
 
             x_bebidas.append(bebida_seleccionada)
             x_con.append(con_seleccionada)
