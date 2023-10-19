@@ -901,6 +901,41 @@ with tab2:
         """,
         unsafe_allow_html=True
     )
+
+        # Ruta de la imagen del logo
+    LOGO_IMAGE = "./img/granos.png"
+    
+    # Texto principal
+    texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
+    
+    # Estilos CSS para el logo y el contenedor
+    estilos_css = f"""
+        <style>
+        .logo-container {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }}
+    
+        .logo-img {{
+            height: 40px;
+            width: auto;
+            margin-left: 20px;
+        }}
+        </style>
+        """
+        
+    # Leer la imagen del logo y codificarla en base64
+    with open(LOGO_IMAGE, "rb") as image_file:
+        encoded_image = base64.b64encode(image_file.read()).decode()
+    
+    # Mostrar el texto principal y el logo
+    st.markdown(estilos_css, unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
+        unsafe_allow_html=True
+    )
+        
     st.header("¿Quiénes bajamos?")
     user_input = st.text_input("Nombres aquí", "")
     user_input = user_input.split(',')
