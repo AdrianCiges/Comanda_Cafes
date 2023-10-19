@@ -7,7 +7,7 @@ import datetime
 from datetime import datetime, time, timedelta
 import re
 import streamlit.components.v1 as components
-import time
+import time as timee
 #import pywhatkit
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
@@ -20,7 +20,7 @@ if len(st.session_state.handler) > 0:
     st.set_page_config(initial_sidebar_state=state)
     if len(st.session_state.handler) > 0:
         # A little extra wait time as without it sometimes the backend moves "too fast" for the front
-        time.sleep(.1)
+        timee.sleep(.1)
         st.experimental_rerun()
 
 st.button('Open', on_click=st.session_state.handler.append, args=['expanded'])
