@@ -91,10 +91,12 @@ with tab1:
     
     
     # ----------------------------------------------------------------------------------------
-    
-    
-    # Ruta de la imagen del logo
-    LOGO_IMAGE = "./img/havas.png"
+
+    if havas:
+        # Ruta de la imagen del logo
+        LOGO_IMAGE = "./img/havas.png"
+    else:
+        pass
     
     # Texto principal
     texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
