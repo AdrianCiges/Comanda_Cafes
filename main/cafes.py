@@ -912,7 +912,7 @@ with tab2:
     # Estilos CSS para el logo y el contenedor
     estilos_css = f"""
         <style>
-        .logo-container {{
+            .logo-container {{
             display: flex;
             align-items: center;
             justify-content: center;
