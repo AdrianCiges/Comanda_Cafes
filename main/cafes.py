@@ -980,7 +980,7 @@ with tab2:
         clean = []
         for persona in user_input:
             if re.search(patron, persona) and persona.strip() != "":
-                clean.append(persona.strip().title())
+                clean.append(persona.strip().capitalize())
         return clean
         
     st.write('')
