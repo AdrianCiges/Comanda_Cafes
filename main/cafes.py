@@ -972,7 +972,7 @@ with tab2:
     
     st.header("¿Quiénes bajamos?")
     user_input = st.text_input("Nombres aquí", "")
-    user_input = [p.input.split(',') for p in user_input]
+    user_input = [p.split(',') for p in user_input]
         
     st.write('')
     
