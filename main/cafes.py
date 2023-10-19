@@ -966,13 +966,6 @@ with tab2:
     
     # ----------------------------------------------------------------------------------------
     
-    col1, col2 = st.sidebar.columns(2)
-    if nuevos > 0:
-        gente_nueva = []
-        for i in range(nuevos):
-            gente_nueva.append(col1.text_input(f'Nombre {i+1}'))
-        gente_nueva = [g for g in gente_nueva if g != '']
-    
     def gente():
         personas = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]   
         try:
