@@ -901,7 +901,7 @@ with tab2:
     
     </style>
     
-    "", unsafe_allow_html=True).
+    "", unsafe_allow_html=True)
 
     # Ruta de la imagen del logo
     LOGO_IMAGE = "./img/granos.png"
