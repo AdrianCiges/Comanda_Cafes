@@ -10,7 +10,7 @@ import re
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
-# havas = True
+havas = True
 
 if havas:
     
