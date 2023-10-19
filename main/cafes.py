@@ -980,7 +980,7 @@ with tab2:
         clean = []
         for persona in user_input:
             if re.search(patron, persona) and persona.strip() != "":
-                if persona in ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]:
+                if persona.strip() in ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]:
                     clean.append(persona.strip().title().replace('  ',' ')+" ")
                 else:
                     clean.append(persona.strip().title().replace('  ',' '))
@@ -1024,7 +1024,7 @@ with tab2:
                 x_tostadas.append(barrita)
 
         except:
-            st.warning('Hay algún nombre no admitido. Modifícalo y prueba de nuevo')
+            st.warning(f'{persona2} ya ha sido introducido. Modifícalo y prueba de nuevo')
 
     st.write('')
     st.write('')
