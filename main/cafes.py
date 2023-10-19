@@ -10,37 +10,41 @@ import re
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
-havas = True
 
-if havas:
-    
-    hora_actual = datetime.now().time()
-    hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
-    hora_sumada = hora_actual_dt + timedelta(hours=2)
-    
-    hora_actual = hora_sumada.time()
-    hora_objetivo = time(10, 30)
-    primer_cafe = time(10, 30)
-    segundo_cafe = time(14, 45)
+hora_actual = datetime.now().time()
+hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
+hora_sumada = hora_actual_dt + timedelta(hours=2)
 
-    if hora_actual < hora_objetivo:
-        tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
-    else:
-        # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
-        tiempo_restante = datetime.combine(datetime.today() + timedelta(days=1), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
-    
-    horas_restantes = tiempo_restante.seconds // 3600
-    minutos_restantes = (tiempo_restante.seconds % 3600) // 60
-    
-    if hora_actual < segundo_cafe:
-        tiempo_restante2 = datetime.combine(datetime.today(), segundo_cafe) - datetime.combine(datetime.today(), hora_actual)
-    else:
-        # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
-        tiempo_restante2 = datetime.combine(datetime.today() + timedelta(days=1), segundo_cafe) - datetime.combine(datetime.today(), hora_actual)
-    
-    horas_restantes2 = tiempo_restante2.seconds // 3600
-    minutos_restantes2 = (tiempo_restante2.seconds % 3600) // 60
-    
+hora_actual = hora_sumada.time()
+hora_objetivo = time(10, 30)
+primer_cafe = time(10, 30)
+segundo_cafe = time(14, 45)
+
+if hora_actual < hora_objetivo:
+    tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
+else:
+    # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
+    tiempo_restante = datetime.combine(datetime.today() + timedelta(days=1), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
+
+horas_restantes = tiempo_restante.seconds // 3600
+minutos_restantes = (tiempo_restante.seconds % 3600) // 60
+
+if hora_actual < segundo_cafe:
+    tiempo_restante2 = datetime.combine(datetime.today(), segundo_cafe) - datetime.combine(datetime.today(), hora_actual)
+else:
+    # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
+    tiempo_restante2 = datetime.combine(datetime.today() + timedelta(days=1), segundo_cafe) - datetime.combine(datetime.today(), hora_actual)
+
+horas_restantes2 = tiempo_restante2.seconds // 3600
+minutos_restantes2 = (tiempo_restante2.seconds % 3600) // 60
+
+        
+# -------------------------------------------------------------------------------------------------------------------
+
+tab1, tab2 = st.tabs(["Havas", "Others"])
+
+with tab1:
+
     if hora_actual > time(18, 00):
         st.sidebar.write(f'Mira que horas son, no deberías estar aquí, pero faltan {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de las 10:30')
     elif hora_actual < primer_cafe:
@@ -51,7 +55,7 @@ if havas:
         st.sidebar.write(f"{horas_restantes2} horas y {minutos_restantes2} minutos para el ☕ de las 14:45")
     else:
         st.sidebar.write('No hay más cafés hoy ☹')
-
+        
     # Ruta de la imagen del logo
     LOGO_IMAGE = "./img/havas.png"
     
@@ -86,64 +90,6 @@ if havas:
         unsafe_allow_html=True
     )
     
-    # ----------------------------------------------------------------------------------------
-    
-    # Botón para añadir una persona más
-    col1, col2 = st.sidebar.columns(2)
-    # nuevos = st.sidebar.selectbox("¿Añadir gente nueva? ¿Cuántos?", [0,1,2,3,4,5,6,7,8,9,10])
-    nuevos = st.sidebar.number_input(label = '¿Añadir gente nueva? ¿Cuántos?', min_value=0, value=0, step=1)
-    
-    col1, col2 = st.sidebar.columns(2)
-    if nuevos > 0:
-        gente_nueva = []
-        for i in range(nuevos):
-            gente_nueva.append(col1.text_input(f'Nombre {i+1}'))
-        gente_nueva = [g for g in gente_nueva if g != '']
-
-else:
-
-    # Ruta de la imagen del logo
-    LOGO_IMAGE = "./img/havas.png"
-    
-    # Texto principal
-    texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
-    
-    # Estilos CSS para el logo y el contenedor
-    estilos_css = f"""
-        <style>
-        .logo-container {{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }}
-    
-        .logo-img {{
-            height: 40px;
-            width: auto;
-            margin-left: 20px;
-        }}
-        </style>
-        """
-        
-    # Leer la imagen del logo y codificarla en base64
-    with open(LOGO_IMAGE, "rb") as image_file:
-        encoded_image = base64.b64encode(image_file.read()).decode()
-    
-    # Mostrar el texto principal y el logo
-    st.markdown(estilos_css, unsafe_allow_html=True)
-    st.markdown(
-        f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
-        unsafe_allow_html=True
-    )
-        
-# -------------------------------------------------------------------------------------------------------------------
-
-tab1, tab2 = st.tabs(["Havas", "Others"])
-
-with tab1:
-
-    havas = True
-        
     # Cambiar el tema de la barra lateral
     st.markdown(
         """
@@ -174,7 +120,20 @@ with tab1:
     #     image_inicio.save(output, format="PNG")
     #     b64_1 = base64.b64encode(output.getvalue()).decode()
     
+        # ----------------------------------------------------------------------------------------
     
+    # Botón para añadir una persona más
+    col1, col2 = st.sidebar.columns(2)
+    # nuevos = st.sidebar.selectbox("¿Añadir gente nueva? ¿Cuántos?", [0,1,2,3,4,5,6,7,8,9,10])
+    nuevos = st.sidebar.number_input(label = '¿Añadir gente nueva? ¿Cuántos?', min_value=0, value=0, step=1)
+    
+    col1, col2 = st.sidebar.columns(2)
+    if nuevos > 0:
+        gente_nueva = []
+        for i in range(nuevos):
+            gente_nueva.append(col1.text_input(f'Nombre {i+1}'))
+        gente_nueva = [g for g in gente_nueva if g != '']
+        
     # ----------------------------------------------------------------------------------------
     
     def gente():
@@ -938,31 +897,30 @@ with tab1:
 # -------------------------------------------------------------------------------------------------------------------
 
 with tab2:
-    havas = False
     
-    # Cambiar el tema de la barra lateral
-    st.markdown(
-        """
-        <style>
-        .sidebar .sidebar-content {
-            background-color: #f8f9fa;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    # # Cambiar el tema de la barra lateral
+    # st.markdown(
+    #     """
+    #     <style>
+    #     .sidebar .sidebar-content {
+    #         background-color: #f8f9fa;
+    #     }
+    #     </style>
+    #     """,
+    #     unsafe_allow_html=True
+    # )
     
-    # Cambiar el tema de la página principal
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background-color: #e9ecef;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    # # Cambiar el tema de la página principal
+    # st.markdown(
+    #     """
+    #     <style>
+    #     .stApp {
+    #         background-color: #e9ecef;
+    #     }
+    #     </style>
+    #     """,
+    #     unsafe_allow_html=True
+    # )
     
     # ----------------------------------------------------------------------------------------
     
