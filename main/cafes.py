@@ -329,14 +329,14 @@ try:
 
         ccl = 0
         ccl_sinlact = 0
-        ccl_soja
+        ccl_soja = 0
         ccl_almendra = 0
         ccl_avena = 0
         ccl_desnat = 0
 
         dcl = 0
         dcl_sinlact = 0
-        dcl_soja
+        dcl_soja = 0
         dcl_almendra = 0
         dcl_avena = 0
         dcl_desnat = 0
@@ -350,25 +350,25 @@ try:
         rojo = 0
         rojo_leche = 0
         rojo_sinlac= 0
-        rojo_soja
+        rojo_soja = 0
         rojo_almendra = 0
         rojo_avena = 0
         verde = 0
         verde_leche = 0
         verde_sinlac= 0
-        verde_soja
+        verde_soja = 0
         verde_almendra = 0
         verde_avena = 0
         negro = 0
         negro_leche = 0
         negro_sinlac = 0
-        negro_soja
+        negro_soja = 0
         negro_almendra = 0
         negro_avena = 0
 
         colacao = 0
         colacao_sinlact = 0
-        colacao_soja
+        colacao_soja = 0
         colacao_almendra = 0
         colacao_avena = 0
         colacao_desnat = 0
@@ -508,8 +508,7 @@ try:
         dcl_normales = dcl - dcl_sinlact - dcl_desnat - dcl_soja - dcl_almendra - dcl_avena
         solo_normales = solo - lardob - largo - doble
 
-        st.write('ok')
-
+        
         if ccl > 0:
             if ccl > 1:
                 if ccl_sinlact > 0 and (ccl_desnat + ccl_soja + ccl_almendra + ccl_avena + ccl_normales == 0):
