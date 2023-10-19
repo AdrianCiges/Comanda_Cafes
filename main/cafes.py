@@ -980,7 +980,11 @@ with tab2:
         clean = []
         for persona in user_input:
             if re.search(patron, persona) and persona.strip() != "":
-                clean.append(persona.strip().title().replace('  ',' '))
+                if persona in ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]:
+                    clean.append(persona.strip().title().replace('  ',' ')+" ")
+                else:
+                    clean.append(persona.strip().title().replace('  ',' '))
+
         return clean
         
     st.write('')
