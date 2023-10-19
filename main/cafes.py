@@ -968,15 +968,13 @@ with tab2:
 
     gente_nueva2 = []
     
-    def gente2():
-        personas2 = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]   
-        try:
-            return personas2 + gente_nueva2
-        except:
-            return personas2
+
     
     st.header("¿Quiénes bajamos?")
+    user_input = st.text_input("Nombres aquí", "")
+        
     st.write('')
+    
     bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro 🤔']
     con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Soja 🌿', 'Leche Almendra 🌰','Leche Avena 🥣','Cortado ✂️', 'Solo ❌', '']
     tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
@@ -990,7 +988,7 @@ with tab2:
     
     # try:
     
-    for persona2 in gente2():
+    for persona2 in user_input:
 
         col10, col20, col30, col40, col50 = st.columns(5)
 
@@ -999,10 +997,10 @@ with tab2:
         if seleccion2:
             seleccionados.append(persona2)
 
-            bebida_seleccionada = col20.selectbox(f"Bebida de {persona}", bebidas)
-            con_seleccionada = col30.selectbox(f"'Con' de {persona}", con)
-            extras = col40.text_input(f"Extras de {persona}")
-            barrita = col50.selectbox(f"Tostada de {persona}", tostadas)
+            bebida_seleccionada = col20.selectbox(f"Bebida de {persona2}", bebidas)
+            con_seleccionada = col30.selectbox(f"'Con' de {persona2}", con)
+            extras = col40.text_input(f"Extras de {persona2}")
+            barrita = col50.selectbox(f"Tostada de {persona2}", tostadas)
 
             x_bebidas.append(bebida_seleccionada)
             x_con.append(con_seleccionada)
