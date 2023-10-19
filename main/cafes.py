@@ -889,19 +889,6 @@ with tab1:
 # -------------------------------------------------------------------------------------------------------------------
 
 with tab2:
-    
-    st.markdown("""
-    
-    <style>
-    
-    
-     .css-1iyw2u1 {
-            display: none;
-        }
-    
-    </style>
-    
-    "", unsafe_allow_html=True).
 
     # Ruta de la imagen del logo
     LOGO_IMAGE = "./img/granos.png"
@@ -1606,4 +1593,3 @@ with tab2:
     col2.metric("% Hoy vs Total", f'{perc_total}%', f"{perc_total-100}% del total")
     col3.metric("% Hoy vs Habitual", f'{perc_hab}%', f"{perc_hab-100}% de lo habitual")
     col4.metric("Media habitual", 6)
-
