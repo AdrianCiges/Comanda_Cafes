@@ -898,32 +898,9 @@ with tab1:
 
 with tab2:
     
-    # # Cambiar el tema de la barra lateral
-    # st.markdown(
-    #     """
-    #     <style>
-    #     .sidebar .sidebar-content {
-    #         background-color: #f8f9fa;
-    #     }
-    #     </style>
-    #     """,
-    #     unsafe_allow_html=True
-    # )
-    
-    # # Cambiar el tema de la página principal
-    # st.markdown(
-    #     """
-    #     <style>
-    #     .stApp {
-    #         background-color: #e9ecef;
-    #     }
-    #     </style>
-    #     """,
-    #     unsafe_allow_html=True
-    # )
-    
     # ----------------------------------------------------------------------------------------
-    
+    st.sidebar.write('No sois de HAVAS')
+
     st.header("¿Quiénes bajamos?")
     user_input = st.text_input("Nombres aquí", "")
     user_input = user_input.split(',')
