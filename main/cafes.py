@@ -12,16 +12,16 @@ import time as timee
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
 
-# if 'handler' not in st.session_state:
-#     st.session_state.handler = []
+if 'handler' not in st.session_state:
+    st.session_state.handler = []
 
-# if len(st.session_state.handler) > 0:
-#     state = st.session_state.handler.pop(0)
-#     st.set_page_config(initial_sidebar_state=state)
-#     if len(st.session_state.handler) > 0:
-#         # A little extra wait time as without it sometimes the backend moves "too fast" for the front
-#         timee.sleep(.1)
-#         st.experimental_rerun()
+if len(st.session_state.handler) > 0:
+    state = st.session_state.handler.pop(0)
+    st.set_page_config(initial_sidebar_state=state)
+    if len(st.session_state.handler) > 0:
+        # A little extra wait time as without it sometimes the backend moves "too fast" for the front
+        timee.sleep(.1)
+        st.experimental_rerun()
 
 # st.button('Open', on_click=st.session_state.handler.append, args=['expanded'])
 # st.button('Close', on_click=st.session_state.handler.append, args=['collapsed'])
