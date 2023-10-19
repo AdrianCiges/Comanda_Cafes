@@ -890,6 +890,14 @@ with tab1:
 
 with tab2:
 
+    # close sidebar
+    js1 = """
+    var clickme = window.parent.document.querySelectorAll("button");
+    clickme[1].click();
+    """
+    
+    streamlit_js_eval(js_expressions=js1)
+
     # Ruta de la imagen del logo
     LOGO_IMAGE = "./img/granos.png"
     
