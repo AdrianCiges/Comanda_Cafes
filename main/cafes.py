@@ -136,7 +136,7 @@ with tab1:
         except:
             return personas
     
-    st.header("¿Quiénes bajamos?")
+    st.header("¿Quién quiere café?")
     st.write('')
     bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro 🤔']
     con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Soja 🌿', 'Leche Almendra 🌰','Leche Avena 🥣','Cortado ✂️', 'Solo ❌', '']
@@ -908,7 +908,7 @@ with tab2:
         unsafe_allow_html=True
     )
         
-    st.header("¿Quiénes bajamos?")
+    st.header("¿Quién quiere café?")
     user_input = st.text_input("Nombres aquí", "")
     user_input = user_input.split(',')
 
