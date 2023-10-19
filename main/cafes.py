@@ -889,12 +889,14 @@ with tab1:
 # -------------------------------------------------------------------------------------------------------------------
 
 with tab2:
-
-    # close sidebar
-    js1 = """
-    var clickme = window.parent.document.querySelectorAll("button");
-    clickme[1].click();
-    """
+    st.markdown("""
+        <script>
+            var clickme = window.parent.document.querySelectorAll("button");
+            clickme[1].click();
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
     
     streamlit_js_eval(js_expressions=js1)
 
