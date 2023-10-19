@@ -5,6 +5,7 @@ import base64
 import io
 import datetime
 from datetime import datetime, time, timedelta
+import re
 #import pywhatkit
 
 st.set_page_config(layout="wide", page_title="Coffees", page_icon="./img/cafe5.png")
@@ -973,6 +974,14 @@ with tab2:
     st.header("¿Quiénes bajamos?")
     user_input = st.text_input("Nombres aquí", "")
     user_input = user_input.split(',')
+
+    def clean_user_input():
+        patron = r'[a-zA-Z]'
+        clean = []
+        for persona in user_input:
+            if re.search(patron, texto) and texto.strip() != "":
+                clean.append(persona.strip())
+        return clean
         
     st.write('')
     
@@ -989,7 +998,7 @@ with tab2:
     
     # try:
     
-    for persona2 in user_input:
+    for persona2 in clean_user_input():
 
         col10, col20, col30, col40, col50 = st.columns(5)
 
