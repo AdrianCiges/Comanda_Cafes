@@ -76,7 +76,7 @@ result = streamlit_bokeh_events(
 
 if result:
     if "GET_LOCATION" in result:
-        st.write(f"Tu ubicación es: {result.get("GET_LOCATION")})
+        st.write(f"Tu ubicación es: {result.get("GET_LOCATION")}")
         ubi = result.get("GET_LOCATION")
 
 # --------------------------------------------------------------------------------------------------------------------
