@@ -12,6 +12,15 @@ import time as timee
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
+from bokeh.io import show
+from bokeh.plotting import gmap
+from bokeh.models import GMapOptions
+from bokeh.models import ColumnDataSource
+from bokeh.palettes import Set3
+from bokeh.palettes import Category20
+from bokeh.palettes import RdBu3
+from bokeh.resources import CDN
+from bokeh.embed import file_html
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
