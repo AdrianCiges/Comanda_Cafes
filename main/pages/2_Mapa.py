@@ -71,82 +71,20 @@ estilos_css = f"""
 
 # --------------------------------------------------------------------------------------------------------------------
 
-# # Sample list of countries and cities
-# countries = ["Spain", "USA", "Germany"]
-# cities = {
-#     "Spain": ["Madrid", "Barcelona"],
-#     "USA": ["New York", "San Francisco"],
-#     "Germany": ["Berlin", "Munich"]
-# }
-
-
-# # Sample coffee shop data (replace with actual data)
-# coffee_shops = {
-#     "Madrid": pd.DataFrame({
-#         'lat': [40.4286, 40.4168],
-#         'lon': [-3.7037, -3.7024]
-#     }),
-#     "Barcelona": pd.DataFrame({
-#         'lat': [41.3879, 41.3962],
-#         'lon': [2.1699, 2.1603]
-#     }),
-#     "New York": pd.DataFrame({
-#         'lat': [40.7128, 40.7189],
-#         'lon': [-74.0060, -74.0112]
-#     }),
-#     "San Francisco": pd.DataFrame({
-#         'lat': [37.7749, 37.7824],
-#         'lon': [-122.4194, -122.4090]
-#     })
-# }
-
-# # Dropdown to select country
-# selected_country = st.selectbox("Select a country:", countries)
-
-# # Dropdown to select city based on country
-# if selected_country:
-#     selected_city = st.selectbox("Select a city:", cities[selected_country])
-
-# # Display coffee shops on map
-# if selected_city:
-#     st.map(coffee_shops[selected_city])
-
-
-# --------------------------------------------------------------------------------------------------------------------
-
-import streamlit as st
-from bokeh.models import Button, CustomJS
-from streamlit_bokeh_events import streamlit_bokeh_events
-
-# Inject custom CSS to change button shape to circular
-st.markdown("""
-    <style>
-        .bk.bk-btn.bk-btn-primary {
-            border-radius: 50%;
-            width: 75px;
-            height: 75px;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# Your existing JavaScript and Bokeh code for button functionality
-loc_button = Button(label="Mi ubicación")
-loc_button.js_on_event("button_click", CustomJS(code="""
-    navigator.geolocation.getCurrentPosition(
-        (loc) => {
-            document.dispatchEvent(new CustomEvent("GET_LOCATION", {detail: {lat: loc.coords.latitude, lon: loc.coords.longitude}}))
-        }
-    )
-    """))
+st.write('<div id="custom-button-wrapper"></div>', unsafe_allow_html=True)
 result = streamlit_bokeh_events(
     loc_button,
     events="GET_LOCATION",
     key="get_location",
     refresh_on_update=False,
-    override_height=75,
-    debounce_time=0)
-
-if result:
-    if "GET_LOCATION" in result:
-        st.write(result.get("GET_LOCATION"))
-
+    debounce_time=0,
+    target="custom-button-wrapper")
+st.markdown("""
+<style>
+    #custom-button-wrapper .bk-root .bk-btn {
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+    }
+</style>
+""", unsafe_allow_html=True)
