@@ -114,29 +114,39 @@ if result:
 
 # --------------------------------------------------------------------------------------------------------------------
 
-# JavaScript code to get location
+import streamlit as st
+from bokeh.models import Button, CustomJS
+from streamlit_bokeh_events import streamlit_bokeh_events
+
+# Inject custom CSS to change button shape to circular
 st.markdown("""
-    <script>
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition((position) => {
-                    const pos = {
-                        lat: position.coords.latitude,
-                        lon: position.coords.longitude
-                    };
-                    fetch('/get_location', {
-                        method: 'POST',
-                        body: JSON.stringify(pos),
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
-                });
-            }
+    <style>
+        .bk.bk-btn.bk-btn-primary {
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
         }
-    </script>
+    </style>
 """, unsafe_allow_html=True)
 
-# Streamlit button
-if st.button('Mi ubicación'):
-    st.write('Button clicked. Check server for POST request.')
+# Your existing JavaScript and Bokeh code for button functionality
+loc_button = Button(label="Mi ubicación")
+loc_button.js_on_event("button_click", CustomJS(code="""
+    navigator.geolocation.getCurrentPosition(
+        (loc) => {
+            document.dispatchEvent(new CustomEvent("GET_LOCATION", {detail: {lat: loc.coords.latitude, lon: loc.coords.longitude}}))
+        }
+    )
+    """))
+result = streamlit_bokeh_events(
+    loc_button,
+    events="GET_LOCATION",
+    key="get_location",
+    refresh_on_update=False,
+    override_height=75,
+    debounce_time=0)
+
+if result:
+    if "GET_LOCATION" in result:
+        st.write(result.get("GET_LOCATION"))
+
