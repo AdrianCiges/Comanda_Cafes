@@ -83,7 +83,7 @@ if result:
 # --------------------------------------------------------------------------------------------------------------------
         latitude = 40
         longitude = -3
-        data = pd.DataFrame({'LAT': [latitude], 'LON': [longitude]})
+        data = pd.DataFrame({'LAT': [ubi['lat']], 'LON': [ubi[lon']]})
         st.map(data, zoom=10)
 
 
