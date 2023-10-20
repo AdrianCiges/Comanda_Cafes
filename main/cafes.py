@@ -879,7 +879,7 @@ with tab1:
     st.write('')
     
     n_cafeteros = len(seleccionados)
-    perc_total = int((len(seleccionados)/len(gente()))*100)
+    perc_total = int((len(seleccionados)/len(gente2()))*100)
     perc_hab = int((len(seleccionados)/6)*100)
     
     col1, col2, col3, col4 = st.columns(4)
@@ -1592,7 +1592,7 @@ with tab2:
     media_habitual = col4.number_input('Media habitual:', value=6)
     col1.metric("Cafeteros hoy", n_cafeteros, f"{n_cafeteros-media_habitual} de lo habitual")
 
-    perc_total = int((len(seleccionados)/len(gente()))*100)
+    perc_total = int((len(seleccionados)/len(gente2()))*100)
     col2.metric("% Hoy vs Total", f'{perc_total}%', f"{perc_total-100}% del total")
 
     perc_hab = int((len(seleccionados)/media_habitual)*100)
