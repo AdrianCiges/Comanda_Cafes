@@ -9,6 +9,7 @@ from datetime import datetime, time, timedelta
 import re
 import streamlit.components.v1 as components
 import time as timee
+import geocoder
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -44,8 +45,10 @@ estilos_css = f"""
     </style>
     """
 
-import streamlit as st
-import pandas as pd
+g = geocoder.ip('me')
+g = g.latlng)
+
+st.map(g)
 
 # Sample list of countries and cities
 countries = ["Spain", "USA", "Germany"]
@@ -55,33 +58,34 @@ cities = {
     "Germany": ["Berlin", "Munich"]
 }
 
-# Sample coffee shop data (replace with actual data)
-coffee_shops = {
-    "Madrid": pd.DataFrame({
-        'lat': [40.4286, 40.4168],
-        'lon': [-3.7037, -3.7024]
-    }),
-    "Barcelona": pd.DataFrame({
-        'lat': [41.3879, 41.3962],
-        'lon': [2.1699, 2.1603]
-    }),
-    "New York": pd.DataFrame({
-        'lat': [40.7128, 40.7189],
-        'lon': [-74.0060, -74.0112]
-    }),
-    "San Francisco": pd.DataFrame({
-        'lat': [37.7749, 37.7824],
-        'lon': [-122.4194, -122.4090]
-    })
-}
 
-# Dropdown to select country
-selected_country = st.selectbox("Select a country:", countries)
+# # Sample coffee shop data (replace with actual data)
+# coffee_shops = {
+#     "Madrid": pd.DataFrame({
+#         'lat': [40.4286, 40.4168],
+#         'lon': [-3.7037, -3.7024]
+#     }),
+#     "Barcelona": pd.DataFrame({
+#         'lat': [41.3879, 41.3962],
+#         'lon': [2.1699, 2.1603]
+#     }),
+#     "New York": pd.DataFrame({
+#         'lat': [40.7128, 40.7189],
+#         'lon': [-74.0060, -74.0112]
+#     }),
+#     "San Francisco": pd.DataFrame({
+#         'lat': [37.7749, 37.7824],
+#         'lon': [-122.4194, -122.4090]
+#     })
+# }
 
-# Dropdown to select city based on country
-if selected_country:
-    selected_city = st.selectbox("Select a city:", cities[selected_country])
+# # Dropdown to select country
+# selected_country = st.selectbox("Select a country:", countries)
 
-# Display coffee shops on map
-if selected_city:
-    st.map(coffee_shops[selected_city])
+# # Dropdown to select city based on country
+# if selected_country:
+#     selected_city = st.selectbox("Select a city:", cities[selected_country])
+
+# # Display coffee shops on map
+# if selected_city:
+#     st.map(coffee_shops[selected_city])
