@@ -46,7 +46,7 @@ estilos_css = f"""
     """
 
 g = geocoder.ip('me')
-g = g.latlng)
+g = g.latlng
 
 st.map(g)
 
