@@ -81,9 +81,9 @@ if result:
         ubi = result.get("GET_LOCATION")
 
 # --------------------------------------------------------------------------------------------------------------------
-        latitude = 40
-        longitude = -3
-        data = pd.DataFrame({'LAT': [ubi['lat']], 'LON': [ubi[lon']]})
+        latitude = ubi['lat']
+        longitude = ubi['lon']
+        data = pd.DataFrame({'LAT': [latitude], 'LON': [longitude]})
         st.map(data, zoom=10)
 
 
