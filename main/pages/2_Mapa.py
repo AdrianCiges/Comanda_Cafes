@@ -110,7 +110,7 @@ if result:
         p.add_tile(tile_provider)
         
         # Convert coordinates to Web Mercator
-        merc_x, merc_y = lonlat_to_mercator(longitude, latitude)
+        merc_x, merc_y = lonlat_to_mercator(ubi['lat'], ubi['lon'])
         
         # Plot coordinates on the map
         p.circle(x=[merc_x], y=[merc_y], size=10, color="red")
