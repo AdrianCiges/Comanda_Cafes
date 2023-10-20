@@ -86,3 +86,8 @@ if selected_country:
 if selected_city:
     st.map(coffee_shops[selected_city])
 
+
+
+import geocoder
+g = geocoder.ip('me')
+st.write(g.latlng)
