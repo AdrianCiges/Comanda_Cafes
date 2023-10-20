@@ -76,7 +76,61 @@ result = streamlit_bokeh_events(
 
 if result:
     if "GET_LOCATION" in result:
-        st.write(result.get("GET_LOCATION"))
+        st.write(f"Tu ubicación es: {result.get("GET_LOCATION")})
+        ubi = result.get("GET_LOCATION")
 
 # --------------------------------------------------------------------------------------------------------------------
 
+bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
+
+def plotAll(data, zoom=15, map_type='roadmap'):
+    gmap_options = GMapOptions(lat=data[0][1], lng=data[0][2], 
+                               map_type=map_type, zoom=zoom)
+    p = gmap(GOOGLE_API_KEY, gmap_options, title='AwanTunai - Risk Intelligence', 
+             width=bokeh_width, height=bokeh_height)
+    
+    latArr = []
+    longArr = []
+    colorArr = []
+    labelArr = []
+    colidx = 0
+    colpalette =
+ Category20.get(20)
+    print(‘palette length: ‘, len(Set3))
+    
+    for x in data:
+        if(x[4] == ‘Stationary’):
+          latArr.append(x[1])
+          longArr.append(x[2])
+          labelArr.append(x[3])
+          if(colidx == len(colpalette)):
+              colidx=0
+          colorArr.append(colpalette[colidx])
+          colidx+=1
+    
+    print(‘latArr: ‘, latArr)
+    print(‘longArr: ‘, longArr)
+    print(‘colorArr: ‘, colorArr)
+    print(‘label: ‘, labelArr)
+    
+    source = ColumnDataSource(dict(
+                x=longArr,
+                y=latArr,
+                color=colorArr,
+                label=labelArr
+            ))
+    
+    center = p.circle(x=’x’, y=’y’, size=10, alpha=0.9, color=’color’, legend_group=’label’, source=source)
+    
+    if RESIDENCE_LATLONG is not None:
+        p.triangle([RESIDENCE_LATLONG[1]], [RESIDENCE_LATLONG[0]], size=10, alpha=0.9, color=’red’)
+    if BUSINESS_LATLONG is not None:
+        p.triangle([BUSINESS_LATLONG[1]], [BUSINESS_LATLONG[0]], size=10, alpha=0.9, color=’blue’)
+    html = file_html(p, CDN, "User locations")
+    return html
+
+import streamlit.components.v1 as components
+if len(data) > 0:
+    components.html(plotAll(data, 15, 'satellite'), height = bokeh_height + 100, width = bokeh_width + 100)
+else:
+    st.write('no location data found')
