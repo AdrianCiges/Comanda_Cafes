@@ -1594,7 +1594,7 @@ with tab2:
     n_cafeteros = len(seleccionados)
     
     col1, col2, col3, col4 = st.columns(4)
-    media_habitual = col4.number_input('Media habitual:', value=6)
+    media_habitual = col4.number_input('Media habitual: ', value=6)
     col1.metric("Cafeteros hoy", n_cafeteros, f"{n_cafeteros-media_habitual} de lo habitual")
 
     try:
