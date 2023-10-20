@@ -1595,7 +1595,7 @@ with tab2:
     col2.metric("% Hoy vs Total", f'{perc_total}%', f"{perc_total-100}% del total")
     col3.metric("% Hoy vs Habitual", f'{perc_hab}%', f"{perc_hab-100}% de lo habitual")
     # col4.metric("Media habitual", 6)
+    col4.metric("Media habitual", insert_number)
 
     insert_number = st.number_input('Insert a number:', value=6)
-    col4.metric("Media habitual", insert_number)
 
