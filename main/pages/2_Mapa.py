@@ -10,44 +10,37 @@ import re
 import streamlit.components.v1 as components
 import time as timee
 
-import streamlit as st
-import pandas as pd
-import requests
-from streamlit_folium import folium_static
-import folium
+st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
-# Sample Country and City lists (replace with actual data)
-countries = ["USA", "Spain", "France"]
-cities = {
-    "USA": ["New York", "San Francisco"],
-    "Spain": ["Madrid", "Barcelona"],
-    "France": ["Paris", "Lyon"]
-}
+# Cambiar el tema de la página principal
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #e9ecef;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# Country dropdown
-selected_country = st.selectbox("Select a country:", countries)
+# Texto principal
+texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
 
-# City dropdown
-if selected_country:
-    selected_city = st.selectbox("Select a city:", cities[selected_country])
+# Estilos CSS para el logo y el contenedor
+estilos_css = f"""
+    <style>
+    .logo-container {{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }}
 
-# Fetch and Display Coffee Shops (this is an example; replace with actual data fetching)
-if selected_city:
-    # You would typically fetch real data from Google Places API or OpenStreetMap API here
-    # For demonstration, let's assume we fetched the following coffee shop coordinates for the selected city
-    sample_data = pd.DataFrame({
-        'lat': [40.4286, 40.4168],
-        'lon': [-3.7037, -3.7024],
-        'name': ['Coffee Shop 1', 'Coffee Shop 2']
-    })
-
-    # Create a folium map centered around the first coffee shop coordinates
-    m = folium.Map(location=[sample_data.iloc[0]['lat'], sample_data.iloc[0]['lon']], zoom_start=15)
-
-    # Add coffee shop markers to the map
-    for idx, row in sample_data.iterrows():
-        folium.Marker([row['lat'], row['lon']], popup=row['name']).add_to(m)
-
-    # Render map
-    folium_static(m)
+    .logo-img {{
+        height: 40px;
+        width: auto;
+        margin-left: 20px;
+    }}
+    </style>
+    """
 
