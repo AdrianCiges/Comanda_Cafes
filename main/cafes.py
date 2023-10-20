@@ -879,7 +879,7 @@ with tab1:
     st.write('')
     
     n_cafeteros = len(seleccionados)
-    perc_total = int((len(seleccionados)/len(gente2()))*100)
+    perc_total = int((len(seleccionados)/len(gente()))*100)
     perc_hab = int((len(seleccionados)/6)*100)
     
     col1, col2, col3, col4 = st.columns(4)
