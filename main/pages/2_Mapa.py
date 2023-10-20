@@ -21,6 +21,7 @@ from bokeh.palettes import Category20
 from bokeh.palettes import RdBu3
 from bokeh.resources import CDN
 from bokeh.embed import file_html
+import math
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
