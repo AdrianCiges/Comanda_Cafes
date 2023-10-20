@@ -72,6 +72,8 @@ estilos_css = f"""
 # --------------------------------------------------------------------------------------------------------------------
 
 st.write('<div id="custom-button-wrapper"></div>', unsafe_allow_html=True)
+loc_button = Button(label="Mi ubicación")
+
 result = streamlit_bokeh_events(
     loc_button,
     events="GET_LOCATION",
