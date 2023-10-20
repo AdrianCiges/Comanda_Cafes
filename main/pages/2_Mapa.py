@@ -91,3 +91,4 @@ if selected_city:
 import geocoder
 g = geocoder.ip('me')
 st.write(g.latlng)
+st.write(g)
