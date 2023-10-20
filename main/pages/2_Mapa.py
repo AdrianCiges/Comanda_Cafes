@@ -82,7 +82,7 @@ if result:
 
 # --------------------------------------------------------------------------------------------------------------------
 
-        bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
+        #bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
         
         import streamlit as st
         from bokeh.plotting import figure
