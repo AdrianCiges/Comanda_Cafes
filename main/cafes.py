@@ -1597,5 +1597,5 @@ with tab2:
     # col4.metric("Media habitual", 6)
 
     insert_number = st.number_input('Insert a number:', value=6)
-    st.metric("Media habitual", insert_number)
+    col4.metric("Media habitual", insert_number)
 
