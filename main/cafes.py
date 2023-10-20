@@ -1596,9 +1596,9 @@ with tab2:
         perc_total = int((len(seleccionados)/len(clean_user_input()))*100)
         col2.metric("% Hoy vs Total", f'{perc_total}%', f"{perc_total-100}% del total")
     except:
-        perc_total = 1
+        perc_total = 1000000000000000000000000000000000000000000000000000
         col2.metric("% Hoy vs Total", f'{perc_total}%', f"Métrica no disponible")
-        #col2.warning('Métrica no disponible')
+        col2.warning('Métrica no disponible')
 
 
 
