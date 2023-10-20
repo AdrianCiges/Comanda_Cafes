@@ -44,6 +44,44 @@ estilos_css = f"""
     </style>
     """
 
+hora_actual = datetime.now().time()
+hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
+hora_sumada = hora_actual_dt + timedelta(hours=2)
+
+hora_actual = hora_sumada.time()
+hora_objetivo = time(12, 00)
+primer_cafe = time(12, 00)
+segundo_cafe = time(14, 00)
+
+if hora_actual < hora_objetivo:
+    tiempo_restante = datetime.combine(datetime.today(), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
+else:
+    # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
+    tiempo_restante = datetime.combine(datetime.today() + timedelta(days=1), hora_objetivo) - datetime.combine(datetime.today(), hora_actual)
+
+horas_restantes = tiempo_restante.seconds // 3600
+minutos_restantes = (tiempo_restante.seconds % 3600) // 60
+
+if hora_actual < segundo_cafe:
+    tiempo_restante2 = datetime.combine(datetime.today(), segundo_cafe) - datetime.combine(datetime.today(), hora_actual)
+else:
+    # Sumamos un día al tiempo objetivo para obtener la próxima ocurrencia
+    tiempo_restante2 = datetime.combine(datetime.today() + timedelta(days=1), segundo_cafe) - datetime.combine(datetime.today(), hora_actual)
+
+horas_restantes2 = tiempo_restante2.seconds // 3600
+minutos_restantes2 = (tiempo_restante2.seconds % 3600) // 60
+
+if hora_actual > time(18, 00):
+    st.sidebar.write(f'¿Un ☕ calentito para una tarde intensa?')
+elif hora_actual < primer_cafe:
+    st.sidebar.write(f"Aún tienes {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de la mañana (12:00)")
+elif hora_actual < time(12, 00):
+    st.sidebar.write('¿Aún no te has tomado tu café matutino?')
+elif hora_actual < segundo_cafe:
+    st.sidebar.write(f"Quedan {horas_restantes2} horas y {minutos_restantes2} minutos para el ☕ post-comida (14:00)")
+else:
+    st.sidebar.write('Nunca es mala hora para un ☕')
+
 
 # Ruta de la imagen del logo
 LOGO_IMAGE = "./img/granos.png"
