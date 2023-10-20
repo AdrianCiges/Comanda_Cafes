@@ -9,6 +9,9 @@ from datetime import datetime, time, timedelta
 import re
 import streamlit.components.v1 as components
 import time as timee
+from bokeh.models.widgets import Button
+from bokeh.models import CustomJS
+from streamlit_bokeh_events import streamlit_bokeh_events
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -44,12 +47,7 @@ estilos_css = f"""
     </style>
     """
 
-import streamlit as st
-from bokeh.models.widgets import Button
-from bokeh.models import CustomJS
-from streamlit_bokeh_events import streamlit_bokeh_events
-
-loc_button = Button(label="Get Location")
+loc_button = Button(label="Mi ubicación")
 loc_button.js_on_event("button_click", CustomJS(code="""
     navigator.geolocation.getCurrentPosition(
         (loc) => {
@@ -69,13 +67,15 @@ if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
 
-# Sample list of countries and cities
-countries = ["Spain", "USA", "Germany"]
-cities = {
-    "Spain": ["Madrid", "Barcelona"],
-    "USA": ["New York", "San Francisco"],
-    "Germany": ["Berlin", "Munich"]
-}
+# --------------------------------------------------------------------------------------------------------------------
+
+# # Sample list of countries and cities
+# countries = ["Spain", "USA", "Germany"]
+# cities = {
+#     "Spain": ["Madrid", "Barcelona"],
+#     "USA": ["New York", "San Francisco"],
+#     "Germany": ["Berlin", "Munich"]
+# }
 
 
 # # Sample coffee shop data (replace with actual data)
@@ -108,3 +108,33 @@ cities = {
 # # Display coffee shops on map
 # if selected_city:
 #     st.map(coffee_shops[selected_city])
+
+
+# --------------------------------------------------------------------------------------------------------------------
+
+# JavaScript code to get location
+st.markdown("""
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    const pos = {
+                        lat: position.coords.latitude,
+                        lon: position.coords.longitude
+                    };
+                    fetch('/get_location', {
+                        method: 'POST',
+                        body: JSON.stringify(pos),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                });
+            }
+        }
+    </script>
+""", unsafe_allow_html=True)
+
+# Streamlit button
+if st.button('Mi ubicación'):
+    st.write('Button clicked. Check server for POST request.')
