@@ -1,3 +1,2 @@
 streamlit==1.27.0
 pywhatkit==5.0.0
-geocoder==0.2.0
