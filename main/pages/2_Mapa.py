@@ -81,39 +81,45 @@ if result:
         ubi = result.get("GET_LOCATION")
 
 # --------------------------------------------------------------------------------------------------------------------
+latitude = 40
+longitude = -3
+st.map(data=[[latitude, longitude]], zoom=10)
 
-        #bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
+
+
+
+        # #bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
         
-        import streamlit as st
-        from bokeh.plotting import figure
-        from bokeh.tile_providers import get_provider, Vendors
+        # import streamlit as st
+        # from bokeh.plotting import figure
+        # from bokeh.tile_providers import get_provider, Vendors
         
-        # Coordinates
-        latitude = 40
-        longitude = -3
+        # # Coordinates
+        # latitude = 40
+        # longitude = -3
         
-        # Convert latitude and longitude to Web Mercator format
-        def lonlat_to_mercator(lon, lat):
-            lat_rad = lat * (3.141592653589793 / 180.0)
-            merc_x = lon * 20037508.34 / 180.0
-            merc_y = (180.0 / 3.141592653589793) * \
-                     (6378137.0 * 3.141592653589793 * \
-                      0.25 * \
-                      (math.log(1.0 + math.sin(lat_rad)) -
-                       math.log(1.0 - math.sin(lat_rad))))
-            return merc_x, merc_y
+        # # Convert latitude and longitude to Web Mercator format
+        # def lonlat_to_mercator(lon, lat):
+        #     lat_rad = lat * (3.141592653589793 / 180.0)
+        #     merc_x = lon * 20037508.34 / 180.0
+        #     merc_y = (180.0 / 3.141592653589793) * \
+        #              (6378137.0 * 3.141592653589793 * \
+        #               0.25 * \
+        #               (math.log(1.0 + math.sin(lat_rad)) -
+        #                math.log(1.0 - math.sin(lat_rad))))
+        #     return merc_x, merc_y
         
-        # Create Bokeh figure
-        tile_provider = get_provider(Vendors.CARTODBPOSITRON)
-        p = figure(x_range=(-2000000, 6000000), y_range=(-1000000, 7000000),
-                   x_axis_type="mercator", y_axis_type="mercator", width=800, height=600)
-        p.add_tile(tile_provider)
+        # # Create Bokeh figure
+        # tile_provider = get_provider(Vendors.CARTODBPOSITRON)
+        # p = figure(x_range=(-2000000, 6000000), y_range=(-1000000, 7000000),
+        #            x_axis_type="mercator", y_axis_type="mercator", width=800, height=600)
+        # p.add_tile(tile_provider)
         
-        # Convert coordinates to Web Mercator
-        merc_x, merc_y = lonlat_to_mercator(ubi['lat'], ubi['lon'])
+        # # Convert coordinates to Web Mercator
+        # merc_x, merc_y = lonlat_to_mercator(ubi['lat'], ubi['lon'])
         
-        # Plot coordinates on the map
-        p.circle(x=[merc_x], y=[merc_y], size=10, color="red")
+        # # Plot coordinates on the map
+        # p.circle(x=[merc_x], y=[merc_y], size=10, color="red")
         
-        # Streamlit
-        st.bokeh_chart(p, use_container_width=True)
+        # # Streamlit
+        # st.bokeh_chart(p, use_container_width=True)
