@@ -1592,8 +1592,15 @@ with tab2:
     media_habitual = col4.number_input('Media habitual:', value=6)
     col1.metric("Cafeteros hoy", n_cafeteros, f"{n_cafeteros-media_habitual} de lo habitual")
 
-    perc_total = int((len(seleccionados)/len(clean_user_input()))*100)
-    col2.metric("% Hoy vs Total", f'{perc_total}%', f"{perc_total-100}% del total")
+    try:
+        perc_total = int((len(seleccionados)/len(clean_user_input()))*100)
+        col2.metric("% Hoy vs Total", f'{perc_total}%', f"{perc_total-100}% del total")
+    except:
+        # perc_total = 1
+        # col2.metric("% Hoy vs Total", f'{perc_total}%', f"{perc_total-100}% del total")
+        col2.warning('Métrica no disponible')
+
+
 
     perc_hab = int((len(seleccionados)/media_habitual)*100)
     col3.metric("% Hoy vs Habitual", f'{perc_hab}%', f"{perc_hab-100}% de lo habitual")
