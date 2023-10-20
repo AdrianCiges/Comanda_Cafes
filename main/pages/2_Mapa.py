@@ -47,7 +47,10 @@ estilos_css = f"""
     </style>
     """
 
-loc_button = Button(label="Mi ubicación")
+# --------------------------------------------------------------------------------------------------------------------
+
+# loc_button = Button(label="Mi ubicación")
+loc_button = st.button('Mi ubicación')
 loc_button.js_on_event("button_click", CustomJS(code="""
     navigator.geolocation.getCurrentPosition(
         (loc) => {
