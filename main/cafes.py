@@ -1598,7 +1598,7 @@ with tab2:
     except:
         perc_total = 1
         col2.metric("% Hoy vs Total", f'{perc_total}%', f"Métrica no disponible")
-        col2.warning('Métrica no disponible')
+        #col2.warning('Métrica no disponible')
 
 
 
