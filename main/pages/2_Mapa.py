@@ -9,7 +9,6 @@ from datetime import datetime, time, timedelta
 import re
 import streamlit.components.v1 as components
 import time as timee
-import geocoder
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -45,10 +44,30 @@ estilos_css = f"""
     </style>
     """
 
-g = geocoder.ip('me')
-g = g.latlng
+import streamlit as st
+from bokeh.models.widgets import Button
+from bokeh.models import CustomJS
+from streamlit_bokeh_events import streamlit_bokeh_events
 
-st.map(g)
+loc_button = Button(label="Get Location")
+loc_button.js_on_event("button_click", CustomJS(code="""
+    navigator.geolocation.getCurrentPosition(
+        (loc) => {
+            document.dispatchEvent(new CustomEvent("GET_LOCATION", {detail: {lat: loc.coords.latitude, lon: loc.coords.longitude}}))
+        }
+    )
+    """))
+result = streamlit_bokeh_events(
+    loc_button,
+    events="GET_LOCATION",
+    key="get_location",
+    refresh_on_update=False,
+    override_height=75,
+    debounce_time=0)
+
+if result:
+    if "GET_LOCATION" in result:
+        st.write(result.get("GET_LOCATION"))
 
 # Sample list of countries and cities
 countries = ["Spain", "USA", "Germany"]
