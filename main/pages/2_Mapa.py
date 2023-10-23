@@ -79,6 +79,7 @@ def extract_cafeterias_in_madrid():
 
     for node in result.nodes:
         cafe_info = {
+            "Cafeteria":
             "Name": node.tags.get("name", "DESCONOCIDO"),
             "Tlf": node.tags.get("phone", "-"),
             "Web": node.tags.get("website", "-"),
@@ -173,7 +174,9 @@ if result:
             for index, row in sorted_df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=f"{row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
+                    popup=f"{Cafetería {index},
+                            row['Name']}, 
+                            Ubi: {row['Calle']} {row['Numero']}",
                 ).add_to(m)
 
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
