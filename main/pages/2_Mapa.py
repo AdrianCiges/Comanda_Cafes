@@ -146,7 +146,7 @@ if result:
         # Probando con folium
         m = folium.Map(location=[latitude, longitude], zoom_start=10)
         folium.Marker(
-            [latitude, longitude], popup="Estás aquí", tooltip="Estás aquí"
+            [latitude, longitude], popup="Estás aquí", tooltip="Estás aquí",icon=red_icon
         ).add_to(m)
         
         # call to render Folium map in Streamlit
