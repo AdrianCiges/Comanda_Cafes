@@ -170,25 +170,25 @@ if result:
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
             
-            # for index, row in sorted_df.iterrows():
-            #     folium.Marker(
-            #         location=[row["Latitude"], row["Longitude"]],
-            #         popup=f"{row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
-            #     ).add_to(m)
+            for index, row in sorted_df.iterrows():
+                folium.Marker(
+                    location=[row["Latitude"], row["Longitude"]],
+                    popup=f"{row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
+                ).add_to(m)
 
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
-            for index, row in sorted_df.iterrows():
-                # Crear un marcador personalizado con una etiqueta alargada
-                marker = folium.map.Marker(
-                    location=[row["Latitude"], row["Longitude"]],
-                    icon=folium.DivIcon(
-                        icon_size=(150, 30),  # Tamaño personalizado de la etiqueta
-                        html=f'<div style="width: 150px; text-align: center; background-color: white; padding: 5px;">{row["Name"]}, Ubi: {row["Calle"]} {row["Numero"]}</div>'
-                    )
-                )
+            # for index, row in sorted_df.iterrows():
+            #     # Crear un marcador personalizado con una etiqueta alargada
+            #     marker = folium.map.Marker(
+            #         location=[row["Latitude"], row["Longitude"]],
+            #         icon=folium.DivIcon(
+            #             icon_size=(150, 30),  # Tamaño personalizado de la etiqueta
+            #             html=f'<div style="width: 150px; text-align: center; background-color: white; padding: 5px;">{row["Name"]}, Ubi: {row["Calle"]} {row["Numero"]}</div>'
+            #         )
+            #     )
                 
-                # Agregar el marcador al mapa
-                marker.add_to(m)
+            #     # Agregar el marcador al mapa
+            #     marker.add_to(m)
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
 
             # Muestra el mapa interactivo en Streamlit
