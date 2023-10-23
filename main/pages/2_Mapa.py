@@ -165,7 +165,7 @@ if result:
             df['dif_sum'] = df['lat_dif'] + df['lon_dif']
             
             sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
-            sorted_df = sorted_df.reset_index(drop=True)
+            sorted_df = sorted_df.reset_index(drop=True, start=1)
     
             # st.table(df)
             
@@ -195,6 +195,8 @@ if result:
             # Muestra el mapa interactivo en Streamlit
             st.write("Mapa de ubicaciones:")
             st_data2 = folium_static(m)
+
+            st.table(sorted_df['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza'])
 
 
 # --------------------------------------------------------------------------------------------------------------------
