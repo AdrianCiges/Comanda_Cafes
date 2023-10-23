@@ -88,7 +88,8 @@ def extract_cafeterias_in_madrid():
             "Horario": node.tags.get("opening_hours", "-"),
             "Terraza": node.tags.get("outdoor_seating", "DESCONOCIDO"),
             "Latitude": float(node.lat),
-            "Longitude": float(node.lon)
+            "Longitude": float("{:.2f}".format(node.lon))
+            
         }
         cafes.append(cafe_info)
 
