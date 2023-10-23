@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import overpy
 from collections import Counter
 from PIL import Image
 import base64
@@ -24,6 +25,7 @@ from streamlit_bokeh_events import streamlit_bokeh_events
 import math
 import folium
 from streamlit_folium import folium_static
+from geopy.geocoders import Nominatim
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -61,6 +63,54 @@ estilos_css = f"""
 
 # -------------------------------------------------------------------------------FUNCIONA-------------------------------------
 
+def extract_cafeterias_in_madrid():
+    api = overpy.Overpass()
+
+    # Definimos una consulta para extraer las cafeterías en Madrid
+    query = """
+    area["name"="Madrid"];
+    node["amenity"="cafe"](area);
+    out;
+    """
+
+    result = api.query(query)
+
+    cafes = []
+
+    for node in result.nodes:
+        cafe_info = {
+            "Name": node.tags.get("name", "DESCONOCIDO"),
+            "Tlf": node.tags.get("phone", "-"),
+            "Web": node.tags.get("website", "-"),
+            "Facebook": node.tags.get("contact:facebook", "-"),
+            "Calle": node.tags.get("addr:street", "-"),
+            "Numero": node.tags.get("addr:housenumber", ""),
+            "Horario": node.tags.get("opening_hours", "-"),
+            "Terraza": node.tags.get("outdoor_seating", "DESCONOCIDO"),
+            "Latitude": node.lat,
+            "Longitude": node.lon,
+        }
+        cafes.append(cafe_info)
+
+    return cafes
+
+def get_city_from_coordinates(latitude, longitude):
+    geolocator = Nominatim(user_agent="city_finder")
+    
+    # Obtener la dirección completa a partir de las coordenadas
+    location = geolocator.reverse((latitude, longitude), exactly_one=True)
+    
+    # Extraer la ciudad de la dirección
+    if location:
+        address = location.address
+        address_parts = address.split(", ")
+        city = address_parts[-4]  # La ciudad generalmente se encuentra en la tercera posición desde el final
+        return city
+    else:
+        return "No se pudo encontrar la ciudad"
+        
+# -------------------------------------------------------------------------------FUNCIONA-------------------------------------
+
 loc_button = Button(label="Mi ubicación", width=150, height=50, button_type="success")
 loc_button.js_on_event("button_click", CustomJS(code="""
     navigator.geolocation.getCurrentPosition(
@@ -79,13 +129,15 @@ result = streamlit_bokeh_events(
 
 if result:
     if "GET_LOCATION" in result:
-        st.write(f"Tu ubicación es: {result.get('GET_LOCATION')}")
         ubi = result.get("GET_LOCATION")
-
-# --------------------------------------------------------------------------------------------------------------------
+        st.write(f"Tu ubicación es: {ubi}")        
         latitude = ubi['lat']
         longitude = ubi['lon']
+        city = get_city_from_coordinates(latitude, longitude)
+        st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
+# --------------------------------------------------------------------------------------------------------------------
+        
         
         # data = pd.DataFrame({'LAT': [latitude], 'LON': [longitude]})
         # st.map(data, zoom=10)
@@ -100,6 +152,16 @@ if result:
         # call to render Folium map in Streamlit
         st_data = folium_static(m)
 
+
+        if __name__ == "__main__":
+            cafes_in_madrid = extract_cafeterias_in_madrid()
+            
+            # Crear un DataFrame a partir de la lista de cafeterías
+            df = pd.DataFrame(cafes_in_madrid)
+            st.table(df)
+
+
+# --------------------------------------------------------------------------------------------------------------------
 
         # #bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
         
