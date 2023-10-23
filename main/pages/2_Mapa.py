@@ -165,7 +165,7 @@ if result:
             df['dif_sum'] = df['lat_dif'] + df['lon_dif']
             
             sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
-            sorted_df = sorted_df.reset_index(drop=True, start=1)
+            sorted_df.index = range(1, len(sorted_df) + 1)
     
             # st.table(df)
             
