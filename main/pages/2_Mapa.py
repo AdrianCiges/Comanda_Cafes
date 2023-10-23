@@ -167,7 +167,7 @@ if result:
             for index, row in df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=f"Latitud: {row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
+                    popup=f"{row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
                 ).add_to(m)
             
             # Muestra el mapa interactivo en Streamlit
