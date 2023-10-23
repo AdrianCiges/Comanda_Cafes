@@ -108,7 +108,30 @@ def get_city_from_coordinates(latitude, longitude):
         return city
     else:
         return "No se pudo encontrar la ciudad"
-        
+
+def convert_coordinates(input_string):
+    # Dividir las coordenadas en latitud y longitud
+    lat, lon = map(float, input_string.split(', '))
+
+    # Convertir la latitud a grados, minutos y segundos
+    lat_deg = int(lat)
+    lat_min = int((lat - lat_deg) * 60)
+    lat_sec = (lat - lat_deg - lat_min / 60) * 3600
+
+    # Convertir la longitud a grados, minutos y segundos
+    lon_deg = int(lon)
+    lon_min = int((lon - lon_deg) * 60)
+    lon_sec = (lon - lon_deg - lon_min / 60) * 3600
+
+    # Construir la cadena de salida en el formato deseado
+    output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"N+{lon_deg}°{lon_min}'{lon_sec:.1f}\"E"
+
+    return output_string
+
+def make_clickable(val):
+    # target _blank to open new window
+    return '<a target="_blank" href="{}">{}</a>'.format(val,val)
+    
 # -------------------------------------------------------------------------------FUNCIONA-------------------------------------
 
 loc_button = Button(label="Mi ubicación", width=150, height=50, button_type="success")
@@ -195,6 +218,10 @@ if result:
             # Muestra el mapa interactivo en Streamlit
             st.write("Mapa de ubicaciones:")
             st_data2 = folium_static(m)
+
+            sorted_df['coords'] = [f"{lat}, {lon}" for lat, lon in zip(sorted_df['Latitude'], sorted_df['Longitude'])]
+            sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+            sorted_df = sorted_df.style.format({'¿Cómo llegar?': make_clickable})
 
             st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza']])
 
