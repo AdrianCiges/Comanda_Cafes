@@ -144,7 +144,7 @@ if result:
         
 
         # Probando con folium
-        m = folium.Map(location=[latitude, longitude], zoom_start=16)
+        m = folium.Map(location=[latitude, longitude], zoom_start=10)
         folium.Marker(
             [latitude, longitude], popup="Estás aquí", tooltip="Estás aquí"
         ).add_to(m)
@@ -159,6 +159,20 @@ if result:
             # Crear un DataFrame a partir de la lista de cafeterías
             df = pd.DataFrame(cafes_in_madrid)
             st.table(df)
+
+            # Crea un mapa de Folium centrado en una ubicación inicial
+            # m = folium.Map(location=[df["Latitude"].mean(), df["Longitude"].mean()], zoom_start=10)
+            
+            # Agrega marcadores para cada par de latitud y longitud en el DataFrame
+            for index, row in df.iterrows():
+                folium.Marker(
+                    location=[row["Latitude"], row["Longitude"]],
+                    popup=f"Latitud: {row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
+                ).add_to(m)
+            
+            # Muestra el mapa interactivo en Streamlit
+            st.write("Mapa de ubicaciones:")
+            st.folium_static(m)
 
 
 # --------------------------------------------------------------------------------------------------------------------
