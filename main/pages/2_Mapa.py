@@ -223,7 +223,7 @@ if result:
             sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
             sorted_df.style.format({'¿Cómo llegar?': make_clickable})
 
-            st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza']])
+            st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','¿Cómo llegar?']])
 
 
 # --------------------------------------------------------------------------------------------------------------------
