@@ -158,7 +158,7 @@ if result:
             
             # Crear un DataFrame a partir de la lista de cafeterías
             df = pd.DataFrame(cafes_in_madrid)
-            st.table(df)
+            st.dataframe(df)
 
 
 # --------------------------------------------------------------------------------------------------------------------
