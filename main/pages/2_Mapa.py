@@ -79,7 +79,6 @@ def extract_cafeterias_in_madrid():
 
     for node in result.nodes:
         cafe_info = {
-            "Cafeteria":
             "Name": node.tags.get("name", "DESCONOCIDO"),
             "Tlf": node.tags.get("phone", "-"),
             "Web": node.tags.get("website", "-"),
