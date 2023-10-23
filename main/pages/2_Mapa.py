@@ -151,7 +151,7 @@ if result:
         ).add_to(m)
         
         # call to render Folium map in Streamlit
-        st_data = folium_static(m)
+        #st_data = folium_static(m)
 
 
         if __name__ == "__main__":
@@ -159,11 +159,17 @@ if result:
             
             # Crear un DataFrame a partir de la lista de cafeterías
             df = pd.DataFrame(cafes_in_madrid)
-            lat_max = latitude+0.005
-            lat_min = latitude-0.005
-            lon_max = longitude+0.01
-            lon_min = longitude-0.01
-            filtered_df = df[(df['Latitude'] >= lat_min) & (df['Latitude'] <= lat_max) & (df['Longitude'] >= lon_min) & (df['Longitude'] <= lon_max)]
+            # lat_max = latitude+0.005
+            # lat_min = latitude-0.005
+            # lon_max = longitude+0.01
+            # lon_min = longitude-0.01
+            # filtered_df = df[(df['Latitude'] >= lat_min) & (df['Latitude'] <= lat_max) & (df['Longitude'] >= lon_min) & (df['Longitude'] <= lon_max)]
+
+            df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
+            df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
+            df['dif_sum'] = df['lat_dif'] + df['lon_dif']
+            
+            sorted_df = df.sort_values(by='dif_sum', ascending=True)
     
             # st.table(df)
 
@@ -171,7 +177,7 @@ if result:
             # m = folium.Map(location=[df["Latitude"].mean(), df["Longitude"].mean()], zoom_start=30)
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
-            for index, row in filtered_df.iterrows():
+            for index, row in sorted_df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
                     popup=f"{row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
