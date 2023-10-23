@@ -144,7 +144,7 @@ if result:
         
 
         # Probando con folium
-        m = folium.Map(location=[latitude, longitude], zoom_start=100)
+        m = folium.Map(location=[latitude, longitude], zoom_start=30)
         red_icon = folium.Icon(color='red')
         folium.Marker(
             [latitude, longitude], popup="Estás aquí", tooltip="Estás aquí",icon=red_icon
@@ -161,8 +161,8 @@ if result:
             df = pd.DataFrame(cafes_in_madrid)
             lat_max = latitude+0.01
             lat_min = latitude-0.01
-            lon_max = longitude+0.01
-            lon_min = longitude-0.01
+            lon_max = longitude+0.02
+            lon_min = longitude-0.02
             filtered_df = df[(df['Latitude'] >= lat_min) & (df['Latitude'] <= lat_max) & (df['Longitude'] >= lon_min) & (df['Longitude'] <= lon_max)]
     
             # st.table(df)
