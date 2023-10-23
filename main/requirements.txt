@@ -3,3 +3,4 @@ pywhatkit==5.0.0
 bokeh==2.4.3  
 streamlit-bokeh-events==0.1.2 
 folium==0.14.0
+streamlit_folium==0.4.0
