@@ -225,6 +225,7 @@ if result:
                 coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
             sorted_df['coords'] = coords
             sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+            sorted_df = sorted_df[['Name','¿Cómo llegar?']]
             st.data_editor(
                 sorted_df,
                 column_config={
@@ -233,7 +234,7 @@ if result:
                 hide_index=True,
             )
 
-            st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','¿Cómo llegar?']])
+            #st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','¿Cómo llegar?']])
 
 
 # --------------------------------------------------------------------------------------------------------------------
