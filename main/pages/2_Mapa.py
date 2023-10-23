@@ -219,6 +219,7 @@ if result:
             st.write("Mapa de ubicaciones:")
             st_data2 = folium_static(m)
 
+            sorted_df = sorted_df.reset_index(drop=True)
             coords = []
             for i,e in enumerate(sorted_df['Latitude']):
                 coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
