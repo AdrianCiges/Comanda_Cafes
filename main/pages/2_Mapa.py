@@ -98,7 +98,7 @@ if result:
         ).add_to(m)
         
         # call to render Folium map in Streamlit
-        st_data = folium_static(m, width=100)
+        st_data = folium_static(m)
 
 
         # #bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
