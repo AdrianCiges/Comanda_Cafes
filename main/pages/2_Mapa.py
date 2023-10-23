@@ -196,7 +196,7 @@ if result:
             st.write("Mapa de ubicaciones:")
             st_data2 = folium_static(m)
 
-            st.table(sorted_df['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza'])
+            st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza']])
 
 
 # --------------------------------------------------------------------------------------------------------------------
