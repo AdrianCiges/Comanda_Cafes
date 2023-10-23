@@ -219,7 +219,10 @@ if result:
             st.write("Mapa de ubicaciones:")
             st_data2 = folium_static(m)
 
-            sorted_df['coords'] = [f"{lat}, {lon}" for lat, lon in zip(sorted_df['Latitude'], sorted_df['Longitude'])]
+            coords = []
+            for i,e in enumerate(sorted_df['Latitude']):
+                coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+            sorted_df['coords'] = coords
             sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
             st.data_editor(
                 sorted_df,
