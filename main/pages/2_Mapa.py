@@ -221,7 +221,9 @@ if result:
 
             sorted_df['coords'] = [f"{lat}, {lon}" for lat, lon in zip(sorted_df['Latitude'], sorted_df['Longitude'])]
             sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
-            sorted_df.style.format({'¿Cómo llegar?': make_clickable})
+            # sorted_df.style.format({'¿Cómo llegar?': make_clickable})
+            # Formatear la columna '¿Cómo llegar?' como enlaces clicables
+            sorted_df['¿Cómo llegar?'] = sorted_df['¿Cómo llegar?'].apply(lambda x: f'<a href="{x}" target="_blank">Enlace</a>')
 
             st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','¿Cómo llegar?']])
 
