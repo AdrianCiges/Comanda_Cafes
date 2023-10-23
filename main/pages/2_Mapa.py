@@ -169,7 +169,7 @@ if result:
             df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
             df['dif_sum'] = df['lat_dif'] + df['lon_dif']
             
-            sorted_df = df.sort_values(by='dif_sum', ascending=True)
+            sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
     
             # st.table(df)
 
@@ -177,7 +177,7 @@ if result:
             # m = folium.Map(location=[df["Latitude"].mean(), df["Longitude"].mean()], zoom_start=30)
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
-            for index, row in sorted_df.iterrows()[:10]:
+            for index, row in sorted_df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
                     popup=f"{row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
