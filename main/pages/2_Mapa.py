@@ -145,6 +145,7 @@ if result:
 
         # Probando con folium
         m = folium.Map(location=[latitude, longitude], zoom_start=10)
+        red_icon = folium.Icon(color='red')
         folium.Marker(
             [latitude, longitude], popup="Estás aquí", tooltip="Estás aquí",icon=red_icon
         ).add_to(m)
