@@ -177,7 +177,7 @@ if result:
             # m = folium.Map(location=[df["Latitude"].mean(), df["Longitude"].mean()], zoom_start=30)
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
-            for index, row in sorted_df.iterrows():
+            for index, row in sorted_df.iterrows()[:10]:
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
                     popup=f"{row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
