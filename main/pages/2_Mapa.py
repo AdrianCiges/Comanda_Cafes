@@ -172,7 +172,7 @@ if result:
             
             # Muestra el mapa interactivo en Streamlit
             st.write("Mapa de ubicaciones:")
-            st.folium_static(m)
+            st_data2 = folium_static(m)
 
 
 # --------------------------------------------------------------------------------------------------------------------
