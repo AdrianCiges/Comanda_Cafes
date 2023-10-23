@@ -178,18 +178,17 @@ if result:
 
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
             for index, row in sorted_df.iterrows():
-                # Crea un ícono personalizado con una etiqueta más alargada
-                custom_icon = folium.DivIcon(
-                    icon_size=(150, 20),  # Tamaño personalizado de la etiqueta
-                    html=f'<div style="width: 150px; text-align: center;">{row["Name"]}, Ubi: {row["Calle"]} {row["Numero"]}</div>'
-                )
-
-                # Agrega un marcador personalizado al mapa
-                folium.Marker(
+                # Crear un marcador personalizado con una etiqueta alargada
+                marker = folium.map.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    icon=custom_icon,
-                    tooltip=row["Name"],  # Puedes mostrar el nombre como un tooltip si lo deseas
-                ).add_to(m)
+                    icon=folium.DivIcon(
+                        icon_size=(150, 30),  # Tamaño personalizado de la etiqueta
+                        html=f'<div style="width: 150px; text-align: center; background-color: white; padding: 5px;">{row["Name"]}, Ubi: {row["Calle"]} {row["Numero"]}</div>'
+                    )
+                )
+                
+                # Agregar el marcador al mapa
+                marker.add_to(m)
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
 
             # Muestra el mapa interactivo en Streamlit
