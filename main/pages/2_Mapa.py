@@ -23,7 +23,7 @@ from bokeh.resources import CDN
 from bokeh.embed import file_html
 import math
 import folium
-from streamlit_folium import st_folium
+from streamlit_folium import folium_static
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -97,7 +97,7 @@ if result:
         ).add_to(m)
         
         # call to render Folium map in Streamlit
-        st_data = st_folium(m, width=725)
+        st_data = folium_static(m, width=725)
 
 
         # #bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
