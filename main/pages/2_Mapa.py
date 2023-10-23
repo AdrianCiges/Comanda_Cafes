@@ -158,7 +158,7 @@ if result:
             
             # Crear un DataFrame a partir de la lista de cafeterías
             df = pd.DataFrame(cafes_in_madrid)
-            st.table(df)
+            # st.table(df)
 
             # Crea un mapa de Folium centrado en una ubicación inicial
             # m = folium.Map(location=[df["Latitude"].mean(), df["Longitude"].mean()], zoom_start=10)
