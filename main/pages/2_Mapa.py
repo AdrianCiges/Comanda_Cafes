@@ -85,10 +85,11 @@ if result:
 # --------------------------------------------------------------------------------------------------------------------
         latitude = ubi['lat']
         longitude = ubi['lon']
-        data = pd.DataFrame({'LAT': [latitude], 'LON': [longitude]})
-        st.map(data, zoom=10)
 
-
+        
+        # data = pd.DataFrame({'LAT': [latitude], 'LON': [longitude]})
+        # st.map(data, zoom=10)
+        
 
         # Probando con folium
         m = folium.Map(location=[latitude, longitude], zoom_start=16)
