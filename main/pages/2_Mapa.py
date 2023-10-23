@@ -140,7 +140,7 @@ if result:
         
         
         # data = pd.DataFrame({'LAT': [latitude], 'LON': [longitude]})
-        # st.map(data, zoom=10)
+        # st.map(data, zoom=100)
         
 
         # Probando con folium
@@ -159,13 +159,19 @@ if result:
             
             # Crear un DataFrame a partir de la lista de cafeterías
             df = pd.DataFrame(cafes_in_madrid)
+            lat_max = latitude+0.01
+            lat_min = latitude-0.01
+            lon_max = longitude+0.01
+            lon_min = longitude-0.01
+            filtered_df = df[(df['Latitude'] >= lat_min) & (df['Latitude'] <= lat_max) & (df['Longitude'] >= lon_min) & (df['Longitude'] <= lon_max)]
+    
             # st.table(df)
 
             # Crea un mapa de Folium centrado en una ubicación inicial
-            # m = folium.Map(location=[df["Latitude"].mean(), df["Longitude"].mean()], zoom_start=10)
+            # m = folium.Map(location=[df["Latitude"].mean(), df["Longitude"].mean()], zoom_start=100)
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
-            for index, row in df.iterrows():
+            for index, row in filtered_df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
                     popup=f"{row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
