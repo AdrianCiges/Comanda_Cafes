@@ -26,6 +26,7 @@ import math
 import folium
 from streamlit_folium import folium_static
 from geopy.geocoders import Nominatim
+import urllib.parse
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -240,11 +241,11 @@ if result:
             sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
 
             for index, row in sorted_df.iterrows():
-                # Crear un enlace a Google Maps utilizando la latitud y longitud
+                # Codifica la URL correctamente
+                encoded_url = urllib.parse.quote(sorted_df["Cómo llegar"][index])
             
-                # Crear el popup con el enlace clickeable que se abrirá en una nueva ventana
-                popup_content = f'A {row["Metros"]} metros <a href="{sorted_df["Cómo llegar"][index]}" target="_blank"><strong>{row["Name"]}</strong></a>'
-
+                # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
+                popup_content = f'A {row["Metros"]} metros <a href="{encoded_url}" target="_blank"><strong>{row["Name"]}</strong></a>'
             
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
