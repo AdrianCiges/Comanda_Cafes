@@ -99,7 +99,7 @@ def get_city_from_coordinates(latitude, longitude):
     geolocator = Nominatim(user_agent="city_finder")
     
     # Obtener la dirección completa a partir de las coordenadas
-    location = geolocator.reverse((latitude, longitude), exactly_one=True)
+    location = geolocator.reverse((latitude, longitude), exactly_one=True) # Susceptible de timeout error!! Arreglar
     
     # Extraer la ciudad de la dirección
     if location:
@@ -187,7 +187,18 @@ if result:
         #st.write(f"Tu ubicación es: {ubi}")        
         latitude = ubi['lat']
         longitude = ubi['lon']
-        city = get_city_from_coordinates(latitude, longitude)
+        try:
+            city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
+        except:
+            st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
+        ciudades_espana = [
+                            "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
+                            "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
+                            "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
+                          ]
+        ciudad_seleccionada = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
+
+            
         #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
 # --------------------------------------------------------------------------------------------------------------------
