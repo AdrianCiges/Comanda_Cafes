@@ -79,14 +79,14 @@ def extract_cafeterias_in_madrid():
 
     for node in result.nodes:
         cafe_info = {
-            "Name": node.tags.get("name", "DESCONOCIDO"),
+            "Name": node.tags.get("name", "No especificado"),
             "Tlf": node.tags.get("phone", "-"),
             "Web": node.tags.get("website", "-"),
             "Facebook": node.tags.get("contact:facebook", "-"),
             "Calle": node.tags.get("addr:street", "-"),
             "Numero": node.tags.get("addr:housenumber", ""),
-            "Horario": node.tags.get("opening_hours", "-"),
-            "Terraza": node.tags.get("outdoor_seating", "DESCONOCIDO").capitalize(),
+            "Horario": node.tags.get("opening_hours", "No especificado"),
+            "Terraza": node.tags.get("outdoor_seating", "No especificado").capitalize(),
             "Latitude": float(node.lat),
             "Longitude": float(node.lon)
         }
@@ -138,6 +138,29 @@ def convert_coordinates(input_string):
 def make_clickable(val):
     # target _blank to open new window
     return '<a target="_blank" href="{}">{}</a>'.format(val,val)
+
+def haversine_distance(lat1, lon1, lat2, lon2):
+    """
+    Calculate the great circle distance in meters between two points
+    on the Earth's surface identified by latitude and longitude.
+    :param lat1: Latitude of the first point (in degrees)
+    :param lon1: Longitude of the first point (in degrees)
+    :param lat2: Latitude of the second point (in degrees)
+    :param lon2: Longitude of the second point (in degrees)
+    :return: Distance in meters
+    """
+    # Convert degrees to radians
+    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
+
+    # Haversine formula
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+    a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+    radius_earth = 6371000  # Earth's radius in meters
+    distance = radius_earth * c
+
+    return distance
     
 # -------------------------------------------------------------------------------FUNCIONA-------------------------------------
 
@@ -160,11 +183,11 @@ result = streamlit_bokeh_events(
 if result:
     if "GET_LOCATION" in result:
         ubi = result.get("GET_LOCATION")
-        st.write(f"Tu ubicación es: {ubi}")        
+        #st.write(f"Tu ubicación es: {ubi}")        
         latitude = ubi['lat']
         longitude = ubi['lon']
         city = get_city_from_coordinates(latitude, longitude)
-        st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
+        #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
 # --------------------------------------------------------------------------------------------------------------------
         
@@ -232,7 +255,8 @@ if result:
                 coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
             sorted_df['coords'] = coords
             sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
-            sorted_df = sorted_df[['Name','¿Cómo llegar?']]
+            sorted_df['metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+            sorted_df = sorted_df[['Name','¿Cómo llegar?','metros']]
             st.data_editor(
                 sorted_df,
                 column_config={
