@@ -184,6 +184,7 @@ if ubi_allow:
             #st.write(f"Tu ubicación es: {ubi}")        
             latitude = ubi['lat']
             longitude = ubi['lon']
+            city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
             try:
                 city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
             except:
