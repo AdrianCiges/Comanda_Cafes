@@ -26,8 +26,9 @@ import math
 import folium
 from streamlit_folium import folium_static
 from geopy.geocoders import Nominatim
+from geopy.geocoders import Photon
 import urllib.parse
-geolocator = Nominatim(user_agent="coffee_maps")
+geolocator = Photon(user_agent="coffee_maps")
 
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
@@ -98,13 +99,13 @@ def extract_cafeterias_in_madrid():
     return cafes
 
 def get_city_from_coordinates(latitude, longitude):
-    geolocator = Nominatim(user_agent="city_finder")
+    geolocator = Photon(user_agent="city_finder")
     
     # Obtener la dirección completa a partir de las coordenadas
     try:
         location = geolocator.reverse((latitude, longitude), exactly_one=True)
     except:
-        geolocator = Nominatim(user_agent="myGeocoder", timeout=5)
+        geolocator = Photon(user_agent="city_finder", timeout=5)
         location = geolocator.reverse((latitude, longitude), addressdetails=True)
 
     
