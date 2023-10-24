@@ -196,7 +196,11 @@ if result:
                             "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
                             "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
                           ]
-        ciudad_seleccionada = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
+        verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
+        if verificar_ciudad:
+            texto_introducido = st.text_input("Indica aquí tu ciudad")
+        else:
+            ciudad_seleccionada = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
 
             
         #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
