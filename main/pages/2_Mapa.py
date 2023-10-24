@@ -241,12 +241,13 @@ if result:
             sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
 
             for index, row in sorted_df.iterrows():
-                popup_content = f'A {row["Metros"]} metros <strong>{row["Name"]}</strong>'
+                popup_content = f'A {row["Metros"]} metros <div id="link" style="text-decoration: underline; cursor: pointer;"><strong>{row["Name"]}</strong></div><script>document.getElementById("link").addEventListener("click", function() {{ window.open("{sorted_df["Cómo llegar"][index]}", "_blank"); }});</script>'
                 
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
                     popup=folium.Popup(html=popup_content, parse_html=True),
                 ).add_to(m)
+
 
 
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
