@@ -103,7 +103,7 @@ def get_city_from_coordinates(latitude, longitude):
         location = geolocator.reverse((latitude, longitude), exactly_one=True)
     except:
         geolocator = Nominatim(user_agent="myGeocoder", timeout=5)
-        location = geolocator.reverse("40.4422656, -3.6995072", addressdetails=True)
+        location = geolocator.reverse((latitude, longitude), addressdetails=True)
 
     
     # Extraer la ciudad de la dirección
