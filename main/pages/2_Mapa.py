@@ -201,12 +201,6 @@ if result:
                 city = st.text_input("Indica aquí tu ciudad")
             else:
                 city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
-
-no_ubi = st.checkbox("Prefiero no usar mi ubicaión")
-if no_ubi:
-    st.write('hey')
-
-
             
         #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
@@ -272,25 +266,14 @@ if no_ubi:
                     popup=popup_content,
                 ).add_to(m)
 
-
-#--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
-            # for index, row in sorted_df.iterrows():
-            #     # Crear un marcador personalizado con una etiqueta alargada
-            #     marker = folium.map.Marker(
-            #         location=[row["Latitude"], row["Longitude"]],
-            #         icon=folium.DivIcon(
-            #             icon_size=(150, 30),  # Tamaño personalizado de la etiqueta
-            #             html=f'<div style="width: 150px; text-align: center; background-color: white; padding: 5px;">{row["Name"]}, Ubi: {row["Calle"]} {row["Numero"]}</div>'
-            #         )
-            #     )
-                
-            #     # Agregar el marcador al mapa
-            #     marker.add_to(m)
-#--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
+# --------------------------- SIN UBI ---------------------------------------------------
+no_ubi = st.checkbox("Prefiero no usar mi ubicaión")
+if no_ubi:
+    st.write('hey')
 
             # Muestra el mapa interactivo en Streamlit
             #st.write("Mapa de ubicaciones:")
-            st_data2 = folium_static(m)
+            # st_data2 = folium_static(m)
 
             # sorted_df = sorted_df.reset_index(drop=True)
             # coords = []
@@ -299,14 +282,14 @@ if no_ubi:
             # sorted_df['coords'] = coords
             # sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
             # sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-            sorted_df = sorted_df[['Name','Cómo llegar','Metros']]
-            st.data_editor(
-                sorted_df,
-                column_config={
-                    "Cómo llegar": st.column_config.LinkColumn("Cómo llegar")
-                },
-                hide_index=True,
-            )
+            # sorted_df = sorted_df[['Name','Cómo llegar','Metros']]
+            # st.data_editor(
+            #     sorted_df,
+            #     column_config={
+            #         "Cómo llegar": st.column_config.LinkColumn("Cómo llegar")
+            #     },
+            #     hide_index=True,
+            # )
 
             #st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','Cómo llegar']])
 
