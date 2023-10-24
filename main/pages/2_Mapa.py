@@ -201,8 +201,9 @@ if result:
         m = folium.Map(location=[latitude, longitude], zoom_start=15) #, zoom_start=20
         red_icon = folium.Icon(color='red')
         folium.Marker(
-            [latitude, longitude], popup="Estás aquí", tooltip="Estás aquí",icon=red_icon
+            [latitude, longitude], popup='<div style="white-space: nowrap;">Estás aquí</div>', tooltip="Estás aquí", icon=red_icon
         ).add_to(m)
+
         
         # call to render Folium map in Streamlit
         #st_data = folium_static(m)
