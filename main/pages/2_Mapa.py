@@ -26,10 +26,7 @@ import math
 import folium
 from streamlit_folium import folium_static
 from geopy.geocoders import Nominatim
-from geopy.geocoders import Photon
 import urllib.parse
-geolocator = Photon(user_agent="coffee_maps")
-
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -99,15 +96,10 @@ def extract_cafeterias_in_madrid():
     return cafes
 
 def get_city_from_coordinates(latitude, longitude):
-    geolocator = Photon(user_agent="city_finder")
+    geolocator = Nominatim(user_agent="city_finder")
     
     # Obtener la dirección completa a partir de las coordenadas
-    try:
-        location = geolocator.reverse((latitude, longitude), exactly_one=True)
-    except:
-        geolocator = Photon(user_agent="city_finder", timeout=5)
-        location = geolocator.reverse((latitude, longitude), addressdetails=True)
-
+    location = geolocator.reverse((latitude, longitude), exactly_one=True)
     
     # Extraer la ciudad de la dirección
     if location:
@@ -236,6 +228,12 @@ if result:
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
 
+            # for index, row in sorted_df.iterrows():
+            #     folium.Marker(
+            #         location=[row["Latitude"], row["Longitude"]],
+            #         popup=f'<div style="white-space: nowrap;">A {row["Metros"]} metros:<br><strong>{row["Name"]}</strong></div>',
+            #     ).add_to(m)
+
             # sorted_df = sorted_df.reset_index(drop=True)
             coords = []
             for i,e in enumerate(sorted_df['Latitude']):
@@ -255,10 +253,24 @@ if result:
                 ).add_to(m)
 
 
+#--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
+            # for index, row in sorted_df.iterrows():
+            #     # Crear un marcador personalizado con una etiqueta alargada
+            #     marker = folium.map.Marker(
+            #         location=[row["Latitude"], row["Longitude"]],
+            #         icon=folium.DivIcon(
+            #             icon_size=(150, 30),  # Tamaño personalizado de la etiqueta
+            #             html=f'<div style="width: 150px; text-align: center; background-color: white; padding: 5px;">{row["Name"]}, Ubi: {row["Calle"]} {row["Numero"]}</div>'
+            #         )
+            #     )
+                
+            #     # Agregar el marcador al mapa
+            #     marker.add_to(m)
+#--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
 
             # Muestra el mapa interactivo en Streamlit
             #st.write("Mapa de ubicaciones:")
-            #st_data2 = folium_static(m)
+            st_data2 = folium_static(m)
 
             # sorted_df = sorted_df.reset_index(drop=True)
             # coords = []
@@ -267,14 +279,14 @@ if result:
             # sorted_df['coords'] = coords
             # sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
             # sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-            # sorted_df = sorted_df[['Name','Cómo llegar','Metros']]
-            # st.data_editor(
-            #     sorted_df,
-            #     column_config={
-            #         "Cómo llegar": st.column_config.LinkColumn("Cómo llegar")
-            #     },
-            #     hide_index=True,
-            # )
+            sorted_df = sorted_df[['Name','Cómo llegar','Metros']]
+            st.data_editor(
+                sorted_df,
+                column_config={
+                    "Cómo llegar": st.column_config.LinkColumn("Cómo llegar")
+                },
+                hide_index=True,
+            )
 
             #st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','Cómo llegar']])
 
