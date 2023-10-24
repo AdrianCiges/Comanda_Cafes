@@ -225,18 +225,32 @@ if result:
             # st.table(df)
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
-            
+
             # for index, row in sorted_df.iterrows():
             #     folium.Marker(
             #         location=[row["Latitude"], row["Longitude"]],
-            #         popup=f"A {row['Metros']} metros: <br><strong>{row['Name']}</strong>",
+            #         popup=f'<div style="white-space: nowrap;">A {row["Metros"]} metros:<br><strong>{row["Name"]}</strong></div>',
             #     ).add_to(m)
 
+            # sorted_df = sorted_df.reset_index(drop=True)
+            coords = []
+            for i,e in enumerate(sorted_df['Latitude']):
+                coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+            sorted_df['coords'] = coords
+            sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+
             for index, row in sorted_df.iterrows():
+                # Crear un enlace a Google Maps utilizando la latitud y longitud
+                google_maps_link = f'https://www.google.com/maps/search/{row["Latitude"]},{row["Longitude"]}'
+            
+                # Crear el popup con el enlace clickeable
+                popup_content = f'A {row["Metros"]} metros <a href="{google_maps_link}"><strong>{row["Name"]}</strong></a>'
+            
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=f'<div style="white-space: nowrap;">A {row["Metros"]} metros:<br><strong>{row["Name"]}</strong></div>',
+                    popup=popup_content,
                 ).add_to(m)
+
 
 
 
@@ -259,12 +273,12 @@ if result:
             #st.write("Mapa de ubicaciones:")
             st_data2 = folium_static(m)
 
-            sorted_df = sorted_df.reset_index(drop=True)
-            coords = []
-            for i,e in enumerate(sorted_df['Latitude']):
-                coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
-            sorted_df['coords'] = coords
-            sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+            # sorted_df = sorted_df.reset_index(drop=True)
+            # coords = []
+            # for i,e in enumerate(sorted_df['Latitude']):
+            #     coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+            # sorted_df['coords'] = coords
+            # sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
             # sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
             sorted_df = sorted_df[['Name','¿Cómo llegar?','Metros']]
             st.data_editor(
