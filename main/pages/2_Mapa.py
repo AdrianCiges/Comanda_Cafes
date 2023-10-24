@@ -124,9 +124,16 @@ def convert_coordinates(input_string):
     lon_sec = (lon - lon_deg - lon_min / 60) * 3600
 
     # Construir la cadena de salida en el formato deseado
-    output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"N+{lon_deg}°{lon_min}'{lon_sec:.1f}\"W"
+    if "-" in str(lat) and "-" in str(lon):
+        output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"S+{lon_deg}°{lon_min}'{lon_sec:.1f}\"W"
+    elif "-" in str(lat):
+        output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"S+{lon_deg}°{lon_min}'{lon_sec:.1f}\"E"
+    elif "-" in str(lon):
+        output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"N+{lon_deg}°{lon_min}'{lon_sec:.1f}\"W"
+    else:
+        output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"N+{lon_deg}°{lon_min}'{lon_sec:.1f}\"E"
 
-    return output_string.replace('-','')
+    return output_string.replace("-","")
 
 def make_clickable(val):
     # target _blank to open new window
