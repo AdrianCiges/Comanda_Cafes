@@ -190,37 +190,17 @@ if ubi_allow:
                 city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
             except:
                 st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
-
-                if st.button("Obtener Coordenadas"):
-                    if direccion:
-                        try:
-                            # Geocodificar la dirección ingresada
-                            location = geocoder.osm(direccion)
-                
-                            if location.ok:
-                                latitude = location.latlng[0]
-                                longitude = location.latlng[1]
-                                st.write(f"Las coordenadas de la dirección '{direccion}' son:")
-                                st.write(f"Latitud: {latitude}")
-                                st.write(f"Longitud: {longitude}")
-                            else:
-                                st.warning("No se encontraron coordenadas para la dirección ingresada.")
-                        except Exception as e:
-                            st.error(f"Ocurrió un error al obtener las coordenadas: {str(e)}")
-                    else:
-                        st.warning("Por favor, ingresa una dirección antes de hacer clic en 'Obtener Coordenadas'.")
-
-                        
-                # ciudades_espana = [
-                #                     "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
-                #                     "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
-                #                     "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
-                #                   ]
-                # verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
-                # if verificar_ciudad:
-                #     city = st.text_input("Indica aquí tu ciudad")
-                # else:
-                #     city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
+                # direccion = st.text_input("Escribe la dirección:")
+                ciudades_espana = [
+                                    "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
+                                    "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
+                                    "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
+                                  ]
+                verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
+                if verificar_ciudad:
+                    city = st.text_input("Indica aquí tu ciudad")
+                else:
+                    city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
                 
             #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
