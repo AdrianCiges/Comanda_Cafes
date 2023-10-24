@@ -160,7 +160,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     radius_earth = 6371000  # Earth's radius in meters
     distance = radius_earth * c
 
-    return distance
+    return int(distance)
     
 # -------------------------------------------------------------------------------FUNCIONA-------------------------------------
 
@@ -218,8 +218,9 @@ if result:
             df['dif_sum'] = df['lat_dif'] + df['lon_dif']
             
             sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
-            sorted_df.index = range(1, len(sorted_df) + 1)
-    
+            #sorted_df.index = range(1, len(sorted_df) + 1)
+            sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+
             # st.table(df)
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
@@ -227,7 +228,7 @@ if result:
             for index, row in sorted_df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=f"Cafetería {index} {row['Name']}, Ubi: {row['Calle']} {row['Numero']}",
+                    popup=f"A {row['metros']} metros \n {row['Name']}",
                 ).add_to(m)
 
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
@@ -255,8 +256,8 @@ if result:
                 coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
             sorted_df['coords'] = coords
             sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
-            sorted_df['metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-            sorted_df = sorted_df[['Name','¿Cómo llegar?','metros']]
+            # sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+            sorted_df = sorted_df[['Name','¿Cómo llegar?','Metros']]
             st.data_editor(
                 sorted_df,
                 column_config={
