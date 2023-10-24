@@ -13,15 +13,6 @@ import time as timee
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
-# from bokeh.io import show
-# from bokeh.plotting import gmap
-# from bokeh.models import GMapOptions
-# from bokeh.models import ColumnDataSource
-# from bokeh.palettes import Set3
-# from bokeh.palettes import Category20
-# from bokeh.palettes import RdBu3
-# from bokeh.resources import CDN
-# from bokeh.embed import file_html
 import math
 import folium
 from streamlit_folium import folium_static
@@ -62,7 +53,8 @@ estilos_css = f"""
     </style>
     """
 
-# -------------------------------------------------------------------------------FUNCIONA-------------------------------------
+# ------------------------------------------------------------------------------------CONFIG⬆️-------------------------------------
+# ---------------------------------------------------------------------------------FUNCIONES⬇️-------------------------------------
 
 def extract_cafeterias_in_madrid():
     api = overpy.Overpass()
@@ -162,54 +154,64 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     distance = radius_earth * c
 
     return int(distance)
+
+# ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
+# -------------------------------------------------------------------------------UBI USUARIO⬇️-------------------------------------
+
+ubi_allow = st.checkbox("Encontrar cafeterías según mi ubicación")
+
+if ubi_allow:
     
-# -------------------------------------------------------------------------------FUNCIONA-------------------------------------
+    loc_button = Button(label="Mi ubicación", width=150, height=50, button_type="success")
+    loc_button.js_on_event("button_click", CustomJS(code="""
+        navigator.geolocation.getCurrentPosition(
+            (loc) => {
+                document.dispatchEvent(new CustomEvent("GET_LOCATION", {detail: {lat: loc.coords.latitude, lon: loc.coords.longitude}}))
+            }
+        )
+        """))
+    result = streamlit_bokeh_events(
+        loc_button,
+        events="GET_LOCATION",
+        key="get_location",
+        refresh_on_update=False,
+        override_height=75,
+        debounce_time=0)
+    
+    if result:
+        if "GET_LOCATION" in result:
+            ubi = result.get("GET_LOCATION")
+            #st.write(f"Tu ubicación es: {ubi}")        
+            latitude = ubi['lat']
+            longitude = ubi['lon']
+            try:
+                city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
+            except:
+                st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
+                ciudades_espana = [
+                                    "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
+                                    "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
+                                    "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
+                                  ]
+                verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
+                if verificar_ciudad:
+                    city = st.text_input("Indica aquí tu ciudad")
+                else:
+                    city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
+                
+            #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
-loc_button = Button(label="Mi ubicación", width=150, height=50, button_type="success")
-loc_button.js_on_event("button_click", CustomJS(code="""
-    navigator.geolocation.getCurrentPosition(
-        (loc) => {
-            document.dispatchEvent(new CustomEvent("GET_LOCATION", {detail: {lat: loc.coords.latitude, lon: loc.coords.longitude}}))
-        }
-    )
-    """))
-result = streamlit_bokeh_events(
-    loc_button,
-    events="GET_LOCATION",
-    key="get_location",
-    refresh_on_update=False,
-    override_height=75,
-    debounce_time=0)
+# -------------------------------------------------------------------------------UBI USUARIO⬆️-------------------------------------
+# -----------------------------------------------------------------------------------SIN UBI⬇️-------------------------------------
 
-if result:
-    if "GET_LOCATION" in result:
-        ubi = result.get("GET_LOCATION")
-        #st.write(f"Tu ubicación es: {ubi}")        
-        latitude = ubi['lat']
-        longitude = ubi['lon']
-        try:
-            city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
-        except:
-            st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
-            ciudades_espana = [
-                                "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
-                                "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
-                                "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
-                              ]
-            verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
-            if verificar_ciudad:
-                city = st.text_input("Indica aquí tu ciudad")
-            else:
-                city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
-            
-        #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
+else:
+    st.write('Building')
 
-# --------------------------------------------------------------------------------------------------------------------
-        
-        
-        # data = pd.DataFrame({'LAT': [latitude], 'LON': [longitude]})
-        # st.map(data, zoom=100)
-        
+
+
+# -----------------------------------------------------------------------------------SIN UBI⬆️-------------------------------------
+# ----------------------------------------------------------------------------------MAPEANDO⬇️-------------------------------------
+
 
         # Probando con folium
         m = folium.Map(location=[latitude, longitude], zoom_start=15) #, zoom_start=20
@@ -217,11 +219,6 @@ if result:
         folium.Marker(
             [latitude, longitude], popup='<div style="white-space: nowrap;">Estás aquí</div>', tooltip="Estás aquí", icon=red_icon
         ).add_to(m)
-
-        
-        # call to render Folium map in Streamlit
-        #st_data = folium_static(m)
-
 
         if __name__ == "__main__":
             cafes_in_madrid = extract_cafeterias_in_madrid()
@@ -237,16 +234,6 @@ if result:
             sorted_df = sorted_df.reset_index(drop=True)
             #sorted_df.index = range(1, len(sorted_df) + 1)
             sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-
-            # st.table(df)
-            
-            # Agrega marcadores para cada par de latitud y longitud en el DataFrame
-
-            # for index, row in sorted_df.iterrows():
-            #     folium.Marker(
-            #         location=[row["Latitude"], row["Longitude"]],
-            #         popup=f'<div style="white-space: nowrap;">A {row["Metros"]} metros:<br><strong>{row["Name"]}</strong></div>',
-            #     ).add_to(m)
 
             # sorted_df = sorted_df.reset_index(drop=True)
             coords = []
@@ -267,67 +254,4 @@ if result:
                 ).add_to(m)
 
 # --------------------------- SIN UBI ---------------------------------------------------
-no_ubi = st.checkbox("Prefiero no usar mi ubicaión")
-if no_ubi:
-    st.write('hey')
 
-            # Muestra el mapa interactivo en Streamlit
-            #st.write("Mapa de ubicaciones:")
-            # st_data2 = folium_static(m)
-
-            # sorted_df = sorted_df.reset_index(drop=True)
-            # coords = []
-            # for i,e in enumerate(sorted_df['Latitude']):
-            #     coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
-            # sorted_df['coords'] = coords
-            # sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
-            # sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-            # sorted_df = sorted_df[['Name','Cómo llegar','Metros']]
-            # st.data_editor(
-            #     sorted_df,
-            #     column_config={
-            #         "Cómo llegar": st.column_config.LinkColumn("Cómo llegar")
-            #     },
-            #     hide_index=True,
-            # )
-
-            #st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','Cómo llegar']])
-
-
-# --------------------------------------------------------------------------------------------------------------------
-
-        # #bokeh_width, bokeh_height = ubi["lat"], ubi["lon"]
-        
-        # import streamlit as st
-        # from bokeh.plotting import figure
-        # from bokeh.tile_providers import get_provider, Vendors
-        
-        # # Coordinates
-        # latitude = 40
-        # longitude = -3
-        
-        # # Convert latitude and longitude to Web Mercator format
-        # def lonlat_to_mercator(lon, lat):
-        #     lat_rad = lat * (3.141592653589793 / 180.0)
-        #     merc_x = lon * 20037508.34 / 180.0
-        #     merc_y = (180.0 / 3.141592653589793) * \
-        #              (6378137.0 * 3.141592653589793 * \
-        #               0.25 * \
-        #               (math.log(1.0 + math.sin(lat_rad)) -
-        #                math.log(1.0 - math.sin(lat_rad))))
-        #     return merc_x, merc_y
-        
-        # # Create Bokeh figure
-        # tile_provider = get_provider(Vendors.CARTODBPOSITRON)
-        # p = figure(x_range=(-2000000, 6000000), y_range=(-1000000, 7000000),
-        #            x_axis_type="mercator", y_axis_type="mercator", width=800, height=600)
-        # p.add_tile(tile_provider)
-        
-        # # Convert coordinates to Web Mercator
-        # merc_x, merc_y = lonlat_to_mercator(ubi['lat'], ubi['lon'])
-        
-        # # Plot coordinates on the map
-        # p.circle(x=[merc_x], y=[merc_y], size=10, color="red")
-        
-        # # Streamlit
-        # st.bokeh_chart(p, use_container_width=True)
