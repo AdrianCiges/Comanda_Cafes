@@ -237,13 +237,13 @@ if result:
             for i,e in enumerate(sorted_df['Latitude']):
                 coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
             sorted_df['coords'] = coords
-            sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+            sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
 
             for index, row in sorted_df.iterrows():
                 # Crear un enlace a Google Maps utilizando la latitud y longitud
             
                 # Crear el popup con el enlace clickeable que se abrirá en una nueva ventana
-                popup_content = f'A {row["Metros"]} metros <a href="{sorted_df['¿Cómo llegar?'][index]}" target="_blank"><strong>{row["Name"]}</strong></a>'
+                popup_content = f'A {row["Metros"]} metros <a href="{sorted_df['Cómo llegar'][index]}" target="_blank"><strong>{row["Name"]}</strong></a>'
             
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
@@ -277,18 +277,18 @@ if result:
             # for i,e in enumerate(sorted_df['Latitude']):
             #     coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
             # sorted_df['coords'] = coords
-            # sorted_df['¿Cómo llegar?'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+            # sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
             # sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-            sorted_df = sorted_df[['Name','¿Cómo llegar?','Metros']]
+            sorted_df = sorted_df[['Name','Cómo llegar','Metros']]
             st.data_editor(
                 sorted_df,
                 column_config={
-                    "¿Cómo llegar?": st.column_config.LinkColumn("¿Cómo llegar?")
+                    "Cómo llegar": st.column_config.LinkColumn("Cómo llegar")
                 },
                 hide_index=True,
             )
 
-            #st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','¿Cómo llegar?']])
+            #st.table(sorted_df[['Name', 'Tlf', 'Web', 'Facebook', 'Calle', 'Numero', 'Horario','Terraza','Cómo llegar']])
 
 
 # --------------------------------------------------------------------------------------------------------------------
