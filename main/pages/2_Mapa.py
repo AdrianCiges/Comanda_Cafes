@@ -229,8 +229,10 @@ if result:
             for index, row in sorted_df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=f"A {row['Metros']} metros \n {row['Name']}",
+                    popup=f"A {row['Metros']} metros: <br><strong>{row['Name']}</strong>",
                 ).add_to(m)
+
+
 
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
             # for index, row in sorted_df.iterrows():
