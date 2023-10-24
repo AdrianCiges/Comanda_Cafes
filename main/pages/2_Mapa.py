@@ -243,6 +243,7 @@ if result:
             for index, row in sorted_df.iterrows():
                 # Codifica la URL correctamente
                 encoded_url = urllib.parse.quote(sorted_df["Cómo llegar"][index])
+                st.write(encoded_url)
             
                 # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
                 popup_content = f'A {row["Metros"]} metros <a href="{encoded_url}" target="_blank"><strong>{row["Name"]}</strong></a>'
@@ -251,9 +252,6 @@ if result:
                     location=[row["Latitude"], row["Longitude"]],
                     popup=popup_content,
                 ).add_to(m)
-
-
-
 
 
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
