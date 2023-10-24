@@ -202,6 +202,11 @@ if result:
             else:
                 city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
 
+no_ubi = st.checkbox("Prefiero no usar mi ubicaión")
+if no_ubi:
+    st.write('hey')
+
+
             
         #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
