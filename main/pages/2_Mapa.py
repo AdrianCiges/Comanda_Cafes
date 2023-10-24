@@ -243,7 +243,8 @@ if result:
                 # Crear un enlace a Google Maps utilizando la latitud y longitud
             
                 # Crear el popup con el enlace clickeable que se abrirá en una nueva ventana
-                popup_content = f'A {row["Metros"]} metros <a href="{sorted_df['Cómo llegar'][index]}" target="_blank"><strong>{row["Name"]}</strong></a>'
+                popup_content = f'A {row["Metros"]} metros <a href="{sorted_df["Cómo llegar"][index]}" target="_blank"><strong>{row["Name"]}</strong></a>'
+
             
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
