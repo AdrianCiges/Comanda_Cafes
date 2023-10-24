@@ -242,10 +242,14 @@ if result:
 
             for index, row in sorted_df.iterrows():
                 # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
-                link = sorted_df["Cómo llegar"][index]
+                # link = sorted_df["Cómo llegar"][index]
+                # popup_content = f'A {row["Metros"]} metros <a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;"><strong>{row["Name"]}</strong></a>'
+                # st.write(f'A {row["Metros"]} metros <a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;"><strong>{row["Name"]}</strong></a>')
+
+                link = sorted_df["Cómo llegar"][index].replace('"', '%22')
                 popup_content = f'A {row["Metros"]} metros <a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;"><strong>{row["Name"]}</strong></a>'
                 st.write(f'A {row["Metros"]} metros <a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;"><strong>{row["Name"]}</strong></a>')
-            
+
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
                     popup=popup_content,
