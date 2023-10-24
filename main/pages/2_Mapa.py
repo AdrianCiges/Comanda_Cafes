@@ -184,11 +184,33 @@ if ubi_allow:
             #st.write(f"Tu ubicación es: {ubi}")        
             latitude = ubi['lat']
             longitude = ubi['lon']
-            city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
             try:
                 city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
             except:
                 st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
+
+                direccion = st.text_input("Escribe la dirección:")
+
+                if st.button("Obtener Coordenadas"):
+                    if direccion:
+                        # Crear un objeto geocoder de Nominatim
+                        geolocator = Nominatim(user_agent="myGeocoder")
+                
+                        try:
+                            # Obtener las coordenadas de la dirección ingresada
+                            location = geolocator.geocode(direccion)
+                            if location:
+                                latitude = location.latitude
+                                longitude = location.longitude
+                                st.write(f"Las coordenadas de la dirección '{direccion}' son:")
+                                st.write(f"Latitud: {latitude}")
+                                st.write(f"Longitud: {longitude}")
+                            else:
+                                st.warning("No se encontraron coordenadas para la dirección ingresada.")
+                        except Exception as e:
+                            st.error(f"Ocurrió un error al obtener las coordenadas: {str(e)}")
+                    else:
+                        st.warning("Por favor, ingresa una dirección antes de hacer clic en 'Obtener Coordenadas'.")
                 ciudades_espana = [
                                     "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
                                     "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
