@@ -226,11 +226,18 @@ if result:
             
             # Agrega marcadores para cada par de latitud y longitud en el DataFrame
             
+            # for index, row in sorted_df.iterrows():
+            #     folium.Marker(
+            #         location=[row["Latitude"], row["Longitude"]],
+            #         popup=f"A {row['Metros']} metros: <br><strong>{row['Name']}</strong>",
+            #     ).add_to(m)
+
             for index, row in sorted_df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=f"A {row['Metros']} metros: <br><strong>{row['Name']}</strong>",
+                    popup=f'<div style="display: flex; justify-content: space-between;">A {row["Metros"]} metros <strong>{row["Name"]}</strong></div>',
                 ).add_to(m)
+
 
 
 
