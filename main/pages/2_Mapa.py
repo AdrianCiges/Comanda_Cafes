@@ -68,8 +68,8 @@ def extract_cafeterias_in_madrid():
     api = overpy.Overpass()
 
     # Definimos una consulta para extraer las cafeterías en Madrid
-    query = """
-    area["name"="Madrid"];
+    query = f"""
+    area["name"="{city}"];
     node["amenity"="cafe"](area);
     out;
     """
@@ -191,16 +191,16 @@ if result:
             city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
         except:
             st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
-        ciudades_espana = [
-                            "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
-                            "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
-                            "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
-                          ]
-        verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
-        if verificar_ciudad:
-            texto_introducido = st.text_input("Indica aquí tu ciudad")
-        else:
-            ciudad_seleccionada = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
+            ciudades_espana = [
+                                "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
+                                "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
+                                "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
+                              ]
+            verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
+            if verificar_ciudad:
+                city = st.text_input("Indica aquí tu ciudad")
+            else:
+                city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
 
             
         #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
