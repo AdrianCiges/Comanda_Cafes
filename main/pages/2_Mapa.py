@@ -278,7 +278,7 @@ if ubi_allow:
                 st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
                 
                 # Desplegable para seleccionar la capital
-                capital_seleccionada = st.selectbox("Selecciona una capital de provincia de España", [capital["ciudad"] for capital in capitales_espana])
+                city = st.selectbox("Selecciona una capital de provincia de España", [capital["ciudad"] for capital in capitales_espana])
                 
                 # Manejo de la selección
                 if st.button("Obtener Coordenadas"):
