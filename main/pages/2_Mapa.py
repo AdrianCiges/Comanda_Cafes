@@ -62,6 +62,15 @@ estilos_css = f"""
     </style>
     """
 
+# Script enlaces
+script_links = f"""
+    <script>
+    alert('testing')
+    </script>
+    """
+
+
+
 # -------------------------------------------------------------------------------FUNCIONA-------------------------------------
 
 def extract_cafeterias_in_madrid():
