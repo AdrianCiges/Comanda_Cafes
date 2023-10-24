@@ -18,6 +18,8 @@ import folium
 from streamlit_folium import folium_static
 from geopy.geocoders import Nominatim
 import urllib.parse
+import geocoder
+
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -189,19 +191,15 @@ if ubi_allow:
             except:
                 st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
 
-                direccion = st.text_input("Escribe la dirección:")
-
                 if st.button("Obtener Coordenadas"):
                     if direccion:
-                        # Crear un objeto geocoder de Nominatim
-                        geolocator = Nominatim(user_agent="myGeocoder")
-                
                         try:
-                            # Obtener las coordenadas de la dirección ingresada
-                            location = geolocator.geocode(direccion)
-                            if location:
-                                latitude = location.latitude
-                                longitude = location.longitude
+                            # Geocodificar la dirección ingresada
+                            location = geocoder.osm(direccion)
+                
+                            if location.ok:
+                                latitude = location.latlng[0]
+                                longitude = location.latlng[1]
                                 st.write(f"Las coordenadas de la dirección '{direccion}' son:")
                                 st.write(f"Latitud: {latitude}")
                                 st.write(f"Longitud: {longitude}")
@@ -211,16 +209,18 @@ if ubi_allow:
                             st.error(f"Ocurrió un error al obtener las coordenadas: {str(e)}")
                     else:
                         st.warning("Por favor, ingresa una dirección antes de hacer clic en 'Obtener Coordenadas'.")
-                ciudades_espana = [
-                                    "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
-                                    "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
-                                    "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
-                                  ]
-                verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
-                if verificar_ciudad:
-                    city = st.text_input("Indica aquí tu ciudad")
-                else:
-                    city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
+
+                        
+                # ciudades_espana = [
+                #                     "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
+                #                     "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
+                #                     "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
+                #                   ]
+                # verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
+                # if verificar_ciudad:
+                #     city = st.text_input("Indica aquí tu ciudad")
+                # else:
+                #     city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
                 
             #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
