@@ -192,7 +192,7 @@ capitales_espana = [
                     {"ciudad": "Soria", "latitud": 41.762349, "longitud": -2.464682},
                     {"ciudad": "Teruel", "latitud": 40.343238, "longitud": -1.106177},
                     {"ciudad": "Ceuta", "latitud": 35.889681, "longitud": -5.321319},
-                    {"ciudad": "Melilla", "latitud": 35.293981, "longitud": -2.938097},
+                    {"ciudad": "Melilla", "latitud": 35.293981, "longitud": -2.938097}
                     ]
                     
 # Función para obtener coordenadas
@@ -290,7 +290,7 @@ if ubi_allow:
                     else:
                         st.warning("La capital seleccionada no se encuentra en la lista.")
 
-             m = folium.Map(location=[latitude, longitude], zoom_start=15) #, zoom_start=20
+                m = folium.Map(location=[latitude, longitude], zoom_start=15) #, zoom_start=20
                 red_icon = folium.Icon(color='red')
                 folium.Marker(
                     [latitude, longitude], popup='<div style="white-space: nowrap;">Estás aquí</div>', tooltip="Estás aquí", icon=red_icon
