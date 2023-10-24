@@ -156,6 +156,51 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     distance = radius_earth * c
 
     return int(distance)
+    
+# Lista de capitales de provincia de España con sus coordenadas
+capitales_espana = [
+                    {"ciudad": "Madrid", "latitud": 40.416775, "longitud": -3.703790},
+                    {"ciudad": "Barcelona", "latitud": 41.385064, "longitud": 2.173403},
+                    {"ciudad": "Valencia", "latitud": 39.469907, "longitud": -0.376288},
+                    {"ciudad": "Sevilla", "latitud": 37.389092, "longitud": -5.984459},
+                    {"ciudad": "Zaragoza", "latitud": 41.648822, "longitud": -0.889085},
+                    {"ciudad": "Málaga", "latitud": 36.721302, "longitud": -4.421636},
+                    {"ciudad": "Murcia", "latitud": 37.983810, "longitud": -1.129519},
+                    {"ciudad": "Palma de Mallorca", "latitud": 39.569600, "longitud": 2.650160},
+                    {"ciudad": "Las Palmas de Gran Canaria", "latitud": 28.124822, "longitud": -15.430006},
+                    {"ciudad": "Santa Cruz de Tenerife", "latitud": 28.469581, "longitud": -16.254568},
+                    {"ciudad": "Córdoba", "latitud": 37.888175, "longitud": -4.779383},
+                    {"ciudad": "Valladolid", "latitud": 41.652251, "longitud": -4.724532},
+                    {"ciudad": "Vitoria-Gasteiz", "latitud": 42.846718, "longitud": -2.672695},
+                    {"ciudad": "Pamplona", "latitud": 42.817987, "longitud": -1.643252},
+                    {"ciudad": "Logroño", "latitud": 42.462719, "longitud": -2.450592},
+                    {"ciudad": "Oviedo", "latitud": 43.361914, "longitud": -5.849388},
+                    {"ciudad": "Santander", "latitud": 43.462306, "longitud": -3.809980},
+                    {"ciudad": "Toledo", "latitud": 39.861176, "longitud": -4.020876},
+                    {"ciudad": "Granada", "latitud": 37.176164, "longitud": -3.597006},
+                    {"ciudad": "Almería", "latitud": 36.838163, "longitud": -2.459722},
+                    {"ciudad": "Huelva", "latitud": 37.261421, "longitud": -6.944722},
+                    {"ciudad": "Cádiz", "latitud": 36.529722, "longitud": -6.292220},
+                    {"ciudad": "Cáceres", "latitud": 39.476110, "longitud": -6.372778},
+                    {"ciudad": "Badajoz", "latitud": 38.878450, "longitud": -6.970100},
+                    {"ciudad": "Salamanca", "latitud": 40.966167, "longitud": -5.664722},
+                    {"ciudad": "Burgos", "latitud": 42.340006, "longitud": -3.699944},
+                    {"ciudad": "León", "latitud": 42.598694, "longitud": -5.567077},
+                    {"ciudad": "Zamora", "latitud": 41.503471, "longitud": -5.743956},
+                    {"ciudad": "Ávila", "latitud": 40.655014, "longitud": -4.700354},
+                    {"ciudad": "Segovia", "latitud": 40.948654, "longitud": -4.118537},
+                    {"ciudad": "Soria", "latitud": 41.762349, "longitud": -2.464682},
+                    {"ciudad": "Teruel", "latitud": 40.343238, "longitud": -1.106177},
+                    {"ciudad": "Ceuta", "latitud": 35.889681, "longitud": -5.321319},
+                    {"ciudad": "Melilla", "latitud": 35.293981, "longitud": -2.938097},
+                    ]
+                    
+# Función para obtener coordenadas
+def obtener_coordenadas(ciudad):
+    for capital in capitales_espana:
+        if capital["ciudad"] == ciudad:
+            return capital["latitud"], capital["longitud"]
+    return None, None
 
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI USUARIO⬇️-------------------------------------
@@ -190,17 +235,20 @@ if ubi_allow:
                 city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
             except:
                 st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
-                # direccion = st.text_input("Escribe la dirección:")
-                ciudades_espana = [
-                                    "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Bilbao", "Granada", "Murcia", 
-                                    "Toledo", "Salamanca", "Santiago de Compostela", "Palma de Mallorca", "Tenerife", "Cádiz",
-                                    "Pamplona", "Valladolid", "Málaga", "Oviedo", "Córdoba", "Girona"
-                                  ]
-                verificar_ciudad = st.checkbox("Mi ciudad no aparece en el desplegable")
-                if verificar_ciudad:
-                    city = st.text_input("Indica aquí tu ciudad")
-                else:
-                    city = st.selectbox("Selecciona una ciudad de España", ciudades_espana)
+                
+                # Desplegable para seleccionar la capital
+                capital_seleccionada = st.selectbox("Selecciona una capital de provincia de España", [capital["ciudad"] for capital in capitales_espana])
+                
+                # Manejo de la selección
+                if st.button("Obtener Coordenadas"):
+                    lat, lon = obtener_coordenadas(capital_seleccionada)
+                    if lat is not None and lon is not None:
+                        st.write(f"Las coordenadas de {capital_seleccionada} son:")
+                        st.write(f"Latitud: {lat}")
+                        st.write(f"Longitud: {lon}")
+                    else:
+                        st.warning("La capital seleccionada no se encuentra en la lista.")
+
                 
             #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
@@ -248,11 +296,22 @@ if ubi_allow:
                     popup=popup_content,
                 ).add_to(m)
 
-# -----------------------------------------------------------------------------------SIN UBI⬇️-------------------------------------
+# -----------------------------------------------------------------------------------MAPPEANDO CON UBI⬆️-------------------------------------
+# ---------------------------------------------------------------------------------------------SIN UBI⬇️-------------------------------------
 
 else:
-    st.write('Building')
-
+    # Desplegable para seleccionar la capital
+    capital_seleccionada = st.selectbox("Selecciona una capital de provincia de España", [capital["ciudad"] for capital in capitales_espana])
+    
+    # Manejo de la selección
+    if st.button("Obtener Coordenadas"):
+        lat, lon = obtener_coordenadas(capital_seleccionada)
+        if lat is not None and lon is not None:
+            st.write(f"Las coordenadas de {capital_seleccionada} son:")
+            st.write(f"Latitud: {lat}")
+            st.write(f"Longitud: {lon}")
+        else:
+            st.warning("La capital seleccionada no se encuentra en la lista.")
 
 
 # -----------------------------------------------------------------------------------SIN UBI⬆️-------------------------------------
