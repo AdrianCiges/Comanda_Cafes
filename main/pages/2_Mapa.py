@@ -241,17 +241,13 @@ if result:
             sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
 
             for index, row in sorted_df.iterrows():
-                popup_content = f'A {row["Metros"]} metros <strong>{row["Name"]}</strong>'
-                
-                # Crear contenido del popup con CustomHtml
-                popup = folium.CustomHtml(popup_content, script=True)
+                # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
+                popup_content = f'A {row["Metros"]} metros <a href="{sorted_df["Cómo llegar"][index]}" target="_blank" style="text-decoration: underline; cursor: pointer;"><strong>{row["Name"]}</strong></a>'
             
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=popup,
+                    popup=popup_content,
                 ).add_to(m)
-
-
 
 
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
