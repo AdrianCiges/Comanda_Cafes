@@ -233,6 +233,47 @@ if ubi_allow:
             longitude = ubi['lon']
             try:
                 city = get_city_from_coordinates(latitude, longitude) # Susceptible de timeout error!! Arreglar
+
+                # MAPEANDO CON UBI USUARIO
+                m = folium.Map(location=[latitude, longitude], zoom_start=15) #, zoom_start=20
+                red_icon = folium.Icon(color='red')
+                folium.Marker(
+                    [latitude, longitude], popup='<div style="white-space: nowrap;">Estás aquí</div>', tooltip="Estás aquí", icon=red_icon
+                ).add_to(m)
+        
+                if __name__ == "__main__":
+                    cafes_in_madrid = extract_cafeterias_in_madrid()
+                    
+                    # Crear un DataFrame a partir de la lista de cafeterías
+                    df = pd.DataFrame(cafes_in_madrid)
+        
+                    df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
+                    df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
+                    df['dif_sum'] = df['lat_dif'] + df['lon_dif']
+                    
+                    sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
+                    sorted_df = sorted_df.reset_index(drop=True)
+                    #sorted_df.index = range(1, len(sorted_df) + 1)
+                    sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+        
+                    # sorted_df = sorted_df.reset_index(drop=True)
+                    coords = []
+                    for i,e in enumerate(sorted_df['Latitude']):
+                        coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+                    sorted_df['coords'] = coords
+                    sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+        
+                    for index, row in sorted_df.iterrows():
+                        # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
+                        
+                        link = sorted_df["Cómo llegar"][index].replace('"', '%22')
+                        popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
+        
+                        folium.Marker(
+                            location=[row["Latitude"], row["Longitude"]],
+                            popup=popup_content,
+                        ).add_to(m)
+                
             except:
                 st.warning('No ha sido posible determinar tu ubicación. Por favor, selecciona tu ciudad en el siguiente desplegable.')
                 
@@ -249,52 +290,51 @@ if ubi_allow:
                     else:
                         st.warning("La capital seleccionada no se encuentra en la lista.")
 
-                
+             m = folium.Map(location=[latitude, longitude], zoom_start=15) #, zoom_start=20
+                red_icon = folium.Icon(color='red')
+                folium.Marker(
+                    [latitude, longitude], popup='<div style="white-space: nowrap;">Estás aquí</div>', tooltip="Estás aquí", icon=red_icon
+                ).add_to(m)
+        
+                if __name__ == "__main__":
+                    cafes_in_madrid = extract_cafeterias_in_madrid()
+                    
+                    # Crear un DataFrame a partir de la lista de cafeterías
+                    df = pd.DataFrame(cafes_in_madrid)
+        
+                    df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
+                    df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
+                    df['dif_sum'] = df['lat_dif'] + df['lon_dif']
+                    
+                    sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
+                    sorted_df = sorted_df.reset_index(drop=True)
+                    #sorted_df.index = range(1, len(sorted_df) + 1)
+                    sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+        
+                    # sorted_df = sorted_df.reset_index(drop=True)
+                    coords = []
+                    for i,e in enumerate(sorted_df['Latitude']):
+                        coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+                    sorted_df['coords'] = coords
+                    sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+        
+                    for index, row in sorted_df.iterrows():
+                        # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
+                        
+                        link = sorted_df["Cómo llegar"][index].replace('"', '%22')
+                        popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
+        
+                        folium.Marker(
+                            location=[row["Latitude"], row["Longitude"]],
+                            popup=popup_content,
+                        ).add_to(m)
             #st.write(f"La ciudad en las coordenadas ({latitude}, {longitude}) es: {city}")
 
 # -------------------------------------------------------------------------------UBI USUARIO⬆️-------------------------------------
 # ----------------------------------------------------------------------------------MAPEANDO⬇️-------------------------------------
 
 
-        # Probando con folium
-        m = folium.Map(location=[latitude, longitude], zoom_start=15) #, zoom_start=20
-        red_icon = folium.Icon(color='red')
-        folium.Marker(
-            [latitude, longitude], popup='<div style="white-space: nowrap;">Estás aquí</div>', tooltip="Estás aquí", icon=red_icon
-        ).add_to(m)
 
-        if __name__ == "__main__":
-            cafes_in_madrid = extract_cafeterias_in_madrid()
-            
-            # Crear un DataFrame a partir de la lista de cafeterías
-            df = pd.DataFrame(cafes_in_madrid)
-
-            df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
-            df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
-            df['dif_sum'] = df['lat_dif'] + df['lon_dif']
-            
-            sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
-            sorted_df = sorted_df.reset_index(drop=True)
-            #sorted_df.index = range(1, len(sorted_df) + 1)
-            sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-
-            # sorted_df = sorted_df.reset_index(drop=True)
-            coords = []
-            for i,e in enumerate(sorted_df['Latitude']):
-                coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
-            sorted_df['coords'] = coords
-            sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
-
-            for index, row in sorted_df.iterrows():
-                # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
-                
-                link = sorted_df["Cómo llegar"][index].replace('"', '%22')
-                popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
-
-                folium.Marker(
-                    location=[row["Latitude"], row["Longitude"]],
-                    popup=popup_content,
-                ).add_to(m)
 
 # -----------------------------------------------------------------------------------MAPPEANDO CON UBI⬆️-------------------------------------
 # ---------------------------------------------------------------------------------------------SIN UBI⬇️-------------------------------------
