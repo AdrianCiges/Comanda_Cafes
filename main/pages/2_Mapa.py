@@ -282,9 +282,9 @@ if ubi_allow:
                 
                 # Manejo de la selección
                 if st.button("Obtener Coordenadas"):
-                    lat, lon = obtener_coordenadas(capital_seleccionada)
+                    lat, lon = obtener_coordenadas(city)
                     if lat is not None and lon is not None:
-                        st.write(f"Las coordenadas de {capital_seleccionada} son:")
+                        st.write(f"Las coordenadas de {city} son:")
                         st.write(f"Latitud: {lat}")
                         st.write(f"Longitud: {lon}")
                     else:
@@ -341,13 +341,13 @@ if ubi_allow:
 
 else:
     # Desplegable para seleccionar la capital
-    capital_seleccionada = st.selectbox("Selecciona una capital de provincia de España", [capital["ciudad"] for capital in capitales_espana])
+    city = st.selectbox("Selecciona una capital de provincia de España", [capital["ciudad"] for capital in capitales_espana])
     
     # Manejo de la selección
     if st.button("Obtener Coordenadas"):
-        lat, lon = obtener_coordenadas(capital_seleccionada)
+        lat, lon = obtener_coordenadas(city)
         if lat is not None and lon is not None:
-            st.write(f"Las coordenadas de {capital_seleccionada} son:")
+            st.write(f"Las coordenadas de {city} son:")
             st.write(f"Latitud: {lat}")
             st.write(f"Longitud: {lon}")
         else:
