@@ -99,7 +99,12 @@ def get_city_from_coordinates(latitude, longitude):
     geolocator = Nominatim(user_agent="city_finder")
     
     # Obtener la dirección completa a partir de las coordenadas
-    location = geolocator.reverse((latitude, longitude), exactly_one=True)
+    try:
+        location = geolocator.reverse((latitude, longitude), exactly_one=True)
+    except:
+        geolocator = Nominatim(user_agent="myGeocoder", timeout=5)
+        location = geolocator.reverse(latitude, longitude, addressdetails=True)
+
     
     # Extraer la ciudad de la dirección
     if location:
