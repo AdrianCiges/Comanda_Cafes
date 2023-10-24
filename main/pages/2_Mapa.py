@@ -241,7 +241,7 @@ if result:
 
             for index, row in sorted_df.iterrows():
                 # Crear un enlace a Google Maps utilizando la latitud y longitud
-                google_maps_link = f'https://www.google.com/maps/search/{row["Latitude"]},{row["Longitude"]}'
+                google_maps_link = sorted_df['¿Cómo llegar?'][index]
             
                 # Crear el popup con el enlace clickeable
                 popup_content = f'A {row["Metros"]} metros <a href="{google_maps_link}"><strong>{row["Name"]}</strong></a>'
