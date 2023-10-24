@@ -235,7 +235,7 @@ if result:
             for index, row in sorted_df.iterrows():
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=f'<div style="white-space: nowrap;">A {row["Metros"]} metros<br><strong>{row["Name"]}</strong></div>',
+                    popup=f'<div style="white-space: nowrap;">A {row["Metros"]} metros:<br><strong>{row["Name"]}</strong></div>',
                 ).add_to(m)
 
 
@@ -256,7 +256,7 @@ if result:
 #--------------PROBANDO ETIQUETA ALARGADA--------------------------------------------------------------------------------------
 
             # Muestra el mapa interactivo en Streamlit
-            st.write("Mapa de ubicaciones:")
+            #st.write("Mapa de ubicaciones:")
             st_data2 = folium_static(m)
 
             sorted_df = sorted_df.reset_index(drop=True)
