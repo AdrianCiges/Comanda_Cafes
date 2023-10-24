@@ -241,16 +241,11 @@ if result:
             sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
 
             for index, row in sorted_df.iterrows():
-                # Codifica la URL correctamente
-                encoded_url = urllib.parse.quote(sorted_df["Cómo llegar"][index])
-                st.write(encoded_url)
-            
-                # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
-                popup_content = f'A {row["Metros"]} metros <a href="{encoded_url}" target="_blank"><strong>{row["Name"]}</strong></a>'
-            
+                popup_content = f'A {row["Metros"]} metros <strong>{row["Name"]}</strong>'
+                
                 folium.Marker(
                     location=[row["Latitude"], row["Longitude"]],
-                    popup=popup_content,
+                    popup=folium.Popup(html=popup_content, parse_html=True),
                 ).add_to(m)
 
 
