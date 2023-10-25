@@ -19,6 +19,7 @@ from streamlit_folium import folium_static
 from geopy.geocoders import Nominatim
 import urllib.parse
 import geocoder
+import os
 
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
