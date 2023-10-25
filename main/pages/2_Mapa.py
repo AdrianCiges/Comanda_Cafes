@@ -205,7 +205,15 @@ def obtener_coordenadas(ciudad):
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI USUARIO⬇️-------------------------------------
 
-df = pd.read_excel('..\..\data\cafeterias_espana.xlsx') 
+# Obtener la ruta completa al archivo XLSX
+archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
+
+# Cargar el archivo XLSX
+df = pd.read_excel(archivo_xlsx)
+
+# Mostrar el DataFrame en la aplicación Streamlit
+st.title("Cafeterías en España")
+st.write("Este es un ejemplo de cómo mostrar un DataFrame desde un archivo XLSX en Streamlit:")
 st.write(df)
 
 ubi_allow = st.checkbox("Encontrar cafeterías según mi ubicación")
