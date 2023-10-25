@@ -205,6 +205,9 @@ def obtener_coordenadas(ciudad):
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI USUARIO⬇️-------------------------------------
 
+df = pd.read_excel('../data/cafeterias_espana')
+st.write(df)
+
 ubi_allow = st.checkbox("Encontrar cafeterías según mi ubicación")
 
 if ubi_allow:
