@@ -206,6 +206,26 @@ def obtener_coordenadas(ciudad):
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI USUARIO⬇️-------------------------------------
 
+# Latitud
+latitud = st.number_input(
+    label="Introduzca los grados de latitud:",
+    min_value=0.0,  # Valor mínimo
+    max_value=90.0, # Valor máximo
+    value=40.0
+    step=0.1,       # Incremento
+    format="%.2f"   # Formato de presentación
+)
+
+# Longitud
+longitud = st.number_input(
+    label="Introduzca los grados de longitud:",
+    min_value=0.0,  # Valor mínimo
+    max_value=90.0, # Valor máximo
+    value=-3
+    step=0.1,       # Incremento
+    format="%.2f"   # Formato de presentación
+)
+
 # Obtener la ruta completa al archivo XLSX
 archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
 
