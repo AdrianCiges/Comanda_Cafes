@@ -209,7 +209,7 @@ def obtener_coordenadas(ciudad):
 # Latitud
 latitud = st.number_input(
     label="Introduzca los grados de latitud:",
-    min_value=0.0,  # Valor mínimo
+    min_value=-90.0,  # Valor mínimo
     max_value=90.0, # Valor máximo
     value=40.0,     # Valor predeterminado
     step=0.1,       # Incremento
@@ -219,7 +219,7 @@ latitud = st.number_input(
 # Longitud
 longitud = st.number_input(
     label="Introduzca los grados de longitud:",
-    min_value=0.0,  # Valor mínimo
+    min_value=-90.0,  # Valor mínimo
     max_value=90.0, # Valor máximo
     value=-3.0,       # Valor predeterminado
     step=0.1,       # Incremento
