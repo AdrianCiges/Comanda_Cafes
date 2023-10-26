@@ -241,7 +241,7 @@ if copipaste:
     st.markdown("""
         <style>
             input[data-baseweb="input"]::placeholder {
-                color: grey;
+                color: red;
             }
         </style>
         """, unsafe_allow_html=True)
