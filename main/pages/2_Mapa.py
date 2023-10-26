@@ -207,23 +207,23 @@ def obtener_coordenadas(ciudad):
 # -------------------------------------------------------------------------------UBI USUARIO⬇️-------------------------------------
 
 # Latitud
-latitud = st.number_input(
+latitud = st.sidebar.number_input(
     label="Introduzca los grados de latitud:",
-    min_value=-90.0,  # Valor mínimo
-    max_value=90.0, # Valor máximo
-    value=40.0,     # Valor predeterminado
-    step=0.1,       # Incremento
-    format="%.2f"   # Formato de presentación
+    min_value=-90.0000,  # Valor mínimo
+    max_value=90.0000,   # Valor máximo
+    value=40.4336,    # Valor predeterminado
+    step=0.0100,         # Incremento
+    format="%.4"     # Formato de presentación
 )
 
 # Longitud
-longitud = st.number_input(
+longitud = st.sidebar.number_input(
     label="Introduzca los grados de longitud:",
-    min_value=-90.0,  # Valor mínimo
-    max_value=90.0, # Valor máximo
-    value=-3.0,       # Valor predeterminado
-    step=0.1,       # Incremento
-    format="%.2f"   # Formato de presentación
+    min_value=-90.0000,  # Valor mínimo
+    max_value=90.0000,   # Valor máximo
+    value=-3.7043,    # Valor predeterminado
+    step=0.0100,         # Incremento
+    format="%.4f"     # Formato de presentación
 )
 
 # Obtener la ruta completa al archivo XLSX
