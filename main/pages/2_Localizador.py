@@ -233,7 +233,7 @@ def get_data():
 #     format="%.4f"        # Formato de presentación
 # )
 
-layout = st.sidebar.columns([2, 1])
+layout = st.sidebar.columns([1, 1])
 
 with layout[0]: 
     start_date = st.date_input('Date:') # omit "sidebar"
