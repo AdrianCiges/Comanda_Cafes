@@ -204,7 +204,7 @@ def obtener_coordenadas(ciudad):
     return None, None
 
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
-# -------------------------------------------------------------------------------UBI USUARIO⬇️-------------------------------------
+# -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
 # Latitud
 latitud = st.sidebar.number_input(
@@ -234,13 +234,9 @@ df = pd.read_excel(archivo_xlsx)
 df = df.drop('Unnamed: 0', axis=1)
 
 
-# Primera parte del título
-st.markdown("# Tus", unsafe_allow_html=True)
-
 # Widget number_input
-num_cafeterias = st.number_input("", value=5, min_value=1, max_value=10, step=1, format="%i")
+num_cafeterias = st.sidebar.number_input("", value=10, min_value=1, max_value=1000, step=1, format="%i")
 
-# Segunda parte del título
 st.markdown(f"# {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
 
