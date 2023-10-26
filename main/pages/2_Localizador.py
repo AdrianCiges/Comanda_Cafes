@@ -255,7 +255,7 @@ if copipaste:
     except:
         latitud = 40.4334
         longitud = -3.7043
-        st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en coordenadas-gps.com")
+        st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en coordenadas-gps.com')
 
 
 st.sidebar.success('Puedes encontrar tus coordenadas en https://www.coordenadas-gps.com/')
