@@ -13,9 +13,11 @@ import time as timee
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
+path1 = 'pags/0_Havas.py'
+
 show_pages(
     [
-        Page("pags/0_Havas.py", "HAVAS group", "💻"),  
+        Page(path1, "HAVAS group", "💻"),  
         Page("pags/1_Tu_grupo.py", "NEW group", "⚙️"),  
         Page("pags/2_Mapa.py", "Localizador", "🌍")    
     ]
