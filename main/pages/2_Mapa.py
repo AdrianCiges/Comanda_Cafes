@@ -211,7 +211,7 @@ archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafe
 
 # Cargar el archivo XLSX
 df = pd.read_excel(archivo_xlsx)
-df = df.drop('Unnamed: 0', axix=1)
+df = df.drop('Unnamed: 0', axis=1)
 
 # Mostrar el DataFrame en la aplicación Streamlit
 st.title("Cafeterías en España")
