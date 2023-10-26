@@ -206,7 +206,7 @@ def obtener_coordenadas(ciudad):
 @st.cache_data
 def get_data():
     data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
-    df = pd.read_excel(archivo_xlsx)
+    df = pd.read_excel(data_url)
     df = df.drop('Unnamed: 0', axis=1)
     return df
 
