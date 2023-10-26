@@ -280,7 +280,7 @@ longitude = longitud
 m = folium.Map(location=[latitude, longitude], zoom_start=15)
 red_icon = folium.Icon(color='red')
 folium.Marker(
-    [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Estás aquí", icon=red_icon
+    [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
 ).add_to(m)
 
 df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
