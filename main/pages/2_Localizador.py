@@ -203,6 +203,13 @@ def obtener_coordenadas(ciudad):
             return capital["latitud"], capital["longitud"]
     return None, None
 
+@st.cache_data
+def get_data():
+    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
+    df = pd.read_excel(archivo_xlsx)
+    df = df.drop('Unnamed: 0', axis=1)
+    return df
+
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
@@ -229,12 +236,13 @@ longitud = st.sidebar.number_input(
 st.sidebar.success('Puedes encontrar tus coordenadas en https://www.coordenadas-gps.com/')
 
 # Obtener la ruta completa al archivo XLSX
-archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
+# archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
 
 # Cargar el archivo XLSX
-df = pd.read_excel(archivo_xlsx)
-df = df.drop('Unnamed: 0', axis=1)
+# df = pd.read_excel(archivo_xlsx)
+# df = df.drop('Unnamed: 0', axis=1)
 
+df = get_data()
 
 # Widget number_input
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
