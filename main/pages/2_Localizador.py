@@ -235,9 +235,9 @@ with layout[-1]:
         format="%.4f"        # Formato de presentación
     )
 
-copipaste = st.sidebar.checkbox('Pegar en formato "Latitud: 40.433439 | Longitud: -3.704345"')
+copipaste = st.sidebar.checkbox('Usar formato unido')
 if copipaste:
-    coords = st.sidebar.text_input(" ", "Latitud: 40.433439 | Longitud: -3.704345")
+    coords = st.sidebar.text_input("Pega aquí las coordenadas de www.coordenadas-gps.com", "Latitud: 40.433439 | Longitud: -3.704345")
     latitud = round(float(coords.split(' | ')[0].replace('Latitud: ','')), 4)
     longitud = round(float(coords.split(' | ')[1].replace('Longitud: ','')), 4)
 
