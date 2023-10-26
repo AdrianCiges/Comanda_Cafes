@@ -211,7 +211,7 @@ latitud = st.number_input(
     label="Introduzca los grados de latitud:",
     min_value=0.0,  # Valor mínimo
     max_value=90.0, # Valor máximo
-    value=40.0
+    value=40.0,     # Valor predeterminado
     step=0.1,       # Incremento
     format="%.2f"   # Formato de presentación
 )
@@ -221,7 +221,7 @@ longitud = st.number_input(
     label="Introduzca los grados de longitud:",
     min_value=0.0,  # Valor mínimo
     max_value=90.0, # Valor máximo
-    value=-3
+    value=-3,       # Valor predeterminado
     step=0.1,       # Incremento
     format="%.2f"   # Formato de presentación
 )
