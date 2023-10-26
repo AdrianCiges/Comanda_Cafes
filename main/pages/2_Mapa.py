@@ -211,10 +211,10 @@ archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafe
 
 # Cargar el archivo XLSX
 df = pd.read_excel(archivo_xlsx)
+df = df.drop('Unnamed: 0', axix=1)
 
 # Mostrar el DataFrame en la aplicación Streamlit
 st.title("Cafeterías en España")
-st.write("Este es un ejemplo de cómo mostrar un DataFrame desde un archivo XLSX en Streamlit:")
 st.write(df)
 
 ubi_allow = st.checkbox("Encontrar cafeterías según mi ubicación")
