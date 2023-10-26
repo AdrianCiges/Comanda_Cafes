@@ -15,9 +15,9 @@ st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/
 
 show_pages(
     [
-        Page("Havas.py", "HAVAS group", "💻"),  # Como el script se ejecuta desde Havas.py, simplemente lo referenciamos por su nombre
-        Page("../pages/1_Tu_grupo.py", "NEW group", "⚙️"),  # Hacemos referencia al directorio padre y luego a "pages"
-        Page("../pages/2_Mapa.py", "Localizador", "🌍")      # Igualmente, hacemos referencia al directorio padre y luego a "pages"
+        Page("Havas.py", "HAVAS group", "💻"),  
+        Page("../main/pages/1_Tu_grupo.py", "NEW group", "⚙️"),  
+        Page("../main/pages/2_Mapa.py", "Localizador", "🌍")    
     ]
 )
 
