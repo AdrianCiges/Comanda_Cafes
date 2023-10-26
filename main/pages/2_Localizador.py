@@ -281,4 +281,3 @@ for index, row in sorted_df.iterrows():
     ).add_to(m)
 
 folium_static(m)
-
