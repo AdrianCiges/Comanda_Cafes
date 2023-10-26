@@ -15,11 +15,12 @@ st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/
 
 show_pages(
     [
-        Page("pages/1_Tu_grupo.py", "HAVAS group", "💻"),
-        Page("pages/1_Tu_grupo.py", "NEW group", "⚙️"), 
-        Page("pages/2_Mapa.py", "Localizador", "🌍")
+        Page("Havas.py", "HAVAS group", "💻"),  # Como el script se ejecuta desde Havas.py, simplemente lo referenciamos por su nombre
+        Page("../pages/1_Tu_grupo.py", "NEW group", "⚙️"),  # Hacemos referencia al directorio padre y luego a "pages"
+        Page("../pages/2_Mapa.py", "Localizador", "🌍")      # Igualmente, hacemos referencia al directorio padre y luego a "pages"
     ]
 )
+
 
 hora_actual = datetime.now().time()
 hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
