@@ -221,7 +221,7 @@ longitud = st.number_input(
     label="Introduzca los grados de longitud:",
     min_value=0.0,  # Valor mínimo
     max_value=90.0, # Valor máximo
-    value=-3,       # Valor predeterminado
+    value=-3.0,       # Valor predeterminado
     step=0.1,       # Incremento
     format="%.2f"   # Formato de presentación
 )
