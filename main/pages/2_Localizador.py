@@ -213,25 +213,47 @@ def get_data():
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
-# Latitud
-latitud = st.sidebar.number_input(
-    label="Introduzca sus grados de Latitud",
-    min_value=-90.0000,  # Valor mínimo
-    max_value=90.0000,   # Valor máximo
-    value=40.4336,       # Valor predeterminado
-    step=0.0100,         # Incremento
-    format="%.4f"        # Formato de presentación
-)
+# # Latitud
+# latitud = st.sidebar.number_input(
+#     label="Introduzca sus grados de Latitud",
+#     min_value=-90.0000,  # Valor mínimo
+#     max_value=90.0000,   # Valor máximo
+#     value=40.4336,       # Valor predeterminado
+#     step=0.0100,         # Incremento
+#     format="%.4f"        # Formato de presentación
+# )
 
-# Longitud
-longitud = st.sidebar.number_input(
-    label="Introduzca sus grados de Longitud:",
-    min_value=-90.0000,  # Valor mínimo
-    max_value=90.0000,   # Valor máximo
-    value=-3.7043,       # Valor predeterminado
-    step=0.0100,         # Incremento
-    format="%.4f"        # Formato de presentación
-)
+# # Longitud
+# longitud = st.sidebar.number_input(
+#     label="Introduzca sus grados de Longitud:",
+#     min_value=-90.0000,  # Valor mínimo
+#     max_value=90.0000,   # Valor máximo
+#     value=-3.7043,       # Valor predeterminado
+#     step=0.0100,         # Incremento
+#     format="%.4f"        # Formato de presentación
+# )
+
+layout = st.sidebar.columns([1, 1])
+
+with layout[0]: 
+    latitud = st.sidebar.number_input(
+        label="Introduzca sus grados de Latitud",
+        min_value=-90.0000,  # Valor mínimo
+        max_value=90.0000,   # Valor máximo
+        value=40.4336,       # Valor predeterminado
+        step=0.0100,         # Incremento
+        format="%.4f"        # Formato de presentación
+    )
+     
+with layout[-1]: 
+    longitud = st.sidebar.number_input(
+        label="Introduzca sus grados de Longitud:",
+        min_value=-90.0000,  # Valor mínimo
+        max_value=90.0000,   # Valor máximo
+        value=-3.7043,       # Valor predeterminado
+        step=0.0100,         # Incremento
+        format="%.4f"        # Formato de presentación
+    )
 
 st.sidebar.success('Puedes encontrar tus coordenadas en https://www.coordenadas-gps.com/')
 
