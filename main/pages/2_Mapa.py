@@ -272,5 +272,5 @@ for index, row in sorted_df.iterrows():
         popup=popup_content,
     ).add_to(m)
 
-    folium_static(m)
+folium_static(m)
 
