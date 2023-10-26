@@ -247,13 +247,13 @@ if copipaste:
         """, unsafe_allow_html=True)
     
     # Tu entrada de texto con valor predeterminado
-    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitud: 40.433439 | Longitud: -3.704345")
+    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitud: 40.433644 | Longitud: -3.704344")
 
     try:
         latitud = round(float(coords.split(' | ')[0].replace('Latitud: ','').replace(',','.').replace("'",".")), 4)
         longitud = round(float(coords.split(' | ')[1].replace('Longitud: ','').replace(',','.').replace("'",".")), 4)
     except:
-        latitud = 40.4334
+        latitud = 40.4336
         longitud = -3.7043
         st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en coordenadas-gps.com')
 
