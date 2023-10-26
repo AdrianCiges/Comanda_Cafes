@@ -233,9 +233,16 @@ archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafe
 df = pd.read_excel(archivo_xlsx)
 df = df.drop('Unnamed: 0', axis=1)
 
-# Mostrar el DataFrame en la aplicación Streamlit
-st.title("Cafeterías en España")
-st.write(df)
+
+# Primera parte del título
+st.markdown("# Tus", unsafe_allow_html=True)
+
+# Widget number_input
+num_cafeterias = st.number_input("", value=5, min_value=1, max_value=10, step=1, format="%i")
+
+# Segunda parte del título
+st.markdown(f"# {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
+
 
 latitude = latitud
 longitude = longitud
@@ -244,7 +251,7 @@ longitude = longitud
 m = folium.Map(location=[latitude, longitude], zoom_start=15)
 red_icon = folium.Icon(color='red')
 folium.Marker(
-    [latitude, longitude], popup='<div style="white-space: nowrap;">Estás aquí</div>', tooltip="Estás aquí", icon=red_icon
+    [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Estás aquí", icon=red_icon
 ).add_to(m)
 
 df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
