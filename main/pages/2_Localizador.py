@@ -249,8 +249,8 @@ if copipaste:
     # Tu entrada de texto con valor predeterminado
     coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitud: 40.433439 | Longitud: -3.704345")
 
-    latitud = round(float(coords.split(' | ')[0].replace('Latitud: ','')), 4)
-    longitud = round(float(coords.split(' | ')[1].replace('Longitud: ','')), 4)
+    latitud = round(float(coords.split(' | ')[0].replace('Latitud: ','').replace(',','.').replace("'",".")), 4)
+    longitud = round(float(coords.split(' | ')[1].replace('Longitud: ','').replace(',','.').replace("'",".")), 4)
 
 
 st.sidebar.success('Puedes encontrar tus coordenadas en https://www.coordenadas-gps.com/')
