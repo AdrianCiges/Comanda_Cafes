@@ -24,6 +24,25 @@ import os
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
+# Inyectar CSS personalizado para centrar todo el contenido de la página
+st.markdown("""
+    <style>
+        .reportview-container {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center !important;
+        }
+        .reportview-container .main {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 65%;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+
 
 # Cambiar el tema de la página principal
 st.markdown(
