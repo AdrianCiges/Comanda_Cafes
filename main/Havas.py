@@ -8,6 +8,7 @@ from datetime import datetime, time, timedelta
 import re
 import streamlit.components.v1 as components
 import time as timee
+from st_pages import Page, show_pages, add_page_title
 #import pywhatkit
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
