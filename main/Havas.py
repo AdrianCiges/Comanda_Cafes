@@ -3,8 +3,8 @@ from st_pages import Page, show_pages, add_page_title
 
 show_pages(
     [
-        Page("pages/Havas.py", "HAVAS group", "💻"),  
-        Page("pages/Tu_grupo.py", "NEW group", "⚙️"),  
-        Page("pages/Mapa.py", "Localizador", "🌍")    
+        Page("pags/Havas.py", "HAVAS group", "💻"),  
+        Page("pags/Tu_grupo.py", "NEW group", "⚙️"),  
+        Page("pags/Mapa.py", "Localizador", "🌍")    
     ]
 )
