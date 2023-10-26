@@ -226,6 +226,8 @@ longitud = st.sidebar.number_input(
     format="%.4f"        # Formato de presentación
 )
 
+st.sidebar.success('Puedes encontrar tus coordenadas en https://www.coordenadas-gps.com/')
+
 # Obtener la ruta completa al archivo XLSX
 archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
 
@@ -235,9 +237,12 @@ df = df.drop('Unnamed: 0', axis=1)
 
 
 # Widget number_input
-num_cafeterias = st.sidebar.number_input("", value=10, min_value=1, max_value=1000, step=1, format="%i")
+num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 
 st.markdown(f"# {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
+
+if latitud == 40.4336 and longitud == -3.7043:
+    st.warning('Estás utilizando la ubicación predeterminada en Gloriete de Quevedo. Para cambiarla usa el menú lateral.')
 
 
 latitude = latitud
