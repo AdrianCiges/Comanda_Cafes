@@ -259,7 +259,7 @@ df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])
 df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
 df['dif_sum'] = df['lat_dif'] + df['lon_dif']
 
-sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
+sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
 sorted_df = sorted_df.reset_index(drop=True)
 sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
 
