@@ -237,17 +237,32 @@ with layout[-1]:
 
 copipaste = st.sidebar.checkbox('Usar formato unido')
 if copipaste:
-    # Inyectar CSS personalizado para cambiar el color del texto dentro de text_input
+    # Inyectar CSS personalizado y HTML para crear un cuadro de texto con texto en gris
     st.markdown("""
         <style>
-            input[data-baseweb="input"]::placeholder {
-                color: red;
+            .greyTextInput input {
+                color: grey;
             }
         </style>
         """, unsafe_allow_html=True)
     
-    # Tu entrada de texto
-    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitud: 40.433439 | Longitud: -3.704345")
+    input_html = """
+    <div class="greyTextInput">
+        <input type="text" id="greyTextInputField" value="Latitud: 40.433439 | Longitud: -3.704345" style="width:100%;">
+    </div>
+    <script>
+        var inputField = document.getElementById("greyTextInputField");
+        inputField.addEventListener("change", function() {
+            var event = new Event("input", {"bubbles": true, "cancelable": false});
+            inputField.dispatchEvent(event);
+        });
+    </script>
+    """
+    
+    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:")
+    if not coords:
+        st.sidebar.markdown(input_html, unsafe_allow_html=True)
+
     latitud = round(float(coords.split(' | ')[0].replace('Latitud: ','')), 4)
     longitud = round(float(coords.split(' | ')[1].replace('Longitud: ','')), 4)
 
