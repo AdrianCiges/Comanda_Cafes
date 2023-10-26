@@ -236,10 +236,24 @@ def get_data():
 layout = st.sidebar.columns([1, 1])
 
 with layout[0]: 
-    start_date = st.date_input('Date:') # omit "sidebar"
+    latitud = st.number_input(
+        label="Latitud",
+        min_value=-90.0000,  # Valor mínimo
+        max_value=90.0000,   # Valor máximo
+        value=40.4336,       # Valor predeterminado
+        step=0.0100,         # Incremento
+        format="%.4f"        # Formato de presentación
+    )
  
 with layout[-1]: 
-    start_hour = st.time_input('Time:') # omit "sidebar"
+    longitud = st.number_input(
+        label="Longitud:",
+        min_value=-90.0000,  # Valor mínimo
+        max_value=90.0000,   # Valor máximo
+        value=-3.7043,       # Valor predeterminado
+        step=0.0100,         # Incremento
+        format="%.4f"        # Formato de presentación
+    )
 
 st.sidebar.success('Puedes encontrar tus coordenadas en https://www.coordenadas-gps.com/')
 
