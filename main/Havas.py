@@ -15,9 +15,9 @@ st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/
 
 show_pages(
     [
-        Page("main/Havas.py", "HAVAS group", "💻"),
-        Page("Comanda_Cafes/main/pages/1_Tu_grupo.py", "NEW group", "⚙️"), 
-        Page("Comanda_Cafes/main/pages/2_Mapa.py", "Localizador", "🌍")
+        Page("Havas.py", "HAVAS group", "💻"),
+        Page("pages/1_Tu_grupo.py", "NEW group", "⚙️"), 
+        Page("pages/2_Mapa.py", "Localizador", "🌍")
     ]
 )
 
