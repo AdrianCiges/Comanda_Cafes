@@ -211,9 +211,9 @@ latitud = st.sidebar.number_input(
     label="Introduzca sus grados de Latitud",
     min_value=-90.0000,  # Valor mínimo
     max_value=90.0000,   # Valor máximo
-    value=40.4336,    # Valor predeterminado
+    value=40.4336,       # Valor predeterminado
     step=0.0100,         # Incremento
-    format="%.4f"     # Formato de presentación
+    format="%.4f"        # Formato de presentación
 )
 
 # Longitud
@@ -221,9 +221,9 @@ longitud = st.sidebar.number_input(
     label="Introduzca sus grados de Longitud:",
     min_value=-90.0000,  # Valor mínimo
     max_value=90.0000,   # Valor máximo
-    value=-3.7043,    # Valor predeterminado
+    value=-3.7043,       # Valor predeterminado
     step=0.0100,         # Incremento
-    format="%.4f"     # Formato de presentación
+    format="%.4f"        # Formato de presentación
 )
 
 # Obtener la ruta completa al archivo XLSX
@@ -240,7 +240,7 @@ st.write(df)
 latitude = latitud
 longitude = longitud
 
-# MAPEANDO CON UBI USUARIO
+# MAPEANDO CON UBI A MANO
 m = folium.Map(location=[latitude, longitude], zoom_start=15)
 red_icon = folium.Icon(color='red')
 folium.Marker(
@@ -253,10 +253,8 @@ df['dif_sum'] = df['lat_dif'] + df['lon_dif']
 
 sorted_df = df.sort_values(by='dif_sum', ascending=True)[:10]
 sorted_df = sorted_df.reset_index(drop=True)
-#sorted_df.index = range(1, len(sorted_df) + 1)
 sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
 
-# sorted_df = sorted_df.reset_index(drop=True)
 coords = []
 for i,e in enumerate(sorted_df['Latitude']):
     coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
@@ -273,3 +271,6 @@ for index, row in sorted_df.iterrows():
         location=[row["Latitude"], row["Longitude"]],
         popup=popup_content,
     ).add_to(m)
+
+    folium_static(m)
+
