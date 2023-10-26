@@ -9,11 +9,12 @@ from datetime import datetime, time, timedelta
 import re
 import streamlit.components.v1 as components
 import time as timee
+import os
 #import pywhatkit
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
-path1 = 'pags/0_Havas.py'
+path1 = os.path.join(os.path.dirname(__file__), '..', 'main', 'pags', '0_Havas.py')
 
 show_pages(
     [
