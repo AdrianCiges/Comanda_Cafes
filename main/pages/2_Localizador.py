@@ -237,7 +237,17 @@ with layout[-1]:
 
 copipaste = st.sidebar.checkbox('Usar formato unido')
 if copipaste:
-    coords = st.sidebar.text_input("Pega aquí las coordenadas de www.coordenadas-gps.com", "Latitud: 40.433439 | Longitud: -3.704345")
+    # Inyectar CSS personalizado para cambiar el color del texto dentro de text_input
+    st.markdown("""
+        <style>
+            input[data-baseweb="input"]::placeholder {
+                color: grey;
+            }
+        </style>
+        """, unsafe_allow_html=True)
+    
+    # Tu entrada de texto
+    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitud: 40.433439 | Longitud: -3.704345")
     latitud = round(float(coords.split(' | ')[0].replace('Latitud: ','')), 4)
     longitud = round(float(coords.split(' | ')[1].replace('Longitud: ','')), 4)
 
