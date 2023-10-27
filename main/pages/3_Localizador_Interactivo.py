@@ -35,8 +35,6 @@ if click_coords:
     for idx, row in closest_points.iterrows():
         folium.Marker([row['latitude'], row['longitude']], popup=f"Distance: {row['distance']:.2f} km").add_to(m)
 
-def on_click(coords):
-    st.session_state.click_coords = coords
+m.add_child(folium.ClickForMarker(popup="Selected Location"))
 
-m.add_child(folium.ClickForMarker(popup="Selected Location", popup_on=True, on_click=on_click))
 folium_static(m)
