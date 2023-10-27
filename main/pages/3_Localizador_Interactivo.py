@@ -5,6 +5,9 @@ import json
 
 import streamlit as st
 
+import streamlit as st
+import json
+
 st.title("Geolocalización del Usuario en Streamlit")
 
 # Función para obtener la geolocalización del usuario en JavaScript
@@ -16,9 +19,9 @@ function getUserLocation() {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
 
-            // Muestra los datos de latitud y longitud en Streamlit
-            document.getElementById("latitude").innerHTML = "Latitud: " + latitude.toFixed(6);
-            document.getElementById("longitude").innerHTML = "Longitud: " + longitude.toFixed(6);
+            // Envía los datos de latitud y longitud al servidor de Streamlit
+            const locationData = {latitude, longitude};
+            Streamlit.setComponentValue(locationData);
         });
     } else {
         alert("Tu navegador no admite geolocalización.");
@@ -32,9 +35,15 @@ st.markdown(javascript_code, unsafe_allow_html=True)
 
 # Botón para obtener la geolocalización del usuario
 if st.button("Obtener Geolocalización"):
-    # Llama a la función JavaScript para obtener la geolocalización
-    st.markdown("<div id='latitude'></div>", unsafe_allow_html=True)
-    st.markdown("<div id='longitude'></div>", unsafe_allow_html=True)
-    st.write(f"Latitud {latitude} Longitud {longitude}")
+    # Obtiene los datos de geolocalización del usuario
+    location_data = st._json_value
+    if location_data:
+        latitude = location_data["latitude"]
+        longitude = location_data["longitude"]
+        st.write(f"Latitud: {latitude:.6f}")
+        st.write(f"Longitud: {longitude:.6f}")
+    else:
+        st.warning("La geolocalización no está habilitada o no se pudo obtener.")
+
 
 
