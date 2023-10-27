@@ -1,4 +1,5 @@
 import streamlit as st
+import requests
 
 def get_geolocation():
     key = "c43c377d6b6b4b05b1750841e52a8473"
