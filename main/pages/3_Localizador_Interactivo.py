@@ -32,8 +32,9 @@ if st.button("Obtener Geolocalización"):
     st.markdown('<button onclick="getUserLocation()">Obtener ubicación</button>', unsafe_allow_html=True)
     
     # Escucha los datos de geolocalización obtenidos
-    location_data = st.json_input('locationData', value={})
+    location_data = st.text_area("Datos de Geolocalización", value="")
     if location_data:
+        location_data = json.loads(location_data)
         latitude = location_data.get("latitude", 0)
         longitude = location_data.get("longitude", 0)
         st.write(f"Latitud: {latitude:.6f}")
