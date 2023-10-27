@@ -9,3 +9,4 @@ overpy==0.6
 geocoder==1.38.1
 openpyxl==3.1.2
 leafmap
+streamlit_js_eval
