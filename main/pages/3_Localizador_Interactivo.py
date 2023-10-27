@@ -1,6 +1,7 @@
 import streamlit as st
 import folium
 from streamlit_folium import folium_static
+from folium.plugins import Draw
 
 st.title("Interactive Map")
 
@@ -13,19 +14,18 @@ index = options.index("OpenStreetMap")
 with col2:
     basemap = st.selectbox("Tipo de mapa:", options, index)
 
-m = folium.Map(location=[40.4168, -3.7038], zoom_start=10, tiles=basemap)  # Puedes cambiar las coordenadas iniciales
+m = folium.Map(location=[40.4168, -3.7038], zoom_start=10, tiles=basemap)
 
-click_coords = []
-
-# Función para capturar el evento de clic y obtener las coordenadas
-def add_marker(map, coord):
-    folium.Marker(location=coord, popup=f"Coordenadas: {coord[0]}, {coord[1]}").add_to(map)
-    click_coords.append(coord)
-
-m.add_child(folium.ClickForMarker(popup=add_marker))
+# Añadimos la herramienta de dibujo al mapa
+draw = Draw(draw_options={'polyline': False, 'rectangle': False, 'polygon': False, 'circle': False, 'circlemarker': False})
+draw.add_to(m)
 
 # Mostrar el mapa en Streamlit
 folium_static(m)
 
-if click_coords:
-    st.write(f"Latitud: {click_coords[-1][0]}, Longitud: {click_coords[-1][1]}")
+# Captura las coordenadas dibujadas en el mapa
+drawn_shapes = st.session_state.get('drawn_shapes', None)
+if drawn_shapes:
+    if "geometry" in drawn_shapes[-1]:
+        coords = drawn_shapes[-1]["geometry"]["coordinates"]
+        st.write(f"Latitud: {coords[1]}, Longitud: {coords[0]}")
