@@ -20,9 +20,9 @@ click_coords = []
 # Función para capturar el evento de clic y obtener las coordenadas
 def add_marker(map, coord):
     folium.Marker(location=coord, popup=f"Coordenadas: {coord[0]}, {coord[1]}").add_to(map)
+    click_coords.append(coord)
 
-# Al hacer clic en el mapa, capturar coordenadas y añadir un marcador
-m.add_child(folium.ClickForMarker(popup_content=add_marker))
+m.add_child(folium.ClickForMarker(popup=add_marker))
 
 # Mostrar el mapa en Streamlit
 folium_static(m)
