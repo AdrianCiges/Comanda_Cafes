@@ -1,22 +1,36 @@
 import streamlit as st
-import leafmap.foliumap as leafmap
+import folium
+from streamlit_folium import folium_static
+from folium.plugins import LocateControl
 
 st.title("Interactive Map")
 
 col1, col2 = st.columns([4, 1])
-options = list(leafmap.basemaps.keys())
-index = options.index("OpenTopoMap")
+
+# Opciones de mapas base
+options = ["OpenStreetMap", "Stamen Terrain", "Stamen Toner", "Stamen Watercolor", "CartoDB positron", "CartoDB dark_matter"]
+index = options.index("OpenStreetMap")
 
 with col2:
     basemap = st.selectbox("Tipo de mapa:", options, index)
 
-with col1:
-    m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=True, minimap_control=True)
-    m.add_basemap(basemap)
-    m.to_streamlit(height=700)
+m = folium.Map(location=[40.4168, -3.7038], zoom_start=10, tiles=basemap)  # Puedes cambiar las coordenadas iniciales
 
-    # Función para capturar el evento de clic y obtener las coordenadas
-    click_coords = m.get_click_latlon()
-    if click_coords:
-        lat, lon = click_coords
-        st.write(f"Latitud: {lat}, Longitud: {lon}")
+# Agregar controles al mapa
+LocateControl().add_to(m)
+
+# Función para capturar el evento de clic y obtener las coordenadas
+click_coords = []
+
+def click_event_handler(feature, **kwargs):
+    coords = feature['geometry']['coordinates']
+    click_coords.append(coords)
+
+m.add_child(folium.ClickForMarker(popup="Coordenadas: {} {}".format(*click_coords)))
+m.add_child(folium.GeoJson("", name="Clicked Points", onEachFeature=click_event_handler))
+
+# Mostrar el mapa en Streamlit
+folium_static(m)
+
+if click_coords:
+    st.write(f"Latitud: {click_coords[-1][1]}, Longitud: {click_coords[-1][0]}")
