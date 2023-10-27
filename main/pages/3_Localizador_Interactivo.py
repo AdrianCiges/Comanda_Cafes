@@ -35,6 +35,6 @@ if st.button("Obtener Geolocalización"):
     # Llama a la función JavaScript para obtener la geolocalización
     st.markdown("<div id='latitude'></div>", unsafe_allow_html=True)
     st.markdown("<div id='longitude'></div>", unsafe_allow_html=True)
-    st.write("Esperando la geolocalización...")
+    st.write(f"Latitud {latitude} Longitud {longitude}")
 
 
