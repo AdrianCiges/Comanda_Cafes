@@ -18,11 +18,8 @@ with col1:
     m.add_basemap(basemap)
     m.to_streamlit(height=700)
 
-map.on('click', function(e) {        
-    var popLocation = e.latlng;
-    var popup = L.popup()
-        .setLatLng(popLocation)
-        .setContent('<p>Hello world!<br />This is a nice popup.</p>')
-        .openOn(map);        
-});
+observeEvent(input$Map_shape_click, { # update the location selectInput on map clicks
+  p <- input$Map_shape_click
+  print(p)
+})
 
