@@ -18,8 +18,5 @@ with col1:
     m.add_basemap(basemap)
     m.to_streamlit(height=700)
 
-observeEvent(input$Map_shape_click, { # update the location selectInput on map clicks
-  p <- input$Map_shape_click
-  print(p)
-})
+
 
