@@ -1,12 +1,4 @@
 import streamlit as st
-import folium
-import streamlit as st
-import json
-
-import streamlit as st
-
-import streamlit as st
-import json
 
 st.title("Geolocalización del Usuario en Streamlit")
 
@@ -20,8 +12,7 @@ function getUserLocation() {
             var longitude = position.coords.longitude;
 
             // Envía los datos de latitud y longitud al servidor de Streamlit
-            const locationData = {latitude, longitude};
-            Streamlit.setComponentValue(locationData);
+            Streamlit.setComponentValue({latitude, longitude});
         });
     } else {
         alert("Tu navegador no admite geolocalización.");
@@ -35,8 +26,12 @@ st.markdown(javascript_code, unsafe_allow_html=True)
 
 # Botón para obtener la geolocalización del usuario
 if st.button("Obtener Geolocalización"):
-    # Obtiene los datos de geolocalización del usuario
-    location_data = st._json_value
+    # Ejecuta la función JavaScript para obtener la geolocalización
+    st.write("Esperando la geolocalización...")
+    st.markdown('<button onclick="getUserLocation()">Obtener ubicación</button>', unsafe_allow_html=True)
+    
+    # Muestra los datos de geolocalización obtenidos
+    location_data = st._get_streamlit_json_value()
     if location_data:
         latitude = location_data["latitude"]
         longitude = location_data["longitude"]
@@ -44,6 +39,3 @@ if st.button("Obtener Geolocalización"):
         st.write(f"Longitud: {longitude:.6f}")
     else:
         st.warning("La geolocalización no está habilitada o no se pudo obtener.")
-
-
-
