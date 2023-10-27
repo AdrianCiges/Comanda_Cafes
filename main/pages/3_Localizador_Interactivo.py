@@ -18,10 +18,11 @@ with col1:
     m.add_basemap(basemap)
     m.to_streamlit(height=700)
 
-map.on('click', function(e): {        
-        var popLocation= e.latlng;
-        var popup = L.popup()
+map.on('click', function(e) {        
+    var popLocation = e.latlng;
+    var popup = L.popup()
         .setLatLng(popLocation)
         .setContent('<p>Hello world!<br />This is a nice popup.</p>')
         .openOn(map);        
-    });
+});
+
