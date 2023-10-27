@@ -10,7 +10,7 @@ import streamlit.components.v1 as components
 import time as timee
 #import pywhatkit
 
-st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
+# st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
 st.set_page_config(
     page_title="Hello",
