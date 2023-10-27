@@ -12,6 +12,11 @@ import time as timee
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
+st.set_page_config(
+    page_title="Hello",
+    page_icon="👋",
+)
+
 hora_actual = datetime.now().time()
 hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
 hora_sumada = hora_actual_dt + timedelta(hours=2)
