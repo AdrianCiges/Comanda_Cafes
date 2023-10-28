@@ -252,7 +252,7 @@ with st.expander('Encontrar mi ubicación', expanded=False):
     
         m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
         m.add_basemap(basemap)
-        m.to_streamlit(height=300, width=690)
+        m.to_streamlit(height=500, width=690)
 
 
 # -------------------------------------------------------------------------------UBI A MANO ⬆️-------------------------------------
