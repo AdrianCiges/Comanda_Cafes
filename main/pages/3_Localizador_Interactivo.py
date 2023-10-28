@@ -1,11 +1,15 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
 
-
 st.title("Interactive Map")
 
 # Lista para almacenar las coordenadas capturadas
 coordinates = []
+
+def display_coordinates(lat, lon):
+    """Function to display coordinates when the map is clicked."""
+    coordinates.append((lat, lon))
+    st.write(f"Latitude: {lat}, Longitude: {lon}")
 
 col1, col2 = st.columns([4, 1])
 options = list(leafmap.basemaps.keys())
@@ -17,4 +21,5 @@ with col2:
 with col1:
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=True, minimap_control=True)
     m.add_basemap(basemap)
+    m.add_child(leafmap.ClickForCoord(latlon=True, callback=display_coordinates))
     m.to_streamlit(height=700)
