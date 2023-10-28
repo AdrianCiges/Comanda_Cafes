@@ -1,6 +1,6 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
-import streamlit-option-menu as option_menu
+import streamlit_option_menu as option_menu
 
 markdown = """
 Web App URL: <https://geotemplate.streamlit.app>
