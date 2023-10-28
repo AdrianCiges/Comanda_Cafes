@@ -1,26 +1,25 @@
 import streamlit as st
+import leafmap.foliumap as leafmap
 import folium
-from streamlit_folium import folium_static
 
 st.title("Interactive Map")
 
 # Lista para almacenar las coordenadas capturadas
 coordinates = []
 
-def display_coordinates(map, lat, lon):
-    """Function to display coordinates and add marker when the map is clicked."""
-    coordinates.append((lat, lon))
-    folium.Marker([lat, lon], tooltip=f'Latitude: {lat}, Longitude: {lon}').add_to(map)
-
 col1, col2 = st.columns([4, 1])
-options = ["OpenStreetMap", "Stamen Terrain", "Stamen Toner", "Mapbox Bright", "Mapbox Control Room"]
-index = options.index("OpenStreetMap")
+options = list(leafmap.basemaps.keys())
+index = options.index("OpenTopoMap")
 
 with col2:
     basemap = st.selectbox("Select a basemap:", options, index)
 
-m = folium.Map(location=[20,0], zoom_start=2, tiles=basemap)
-m.add_child(folium.LatLngPopup())
-
 with col1:
-    folium_static(m)
+    m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=True, minimap_control=True)
+    m.add_basemap(basemap)
+    
+    # Add ClickForMarker functionality using folium
+    marker = folium.ClickForMarker(popup="Coordinates: Lat: {}<br>Lon: {}", tooltip="Click to see coordinates")
+    m.add_child(marker)
+    
+    m.to_streamlit(height=700)
