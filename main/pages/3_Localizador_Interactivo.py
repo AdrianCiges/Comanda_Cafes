@@ -3,9 +3,13 @@ import requests
 import json
 
 
-def get_ip():
-    response = requests.get('https://api64.ipify.org?format=json').json()
-    return response["ip"]
+def get_ip_address():
+    try:
+        # Utilizando un servicio externo para obtener la dirección IP del usuario
+        ip_address = requests.get('https://api64.ipify.org?format=json').json()['ip']
+        return ip_address
+    except:
+        return "No se pudo obtener la dirección IP"
 
 
 # def get_location():
@@ -23,7 +27,7 @@ def get_ip():
 if st.button('Mi ubicación'):
     # st.write(get_location())
 
-    ip_address = get_ip()
+    ip_address = get_ip_address()
     request_url = 'https://geolocation-db.com/jsonp/' + ip_address
     response = requests.get(request_url)
     result = response.content.decode()
