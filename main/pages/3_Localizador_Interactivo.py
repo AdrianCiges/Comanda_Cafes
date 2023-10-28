@@ -3,7 +3,7 @@ import requests
 
 def get_location_from_ip():
     try:
-        response = requests.get("https://ipinfo.io/json?token=TU_TOKEN")
+        response = requests.get("https://ipinfo.io/json?token=83c178d0c646a4")
         data = response.json()
         location = data['loc'].split(',')
         return float(location[0]), float(location[1])
