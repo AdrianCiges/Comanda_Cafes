@@ -23,3 +23,5 @@ with col1:
     m.add_child(marker)
     
     m.to_streamlit(height=700)
+
+st.write(marker)
