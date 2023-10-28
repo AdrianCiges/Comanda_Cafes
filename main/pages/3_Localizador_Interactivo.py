@@ -19,7 +19,7 @@ with col1:
     m.add_basemap(basemap)
     
     # Add ClickForMarker functionality using folium
-    marker = folium.ClickForMarker(popup="Coordinates: Lat: {}<br>Lon: {}", tooltip="Click to see coordinates")
+    marker = folium.ClickForMarker(popup="Coordinates: Lat: {}<br>Lon: {}")
     m.add_child(marker)
     
     m.to_streamlit(height=700)
