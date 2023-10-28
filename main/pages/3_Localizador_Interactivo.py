@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 import json
-from flask import Flask, request
+from Flask import Flask, request
 
 app = Flask(__name__)
 
