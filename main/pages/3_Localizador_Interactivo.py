@@ -16,6 +16,5 @@ with col1:
 
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=True, minimap_control=True)
     st.write(m)
-    st.write(locate_control, latlon_control)
     m.add_basemap(basemap)
     m.to_streamlit(height=700)
