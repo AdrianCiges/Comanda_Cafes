@@ -235,20 +235,20 @@ def get_data():
 
 with st.expander('Encontrar mi ubicación', expanded=False):   
         
-    # col1, col2 = st.columns([4, 1])
-    # options = list(leafmap.basemaps.keys())
-    # index = options.index("OpenTopoMap")
+    col1, col2 = st.columns([4, 1])
+    options = list(leafmap.basemaps.keys())
+    index = options.index("OpenTopoMap")
     
-    # with col2:
+    with col2:
     
-    #     basemap = st.selectbox("Select a basemap:", options, index)
+        basemap = st.selectbox("Tipo de mapa:", options, index)
     
     
-    # with col1:
+    with col1:
     
-    m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=True, minimap_control=True)
-    # m.add_basemap(basemap)
-    m.to_streamlit(height=700)
+        m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
+        m.add_basemap(basemap)
+        m.to_streamlit(height=500)
 
 
 # -------------------------------------------------------------------------------UBI A MANO ⬆️-------------------------------------
