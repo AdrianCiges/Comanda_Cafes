@@ -18,4 +18,5 @@ def get_location():
     return location_data
 
 
-print(get_location())
+if st.button('Mi ubicación'):
+    st.write(get_location())
