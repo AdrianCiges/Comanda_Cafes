@@ -1,164 +1,49 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jan 21 20:37:10 2022
-
-@author: Ronald Nyasha Kanyepi
-@email : kanyepironald@gmail.com
-"""
-
-import os
-import pandas as pd
 import streamlit as st
-from PIL import Image
-from streamlit_option_menu import option_menu
-from streamlit_folium import folium_static
-import folium
-import requests
-from requests.exceptions import ConnectionError
+import leafmap.foliumap as leafmap
 
+markdown = """
+Web App URL: <https://geotemplate.streamlit.app>
+GitHub Repository: <https://github.com/giswqs/streamlit-multipage-template>
+"""
 
-def config():
-    file_path = "./components/img/"
-    img = Image.open(os.path.join(file_path, 'logo.ico'))
-    st.set_page_config(page_title='GEO LOCATION APP', page_icon=img, layout="wide", initial_sidebar_state="expanded")
+st.sidebar.title("About")
+st.sidebar.info(markdown)
+logo = "https://i.imgur.com/UbOXYAU.png"
+st.sidebar.image(logo)
 
-    # code to check turn of setting and footer
-    st.markdown(""" <style>
-    MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style> """, unsafe_allow_html=True)
+st.title("Interactive Map")
 
-    # encoding format
-    encoding = "utf-8"
+# Lista para almacenar las coordenadas capturadas
+coordinates = []
 
-    st.markdown(
-        """
-        <style>
-            .stProgress > div > div > div > div {
-                background-color: #1c4b27;
-            }
-        </style>""",
-        unsafe_allow_html=True,
-    )
+col1, col2 = st.columns([4, 1])
+options = list(leafmap.basemaps.keys())
+index = options.index("OpenTopoMap")
 
-    st.balloons()
-    # I want it to show balloon when it finished loading all the configs
+with col2:
+    basemap = st.selectbox("Select a basemap:", options, index)
 
+with col1:
+    m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=True, minimap_control=True)
+    m.add_basemap(basemap)
+    m.to_streamlit(height=700)
 
-def get_geolocation():
-    key = "c43c377d6b6b4b05b1750841e52a8473"
-    response = requests.get("https://api.ipgeolocation.io/ipgeo?apiKey=" + key)
-    return response.json()
+# Función para capturar las coordenadas cuando se hace clic en el mapa
+def handle_map_click(event):
+    if event["type"] == "click":
+        coordinates.append((event["latlng"]["lat"], event["latlng"]["lng"]))
 
+# Registra la función de manejo de clics en el mapa
+m.on("click", handle_map_click)
 
-def other_tab():
-    st.header("Other TAB")
+# Botón para obtener la geolocalización del usuario
+if st.button("Geolocalizar Usuario"):
+    user_location = m.get_location()
+    if user_location:
+        coordinates.append((user_location["lat"], user_location["lng"]))
 
-
-def home():
-    try:
-        with st.spinner("Please wait your request is being processed ......"):
-            response = get_geolocation()
-            st.header("IP Geolocation App 🕵️‍♂️")
-            col1, col2 = st.columns([8, 4])
-
-            with col1:
-                m = folium.Map(location=[response["latitude"], response["longitude"]], zoom_start=16)
-                tooltip = "The Approx Location"
-                folium.Marker(
-                    [response["latitude"], response["longitude"]],
-                    popup="The Approx Location", tooltip=tooltip
-                ).add_to(m)
-                folium_static(m,width=500,height=400)
-
-
-
-            with col2:
-                st.markdown(f"""
-                <table>
-                <thead>
-                   <th>Data</th>
-                   <th>Value</td>
-                </thead>
-                
-                <tr>
-                   <td>Ip Address</td>
-                   <td>{response["ip"]}</td>
-                </tr>
-                
-                <tr>
-                   <td>City</td>
-                   <td>{response["city"]}</td>
-                </tr>
-                
-                <tr>
-                   <td>District</td>
-                   <td>{response["district"]}</td>
-                </tr>
-                
-                <tr>
-                   <td>Province</td>
-                   <td>{response["state_prov"]}</td>
-                </tr>
-                
-                <tr>
-                   <td>Calling Code</td>
-                   <td>{response["calling_code"]}</td>
-                </tr>
-                <tr>
-                   <td>Latitude</td>
-                   <td>{response["latitude"]}</td>
-                </tr>
-                
-                <tr>
-                   <td>Longitude</td>
-                   <td>{response["longitude"]}</td>
-                </tr>
-                           
-                <tr>
-                   <td>Country</td>
-                   <td><img src="{response['country_flag']}" style="width:30%;max-width:40%"> {response["country_name"]}</td>
-                </tr>
-                
-
-    
-                </table>
-
-
-""",unsafe_allow_html=True)
-
-            with st.expander("More Information regarding this IP"):
-                st.subheader("Currency")
-                df = pd.DataFrame.from_dict(response["currency"], orient="index", dtype=str, columns=['Value'])
-                st.write(df)
-                st.subheader("ISP")
-                st.write("isp",{response["isp"]})
-                st.write("connection_type",{response["connection_type"]})
-                st.write("organization", {response["organization"]})
-
-                st.subheader("TimeZone")
-                df_1 = pd.DataFrame.from_dict(response["time_zone"], orient="index", dtype=str, columns=['Value'])
-                st.write(df_1)
-
-
-
-
-
-
-
-
-    except ConnectionError as e:
-        st.error("The APP has failed to connect please check your connection 😥")
-
-
-def main():
-    config()
-    with st.sidebar:
-        choice = option_menu("Main Menu", ["Home", 'Other Tab'], icons=['house', 'list-task'], menu_icon="cast",
-                             default_index=0)
-
-    home() if (choice == "Home") else other_tab()
-
-
-if __name__ == '__main__':
-    main()
+# Muestra las coordenadas capturadas debajo del mapa
+if coordinates:
+    st.write("Coordenadas Capturadas:")
+    for lat, lon in coordinates:
+        st.write(f"Latitud: {lat:.6f}, Longitud: {lon:.6f}")
