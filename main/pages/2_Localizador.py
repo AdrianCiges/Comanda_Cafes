@@ -245,14 +245,14 @@ with st.expander('Encontrar mi ubicación', expanded=False):
     
     with col2:
     
-        basemap = st.selectbox("Tipo de mapa:", options, index)
+        basemap = st.selectbox("Select a basemap:", options, index)
     
     
     with col1:
     
         m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=True, minimap_control=True)
         m.add_basemap(basemap)
-        m.to_streamlit(height=500, width=690)
+        m.to_streamlit(height=700)
 
 
 # -------------------------------------------------------------------------------UBI A MANO ⬆️-------------------------------------
