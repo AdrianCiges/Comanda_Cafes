@@ -24,4 +24,4 @@ with col1:
     
     m.to_streamlit(height=700)
 
-st.write(marker)
+    st.write(marker)
