@@ -233,6 +233,10 @@ def get_data():
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
+num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
+
+st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
+
 with st.expander('Encontrar mi ubicación', expanded=False):   
         
     col1, col2 = st.columns([4, 1])
@@ -248,7 +252,7 @@ with st.expander('Encontrar mi ubicación', expanded=False):
     
         m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
         m.add_basemap(basemap)
-        m.to_streamlit(height=500, width=700)
+        m.to_streamlit(height=500, width=690)
 
 
 # -------------------------------------------------------------------------------UBI A MANO ⬆️-------------------------------------
@@ -300,7 +304,7 @@ if copipaste:
         st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en coordenadas-gps.com')
 
 
-st.sidebar.success('Puedes encontrar tus coordenadas en https://www.coordenadas-gps.com/')
+st.sidebar.success('Puedes encontrar tus coordenadas en el desplegable "Encontrar mi ubicación"')
 
 # Obtener la ruta completa al archivo XLSX
 # archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
@@ -310,11 +314,6 @@ st.sidebar.success('Puedes encontrar tus coordenadas en https://www.coordenadas-
 # df = df.drop('Unnamed: 0', axis=1)
 
 df = get_data()
-
-# Widget number_input
-num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
-
-st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
 if latitud == 40.4336 and longitud == -3.7043:
     st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para cambiarla usa el menú lateral.')
