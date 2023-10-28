@@ -1,15 +1,14 @@
 import streamlit as st
 import requests
 import json
+from flask import Flask, request
 
+app = Flask(__name__)
 
-def get_ip_address():
-    try:
-        # Utilizando un servicio externo para obtener la dirección IP del usuario
-        ip_address = requests.get('https://api64.ipify.org?format=json').json()['ip']
-        return ip_address
-    except:
-        return "No se pudo obtener la dirección IP"
+@app.route('/')
+def get_ip():
+    user_ip = request.remote_addr
+    return f"Your IP address is: {user_ip}"
 
 
 # def get_location():
@@ -27,7 +26,7 @@ def get_ip_address():
 if st.button('Mi ubicación'):
     # st.write(get_location())
 
-    ip_address = get_ip_address()
+    ip_address = get_ip()
     request_url = 'https://geolocation-db.com/jsonp/' + ip_address
     response = requests.get(request_url)
     result = response.content.decode()
