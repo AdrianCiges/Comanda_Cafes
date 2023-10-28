@@ -18,3 +18,4 @@ requests==2.24.0
 Pillow==7.2.0
 streamlit_folium
 streamlit_option_menu==0.3.2
+Flask
