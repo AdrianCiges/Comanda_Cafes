@@ -1,6 +1,5 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
-import streamlit_option_menu as option_menu
 
 
 st.title("Interactive Map")
