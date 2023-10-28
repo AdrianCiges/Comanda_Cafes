@@ -1,22 +1,18 @@
 import streamlit as st
-import leafmap.foliumap as leafmap
+import requests
 
-def get_user_location():
-    m = leafmap.Map()
-    
-    # Añadimos la función de geolocalización
-    locate_control = leafmap.LocateControl(auto_start=True, fly_to=True)
-    m.add_control(locate_control)
-
-    # Aquí puedes añadir código adicional para mostrar el mapa en Streamlit si lo deseas
-    # Por ejemplo: m.to_streamlit()
-
-    # Devuelve las coordenadas del usuario
-    return locate_control.last_location
+def get_location_from_ip():
+    try:
+        response = requests.get("https://ipinfo.io/json?token=TU_TOKEN")
+        data = response.json()
+        location = data['loc'].split(',')
+        return float(location[0]), float(location[1])
+    except:
+        return None, None
 
 if st.button("Get my location"):
-    location = get_user_location()
-    if location:
-        st.write(f"Your coordinates are: {location}")
+    lat, lon = get_location_from_ip()
+    if lat and lon:
+        st.write(f"Your approximate coordinates are: Latitude: {lat}, Longitude: {lon}")
     else:
         st.write("Unable to get your location.")
