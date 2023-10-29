@@ -210,24 +210,21 @@ except:
     longitud = -3.7043
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
-# Determinar si el st.expander debe estar comprimido
-if coords != "Latitude: 40.4336 Longitude: -3.7043":
-    expander_expanded = False
-else:
-    expander_expanded = True
-# expander_expanded = coords != "Latitude: 40.4336 Longitude: -3.7043"
-st.write(expander_expanded)
+# Usar st.session_state para rastrear si el valor del st.text_input ha cambiado
+if "previous_coords" not in st.session_state:
+    st.session_state.previous_coords = coords
 
+coords_changed = st.session_state.previous_coords != coords
+st.session_state.previous_coords = coords
+
+# Determinar si el st.expander debe estar comprimido
+expander_expanded = not coords_changed
 
 # MAPEAR
-if expander_expanded == False:
-    with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=False):       
-        m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
-        m.to_streamlit(height=600, width=685)
-else:
-    with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=True):       
-        m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
-        m.to_streamlit(height=600, width=685)
+with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
+    m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
+    m.to_streamlit(height=600, width=685)
+
 
 
 
