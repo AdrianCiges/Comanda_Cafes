@@ -204,7 +204,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable "**📍ENCONTRAR MI UBICACIÓN**":", "Latitude: 40.4336 Longitude: -3.7043")
+coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
 st.session_state.coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
 
 try:
