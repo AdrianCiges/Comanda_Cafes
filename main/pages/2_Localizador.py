@@ -212,6 +212,8 @@ except:
 
 # Determinar si el st.expander debe estar comprimido
 expander_expanded = coords != "Latitude: 40.4336 Longitude: -3.7043"
+st.write(expander_expanded)
+
 
 # MAPEAR
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
