@@ -214,6 +214,7 @@ except:
 # Si las coordenadas han cambiado respecto al valor predeterminado, forzamos una actualización de Streamlit
 if coords != default_coords:
     st.experimental_rerun()
+    break
 
 # Determinar si el st.expander debe estar comprimido
 expander_expanded = coords == default_coords
