@@ -261,27 +261,8 @@ with st.expander('Encontrar mi ubicación', expanded=False):
 
 layout = st.sidebar.columns([1, 1])
 
-with layout[0]: 
-    latitud = st.number_input(
-        label="Latitud",
-        min_value=-90.0000,  # Valor mínimo
-        max_value=90.0000,   # Valor máximo
-        value=40.4336,       # Valor predeterminado
-        step=0.0100,         # Incremento
-        format="%.4f"        # Formato de presentación
-    )
- 
-with layout[-1]: 
-    longitud = st.number_input(
-        label="Longitud:",
-        min_value=-90.0000,  # Valor mínimo
-        max_value=90.0000,   # Valor máximo
-        value=-3.7043,       # Valor predeterminado
-        step=0.0100,         # Incremento
-        format="%.4f"        # Formato de presentación
-    )
-
 copipaste = st.sidebar.checkbox('Usar formato unido')
+
 if copipaste:
     # Inyectar CSS personalizado para cambiar el color del texto predeterminado en text_input
     st.markdown("""
@@ -293,7 +274,7 @@ if copipaste:
         """, unsafe_allow_html=True)
     
     # Tu entrada de texto con valor predeterminado
-    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitud: 40.433644 | Longitud: -3.704344")
+    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitude: 40.4336 Longitude: -3.7043")
 
     try:
         latitud = round(float(coords.split(' ')[1]), 4)
@@ -303,15 +284,30 @@ if copipaste:
         longitud = -3.7043
         st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
+else:
+    with layout[0]: 
+        latitud = st.number_input(
+            label="Latitud",
+            min_value=-90.0000,  # Valor mínimo
+            max_value=90.0000,   # Valor máximo
+            value=40.4336,       # Valor predeterminado
+            step=0.0100,         # Incremento
+            format="%.4f"        # Formato de presentación
+        )
+
+    with layout[-1]: 
+        longitud = st.number_input(
+            label="Longitud:",
+            min_value=-90.0000,  # Valor mínimo
+            max_value=90.0000,   # Valor máximo
+            value=-3.7043,       # Valor predeterminado
+            step=0.0100,         # Incremento
+            format="%.4f"        # Formato de presentación
+        )
 
 st.sidebar.success('Puedes encontrar tus coordenadas en el desplegable "Encontrar mi ubicación"')
 
-# Obtener la ruta completa al archivo XLSX
-# archivo_xlsx = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
 
-# Cargar el archivo XLSX
-# df = pd.read_excel(archivo_xlsx)
-# df = df.drop('Unnamed: 0', axis=1)
 
 df = get_data()
 
