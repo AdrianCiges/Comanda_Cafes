@@ -279,7 +279,7 @@ if copipaste:
         """, unsafe_allow_html=True)
     
     # Entrada de texto con valor predeterminado
-    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitude: 40.4336 Longitude: -3.7043")
+    #coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitude: 40.4336 Longitude: -3.7043")
 
     try:
         latitud = round(float(coords.split(' ')[1]), 4)
