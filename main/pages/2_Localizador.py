@@ -218,7 +218,7 @@ if "previous_coords" not in st.session_state:
 # Si las coordenadas han cambiado respecto al valor anterior y al predeterminado, forzamos una actualización de Streamlit
 if coords != st.session_state.previous_coords:
     if coords != default_coords:
-        st.experimental_rerun()
+        pass
     st.session_state.previous_coords = coords
 
 # Determinar si el st.expander debe estar comprimido
