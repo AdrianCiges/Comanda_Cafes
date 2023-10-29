@@ -188,8 +188,6 @@ def get_data():
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
-import streamlit as st
-
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
@@ -215,12 +213,13 @@ except:
 
 # Almacenar el valor anterior de coords en st.session_state
 if "previous_coords" not in st.session_state:
-    st.session_state.previous_coords = coords
+    st.session_state.previous_coords = default_coords
 
 # Si las coordenadas han cambiado respecto al valor anterior y al predeterminado, forzamos una actualización de Streamlit
-if coords != st.session_state.previous_coords and coords != default_coords:
+if coords != st.session_state.previous_coords:
+    if coords != default_coords:
+        st.experimental_rerun()
     st.session_state.previous_coords = coords
-    st.experimental_rerun()
 
 # Determinar si el st.expander debe estar comprimido
 expander_expanded = coords == default_coords
