@@ -222,7 +222,7 @@ expander_expanded = not st.session_state.coords_changed
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
     # col1, col2 = st.columns([4, 1])
     # options = list(leafmap.basemaps.keys())
-    index = options.index("OpenTopoMap")
+    # index = options.index("OpenTopoMap")
     
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
     # m.add_basemap(basemap)
