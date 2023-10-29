@@ -238,6 +238,7 @@ st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_ht
 
 copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACAIÓN**"')
 
+coords_changed = False  # Valor predeterminado
 if copipaste:
     # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
     st.markdown("""
@@ -298,12 +299,6 @@ with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=not coords_changed
         m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
         m.add_basemap(basemap)
         m.to_streamlit(height=600, width=685)
-
-
-
-
-# st.sidebar.success('Puedes encontrar tus coordenadas en el desplegable "**📍ENCONTRAR MI UBICACIÓN**"')
-
 
 
 df = get_data()
