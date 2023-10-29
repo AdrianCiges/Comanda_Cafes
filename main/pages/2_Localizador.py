@@ -237,7 +237,7 @@ num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_val
 
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
-with st.expander('Encontrar mi ubicación', expanded=False):   
+with st.expander('**📍Encontrar mi ubicación**', expanded=False):   
         
     col1, col2 = st.columns([4, 1])
     options = list(leafmap.basemaps.keys())
@@ -261,7 +261,7 @@ with st.expander('Encontrar mi ubicación', expanded=False):
 
 layout = st.sidebar.columns([1, 1])
 
-copipaste = st.sidebar.checkbox('Pegar info del mapa "Encuentra tu ubicación"')
+copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍Encontrar mi ubicación**"')
 
 if copipaste:
     # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
@@ -305,7 +305,7 @@ else:
             format="%.4f"        # Formato de presentación
         )
 
-st.sidebar.success('Puedes encontrar tus coordenadas en el desplegable "Encontrar mi ubicación"')
+st.sidebar.success('Puedes encontrar tus coordenadas en el desplegable "**📍Encontrar mi ubicación**"')
 
 
 
