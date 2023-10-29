@@ -266,7 +266,7 @@ with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=not coords_changed
 
 layout = st.sidebar.columns([1, 1])
 
-copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACAIÓN**"')
+#copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACAIÓN**"')
 
 if copipaste:
     # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
