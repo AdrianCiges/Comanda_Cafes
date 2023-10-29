@@ -296,8 +296,8 @@ if copipaste:
     coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitud: 40.433644 | Longitud: -3.704344")
 
     try:
-        latitud = round(float(coords.split(' | ')[0].replace('Latitud: ','').replace(',','.').replace("'",".")), 4)
-        longitud = round(float(coords.split(' | ')[1].replace('Longitud: ','').replace(',','.').replace("'",".")), 4)
+        latitud = round(float(coords.split('')[1]), 4)
+        longitud = round(float(coords.split('')[3]), 4)
     except:
         latitud = 40.4336
         longitud = -3.7043
