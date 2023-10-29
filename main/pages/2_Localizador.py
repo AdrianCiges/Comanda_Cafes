@@ -210,7 +210,7 @@ except:
     longitud = -3.7043
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
-if latitud == latitud = 40.4336 and longitud == -3.7043:
+if latitud == 40.4336 and longitud == -3.7043:
     expander_expanded = False    
 else:
     expander_expanded = True
