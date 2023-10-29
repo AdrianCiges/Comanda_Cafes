@@ -220,12 +220,12 @@ expander_expanded = not st.session_state.coords_changed
 
 # Resto del código para mostrar el mapa
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
-    col1, col2 = st.columns([4, 1])
-    options = list(leafmap.basemaps.keys())
+    # col1, col2 = st.columns([4, 1])
+    # options = list(leafmap.basemaps.keys())
     index = options.index("OpenTopoMap")
     
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
-    m.add_basemap(basemap)
+    # m.add_basemap(basemap)
     m.to_streamlit(height=600, width=685)
 
 
