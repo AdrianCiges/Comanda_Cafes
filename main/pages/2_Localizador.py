@@ -200,7 +200,8 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
+default_coords = "Latitude: 40.4336 Longitude: -3.7043"
+coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", default_coords)
 
 try:
     latitud = round(float(coords.split(' ')[1]), 4)
@@ -210,13 +211,18 @@ except:
     longitud = -3.7043
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
+# Si las coordenadas han cambiado respecto al valor predeterminado, forzamos una actualización de Streamlit
+if coords != default_coords:
+    st.experimental_rerun()
+
 # Determinar si el st.expander debe estar comprimido
-expander_expanded = coords == "Latitude: 40.4336 Longitude: -3.7043"
+expander_expanded = coords == default_coords
 
 # MAPEAR
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
     m.to_streamlit(height=600, width=685)
+
 
 
 df = get_data()
