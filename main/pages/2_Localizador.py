@@ -188,7 +188,6 @@ def get_data():
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
-expander_expanded = False
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
@@ -211,15 +210,14 @@ except:
     longitud = -3.7043
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
-if coords == "Latitude: 40.4336 Longitude: -3.7043":
-    expander_expanded = False    
-else:
-    expander_expanded = True
+# Determinar si el st.expander debe estar comprimido
+expander_expanded = coords != "Latitude: 40.4336 Longitude: -3.7043"
 
 # MAPEAR
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
     m.to_streamlit(height=600, width=685)
+
 
 
 
