@@ -294,9 +294,18 @@ else:
 # Determinar si el st.expander debe estar comprimido
 expander_expanded = not (coords_changed or lat_changed or lon_changed)
 
-# Resto del código para mostrar el mapa
-with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
-    # ... (Mismo código que antes para mostrar el mapa)
+with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=not coords_changed):   
+    col1, col2 = st.columns([4, 1])
+    options = list(leafmap.basemaps.keys())
+    index = options.index("OpenTopoMap")
+    
+    with col2:
+        basemap = st.selectbox("Select a basemap:", options, index)
+    
+    with col1:
+        m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
+        m.add_basemap(basemap)
+        m.to_streamlit(height=600, width=685)
 
 
 
