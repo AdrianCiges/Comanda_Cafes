@@ -220,9 +220,14 @@ st.write(expander_expanded)
 
 
 # MAPEAR
-with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
-    m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
-    m.to_streamlit(height=600, width=685)
+if expander_expanded == False
+    with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=False):       
+        m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
+        m.to_streamlit(height=600, width=685)
+else:
+    with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=True):       
+        m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
+        m.to_streamlit(height=600, width=685)
 
 
 
