@@ -261,10 +261,10 @@ with st.expander('Encontrar mi ubicación', expanded=False):
 
 layout = st.sidebar.columns([1, 1])
 
-copipaste = st.sidebar.checkbox('Usar formato unido')
+copipaste = st.sidebar.checkbox('Pegar info del mapa "Encuentra tu ubicación"')
 
 if copipaste:
-    # Inyectar CSS personalizado para cambiar el color del texto predeterminado en text_input
+    # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
     st.markdown("""
         <style>
             div.stTextInput > div > div > input {
@@ -273,7 +273,7 @@ if copipaste:
         </style>
         """, unsafe_allow_html=True)
     
-    # Tu entrada de texto con valor predeterminado
+    # Entrada de texto con valor predeterminado
     coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitude: 40.4336 Longitude: -3.7043")
 
     try:
