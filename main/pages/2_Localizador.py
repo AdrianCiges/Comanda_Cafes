@@ -177,51 +177,6 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     distance = radius_earth * c
 
     return int(distance)
-    
-# Lista de capitales de provincia de España con sus coordenadas
-capitales_espana = [
-                    {"ciudad": "Madrid", "latitud": 40.416775, "longitud": -3.703790},
-                    {"ciudad": "Barcelona", "latitud": 41.385064, "longitud": 2.173403},
-                    {"ciudad": "Valencia", "latitud": 39.469907, "longitud": -0.376288},
-                    {"ciudad": "Sevilla", "latitud": 37.389092, "longitud": -5.984459},
-                    {"ciudad": "Zaragoza", "latitud": 41.648822, "longitud": -0.889085},
-                    {"ciudad": "Málaga", "latitud": 36.721302, "longitud": -4.421636},
-                    {"ciudad": "Murcia", "latitud": 37.983810, "longitud": -1.129519},
-                    {"ciudad": "Palma de Mallorca", "latitud": 39.569600, "longitud": 2.650160},
-                    {"ciudad": "Las Palmas de Gran Canaria", "latitud": 28.124822, "longitud": -15.430006},
-                    {"ciudad": "Santa Cruz de Tenerife", "latitud": 28.469581, "longitud": -16.254568},
-                    {"ciudad": "Córdoba", "latitud": 37.888175, "longitud": -4.779383},
-                    {"ciudad": "Valladolid", "latitud": 41.652251, "longitud": -4.724532},
-                    {"ciudad": "Vitoria-Gasteiz", "latitud": 42.846718, "longitud": -2.672695},
-                    {"ciudad": "Pamplona", "latitud": 42.817987, "longitud": -1.643252},
-                    {"ciudad": "Logroño", "latitud": 42.462719, "longitud": -2.450592},
-                    {"ciudad": "Oviedo", "latitud": 43.361914, "longitud": -5.849388},
-                    {"ciudad": "Santander", "latitud": 43.462306, "longitud": -3.809980},
-                    {"ciudad": "Toledo", "latitud": 39.861176, "longitud": -4.020876},
-                    {"ciudad": "Granada", "latitud": 37.176164, "longitud": -3.597006},
-                    {"ciudad": "Almería", "latitud": 36.838163, "longitud": -2.459722},
-                    {"ciudad": "Huelva", "latitud": 37.261421, "longitud": -6.944722},
-                    {"ciudad": "Cádiz", "latitud": 36.529722, "longitud": -6.292220},
-                    {"ciudad": "Cáceres", "latitud": 39.476110, "longitud": -6.372778},
-                    {"ciudad": "Badajoz", "latitud": 38.878450, "longitud": -6.970100},
-                    {"ciudad": "Salamanca", "latitud": 40.966167, "longitud": -5.664722},
-                    {"ciudad": "Burgos", "latitud": 42.340006, "longitud": -3.699944},
-                    {"ciudad": "León", "latitud": 42.598694, "longitud": -5.567077},
-                    {"ciudad": "Zamora", "latitud": 41.503471, "longitud": -5.743956},
-                    {"ciudad": "Ávila", "latitud": 40.655014, "longitud": -4.700354},
-                    {"ciudad": "Segovia", "latitud": 40.948654, "longitud": -4.118537},
-                    {"ciudad": "Soria", "latitud": 41.762349, "longitud": -2.464682},
-                    {"ciudad": "Teruel", "latitud": 40.343238, "longitud": -1.106177},
-                    {"ciudad": "Ceuta", "latitud": 35.889681, "longitud": -5.321319},
-                    {"ciudad": "Melilla", "latitud": 35.293981, "longitud": -2.938097}
-                    ]
-                    
-# Función para obtener coordenadas
-def obtener_coordenadas(ciudad):
-    for capital in capitales_espana:
-        if capital["ciudad"] == ciudad:
-            return capital["latitud"], capital["longitud"]
-    return None, None
 
 @st.cache_data
 def get_data():
@@ -233,14 +188,18 @@ def get_data():
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
+# Inicializar las variables en st.session_state si no existen
+if "coords_changed" not in st.session_state:
+    st.session_state.coords_changed = False
+if "lat_changed" not in st.session_state:
+    st.session_state.lat_changed = False
+if "lon_changed" not in st.session_state:
+    st.session_state.lon_changed = False
+
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
 copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACIÓN**"')
-
-coords_changed = False  # Valor predeterminado
-lat_changed = False     # Valor predeterminado
-lon_changed = False     # Valor predeterminado
 
 if copipaste:
     # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
@@ -252,11 +211,8 @@ if copipaste:
         </style>
         """, unsafe_allow_html=True)
     
-    # Entrada de texto con valor predeterminado
     coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitude: 40.4336 Longitude: -3.7043")
-
-    # Comprueba si el valor de coords ha cambiado
-    coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
+    st.session_state.coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
 
     try:
         latitud = round(float(coords.split(' ')[1]), 4)
@@ -274,27 +230,28 @@ else:
             label="Latitud",
             min_value=-90.0000,  # Valor mínimo
             max_value=90.0000,   # Valor máximo
-            value=40.4336,       # Valor predeterminado
+            value=40.4336 if not st.session_state.lat_changed else None,       # Valor predeterminado
             step=0.0100,         # Incremento
             format="%.4f"        # Formato de presentación
         )
-        lat_changed = latitud != 40.4336  # Comprobar si el valor ha cambiado
+        st.session_state.lat_changed = latitud != 40.4336
 
     with layout[-1]: 
         longitud = st.number_input(
             label="Longitud:",
             min_value=-90.0000,  # Valor mínimo
             max_value=90.0000,   # Valor máximo
-            value=-3.7043,       # Valor predeterminado
+            value=-3.7043 if not st.session_state.lon_changed else None,       # Valor predeterminado
             step=0.0100,         # Incremento
             format="%.4f"        # Formato de presentación
         )
-        lon_changed = longitud != -3.7043  # Comprobar si el valor ha cambiado
+        st.session_state.lon_changed = longitud != -3.7043
 
 # Determinar si el st.expander debe estar comprimido
-expander_expanded = not (coords_changed or lat_changed or lon_changed)
+expander_expanded = not (st.session_state.coords_changed or st.session_state.lat_changed or st.session_state.lon_changed)
 
-with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=not coords_changed):   
+# Resto del código para mostrar el mapa
+with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
     col1, col2 = st.columns([4, 1])
     options = list(leafmap.basemaps.keys())
     index = options.index("OpenTopoMap")
@@ -306,7 +263,6 @@ with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=not coords_changed
         m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
         m.add_basemap(basemap)
         m.to_streamlit(height=600, width=685)
-
 
 
 df = get_data()
