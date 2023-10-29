@@ -200,8 +200,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-default_coords = "Latitude: 40.4336 Longitude: -3.7043"
-coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", default_coords)
+coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
 
 try:
     latitud = round(float(coords.split(' ')[1]), 4)
@@ -211,21 +210,15 @@ except:
     longitud = -3.7043
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
-# Almacenar el valor anterior de coords en st.session_state
+# Usar st.session_state para rastrear si el valor del st.text_input ha cambiado
 if "previous_coords" not in st.session_state:
-    st.session_state.previous_coords = default_coords
+    st.session_state.previous_coords = coords
 
-# Comprobar si las coordenadas han cambiado
 coords_changed = st.session_state.previous_coords != coords
 st.session_state.previous_coords = coords
 
 # Determinar si el st.expander debe estar comprimido
-expander_expanded = coords == default_coords
-
-# Si las coordenadas han cambiado y no son las predeterminadas, reiniciamos Streamlit
-if coords_changed and coords != default_coords:
-    expander_expanded = False
-    st.experimental_rerun()
+expander_expanded = not coords_changed
 
 # MAPEAR
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
