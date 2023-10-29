@@ -211,7 +211,7 @@ except:
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
 # Determinar si el st.expander debe estar comprimido
-if coords =! "Latitude: 40.4336 Longitude: -3.7043":
+if coords != "Latitude: 40.4336 Longitude: -3.7043":
     expander_expanded = False
 else:
     expander_expanded = True
