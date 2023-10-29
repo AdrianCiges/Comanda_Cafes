@@ -188,10 +188,6 @@ def get_data():
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
-# Inicializar las variables en st.session_state si no existen
-if "coords_changed" not in st.session_state:
-    st.session_state.coords_changed = False
-
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
@@ -205,7 +201,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
-st.session_state.coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
+coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
 
 try:
     latitud = round(float(coords.split(' ')[1]), 4)
@@ -216,7 +212,7 @@ except:
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
 # Determinar si el st.expander debe estar comprimido
-expander_expanded = not st.session_state.coords_changed
+expander_expanded = not coords_changed
 
 # MAPEAR
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
