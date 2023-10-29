@@ -236,7 +236,7 @@ def get_data():
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
-copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACIÓN**"')
+copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACAIÓN**"')
 
 if copipaste:
     # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
@@ -286,7 +286,7 @@ else:
         )
 
 # Resto del código para mostrar el mapa
-with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=not coords_changed):   
+with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=not coords_changed):   
     col1, col2 = st.columns([4, 1])
     options = list(leafmap.basemaps.keys())
     index = options.index("OpenTopoMap")
@@ -298,6 +298,7 @@ with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=not coords_changed)
         m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
         m.add_basemap(basemap)
         m.to_streamlit(height=600, width=685)
+
 
 
 
