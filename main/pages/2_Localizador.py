@@ -188,6 +188,8 @@ def get_data():
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
+import streamlit as st
+
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
@@ -211,10 +213,14 @@ except:
     longitud = -3.7043
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
-# Si las coordenadas han cambiado respecto al valor predeterminado, forzamos una actualización de Streamlit
-if coords != default_coords:
+# Almacenar el valor anterior de coords en st.session_state
+if "previous_coords" not in st.session_state:
+    st.session_state.previous_coords = coords
+
+# Si las coordenadas han cambiado respecto al valor anterior y al predeterminado, forzamos una actualización de Streamlit
+if coords != st.session_state.previous_coords and coords != default_coords:
+    st.session_state.previous_coords = coords
     st.experimental_rerun()
-    break
 
 # Determinar si el st.expander debe estar comprimido
 expander_expanded = coords == default_coords
@@ -223,6 +229,7 @@ expander_expanded = coords == default_coords
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
     m.to_streamlit(height=600, width=685)
+
 
 
 
