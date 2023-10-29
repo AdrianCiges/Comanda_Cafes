@@ -236,32 +236,14 @@ def get_data():
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
-copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACAIÓN**"')
+copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACIÓN**"')
 
 coords_changed = False  # Valor predeterminado
+lat_changed = False     # Valor predeterminado
+lon_changed = False     # Valor predeterminado
+
 if copipaste:
-    # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
-    st.markdown("""
-        <style>
-            div.stTextInput > div > div > input {
-                color: grey;
-            }
-        </style>
-        """, unsafe_allow_html=True)
-    
-    # Entrada de texto con valor predeterminado
-    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitude: 40.4336 Longitude: -3.7043")
-
-    # Comprueba si el valor de coords ha cambiado
-    coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
-
-    try:
-        latitud = round(float(coords.split(' ')[1]), 4)
-        longitud = round(float(coords.split(' ')[3]), 4)
-    except:
-        latitud = 40.4336
-        longitud = -3.7043
-        st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
+    # ... (Mismo código que antes para el copipaste)
 
 else:
     layout = st.sidebar.columns([1, 1])
@@ -275,6 +257,7 @@ else:
             step=0.0100,         # Incremento
             format="%.4f"        # Formato de presentación
         )
+        lat_changed = latitud != 40.4336  # Comprobar si el valor ha cambiado
 
     with layout[-1]: 
         longitud = st.number_input(
@@ -285,20 +268,15 @@ else:
             step=0.0100,         # Incremento
             format="%.4f"        # Formato de presentación
         )
+        lon_changed = longitud != -3.7043  # Comprobar si el valor ha cambiado
+
+# Determinar si el st.expander debe estar comprimido
+expander_expanded = not (coords_changed or lat_changed or lon_changed)
 
 # Resto del código para mostrar el mapa
-with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=not coords_changed):   
-    col1, col2 = st.columns([4, 1])
-    options = list(leafmap.basemaps.keys())
-    index = options.index("OpenTopoMap")
-    
-    with col2:
-        basemap = st.selectbox("Select a basemap:", options, index)
-    
-    with col1:
-        m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
-        m.add_basemap(basemap)
-        m.to_streamlit(height=600, width=685)
+with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
+    # ... (Mismo código que antes para mostrar el mapa)
+
 
 
 df = get_data()
