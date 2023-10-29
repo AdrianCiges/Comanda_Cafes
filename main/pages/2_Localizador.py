@@ -236,7 +236,7 @@ def get_data():
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
-copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACAIÓN**"')
+copipaste = st.sidebar.checkbox('Pegar info del mapa "**📍ENCONTRAR MI UBICACIÓN**"')
 
 if copipaste:
     # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
@@ -250,6 +250,9 @@ if copipaste:
     
     # Entrada de texto con valor predeterminado
     coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitude: 40.4336 Longitude: -3.7043")
+
+    # Comprueba si el valor de coords ha cambiado
+    coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
 
     try:
         latitud = round(float(coords.split(' ')[1]), 4)
@@ -282,8 +285,8 @@ else:
             format="%.4f"        # Formato de presentación
         )
 
-# Mostrar el mapa
-with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=True):   
+# Resto del código para mostrar el mapa
+with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=not coords_changed):   
     col1, col2 = st.columns([4, 1])
     options = list(leafmap.basemaps.keys())
     index = options.index("OpenTopoMap")
@@ -297,7 +300,8 @@ with st.expander('**📍ENCONTRAR MI UBICACAIÓN**', expanded=True):
         m.to_streamlit(height=600, width=685)
 
 
-# st.sidebar.success('Puedes encontrar tus coordenadas en el desplegable "**📍ENCONTRAR MI UBICACAIÓN**"')
+
+# st.sidebar.success('Puedes encontrar tus coordenadas en el desplegable "**📍ENCONTRAR MI UBICACIÓN**"')
 
 
 
