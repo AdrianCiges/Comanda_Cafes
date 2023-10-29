@@ -201,7 +201,6 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
-coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
 
 try:
     latitud = round(float(coords.split(' ')[1]), 4)
@@ -211,8 +210,10 @@ except:
     longitud = -3.7043
     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
-# Determinar si el st.expander debe estar comprimido
-expander_expanded = not coords_changed
+if latitud == latitud = 40.4336 and longitud == -3.7043:
+    expander_expanded = False    
+else:
+    expander_expanded = True
 
 # MAPEAR
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):       
