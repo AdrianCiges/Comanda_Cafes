@@ -295,13 +295,13 @@ if copipaste:
     # Tu entrada de texto con valor predeterminado
     coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitud: 40.433644 | Longitud: -3.704344")
 
-    # try:
-    latitud = round(float(coords.split('')[1]), 4)
-    longitud = round(float(coords.split('')[3]), 4)
-    # except:
-    #     latitud = 40.4336
-    #     longitud = -3.7043
-    #     st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en coordenadas-gps.com')
+    try:
+        latitud = round(float(coords.split(' ')[1]), 4)
+        longitud = round(float(coords.split(' ')[3]), 4)
+    except:
+        latitud = 40.4336
+        longitud = -3.7043
+        st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
 
 st.sidebar.success('Puedes encontrar tus coordenadas en el desplegable "Encontrar mi ubicación"')
