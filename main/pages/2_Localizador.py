@@ -243,7 +243,28 @@ lat_changed = False     # Valor predeterminado
 lon_changed = False     # Valor predeterminado
 
 if copipaste:
-    # ... (Mismo código que antes para el copipaste)
+    # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
+    st.markdown("""
+        <style>
+            div.stTextInput > div > div > input {
+                color: grey;
+            }
+        </style>
+        """, unsafe_allow_html=True)
+    
+    # Entrada de texto con valor predeterminado
+    coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen:", "Latitude: 40.4336 Longitude: -3.7043")
+
+    # Comprueba si el valor de coords ha cambiado
+    coords_changed = coords != "Latitude: 40.4336 Longitude: -3.7043"
+
+    try:
+        latitud = round(float(coords.split(' ')[1]), 4)
+        longitud = round(float(coords.split(' ')[3]), 4)
+    except:
+        latitud = 40.4336
+        longitud = -3.7043
+        st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
 
 else:
     layout = st.sidebar.columns([1, 1])
