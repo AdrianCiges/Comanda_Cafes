@@ -101,7 +101,7 @@ st.markdown(
 )
 
 st.header("¿Quién quiere café?")
-user_input = st.text_input("Nombres aquí", "")
+user_input = st.text_input("Nombres aquí (separados por , )", "")
 user_input = user_input.split(',')
 
 def clean_user_input():
