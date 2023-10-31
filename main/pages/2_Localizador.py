@@ -219,7 +219,7 @@ expander_expanded = not coords_changed
 
 
 # Define la URL de tu imagen. Puede ser una URL local o remota.
-url_imagen = "./img/location.png"
+url_imagen = "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/location.png"
     
 # Leer la imagen del logo y codificarla en base64
 with open(url_imagen, "rb") as image_file2:
@@ -231,7 +231,7 @@ with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):
 
     # Utiliza st.markdown para insertar el HTML que combina texto e imagen.
     st.markdown(f"""
-        Pulsa el icono <img src="{encoded_image2}" width="30"/> para geolocalizarte
+        Pulsa el icono <img src="{url_imagen}" width="30"/> para geolocalizarte
     """, unsafe_allow_html=True)
 
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
