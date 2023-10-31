@@ -230,11 +230,6 @@ st.markdown(f"""
 # MAPEAR
 with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
 
-    # Utiliza st.markdown para insertar el HTML que combina texto e imagen.
-    st.markdown(f"""
-        Pulsa el icono <img src="{encoded_image2}" width="30"/> para geolocalizarte
-    """, unsafe_allow_html=True)
-
     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
     m.to_streamlit(height=600, width=685)
 
