@@ -220,10 +220,11 @@ expander_expanded = not coords_changed
 
 # Define la URL de tu imagen. Puede ser una URL local o remota.
 url_imagen = "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/location.png"
-    
-# Leer la imagen del logo y codificarla en base64
-with open(url_imagen, "rb") as image_file2:
-    encoded_image2 = base64.b64encode(image_file2.read()).decode()
+
+# Utiliza st.markdown para insertar el HTML que combina texto e imagen.
+st.markdown(f"""
+    Pulsa el icono <img src="{url_imagen}" style="display:inline; vertical-align:middle; width:30px; height:30px"/> para geolocalizarte
+""", unsafe_allow_html=True)
 
 
 # MAPEAR
