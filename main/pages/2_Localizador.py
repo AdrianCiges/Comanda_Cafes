@@ -186,7 +186,7 @@ def get_data():
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
-st.markdown(f"# Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
+st.markdown(f"## Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 
 # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
 st.markdown("""
