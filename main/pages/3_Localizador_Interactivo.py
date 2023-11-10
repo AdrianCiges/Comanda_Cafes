@@ -1,31 +1,20 @@
 import streamlit as st
-import geocoder
-import folium
-from streamlit_folium import folium_static
+from bokeh.models.widgets import Button
+from bokeh.models import CustomJS
+from streamlit_bokeh_events import streamlit_bokeh_events
 
-def obtener_ubicacion_actual():
-    # Obtener la ubicación basada en la dirección IP
-    g = geocoder.ip('me')
-    return g.latlng
-
-def mostrar_mapa(ubicacion):
-    # Crear un mapa centrado en la ubicación actual
-    mapa = folium.Map(location=ubicacion, zoom_start=15)
-
-    # Agregar un marcador para la ubicación actual
-    folium.Marker(ubicacion, popup='Ubicación Actual').add_to(mapa)
-
-    # Mostrar el mapa en Streamlit
-    folium_static(mapa)
-
-# Título de la aplicación en Streamlit
-st.title("Mapa de Ubicación Actual")
-
-# Obtener la ubicación actual
-ubicacion_actual = obtener_ubicacion_actual()
-
-# Mostrar el mapa con la ubicación actual
-if ubicacion_actual:
-    mostrar_mapa(ubicacion_actual)
-else:
-    st.write("No se pudo obtener la ubicación actual.")
+loc_button = Button(label="Get Location")
+loc_button.js_on_event("button_click", CustomJS(code="""
+    navigator.geolocation.getCurrentPosition(
+        (loc) => {
+            document.dispatchEvent(new CustomEvent("GET_LOCATION", {detail: {lat: loc.coords.latitude, lon: loc.coords.longitude}}))
+        }
+    )
+    """))
+result = streamlit_bokeh_events(
+    loc_button,
+    events="GET_LOCATION",
+    key="get_location",
+    refresh_on_update=False,
+    override_height=75,
+    debounce_time=0)
