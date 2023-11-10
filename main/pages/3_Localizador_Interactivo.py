@@ -3,6 +3,6 @@ from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share
 import json
 
 loc = get_geolocation()
-st.write(f'{loc})
-st.write(f'{loc['coords']['latitude']}, {loc['coords']['longitude']}]
+st.write(f'{loc}')
+st.write(f'{loc['coords']['latitude']}, {loc['coords']['longitude']}')
 
