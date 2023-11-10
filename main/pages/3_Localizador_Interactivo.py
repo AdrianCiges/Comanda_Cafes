@@ -4,4 +4,4 @@ import json
 
 if st.checkbox("Check my location"):
     loc = get_geolocation()
-    st.write(f"Your coordinates are {loc}")
+    st.write(f"Your coordinates are {loc['coords']['latitude']}")
