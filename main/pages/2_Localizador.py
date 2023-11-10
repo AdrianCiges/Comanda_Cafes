@@ -204,8 +204,9 @@ st.markdown("""
 
 if st.button('📍 Usar mi ubicación'):
     loc = get_geolocation()
-    latitud = float(loc['coords']['latitude'])
-    longitud = float(loc['coords']['longitude'])
+    location = [loc]
+    latitud = location[0]['coords']['latitude']
+    longitud = location[0]['coords']['longitude']
     st.write(f'{latitud}, {longitud}')
 try:
     latitud = round(float(latitud), 4)
