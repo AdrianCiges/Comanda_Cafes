@@ -202,8 +202,9 @@ st.markdown("""
 
 # coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
 
+loc = get_geolocation()
+
 if st.button('📍 Usar mi ubicación'):
-    loc = get_geolocation()
     location = [loc]
     latitud = location[0]['coords']['latitude']
     longitud = location[0]['coords']['longitude']
