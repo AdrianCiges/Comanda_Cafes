@@ -20,3 +20,4 @@ streamlit_folium
 streamlit_option_menu==0.3.2
 Flask==3.0.0
 geocoder==0.2.1
+streamlit-js-eval==0.1.5
