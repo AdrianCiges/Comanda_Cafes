@@ -1,5 +1,7 @@
+import streamlit as st
 import geocoder
 import folium
+from streamlit_folium import folium_static
 
 def obtener_ubicacion_actual():
     # Obtener la ubicación basada en la dirección IP
@@ -13,8 +15,11 @@ def mostrar_mapa(ubicacion):
     # Agregar un marcador para la ubicación actual
     folium.Marker(ubicacion, popup='Ubicación Actual').add_to(mapa)
 
-    # Mostrar el mapa
-    display(mapa)
+    # Mostrar el mapa en Streamlit
+    folium_static(mapa)
+
+# Título de la aplicación en Streamlit
+st.title("Mapa de Ubicación Actual")
 
 # Obtener la ubicación actual
 ubicacion_actual = obtener_ubicacion_actual()
@@ -23,4 +28,4 @@ ubicacion_actual = obtener_ubicacion_actual()
 if ubicacion_actual:
     mostrar_mapa(ubicacion_actual)
 else:
-    print("No se pudo obtener la ubicación actual.")
+    st.write("No se pudo obtener la ubicación actual.")
