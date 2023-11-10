@@ -175,6 +175,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 
     return int(distance)
 
+
 @st.cache_data
 def get_data():
     data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
@@ -197,15 +198,20 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
+# coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
 
+if st.button('📍 Usar mi ubicación'):
+    loc = get_geolocation()
+    latitud = loc['coords']['latitude']
+    longitud = loc['coords']['longitude']
+    st.write(f'{latitud}, {longitud}')
 try:
-    latitud = round(float(coords.split(' ')[1]), 4)
-    longitud = round(float(coords.split(' ')[3]), 4)
+    latitud = round(float(latitud), 4)
+    longitud = round(float(longitud), 4)
 except:
     latitud = 40.4336
     longitud = -3.7043
-    st.sidebar.warning('Hay un error en tus coordenadas. Asegúrate que pegar el texto tal y como aparece en el mapa del desplegable.')
+    st.sidebar.warning('Hay un error en tus coordenadas.')
 
 # Usar st.session_state para rastrear si el valor del st.text_input ha cambiado
 if "previous_coords" not in st.session_state:
@@ -227,12 +233,11 @@ expander_expanded = not coords_changed
 # """, unsafe_allow_html=True)
 
 
-# MAPEAR
-with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
+# # MAPEAR
+# with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
 
-    m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
-    m.to_streamlit(height=600, width=685)
-
+#     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
+#     m.to_streamlit(height=600, width=685)
 
 df = get_data()
 
