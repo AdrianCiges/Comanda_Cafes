@@ -4,7 +4,7 @@ import json
 
 loc = get_geolocation()
 # st.write(f'{loc}')
-latitud = loc['coords']['latitude']
-longitud = loc['coords']['longitude']
+latitud = list(loc['coords']['latitude'])[0]
+longitud = list(loc['coords']['longitude'])[0]
 st.write(f'{latitud}, {longitud}')
 
