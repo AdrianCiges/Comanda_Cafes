@@ -216,14 +216,14 @@ except:
     st.sidebar.warning('Hay un error en tus coordenadas.')
 
 # Usar st.session_state para rastrear si el valor del st.text_input ha cambiado
-if "previous_coords" not in st.session_state:
-    st.session_state.previous_coords = coords
+# if "previous_coords" not in st.session_state:
+#     st.session_state.previous_coords = coords
 
-coords_changed = st.session_state.previous_coords != coords
-st.session_state.previous_coords = coords
+# coords_changed = st.session_state.previous_coords != coords
+# st.session_state.previous_coords = coords
 
-# Determinar si el st.expander debe estar comprimido
-expander_expanded = not coords_changed
+# # Determinar si el st.expander debe estar comprimido
+# expander_expanded = not coords_changed
 
 
 # # Define la URL de tu imagen. Puede ser una URL local o remota.
