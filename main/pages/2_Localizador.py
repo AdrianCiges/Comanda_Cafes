@@ -218,13 +218,13 @@ st.session_state.previous_coords = coords
 expander_expanded = not coords_changed
 
 
-# Define la URL de tu imagen. Puede ser una URL local o remota.
-url_imagen = "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/location.png"
+# # Define la URL de tu imagen. Puede ser una URL local o remota.
+# url_imagen = "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/location.png"
 
-# Utiliza st.markdown para insertar el HTML que combina texto e imagen.
-st.markdown(f"""
-    Pulsa el icono <img src="{url_imagen}" style="display:inline; vertical-align:middle; width:30px; height:30px"/> para geolocalizarte
-""", unsafe_allow_html=True)
+# # Utiliza st.markdown para insertar el HTML que combina texto e imagen.
+# st.markdown(f"""
+#     Pulsa el icono <img src="{url_imagen}" style="display:inline; vertical-align:middle; width:30px; height:30px"/> para geolocalizarte
+# """, unsafe_allow_html=True)
 
 
 # MAPEAR
