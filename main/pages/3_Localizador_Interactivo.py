@@ -5,3 +5,5 @@ import json
 def get_user_loc():
     loc = get_geolocation()
     return loc['coords']['latitude'], loc['coords']['longitude']
+
+get_user_loc()
