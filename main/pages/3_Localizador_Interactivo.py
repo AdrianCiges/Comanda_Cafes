@@ -8,7 +8,7 @@ st.write(f'{loc}')
 location = [loc]
 st.write(location)
 
-latitud = location[0]['coords']
+latitud = location[0]['coords']['latitude']
 st.write(latitud)
 
 
