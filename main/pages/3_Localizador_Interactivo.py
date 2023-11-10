@@ -9,7 +9,9 @@ location = [loc]
 st.write(location)
 
 latitud = location[0]['coords']['latitude']
-st.write(latitud)
+longitud = location[0]['coords']['longitude']
+
+st.write(latitud, longitud)
 
 
 # latitud = list(loc['coords']['latitude'])[0]
