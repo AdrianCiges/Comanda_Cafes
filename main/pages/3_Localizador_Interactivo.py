@@ -6,5 +6,5 @@ loc = get_geolocation()
 # st.write(f'{loc}')
 latitud = loc['coords']['latitude']
 longitud = loc['coords']['longitude']
-st.write(f'{latitud}, {longitud}'
+st.write(f'{latitud}, {longitud}')
 
