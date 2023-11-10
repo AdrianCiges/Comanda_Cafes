@@ -4,5 +4,5 @@ import json
 
 loc = get_geolocation()
 st.write(f'{loc}')
-st.write(f'{loc['coords']['latitude']}, {loc['coords']['longitude']}')
+# st.write(f'{loc['coords']['latitude']}, {loc['coords']['longitude']}')
 
