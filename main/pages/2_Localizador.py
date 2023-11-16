@@ -177,19 +177,9 @@ def get_data():
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 
 if num_cafeterias != 1:
-    st.markdown(f"## Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: 0px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
 else:
-    st.markdown(f"## Tu cafetería más cercana", unsafe_allow_html=True)
-
-
-# # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
-# st.markdown("""
-#     <style>
-#         div.stTextInput > div > div > input {
-#             color: grey;
-#         }
-#     </style>
-#     """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: 0px;'>Tu cafetería más cercana</h2>", unsafe_allow_html=True)
 
 
 loc = get_geolocation()
