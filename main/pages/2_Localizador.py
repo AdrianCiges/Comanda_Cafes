@@ -190,7 +190,7 @@ def get_data():
 
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 
-if num_cafeterias < 1:
+if num_cafeterias != 1:
     st.markdown(f"## Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
 else:
     st.markdown(f"## Tu cafetería más cercana", unsafe_allow_html=True)
