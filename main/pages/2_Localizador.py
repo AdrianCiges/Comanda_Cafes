@@ -270,6 +270,6 @@ for index, row in sorted_df.iterrows():
         popup=popup_content,
     ).add_to(m)
 
-folium_static(m, width=100)
+folium_static(m, width=300)
 
 
