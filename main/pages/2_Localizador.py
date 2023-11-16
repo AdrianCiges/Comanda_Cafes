@@ -254,3 +254,6 @@ with col1:
         ).add_to(m)
     
     folium_static(m)
+
+with col2:
+    st.write("Otros elementos o espacio vacío")
