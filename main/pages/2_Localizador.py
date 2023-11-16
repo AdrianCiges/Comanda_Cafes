@@ -178,11 +178,6 @@ num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_val
 
 from_pc = st.sidebar.checkbox('Vista para ordenador')
 
-if from_pc:
-    size_map = 1025
-else:
-    size_map = 380
-
 
 if num_cafeterias != 1:
     st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -50px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
@@ -251,6 +246,9 @@ for index, row in sorted_df.iterrows():
         popup=popup_content,
     ).add_to(m)
 
-folium_static(m, width=size_map)
+if from_pc:
+    folium_static(m)
+else:
+    folium_static(m, width=380)
 
 
