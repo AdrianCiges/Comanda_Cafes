@@ -220,51 +220,56 @@ longitude = longitud
 
 
 
-st.write('''<style>
-[data-testid="column"] {
-    width: calc(33.3333% - 1rem) !important;
-    flex: 1 1 calc(33.3333% - 1rem) !important;
-    min-width: calc(33% - 1rem) !important;
-}
-</style>''', unsafe_allow_html=True)
+# CSS para ajustar el ancho del contenedor del mapa y el fondo
+css = """
+<style>
+    .css-1s1f96m {  # Este selector podría cambiar según la versión de Streamlit
+        width: 60%;
+        margin: 0 auto;
+    }
+    .main {  # Este selector aplica al contenedor principal
+        background-color: transparent;  # Ajusta esto según el color de fondo deseado
+    }
+</style>
+"""
+
+# Aplicar el CSS en Streamlit
+st.markdown(css, unsafe_allow_html=True)
 
 
-# MAPEANDO CON UBI
-col1, col2 = st.columns([3, 1])
 
-with col1:
-    m = folium.Map(location=[latitude, longitude], zoom_start=15, width='60%')
-    red_icon = folium.Icon(color='red')
+
+m = folium.Map(location=[latitude, longitude], zoom_start=15, width='60%')
+red_icon = folium.Icon(color='red')
+folium.Marker(
+    [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
+).add_to(m)
+
+df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
+df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
+df['dif_sum'] = df['lat_dif'] + df['lon_dif']
+
+sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
+sorted_df = sorted_df.reset_index(drop=True)
+sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+
+coords = []
+for i,e in enumerate(sorted_df['Latitude']):
+    coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+sorted_df['coords'] = coords
+sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+
+for index, row in sorted_df.iterrows():
+    # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
+    
+    link = sorted_df["Cómo llegar"][index].replace('"', '%22')
+    popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
+
     folium.Marker(
-        [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
+        location=[row["Latitude"], row["Longitude"]],
+        popup=popup_content,
     ).add_to(m)
-    
-    df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
-    df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
-    df['dif_sum'] = df['lat_dif'] + df['lon_dif']
-    
-    sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
-    sorted_df = sorted_df.reset_index(drop=True)
-    sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-    
-    coords = []
-    for i,e in enumerate(sorted_df['Latitude']):
-        coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
-    sorted_df['coords'] = coords
-    sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
-    
-    for index, row in sorted_df.iterrows():
-        # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
-        
-        link = sorted_df["Cómo llegar"][index].replace('"', '%22')
-        popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
-    
-        folium.Marker(
-            location=[row["Latitude"], row["Longitude"]],
-            popup=popup_content,
-        ).add_to(m)
-    
-    folium_static(m)
 
-with col2:
-    st.write("Otros elementos o espacio vacío")
+folium_static(m)
+
+
