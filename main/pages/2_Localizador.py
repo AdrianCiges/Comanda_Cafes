@@ -179,7 +179,7 @@ num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_val
 from_pc = st.sidebar.checkbox('Vista para ordenador')
 
 if from_pc:
-    size_map = 1050
+    size_map = 1025
 else:
     size_map = 380
 
