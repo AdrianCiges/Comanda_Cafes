@@ -220,7 +220,7 @@ longitude = longitud
 
 # MAPEANDO CON UBI
 with st.container():
-    m = folium.Map(location=[latitude, longitude], zoom_start=15, width='50%')
+    m = folium.Map(location=[latitude, longitude], zoom_start=15, width='100%')
     red_icon = folium.Icon(color='red')
     folium.Marker(
         [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
