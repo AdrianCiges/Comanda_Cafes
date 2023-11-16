@@ -218,6 +218,17 @@ if latitud == 40.4336 and longitud == -3.7043:
 latitude = latitud
 longitude = longitud
 
+
+
+st.write('''<style>
+[data-testid="column"] {
+    width: calc(33.3333% - 1rem) !important;
+    flex: 1 1 calc(33.3333% - 1rem) !important;
+    min-width: calc(33% - 1rem) !important;
+}
+</style>''', unsafe_allow_html=True)
+
+
 # MAPEANDO CON UBI
 col1, col2 = st.columns([3, 1])
 
