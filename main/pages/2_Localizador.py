@@ -220,27 +220,6 @@ longitude = longitud
 
 
 
-# CSS para centrar el mapa en la página
-css = """
-<style>
-    .main {  # Selector para el contenedor principal
-        width: 100%;
-        display: flex;
-        justify-content: center;  # Centra los elementos horizontalmente
-    }
-    .css-1s1f96m {  # Selector para el contenedor del mapa; puede variar según la versión de Streamlit
-        width: 60%;  # Ancho del mapa
-        margin: 0 auto;  # Centra el mapa
-    }
-</style>
-"""
-
-# Aplicar el CSS en Streamlit
-st.markdown(css, unsafe_allow_html=True)
-
-
-
-
 m = folium.Map(location=[latitude, longitude], zoom_start=15)
 red_icon = folium.Icon(color='red')
 folium.Marker(
