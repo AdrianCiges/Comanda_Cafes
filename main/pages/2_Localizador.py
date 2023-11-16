@@ -239,7 +239,7 @@ st.markdown(css, unsafe_allow_html=True)
 
 
 
-m = folium.Map(location=[latitude, longitude], zoom_start=15, width='60%')
+m = folium.Map(location=[latitude, longitude], zoom_start=15)
 red_icon = folium.Icon(color='red')
 folium.Marker(
     [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
@@ -270,6 +270,6 @@ for index, row in sorted_df.iterrows():
         popup=popup_content,
     ).add_to(m)
 
-folium_static(m)
+folium_static(m, , width=100)
 
 
