@@ -204,7 +204,7 @@ st.markdown("""
 
 loc = get_geolocation()
 
-if st.button('📍 Usar mi ubicación'):
+if st.checkbox('📍 Usar mi ubicación'):
     location = [loc]
     latitud = location[0]['coords']['latitude']
     longitud = location[0]['coords']['longitude']
