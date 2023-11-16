@@ -219,7 +219,9 @@ latitude = latitud
 longitude = longitud
 
 # MAPEANDO CON UBI
-with st.container():
+col1, col2 = st.columns([3, 1])
+
+with col1:
     m = folium.Map(location=[latitude, longitude], zoom_start=15, width='100%')
     red_icon = folium.Icon(color='red')
     folium.Marker(
