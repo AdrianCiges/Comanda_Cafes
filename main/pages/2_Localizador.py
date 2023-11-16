@@ -109,20 +109,6 @@ st.markdown(
 
 #     return cafes
 
-# def get_city_from_coordinates(latitude, longitude):
-#     geolocator = Nominatim(user_agent="city_finder")
-    
-#     # Obtener la dirección completa a partir de las coordenadas
-#     location = geolocator.reverse((latitude, longitude), exactly_one=True) # Susceptible de timeout error!! Arreglar
-    
-#     # Extraer la ciudad de la dirección
-#     if location:
-#         address = location.address
-#         address_parts = address.split(", ")
-#         city = address_parts[-4]  # La ciudad generalmente se encuentra en la tercera posición desde el final
-#         return city
-#     else:
-#         return "No se pudo encontrar la ciudad"
 
 def convert_coordinates(input_string):
     # Dividir las coordenadas en latitud y longitud
@@ -196,16 +182,15 @@ else:
     st.markdown(f"## Tu cafetería más cercana", unsafe_allow_html=True)
 
 
-# Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
-st.markdown("""
-    <style>
-        div.stTextInput > div > div > input {
-            color: grey;
-        }
-    </style>
-    """, unsafe_allow_html=True)
+# # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
+# st.markdown("""
+#     <style>
+#         div.stTextInput > div > div > input {
+#             color: grey;
+#         }
+#     </style>
+#     """, unsafe_allow_html=True)
 
-# coords = st.sidebar.text_input("Pega aquí las coordenadas tal como aparecen en el desplegable '**📍ENCONTRAR MI UBICACIÓN**':", "Latitude: 40.4336 Longitude: -3.7043")
 
 loc = get_geolocation()
 
@@ -219,25 +204,6 @@ try:
 except:
     latitud = 40.4336
     longitud = -3.7043
-
-# Usar st.session_state para rastrear si el valor del st.text_input ha cambiado
-# if "previous_coords" not in st.session_state:
-#     st.session_state.previous_coords = coords
-
-# coords_changed = st.session_state.previous_coords != coords
-# st.session_state.previous_coords = coords
-
-# # Determinar si el st.expander debe estar comprimido
-# expander_expanded = not coords_changed
-
-
-# # Define la URL de tu imagen. Puede ser una URL local o remota.
-# url_imagen = "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/location.png"
-
-# # Utiliza st.markdown para insertar el HTML que combina texto e imagen.
-# st.markdown(f"""
-#     Pulsa el icono <img src="{url_imagen}" style="display:inline; vertical-align:middle; width:30px; height:30px"/> para geolocalizarte
-# """, unsafe_allow_html=True)
 
 
 # # MAPEAR
