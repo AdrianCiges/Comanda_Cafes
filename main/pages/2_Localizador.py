@@ -172,9 +172,17 @@ def get_data():
     return df
 
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
-# -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
+# --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
 
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
+
+from_pc = st.sidebar.checkbox('Vista para ordenador')
+
+if from_pc:
+    size_map =
+else:
+    size_map = 
+
 
 if num_cafeterias != 1:
     st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -50px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
@@ -210,8 +218,8 @@ if latitud == 40.4336 and longitud == -3.7043:
 latitude = latitud
 longitude = longitud
 
-# MAPEANDO CON UBI A MANO
-m = folium.Map(location=[latitude, longitude], zoom_start=15)
+# MAPEANDO CON UBI
+m = folium.Map(location=[latitude, longitude], zoom_start=15, height=600, width=685)
 red_icon = folium.Icon(color='red')
 folium.Marker(
     [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
