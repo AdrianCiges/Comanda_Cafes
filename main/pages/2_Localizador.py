@@ -247,7 +247,23 @@ for index, row in sorted_df.iterrows():
     ).add_to(m)
 
 if from_pc:
-    folium_static(m)
+    # CSS para centrar el mapa en la página
+    css = """
+    <style>
+        .css-1e5imcs {  # Selector para el contenedor del mapa; puede variar según la versión de Streamlit
+            display: flex;
+            justify-content: center;
+        }
+        .stAlert {  # Selector para el contenedor del elemento folium_static
+            width: 1015px;
+            margin: 0 auto;
+        }
+    </style>
+    """
+    
+    # Aplicar el CSS en Streamlit
+    st.markdown(css, unsafe_allow_html=True)
+    folium_static(m, width=1015)
 else:
     folium_static(m, width=380)
 
