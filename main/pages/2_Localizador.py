@@ -220,15 +220,17 @@ longitude = longitud
 
 
 
-# CSS para ajustar el ancho del contenedor del mapa y el fondo
+# CSS para centrar el mapa en la página
 css = """
 <style>
-    .css-1s1f96m {  # Este selector podría cambiar según la versión de Streamlit
-        width: 60%;
-        margin: 0 auto;
+    .main {  # Selector para el contenedor principal
+        width: 100%;
+        display: flex;
+        justify-content: center;  # Centra los elementos horizontalmente
     }
-    .main {  # Este selector aplica al contenedor principal
-        background-color: transparent;  # Ajusta esto según el color de fondo deseado
+    .css-1s1f96m {  # Selector para el contenedor del mapa; puede variar según la versión de Streamlit
+        width: 60%;  # Ancho del mapa
+        margin: 0 auto;  # Centra el mapa
     }
 </style>
 """
