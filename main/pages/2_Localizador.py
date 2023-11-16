@@ -247,7 +247,7 @@ for index, row in sorted_df.iterrows():
     ).add_to(m)
 
 if from_pc:
-    folium_static(m, width=1015)
+    folium_static(m, width=1025)
 else:
     folium_static(m, width=380)
 
