@@ -219,35 +219,36 @@ latitude = latitud
 longitude = longitud
 
 # MAPEANDO CON UBI
-m = folium.Map(location=[latitude, longitude], zoom_start=15, width='50px')
-red_icon = folium.Icon(color='red')
-folium.Marker(
-    [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
-).add_to(m)
-
-df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
-df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
-df['dif_sum'] = df['lat_dif'] + df['lon_dif']
-
-sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
-sorted_df = sorted_df.reset_index(drop=True)
-sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-
-coords = []
-for i,e in enumerate(sorted_df['Latitude']):
-    coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
-sorted_df['coords'] = coords
-sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
-
-for index, row in sorted_df.iterrows():
-    # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
-    
-    link = sorted_df["Cómo llegar"][index].replace('"', '%22')
-    popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
-
+with st.container():
+    m = folium.Map(location=[latitude, longitude], zoom_start=15, width='50%')
+    red_icon = folium.Icon(color='red')
     folium.Marker(
-        location=[row["Latitude"], row["Longitude"]],
-        popup=popup_content,
+        [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
     ).add_to(m)
-
-folium_static(m)
+    
+    df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
+    df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
+    df['dif_sum'] = df['lat_dif'] + df['lon_dif']
+    
+    sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
+    sorted_df = sorted_df.reset_index(drop=True)
+    sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+    
+    coords = []
+    for i,e in enumerate(sorted_df['Latitude']):
+        coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+    sorted_df['coords'] = coords
+    sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+    
+    for index, row in sorted_df.iterrows():
+        # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
+        
+        link = sorted_df["Cómo llegar"][index].replace('"', '%22')
+        popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
+    
+        folium.Marker(
+            location=[row["Latitude"], row["Longitude"]],
+            popup=popup_content,
+        ).add_to(m)
+    
+    folium_static(m)
