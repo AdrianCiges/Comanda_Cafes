@@ -233,7 +233,7 @@ st.write('''<style>
 col1, col2 = st.columns([3, 1])
 
 with col1:
-    m = folium.Map(location=[latitude, longitude], zoom_start=15, width='100%')
+    m = folium.Map(location=[latitude, longitude], zoom_start=15, width='60%')
     red_icon = folium.Icon(color='red')
     folium.Marker(
         [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
