@@ -179,9 +179,9 @@ num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_val
 from_pc = st.sidebar.checkbox('Vista para ordenador')
 
 if from_pc:
-    size_map = 100
+    size_map = 1000
 else:
-    size_map = 200
+    size_map = 380
 
 
 if num_cafeterias != 1:
@@ -270,6 +270,6 @@ for index, row in sorted_df.iterrows():
         popup=popup_content,
     ).add_to(m)
 
-folium_static(m, width=380)
+folium_static(m, width=size_map)
 
 
