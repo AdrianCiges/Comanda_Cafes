@@ -78,51 +78,51 @@ st.markdown(
 # ------------------------------------------------------------------------------------CONFIG⬆️-------------------------------------
 # ---------------------------------------------------------------------------------FUNCIONES⬇️-------------------------------------
 
-def extract_cafeterias_in_madrid():
-    api = overpy.Overpass()
+# def extract_cafeterias_in_madrid():
+#     api = overpy.Overpass()
 
-    # Definimos una consulta para extraer las cafeterías en Madrid
-    query = f"""
-    area["name"="{city}"];
-    node["amenity"="cafe"](area);
-    out;
-    """
+#     # Definimos una consulta para extraer las cafeterías en Madrid
+#     query = f"""
+#     area["name"="{city}"];
+#     node["amenity"="cafe"](area);
+#     out;
+#     """
 
-    result = api.query(query)
+#     result = api.query(query)
 
-    cafes = []
+#     cafes = []
 
-    for node in result.nodes:
-        cafe_info = {
-            "Name": node.tags.get("name", "No especificado"),
-            "Tlf": node.tags.get("phone", "-"),
-            "Web": node.tags.get("website", "-"),
-            "Facebook": node.tags.get("contact:facebook", "-"),
-            "Calle": node.tags.get("addr:street", "-"),
-            "Numero": node.tags.get("addr:housenumber", ""),
-            "Horario": node.tags.get("opening_hours", "No especificado"),
-            "Terraza": node.tags.get("outdoor_seating", "No especificado").capitalize(),
-            "Latitude": float(node.lat),
-            "Longitude": float(node.lon)
-        }
-        cafes.append(cafe_info)
+#     for node in result.nodes:
+#         cafe_info = {
+#             "Name": node.tags.get("name", "No especificado"),
+#             "Tlf": node.tags.get("phone", "-"),
+#             "Web": node.tags.get("website", "-"),
+#             "Facebook": node.tags.get("contact:facebook", "-"),
+#             "Calle": node.tags.get("addr:street", "-"),
+#             "Numero": node.tags.get("addr:housenumber", ""),
+#             "Horario": node.tags.get("opening_hours", "No especificado"),
+#             "Terraza": node.tags.get("outdoor_seating", "No especificado").capitalize(),
+#             "Latitude": float(node.lat),
+#             "Longitude": float(node.lon)
+#         }
+#         cafes.append(cafe_info)
 
-    return cafes
+#     return cafes
 
-def get_city_from_coordinates(latitude, longitude):
-    geolocator = Nominatim(user_agent="city_finder")
+# def get_city_from_coordinates(latitude, longitude):
+#     geolocator = Nominatim(user_agent="city_finder")
     
-    # Obtener la dirección completa a partir de las coordenadas
-    location = geolocator.reverse((latitude, longitude), exactly_one=True) # Susceptible de timeout error!! Arreglar
+#     # Obtener la dirección completa a partir de las coordenadas
+#     location = geolocator.reverse((latitude, longitude), exactly_one=True) # Susceptible de timeout error!! Arreglar
     
-    # Extraer la ciudad de la dirección
-    if location:
-        address = location.address
-        address_parts = address.split(", ")
-        city = address_parts[-4]  # La ciudad generalmente se encuentra en la tercera posición desde el final
-        return city
-    else:
-        return "No se pudo encontrar la ciudad"
+#     # Extraer la ciudad de la dirección
+#     if location:
+#         address = location.address
+#         address_parts = address.split(", ")
+#         city = address_parts[-4]  # La ciudad generalmente se encuentra en la tercera posición desde el final
+#         return city
+#     else:
+#         return "No se pudo encontrar la ciudad"
 
 def convert_coordinates(input_string):
     # Dividir las coordenadas en latitud y longitud
@@ -189,7 +189,12 @@ def get_data():
 # -------------------------------------------------------------------------------UBI A MANO ⬇️-------------------------------------
 
 num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
-st.markdown(f"## Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
+
+if num_cafeterias < 1:
+    st.markdown(f"## Tus {num_cafeterias} cafeterías más cercanas", unsafe_allow_html=True)
+else:
+    st.markdown(f"## Tu cafetería más cercana", unsafe_allow_html=True)
+
 
 # Inyectamos CSS personalizado para cambiar el color del texto predeterminado en text_input
 st.markdown("""
@@ -208,14 +213,12 @@ if st.checkbox('📍 Usar mi ubicación'):
     location = [loc]
     latitud = location[0]['coords']['latitude']
     longitud = location[0]['coords']['longitude']
-    st.write(f'{latitud}, {longitud}')
 try:
     latitud = round(float(latitud), 4)
     longitud = round(float(longitud), 4)
 except:
     latitud = 40.4336
     longitud = -3.7043
-    st.sidebar.warning('Hay un error en tus coordenadas.')
 
 # Usar st.session_state para rastrear si el valor del st.text_input ha cambiado
 # if "previous_coords" not in st.session_state:
@@ -246,7 +249,7 @@ except:
 df = get_data()
 
 if latitud == 40.4336 and longitud == -3.7043:
-    st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para cambiarla usa el menú lateral.')
+    st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
 
 latitude = latitud
 longitude = longitud
