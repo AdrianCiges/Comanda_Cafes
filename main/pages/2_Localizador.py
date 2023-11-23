@@ -310,8 +310,10 @@ with tab1:
 
 with tab2:
     
-    latitud_usuario = st.number_input("Ingrese la latitud:", min_value=-90, max_value=90)
-    longitud_usuario = st.number_input("Ingrese la longitud:", min_value=-180, max_value=180)
-    
-    df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario)
-    st.table(df_resultante)
+    if st.checkbox('📍 Usar mi ubicación '):
+
+        latitud_usuario = st.number_input("Ingrese la latitud:", min_value=-90, max_value=90)
+        longitud_usuario = st.number_input("Ingrese la longitud:", min_value=-180, max_value=180)
+        
+        df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario)
+        st.table(df_resultante)
