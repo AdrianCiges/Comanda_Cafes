@@ -23,6 +23,7 @@ import os
 import leafmap.foliumap as leafmap
 from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share_link, get_geolocation
 import json
+import googlemaps
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
