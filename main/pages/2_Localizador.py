@@ -177,8 +177,6 @@ def get_data():
 def buscar_cafeterias(latitud, longitud, key, radio=10000):
     # Configurar la clave de API
 
-    key=key
-
     gmaps = googlemaps.Client(key=key)
 
     # Realizar la búsqueda
@@ -317,5 +315,5 @@ with tab2:
         key = st.text_input("Ingrese API key de Google Maps")
 
         if key:
-            df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario)
+            df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario, key)
             st.table(df_resultante)
