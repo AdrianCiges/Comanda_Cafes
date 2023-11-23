@@ -77,102 +77,102 @@ st.markdown(
 
 tab1, tab2 = st.tabs(["Open Street Map", "Google Maps API"])
     
-    # ------------------------------------------------------------------------------------CONFIG⬆️-------------------------------------
-    # ---------------------------------------------------------------------------------FUNCIONES⬇️-------------------------------------
-    
-    # def extract_cafeterias_in_madrid():
-    #     api = overpy.Overpass()
-    
-    #     # Definimos una consulta para extraer las cafeterías en Madrid
-    #     query = f"""
-    #     area["name"="{city}"];
-    #     node["amenity"="cafe"](area);
-    #     out;
-    #     """
-    
-    #     result = api.query(query)
-    
-    #     cafes = []
-    
-    #     for node in result.nodes:
-    #         cafe_info = {
-    #             "Name": node.tags.get("name", "No especificado"),
-    #             "Tlf": node.tags.get("phone", "-"),
-    #             "Web": node.tags.get("website", "-"),
-    #             "Facebook": node.tags.get("contact:facebook", "-"),
-    #             "Calle": node.tags.get("addr:street", "-"),
-    #             "Numero": node.tags.get("addr:housenumber", ""),
-    #             "Horario": node.tags.get("opening_hours", "No especificado"),
-    #             "Terraza": node.tags.get("outdoor_seating", "No especificado").capitalize(),
-    #             "Latitude": float(node.lat),
-    #             "Longitude": float(node.lon)
-    #         }
-    #         cafes.append(cafe_info)
-    
-    #     return cafes
-    
-    
-    def convert_coordinates(input_string):
-        # Dividir las coordenadas en latitud y longitud
-        lat, lon = map(float, input_string.split(', '))
-    
-        # Convertir la latitud a grados, minutos y segundos
-        lat_deg = int(lat)
-        lat_min = int((lat - lat_deg) * 60)
-        lat_sec = (lat - lat_deg - lat_min / 60) * 3600
-    
-        # Convertir la longitud a grados, minutos y segundos
-        lon_deg = int(lon)
-        lon_min = int((lon - lon_deg) * 60)
-        lon_sec = (lon - lon_deg - lon_min / 60) * 3600
-    
-        # Construir la cadena de salida en el formato deseado
-        if "-" in str(lat) and "-" in str(lon):
-            output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"S+{lon_deg}°{lon_min}'{lon_sec:.1f}\"W"
-        elif "-" in str(lat):
-            output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"S+{lon_deg}°{lon_min}'{lon_sec:.1f}\"E"
-        elif "-" in str(lon):
-            output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"N+{lon_deg}°{lon_min}'{lon_sec:.1f}\"W"
-        else:
-            output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"N+{lon_deg}°{lon_min}'{lon_sec:.1f}\"E"
-    
-        return output_string.replace("-","")
-    
-    def make_clickable(val):
-        # target _blank to open new window
-        return '<a target="_blank" href="{}">{}</a>'.format(val,val)
-    
-    def haversine_distance(lat1, lon1, lat2, lon2):
-        """
-        Calculate the great circle distance in meters between two points
-        on the Earth's surface identified by latitude and longitude.
-        :param lat1: Latitude of the first point (in degrees)
-        :param lon1: Longitude of the first point (in degrees)
-        :param lat2: Latitude of the second point (in degrees)
-        :param lon2: Longitude of the second point (in degrees)
-        :return: Distance in meters
-        """
-        # Convert degrees to radians
-        lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
-    
-        # Haversine formula
-        dlon = lon2 - lon1
-        dlat = lat2 - lat1
-        a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-        radius_earth = 6371000  # Earth's radius in meters
-        distance = radius_earth * c
-    
-        return int(distance)
-    
-    
-    @st.cache_data
-    def get_data():
-        data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
-        df = pd.read_excel(data_url)
-        df = df.drop('Unnamed: 0', axis=1)
-        return df
-    
+# ------------------------------------------------------------------------------------CONFIG⬆️-------------------------------------
+# ---------------------------------------------------------------------------------FUNCIONES⬇️-------------------------------------
+
+# def extract_cafeterias_in_madrid():
+#     api = overpy.Overpass()
+
+#     # Definimos una consulta para extraer las cafeterías en Madrid
+#     query = f"""
+#     area["name"="{city}"];
+#     node["amenity"="cafe"](area);
+#     out;
+#     """
+
+#     result = api.query(query)
+
+#     cafes = []
+
+#     for node in result.nodes:
+#         cafe_info = {
+#             "Name": node.tags.get("name", "No especificado"),
+#             "Tlf": node.tags.get("phone", "-"),
+#             "Web": node.tags.get("website", "-"),
+#             "Facebook": node.tags.get("contact:facebook", "-"),
+#             "Calle": node.tags.get("addr:street", "-"),
+#             "Numero": node.tags.get("addr:housenumber", ""),
+#             "Horario": node.tags.get("opening_hours", "No especificado"),
+#             "Terraza": node.tags.get("outdoor_seating", "No especificado").capitalize(),
+#             "Latitude": float(node.lat),
+#             "Longitude": float(node.lon)
+#         }
+#         cafes.append(cafe_info)
+
+#     return cafes
+
+
+def convert_coordinates(input_string):
+    # Dividir las coordenadas en latitud y longitud
+    lat, lon = map(float, input_string.split(', '))
+
+    # Convertir la latitud a grados, minutos y segundos
+    lat_deg = int(lat)
+    lat_min = int((lat - lat_deg) * 60)
+    lat_sec = (lat - lat_deg - lat_min / 60) * 3600
+
+    # Convertir la longitud a grados, minutos y segundos
+    lon_deg = int(lon)
+    lon_min = int((lon - lon_deg) * 60)
+    lon_sec = (lon - lon_deg - lon_min / 60) * 3600
+
+    # Construir la cadena de salida en el formato deseado
+    if "-" in str(lat) and "-" in str(lon):
+        output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"S+{lon_deg}°{lon_min}'{lon_sec:.1f}\"W"
+    elif "-" in str(lat):
+        output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"S+{lon_deg}°{lon_min}'{lon_sec:.1f}\"E"
+    elif "-" in str(lon):
+        output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"N+{lon_deg}°{lon_min}'{lon_sec:.1f}\"W"
+    else:
+        output_string = f"{lat_deg}°{lat_min}'{lat_sec:.1f}\"N+{lon_deg}°{lon_min}'{lon_sec:.1f}\"E"
+
+    return output_string.replace("-","")
+
+def make_clickable(val):
+    # target _blank to open new window
+    return '<a target="_blank" href="{}">{}</a>'.format(val,val)
+
+def haversine_distance(lat1, lon1, lat2, lon2):
+    """
+    Calculate the great circle distance in meters between two points
+    on the Earth's surface identified by latitude and longitude.
+    :param lat1: Latitude of the first point (in degrees)
+    :param lon1: Longitude of the first point (in degrees)
+    :param lat2: Latitude of the second point (in degrees)
+    :param lon2: Longitude of the second point (in degrees)
+    :return: Distance in meters
+    """
+    # Convert degrees to radians
+    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
+
+    # Haversine formula
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+    a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+    radius_earth = 6371000  # Earth's radius in meters
+    distance = radius_earth * c
+
+    return int(distance)
+
+
+@st.cache_data
+def get_data():
+    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
+    df = pd.read_excel(data_url)
+    df = df.drop('Unnamed: 0', axis=1)
+    return df
+
     # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
     # --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
 
