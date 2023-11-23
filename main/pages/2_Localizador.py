@@ -210,13 +210,13 @@ def buscar_cafeterias(latitud, longitud, radio=10000):
         serves_vegetarian_food = detalles.get('result', {}).get('serves_vegetarian_food', None)
         serves_beer = detalles.get('result', {}).get('serves_beer', None)
         serves_wine = detalles.get('result', {}).get('serves_wine', None)
-            takeout = detalles.get('result', {}).get('takeout', None)
-            url = detalles.get('result', {}).get('url')
+        takeout = detalles.get('result', {}).get('takeout', None)
+        url = detalles.get('result', {}).get('url')
 
-            cafeterias.append([nombre, abierto_ahora, latitud, longitud, rating, 
-                               opiniones, wheelchair_accessible_entrance, reservable, price_level,
-                               serves_breakfast, serves_brunch, serves_lunch, serves_dinner,
-                               serves_vegetarian_food, serves_beer, serves_wine, takeout, url])
+        cafeterias.append([nombre, abierto_ahora, latitud, longitud, rating, 
+                           opiniones, wheelchair_accessible_entrance, reservable, price_level,
+                           serves_breakfast, serves_brunch, serves_lunch, serves_dinner,
+                           serves_vegetarian_food, serves_beer, serves_wine, takeout, url])
 
         # Convertir a DataFrame
         df_cafeterias = pd.DataFrame(cafeterias, columns=['nombre', 'abierto_ahora', 'latitud', 'longitud', 'rating', 
