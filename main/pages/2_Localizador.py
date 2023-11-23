@@ -38,46 +38,44 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-tab1, tab2 = st.tabs(["Open Street Map", "Google Maps API"])
+# Texto principal
+texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
 
-with tab1:
+# Estilos CSS para el logo y el contenedor
+estilos_css = f"""
+    <style>
+    .logo-container {{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }}
+
+    .logo-img {{
+        height: 40px;
+        width: auto;
+        margin-left: 20px;
+    }}
+    </style>
+    """
+
+# Ruta de la imagen del logo
+LOGO_IMAGE = "./img/mapa.png"
+
+# Texto principal
+texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
     
-    # Texto principal
-    texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
-    
-    # Estilos CSS para el logo y el contenedor
-    estilos_css = f"""
-        <style>
-        .logo-container {{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }}
-    
-        .logo-img {{
-            height: 40px;
-            width: auto;
-            margin-left: 20px;
-        }}
-        </style>
-        """
-    
-    # Ruta de la imagen del logo
-    LOGO_IMAGE = "./img/mapa.png"
-    
-    # Texto principal
-    texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
-        
-    # Leer la imagen del logo y codificarla en base64
-    with open(LOGO_IMAGE, "rb") as image_file:
-        encoded_image = base64.b64encode(image_file.read()).decode()
-    
-    # Mostrar el texto principal y el logo
-    st.markdown(estilos_css, unsafe_allow_html=True)
-    st.markdown(
-        f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
-        unsafe_allow_html=True
-    )
+# Leer la imagen del logo y codificarla en base64
+with open(LOGO_IMAGE, "rb") as image_file:
+    encoded_image = base64.b64encode(image_file.read()).decode()
+
+# Mostrar el texto principal y el logo
+st.markdown(estilos_css, unsafe_allow_html=True)
+st.markdown(
+    f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
+    unsafe_allow_html=True
+)
+
+tab1, tab2 = st.tabs(["Open Street Map", "Google Maps API"])
     
     # ------------------------------------------------------------------------------------CONFIG⬆️-------------------------------------
     # ---------------------------------------------------------------------------------FUNCIONES⬇️-------------------------------------
@@ -177,6 +175,8 @@ with tab1:
     
     # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
     # --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
+
+with tab1:
     
     num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
     
