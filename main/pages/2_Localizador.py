@@ -174,10 +174,8 @@ def get_data():
     df = df.drop('Unnamed: 0', axis=1)
     return df
 
-def buscar_cafeterias(latitud, longitud, radio=10000):
+def buscar_cafeterias(latitud, longitud, key, radio=10000):
     # Configurar la clave de API
-
-    key = st.text_input("Ingrese API key de Google Maps")
 
     gmaps = googlemaps.Client(key=key)
 
@@ -312,8 +310,10 @@ with tab2:
     
     if st.checkbox('📍 Usar mi ubicación '):
 
-        latitud_usuario = st.number_input("Ingrese la latitud:", min_value=-90, max_value=90)
-        longitud_usuario = st.number_input("Ingrese la longitud:", min_value=-180, max_value=180)
-        
-        df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario)
-        st.table(df_resultante)
+        latitud_usuario = st.number_input("Ingrese la latitud:", min_value=-90, max_value=90, value=40.4336)
+        longitud_usuario = st.number_input("Ingrese la longitud:", min_value=-180, max_value=180, value=-3.7043)
+        key = st.text_input("Ingrese API key de Google Maps")
+
+        if key:
+            df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario)
+            st.table(df_resultante)
