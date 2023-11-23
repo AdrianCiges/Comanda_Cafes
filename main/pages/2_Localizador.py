@@ -174,6 +174,58 @@ def get_data():
     df = df.drop('Unnamed: 0', axis=1)
     return df
 
+def buscar_cafeterias(latitud, longitud, radio=10000):
+    # Configurar la clave de API
+
+    key = st.text_input("Ingrese API key de Google Maps")
+
+    gmaps = googlemaps.Client(key=key)
+
+    # Realizar la búsqueda
+    resultados = gmaps.places_nearby(location=(latitud, longitud), radius=radio, type='cafe')
+
+    # Extraer la información deseada
+    cafeterias = []
+    for lugar in resultados['results']:
+        # Detalles básicos
+        place_id = lugar.get('place_id', None)
+        nombre = lugar.get('name', None)
+        latitud = lugar.get('geometry', {}).get('location', None).get('lat')
+        longitud = lugar.get('geometry', {}).get('location', None).get('lng')
+        rating = lugar.get('rating', None)
+        opiniones = lugar.get('user_ratings_total', None)
+
+        # Obtener detalles del lugar
+        detalles = gmaps.place(place_id=place_id)
+        abierto_ahora = detalles.get('result', {}).get('current_opening_hours', {}).get('open_now', None)
+        wheelchair_accessible_entrance = detalles.get('result', {}).get('wheelchair_accessible_entrance', None) 
+        price_level = detalles.get('result', {}).get('price_level', None)
+        reservable = detalles.get('result', {}).get('reservable', None)
+        
+        # Más detalles
+        serves_breakfast = detalles.get('result', {}).get('serves_breakfast', None)
+        serves_brunch = detalles.get('result', {}).get('serves_brunch', None)
+        serves_lunch = detalles.get('result', {}).get('serves_lunch', None)
+        serves_dinner = detalles.get('result', {}).get('serves_dinner', None)
+        serves_vegetarian_food = detalles.get('result', {}).get('serves_vegetarian_food', None)
+        serves_beer = detalles.get('result', {}).get('serves_beer', None)
+        serves_wine = detalles.get('result', {}).get('serves_wine', None)
+            takeout = detalles.get('result', {}).get('takeout', None)
+            url = detalles.get('result', {}).get('url')
+
+            cafeterias.append([nombre, abierto_ahora, latitud, longitud, rating, 
+                               opiniones, wheelchair_accessible_entrance, reservable, price_level,
+                               serves_breakfast, serves_brunch, serves_lunch, serves_dinner,
+                               serves_vegetarian_food, serves_beer, serves_wine, takeout, url])
+
+        # Convertir a DataFrame
+        df_cafeterias = pd.DataFrame(cafeterias, columns=['nombre', 'abierto_ahora', 'latitud', 'longitud', 'rating', 
+                                                          'opiniones', 'wheelchair_accessible_entrance', 'reservable','price_level',
+                                                          'serves_breakfast', 'serves_brunch', 'serves_lunch', 'serves_dinner',
+                                                          'serves_vegetarian_food', 'serves_beer', 'serves_wine', 'takeout', 'url'])
+
+        return df_cafeterias
+
     # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
     # --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
 
@@ -257,4 +309,9 @@ with tab1:
         folium_static(m, width=380)
 
 with tab2:
-    pass
+    
+    latitud_usuario = st.number_input("Ingrese la latitud:", min_value=-90, max_value=90)
+    longitud_usuario = st.number_input("Ingrese la longitud:", min_value=-180, max_value=180)
+    
+    df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario)
+    st.table(df_resultante)
