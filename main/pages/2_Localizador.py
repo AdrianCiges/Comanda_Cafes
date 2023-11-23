@@ -177,6 +177,8 @@ def get_data():
 def buscar_cafeterias(latitud, longitud, key, radio=10000):
     # Configurar la clave de API
 
+    key=key
+
     gmaps = googlemaps.Client(key=key)
 
     # Realizar la búsqueda
