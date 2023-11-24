@@ -337,24 +337,24 @@ with tab2:
         longitud = -3.7043
 
         
-    m = folium.Map(location=[latitude, longitude], zoom_start=15)
+    m = folium.Map(location=[latitude, longitud], zoom_start=15)
         
     red_icon = folium.Icon(color='red')
     folium.Marker(
-        [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
+        [latitude, longitud], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
     ).add_to(m)
     
     df_resultante['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df_resultante['latitud'])]
-    df_resultante['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df_resultante['longitud'])]
+    df_resultante['lon_dif'] = [abs(float(lg) - longitud) for i,lg in enumerate(df_resultante['longitud'])]
     df_resultante['dif_sum'] = df_resultante['lat_dif'] + df_resultante['lon_dif']
     
     sorted_df = df_resultante.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
     sorted_df = sorted_df.reset_index(drop=True)
-    sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['longitude'][i]) for i,e in enumerate(sorted_df['latitud'])]
+    sorted_df['Metros'] = [haversine_distance(latitude, longitud, e, sorted_df['longitud'][i]) for i,e in enumerate(sorted_df['latitud'])]
     
     coords = []
     for i,e in enumerate(sorted_df['latitud']):
-        coords.append(str(e) + ", " +str(sorted_df['longitude'][i]))
+        coords.append(str(e) + ", " +str(sorted_df['longitud'][i]))
     sorted_df['coords'] = coords
     sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
     
@@ -365,7 +365,7 @@ with tab2:
         popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
     
         folium.Marker(
-            location=[row["latitud"], row["longitude"]],
+            location=[row["latitud"], row["longitud"]],
             popup=popup_content,
         ).add_to(m)
     
