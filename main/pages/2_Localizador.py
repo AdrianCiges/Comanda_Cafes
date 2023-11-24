@@ -237,9 +237,9 @@ with tab1:
     
     
     if num_cafeterias != 1:
-        st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -50px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
+        st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
     else:
-        st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -50px;'>Tu cafetería más cercana</h2>", unsafe_allow_html=True)
+        st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tu cafetería más cercana</h2>", unsafe_allow_html=True)
         
     
     if st.checkbox('📍 Usar mi ubicación'):
