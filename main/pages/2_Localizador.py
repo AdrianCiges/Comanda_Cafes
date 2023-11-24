@@ -308,7 +308,7 @@ with tab1:
 
 with tab2:
     
-    loc1 = get_geolocation()
+    # loc1 = get_geolocation()
     
     # if st.checkbox('📍 Usar mi ubicación   '):
     #     location = [loc1]
