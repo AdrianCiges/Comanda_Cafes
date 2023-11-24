@@ -356,13 +356,13 @@ with tab2:
     for i,e in enumerate(sorted_df['latitud']):
         coords.append(str(e) + ", " +str(sorted_df['longitud'][i]))
     sorted_df['coords'] = coords
-    sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+    sorted_df['Cómo llegar'] = [e for e in sorted_df['url']]
     
     for index, row in sorted_df.iterrows():
         # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
         
         link = sorted_df["Cómo llegar"][index].replace('"', '%22')
-        popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
+        popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["nombre"]}</a></strong></div>'
     
         folium.Marker(
             location=[row["latitud"], row["longitud"]],
