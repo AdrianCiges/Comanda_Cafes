@@ -307,6 +307,7 @@ with tab1:
         folium_static(m, width=380)
 
 with tab2:
+    pass
     
     # loc1 = get_geolocation()
     
