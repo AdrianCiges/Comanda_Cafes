@@ -267,9 +267,10 @@ with tab1:
     
     latitude = latitud
     longitude = longitud
+
+    st.table(df)
     
-    
-    
+
     m = folium.Map(location=[latitude, longitude], zoom_start=15)
     red_icon = folium.Icon(color='red')
     folium.Marker(
