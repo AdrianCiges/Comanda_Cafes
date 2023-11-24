@@ -310,7 +310,7 @@ with tab2:
     
     loc = get_geolocation()
     
-    if st.checkbox('📍 Usar mi ubicación'):
+    if st.checkbox('📍 Usar mi ubicación   '):
         location = [loc]
         latitud = location[0]['coords']['latitude']
         longitud = location[0]['coords']['longitude']
@@ -323,7 +323,7 @@ with tab2:
 
         latitud_usuario = st.number_input("Ingrese la latitud:", min_value=-90.0000, max_value=90.0000, value=40.4336)
         longitud_usuario = st.number_input("Ingrese la longitud:", min_value=-180.0000, max_value=180.0000, value=-3.7043)
-        key = st.text_input("Ingrese API key de Google Maps")
+        key = st.text_input("Ingrese API key de Google Maps ")
 
         if key:
             df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario, key)
