@@ -268,7 +268,7 @@ with tab1:
     latitude = latitud
     longitude = longitud
 
-    st.table(df)
+    st.dataframe(df)
     
 
     m = folium.Map(location=[latitude, longitude], zoom_start=15)
