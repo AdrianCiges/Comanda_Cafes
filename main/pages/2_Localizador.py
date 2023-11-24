@@ -308,10 +308,8 @@ with tab1:
 
 with tab2:
     
-    loc1 = get_geolocation()
-    
     if st.checkbox('📍 Usar mi ubicación   '):
-        location = [loc1]
+        location = [loc]
         latitud = location[0]['coords']['latitude']
         longitud = location[0]['coords']['longitude']
     try:
