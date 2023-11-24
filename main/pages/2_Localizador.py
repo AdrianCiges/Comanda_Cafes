@@ -227,6 +227,8 @@ def buscar_cafeterias(latitud, longitud, key, radio=10000):
     # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
     # --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
 
+loc = get_geolocation()
+
 with tab1:
     
     num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
@@ -238,9 +240,7 @@ with tab1:
         st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -50px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
     else:
         st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -50px;'>Tu cafetería más cercana</h2>", unsafe_allow_html=True)
-    
-    
-    loc = get_geolocation()
+        
     
     if st.checkbox('📍 Usar mi ubicación'):
         location = [loc]
@@ -307,28 +307,27 @@ with tab1:
         folium_static(m, width=380)
 
 with tab2:
-    pass
     
-    # loc1 = get_geolocation()
+    loc1 = get_geolocation()
     
-    # if st.checkbox('📍 Usar mi ubicación   '):
-    #     location = [loc1]
-    #     latitud = location[0]['coords']['latitude']
-    #     longitud = location[0]['coords']['longitude']
-    # try:
-    #     latitud = round(float(latitud), 4)
-    #     longitud = round(float(longitud), 4)
-    # except:
-    #     latitud = 40.4336
-    #     longitud = -3.7043
+    if st.checkbox('📍 Usar mi ubicación   '):
+        location = [loc1]
+        latitud = location[0]['coords']['latitude']
+        longitud = location[0]['coords']['longitude']
+    try:
+        latitud = round(float(latitud), 4)
+        longitud = round(float(longitud), 4)
+    except:
+        latitud = 40.4336
+        longitud = -3.7043
 
-        # latitud_usuario = st.number_input("Ingrese la latitud:", min_value=-90.0000, max_value=90.0000, value=40.4336)
-        # longitud_usuario = st.number_input("Ingrese la longitud:", min_value=-180.0000, max_value=180.0000, value=-3.7043)
-        # key = st.text_input("Ingrese API key de Google Maps ")
+        latitud_usuario = st.number_input("Ingrese la latitud:", min_value=-90.0000, max_value=90.0000, value=40.4336)
+        longitud_usuario = st.number_input("Ingrese la longitud:", min_value=-180.0000, max_value=180.0000, value=-3.7043)
+        key = st.text_input("Ingrese API key de Google Maps ")
 
-        # if key:
-        #     df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario, key)
-        #     st.table(df_resultante)
-        # else:
-        #     if latitud == 40.4336 and longitud == -3.7043:
-        #         st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
+        if key:
+            df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario, key)
+            st.table(df_resultante)
+        else:
+            if latitud == 40.4336 and longitud == -3.7043:
+                st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
