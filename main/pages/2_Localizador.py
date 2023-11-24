@@ -344,17 +344,17 @@ with tab2:
         [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
     ).add_to(m)
     
-    df_resultante['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df_resultante['Latitud'])]
-    df_resultante['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df_resultante['Longitud'])]
+    df_resultante['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df_resultante['latitud'])]
+    df_resultante['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df_resultante['longitud'])]
     df_resultante['dif_sum'] = df_resultante['lat_dif'] + df_resultante['lon_dif']
     
     sorted_df = df_resultante.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
     sorted_df = sorted_df.reset_index(drop=True)
-    sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitud'])]
+    sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['longitude'][i]) for i,e in enumerate(sorted_df['latitud'])]
     
     coords = []
-    for i,e in enumerate(sorted_df['Latitud']):
-        coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+    for i,e in enumerate(sorted_df['latitud']):
+        coords.append(str(e) + ", " +str(sorted_df['longitude'][i]))
     sorted_df['coords'] = coords
     sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
     
@@ -365,7 +365,7 @@ with tab2:
         popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
     
         folium.Marker(
-            location=[row["Latitude"], row["Longitude"]],
+            location=[row["latitud"], row["longitude"]],
             popup=popup_content,
         ).add_to(m)
     
