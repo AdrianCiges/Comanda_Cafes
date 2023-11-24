@@ -313,6 +313,15 @@ with tab2:
         latitud = location[0]['coords']['latitude']
         longitud = location[0]['coords']['longitude']
         
+        key = st.text_input("Ingrese API key de Google Maps ")
+    
+        if key:
+            df_resultante = buscar_cafeterias(latitud, longitud, key)
+            st.table(df_resultante)
+        else:
+            if latitud == 40.4336 and longitud == -3.7043:
+                st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
+                
     try:
         latitud = round(float(latitud), 4)
         longitud = round(float(longitud), 4)
@@ -320,11 +329,4 @@ with tab2:
         latitud = 40.4336
         longitud = -3.7043
         
-    key = st.text_input("Ingrese API key de Google Maps ")
-
-    if key:
-        df_resultante = buscar_cafeterias(latitud_usuario, longitud_usuario, key)
-        st.table(df_resultante)
-    else:
-        if latitud == 40.4336 and longitud == -3.7043:
-            st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
+    
