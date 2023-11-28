@@ -268,8 +268,6 @@ with tab1:
     latitude = latitud
     longitude = longitud
 
-    st.dataframe(df)
-    
 
     m = folium.Map(location=[latitude, longitude], zoom_start=15)
     red_icon = folium.Icon(color='red')
@@ -307,70 +305,70 @@ with tab1:
     else:
         folium_static(m, width=380)
 
-with tab2:
+# with tab2:
     
-    if st.checkbox('📍 Usar mi ubicación   '):
-        location = [loc]
-        latitud = location[0]['coords']['latitude']
-        longitud = location[0]['coords']['longitude']
+#     if st.checkbox('📍 Usar mi ubicación   '):
+#         location = [loc]
+#         latitud = location[0]['coords']['latitude']
+#         longitud = location[0]['coords']['longitude']
 
-        try:
-            latitud = round(float(latitud), 4)
-            longitud = round(float(longitud), 4)
-        except:
-            latitud = 40.4336
-            longitud = -3.7043
+#         try:
+#             latitud = round(float(latitud), 4)
+#             longitud = round(float(longitud), 4)
+#         except:
+#             latitud = 40.4336
+#             longitud = -3.7043
         
-        key = st.text_input("Ingrese API key de Google Maps ")
+#         key = st.text_input("Ingrese API key de Google Maps ")
     
-        if key:
+#         if key:
                                 
-            df_resultante = buscar_cafeterias(latitud, longitud, key)
-            st.table(df_resultante)
-    else:
-        st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
+#             df_resultante = buscar_cafeterias(latitud, longitud, key)
+#             st.table(df_resultante)
+#     else:
+#         st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
 
-    try:
-        latitud = round(float(latitud), 4)
-        longitud = round(float(longitud), 4)
-    except:
-        latitud = 40.4336
-        longitud = -3.7043
+#     try:
+#         latitud = round(float(latitud), 4)
+#         longitud = round(float(longitud), 4)
+#     except:
+#         latitud = 40.4336
+#         longitud = -3.7043
 
         
-    m = folium.Map(location=[latitude, longitud], zoom_start=15)
+#     m = folium.Map(location=[latitude, longitud], zoom_start=15)
         
-    red_icon = folium.Icon(color='red')
-    folium.Marker(
-        [latitude, longitud], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
-    ).add_to(m)
+#     red_icon = folium.Icon(color='red')
+#     folium.Marker(
+#         [latitude, longitud], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
+#     ).add_to(m)
     
-    df_resultante['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df_resultante['latitud'])]
-    df_resultante['lon_dif'] = [abs(float(lg) - longitud) for i,lg in enumerate(df_resultante['longitud'])]
-    df_resultante['dif_sum'] = df_resultante['lat_dif'] + df_resultante['lon_dif']
+#     df_resultante['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df_resultante['latitud'])]
+#     df_resultante['lon_dif'] = [abs(float(lg) - longitud) for i,lg in enumerate(df_resultante['longitud'])]
+#     df_resultante['dif_sum'] = df_resultante['lat_dif'] + df_resultante['lon_dif']
     
-    sorted_df = df_resultante.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
-    sorted_df = sorted_df.reset_index(drop=True)
-    sorted_df['Metros'] = [haversine_distance(latitude, longitud, e, sorted_df['longitud'][i]) for i,e in enumerate(sorted_df['latitud'])]
+#     sorted_df = df_resultante.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
+#     sorted_df = sorted_df.reset_index(drop=True)
+#     sorted_df['Metros'] = [haversine_distance(latitude, longitud, e, sorted_df['longitud'][i]) for i,e in enumerate(sorted_df['latitud'])]
     
-    coords = []
-    for i,e in enumerate(sorted_df['latitud']):
-        coords.append(str(e) + ", " +str(sorted_df['longitud'][i]))
-    sorted_df['coords'] = coords
-    sorted_df['Cómo llegar'] = [e for e in sorted_df['url']]
+#     coords = []
+#     for i,e in enumerate(sorted_df['latitud']):
+#         coords.append(str(e) + ", " +str(sorted_df['longitud'][i]))
+#     sorted_df['coords'] = coords
+#     sorted_df['Cómo llegar'] = [e for e in sorted_df['url']]
     
-    for index, row in sorted_df.iterrows():
-        # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
+#     for index, row in sorted_df.iterrows():
+#         # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
         
-        link = sorted_df["Cómo llegar"][index].replace('"', '%22')
-        popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["nombre"]}</a></strong></div>'
+#         link = sorted_df["Cómo llegar"][index].replace('"', '%22')
+#         popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["nombre"]}</a></strong></div>'
     
-        folium.Marker(
-            location=[row["latitud"], row["longitud"]],
-            popup=popup_content,
-        ).add_to(m)
+#         folium.Marker(
+#             location=[row["latitud"], row["longitud"]],
+#             popup=popup_content,
+#         ).add_to(m)
     
-    if from_pc:
-        folium_static(m, width=1025)
-    else:
-        folium_static(m, width=380)
+#     if from_pc:
+#         folium_static(m, width=1025)
+#     else:
+#         folium_static(m, width=380)
