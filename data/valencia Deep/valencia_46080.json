@@ -1,0 +1,2124 @@
+[{
+  "url": "https://www.google.com/maps/place/Starbucks+On+The+Go/@42.1368962,-1.6999547,17z/data=!3m1!4b1!4m6!3m5!1s0xd5a5b2dec1dd6b3:0x6ee3aed28761a211!8m2!3d42.1368962!4d-1.6999547!16s%2Fg%2F11q7dzdy7s?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 14,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.17227829478068,-1.7276740331015306,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee%20places/@42.17227829478068,-1.7276740331015306,16z?hl=es",
+  "isAdvertisement": false,
+  "title": "Starbucks On The Go",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Cafetería",
+  "address": "N-232, 82, 31590 Castejón, Teruel, España",
+  "neighborhood": null,
+  "street": "N-232, 82",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Teruel",
+  "countryCode": "ES",
+  "website": "https://www.repsol.es/es/productos-y-servicios/estaciones-de-servicio/servicios/tienda/starbucks-on-the-go/index.cshtml",
+  "phone": null,
+  "phoneUnformatted": null,
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1368962,
+    "lng": -1.6999547
+  },
+  "locatedIn": null,
+  "plusCode": "48P2+Q2 Castejón, España",
+  "menu": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJs9Yd7C1bWg0REaJhh9Ku424",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "7990422383123079697",
+  "reviewsCount": 0,
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 0,
+    "fiveStar": 0
+  },
+  "imagesCount": 4,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Café",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:21:49.690Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [],
+  "peopleAlsoSearch": [
+    {
+      "category": "Otras personas también buscan",
+      "title": "Museo de Castejón",
+      "reviewsCount": 85,
+      "totalScore": 4.4
+    },
+    {
+      "category": "Otras personas también buscan",
+      "title": "Adif Castejón de Ebro",
+      "reviewsCount": 1,
+      "totalScore": 3
+    },
+    {
+      "category": "Otras personas también buscan",
+      "title": "Castejon",
+      "reviewsCount": 18,
+      "totalScore": 4
+    },
+    {
+      "category": "Otras personas también buscan",
+      "title": "Bar Restaurante Los Chopos Hadda",
+      "reviewsCount": 181,
+      "totalScore": 4.1
+    },
+    {
+      "category": "Otras personas también buscan",
+      "title": "Cafetería el Villa Castejón",
+      "reviewsCount": 21,
+      "totalScore": 4.2
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Para llevar": true
+      },
+      {
+        "Comer allí": true
+      },
+      {
+        "A domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Acceso para sillas de ruedas": true
+      },
+      {
+        "Aparcamiento adaptado para sillas de ruedas": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Cafeter%C3%ADa+Classic/@42.1703442,-1.6919833,17z/data=!3m1!4b1!4m6!3m5!1s0xd5a5db10ddcbf4b:0xbc9f921ee64233f1!8m2!3d42.1703442!4d-1.6919833!16s%2Fg%2F11s82v900w?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 10,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.17227829478068,-1.7276740331015306,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee%20places/@42.17227829478068,-1.7276740331015306,16z?hl=es",
+  "isAdvertisement": false,
+  "title": "Cafetería Classic",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Cafetería",
+  "address": "C. las Merindades, 31590 Castejón, Navarra, España",
+  "neighborhood": null,
+  "street": "C. las Merindades",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Navarra",
+  "countryCode": "ES",
+  "website": null,
+  "phone": null,
+  "phoneUnformatted": null,
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1703442,
+    "lng": -1.6919833
+  },
+  "locatedIn": null,
+  "plusCode": "58C5+46 Castejón, España",
+  "menu": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJS7_cDbFdWg0R8TNC5h6Sn7w",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "13591742861837218801",
+  "reviewsCount": 0,
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 0,
+    "fiveStar": 0
+  },
+  "imagesCount": 1,
+  "imageCategories": [
+    "Todas",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:21:56.889Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "miércoles",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "jueves",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "viernes",
+      "hours": "18:00 to 24:00"
+    },
+    {
+      "day": "sábado",
+      "hours": "18:00 to 24:00"
+    },
+    {
+      "day": "domingo",
+      "hours": "10:00 to 15:00, 18:00 to 23:00"
+    },
+    {
+      "day": "lunes",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "martes",
+      "hours": "Cerrado"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "Otras personas también buscan",
+      "title": "Cafetería el Villa Castejón",
+      "reviewsCount": 21,
+      "totalScore": 4.2
+    },
+    {
+      "category": "Otras personas también buscan",
+      "title": "Avenida",
+      "reviewsCount": 48,
+      "totalScore": 4
+    },
+    {
+      "category": "Otras personas también buscan",
+      "title": "Bar Amanecer",
+      "reviewsCount": 352,
+      "totalScore": 4.4
+    },
+    {
+      "category": "Otras personas también buscan",
+      "title": "Alex",
+      "reviewsCount": 61,
+      "totalScore": 4.5
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Comer allí": true
+      },
+      {
+        "A domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Acceso para sillas de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Bebidas alcohólicas": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licores fuertes": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayuno": true
+      },
+      {
+        "Postres": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Aseos": true
+      },
+      {
+        "Bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Acogedor": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Clientela": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Niños": [
+      {
+        "Ideal para niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Cafeter%C3%ADa+el+Villa+Castej%C3%B3n/@42.1347976,-1.6984333,17z/data=!3m1!4b1!4m9!3m8!1s0xd5a5cc70398c735:0x85bdf6303a09eb46!5m2!4m1!1i2!8m2!3d42.1347976!4d-1.6984333!16s%2Fg%2F11c54dp0hm?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 8,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.17227829478068,-1.7276740331015306,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee%20places/@42.17227829478068,-1.7276740331015306,16z?hl=es",
+  "isAdvertisement": false,
+  "title": "Cafetería el Villa Castejón",
+  "subTitle": null,
+  "description": null,
+  "price": "49 GBP",
+  "categoryName": "Cafetería",
+  "address": "Ctra Nacional 232 km. 83,400, 31590 Castejón, Navarra, España",
+  "neighborhood": null,
+  "street": "Ctra Nacional 232 km. 83,400",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Navarra",
+  "countryCode": "ES",
+  "website": "https://www.elvillacastejon.com/es/restauracion/",
+  "phone": "+34 948 84 20 12",
+  "phoneUnformatted": "+34948842012",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1347976,
+    "lng": -1.6984333
+  },
+  "locatedIn": null,
+  "plusCode": "48M2+WJ Castejón, España",
+  "menu": null,
+  "totalScore": 4.2,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJNceYA8dcWg0RRusJOjD2vYU",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "9637129464635321158",
+  "reviewsCount": 21,
+  "reviewsDistribution": {
+    "oneStar": 3,
+    "twoStar": 0,
+    "threeStar": 1,
+    "fourStar": 3,
+    "fiveStar": 14
+  },
+  "imagesCount": 34,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Vídeos",
+    "Ambiente",
+    "Del propietario",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:21:57.132Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": "2023-12-03",
+  "checkOutDate": "2023-12-04",
+  "similarHotelsNearby": [
+    {
+      "name": "Hotel HM Alfaro",
+      "rating": 4,
+      "reviews": 466,
+      "description": "Wi-Fi y aparcamiento gratis",
+      "price": "40 GBP"
+    },
+    {
+      "name": "Luze El Villa",
+      "rating": 4.2,
+      "reviews": 3512,
+      "description": "Wi-Fi y aparcamiento gratis",
+      "price": "49 GBP"
+    },
+    {
+      "name": "Hotel Palacios, Alfaro, La Rioja",
+      "rating": 4.1,
+      "reviews": 1655,
+      "description": "desayuno, Wi-Fi y aparcamiento gratis",
+      "price": "52 GBP"
+    },
+    {
+      "name": "Hotel Ciudad de Corella",
+      "rating": 3.4,
+      "reviews": 720,
+      "description": "Wi-Fi y aparcamiento gratis",
+      "price": "63 GBP"
+    },
+    {
+      "name": "Hostal Europa",
+      "rating": 4.2,
+      "reviews": 142,
+      "description": "Wi-Fi y aparcamiento gratis",
+      "price": null
+    },
+    {
+      "name": "La Alcoholera",
+      "rating": 4.6,
+      "reviews": 45,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "Casa Rural el convento",
+      "rating": 3.7,
+      "reviews": 6,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "Casa Rural Sancho El Fuerte",
+      "rating": 4.3,
+      "reviews": 24,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "Hostel La Huertica",
+      "rating": 4.8,
+      "reviews": 72,
+      "description": "Wi-Fi gratis",
+      "price": null
+    }
+  ],
+  "hotelReviewSummary": null,
+  "hotelAds": [
+    {
+      "title": "Atrapalo.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Osy8X3DnH33bYq_XzlqpGj-beDUMEaBFfkEkCf6hLshFODoAVSAHVwHkRLJo0OrqheaLhzqKkQkjhFmoUDLx4kTA2gMOUib1sz3FD5c0BEgnVz4yfyKuAzY&pcurl=https://www.atrapalo.com/tracking/A6-6524-HO-12082_0312202304122023_5112_1500_800_5660_31/hoteles/12082-0_x?atoken%3Dn2f32x6c3x6c4xax0x2zzzzzzzzzzzzzz%26utoken%3D1%253A1%253A77778020%253A0%253A72c56%26canonical_hash%3Dd0cab934b7c48d566def629cec503145%26odata%3Dqx69ygbw4A8khr25lj9wql1Afw0tbwdb41hfkgvvkvbv80r8lsdq%26utm_source%3Dgoogle_hotel%26utm_medium%3Dmetabuscadores%26utm_campaign%3Dhoteles-afiliacion",
+      "isOfficialSite": false,
+      "price": "49 GBP",
+      "url": "https://www.atrapalo.com/tracking/A6-6524-HO-12082_0312202304122023_5112_1500_800_5660_31/hoteles/12082-0_x?atoken=n2f32x6c3x6c4xax0x2zzzzzzzzzzzzzz&utoken=1:1:77778020:0:72c56&canonical_hash=d0cab934b7c48d566def629cec503145&odata=qx69ygbw4A8khr25lj9wql1Afw0tbwdb41hfkgvvkvbv80r8lsdq&utm_source=google_hotel&utm_medium=metabuscadores&utm_campaign=hoteles-afiliacion"
+    }
+  ],
+  "popularTimesLiveText": "Ahora: Suele estar un poco concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 4,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 80
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 0
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 4,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 30
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 4,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 0
+      }
+    ],
+    "We": [
+      {
+        "hour": 4,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 80
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 80
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 70
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 10
+      }
+    ],
+    "Th": [
+      {
+        "hour": 4,
+        "occupancyPercent": 90
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 70
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 100
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 4,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 70
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 30
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 4,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 0
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "miércoles",
+      "hours": "Abierto 24 horas"
+    },
+    {
+      "day": "jueves",
+      "hours": "Abierto 24 horas"
+    },
+    {
+      "day": "viernes",
+      "hours": "Abierto 24 horas"
+    },
+    {
+      "day": "sábado",
+      "hours": "Abierto 24 horas"
+    },
+    {
+      "day": "domingo",
+      "hours": "Abierto 24 horas"
+    },
+    {
+      "day": "lunes",
+      "hours": "Abierto 24 horas"
+    },
+    {
+      "day": "martes",
+      "hours": "Abierto 24 horas"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Para llevar": true
+      },
+      {
+        "Comer allí": true
+      },
+      {
+        "A domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Acceso para sillas de ruedas": true
+      },
+      {
+        "Aseo adaptado para sillas de ruedas": true
+      },
+      {
+        "Asientos adaptados sillas de ruedas": true
+      },
+      {
+        "Bucle magnético asistencial": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Bebidas alcohólicas": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Cócteles": true
+      },
+      {
+        "Comida preparada": true
+      },
+      {
+        "Licores fuertes": true
+      },
+      {
+        "Platos pequeños": true
+      },
+      {
+        "Se sirve comida hasta tarde": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayuno": true
+      },
+      {
+        "Comida": true
+      },
+      {
+        "Cena": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Sitio para sentarse": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Acogedor": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Clientela": [
+      {
+        "Grupos": true
+      },
+      {
+        "Ideal para familias": true
+      }
+    ],
+    "Planificación": [
+      {
+        "Se aceptan reservas": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Niños": [
+      {
+        "Ideal para niños": true
+      },
+      {
+        "Menú infantil": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": {
+    "text": "Está muy bien tranquilo buena atención",
+    "language": "es",
+    "postDate": "Hace 2 meses",
+    "postedBy": {
+      "name": "Evelyn Zuniga",
+      "url": "https://www.google.com/maps/contrib/105134745042462569052?hl=es",
+      "title": "Local Guide",
+      "totalReviews": 18
+    },
+    "media": []
+  },
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Luze+El+Villa/@42.1345936,-1.6982612,17z/data=!3m1!4b1!4m9!3m8!1s0xd5a5cc6cd2bbb33:0xaf33f5c47d3708c4!5m2!4m1!1i2!8m2!3d42.1345936!4d-1.6982612!16s%2Fg%2F1ts_7yh0?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 10,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.134091926096545,-1.6933521666203062,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee+places/@42.1340919,-1.6933522,16z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Luze El Villa",
+  "subTitle": null,
+  "description": "Hotel informal con habitaciones y suites amplias de estilo moderno, sala de juegos, gimnasio y sauna",
+  "price": "49 GBP",
+  "categoryName": "Hotel",
+  "address": "Carretera, N-232, Km 83, 400, 31590 Castejón, España",
+  "neighborhood": null,
+  "street": "Carretera, N-232, Km 83, 400",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Navarra",
+  "countryCode": "ES",
+  "website": "https://www.luzehoteles.com/luze-el-villa/",
+  "phone": "+34 948 84 20 12",
+  "phoneUnformatted": "+34948842012",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1345936,
+    "lng": -1.6982612
+  },
+  "locatedIn": null,
+  "plusCode": "48M2+RM Castejón, España",
+  "menu": null,
+  "totalScore": 4.2,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJM7srzcZcWg0RxAg3fcT1M68",
+  "categories": [
+    "Hotel",
+    "Cafetería",
+    "Restaurante"
+  ],
+  "cid": "12624704404712786116",
+  "reviewsCount": 3513,
+  "reviewsDistribution": {
+    "oneStar": 145,
+    "twoStar": 123,
+    "threeStar": 459,
+    "fourStar": 1103,
+    "fiveStar": 1683
+  },
+  "imagesCount": 2622,
+  "imageCategories": [
+    "Todas",
+    "Más recientes",
+    "Vídeos",
+    "Habitaciones",
+    "Exterior",
+    "Servicios",
+    "Comida y bebida",
+    "De los visitantes",
+    "Del propietario",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:23:23.158Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": "Hotel de 3 estrellas",
+  "hotelDescription": "Este hotel sin pretensiones se encuentra en una zona rural junto a la autopista AP‑15, a 6 km de las Bodegas Marqués de Montecierzo y de las exposiciones históricas del Museo de Castejón.\n Las habitaciones son espaciosas y tienen decoración moderna, Wi‑Fi gratis, televisión de pantalla plana y, en algunos casos, literas. Las suites incluyen zona de estar.\n El hotel sirve desayuno por un suplemento en un bar restaurante buffet de estilo chic y dispone de sala de juegos, sauna, gimnasio, zona de juego infantil y aparcamiento gratuito.",
+  "checkInDate": "2023-12-03",
+  "checkOutDate": "2023-12-04",
+  "similarHotelsNearby": [
+    {
+      "name": "Hotel HM Alfaro",
+      "rating": 4,
+      "reviews": 466,
+      "description": null,
+      "price": "40 GBP"
+    },
+    {
+      "name": "Hotel Palacios, Alfaro, La Rioja",
+      "rating": 4.1,
+      "reviews": 1655,
+      "description": "desayuno gratis",
+      "price": "52 GBP"
+    },
+    {
+      "name": "Hotel Ciudad de Corella",
+      "rating": 3.4,
+      "reviews": 720,
+      "description": null,
+      "price": "63 GBP"
+    },
+    {
+      "name": "Casa Rural la Bardena Blanca",
+      "rating": 4.3,
+      "reviews": 108,
+      "description": null,
+      "price": "56 GBP"
+    },
+    {
+      "name": "Hostal Europa",
+      "rating": 4.2,
+      "reviews": 142,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "Casas Rurales en Arguedas Navarra : Apartamentos La Jasa en Arguedas",
+      "rating": 4.4,
+      "reviews": 115,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "Hostel La Huertica",
+      "rating": 4.8,
+      "reviews": 72,
+      "description": "Mejor valoración de los huéspedes",
+      "price": null
+    },
+    {
+      "name": "Hotel Rural Camino de las Bardenas",
+      "rating": 4.4,
+      "reviews": 203,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "La Casa de la Abuela",
+      "rating": 4,
+      "reviews": 110,
+      "description": null,
+      "price": null
+    }
+  ],
+  "hotelReviewSummary": null,
+  "hotelAds": [
+    {
+      "title": "Luze El Villa",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OsyQKZfdvsLrqdijHH6rPW-hU8dRMu_MXRgiymwqeJ9JO7yKzyZqX1Y7cythQ3YunqosqogVJmTU78ghRwl9gs9k4wkkYcarjOEQmwuULa69uROqzJEr9wy3&pcurl=https://reservation.mirai.com/Forwarder/googleFrontDispatcher.htm?idtokenprovider%3D100117616%26checkin%3D03/12/2023%26nights%3D1%26lang%3Des%26hsri%3D02040%26adults%3D2%26children%3D0%26ages%3D%26babies%3D0%26googlecrawler%3Dfalse%26utm_source%3Dhotelfinder%26utm_medium%3Dorganic%26utm_campaign%3Dorganic%26bookingSource%3DGoogleCPA%26currency%3DGBP%26rates%3DMjE1fDIyMTQwfDEzODk1NWIwfDY1MzN8MTU2MTE1%26tracking%3D%26utm_content%3DGB%26UserDevice%3Ddesktop%26clickorigin%3DNOT-RBM%26date_type%3Ddefault%26campaign_id%3Dorganic%26googlesite%3Dmapresults%26tt_meta%3Dgha%26PPA3%3DFALSE%26user_list_id%3D",
+      "isOfficialSite": true,
+      "price": "49 GBP",
+      "url": "https://reservation.mirai.com/Forwarder/googleFrontDispatcher.htm?idtokenprovider=100117616&checkin=03/12/2023&nights=1&lang=es&hsri=02040&adults=2&children=0&ages=&babies=0&googlecrawler=false&utm_source=hotelfinder&utm_medium=organic&utm_campaign=organic&bookingSource=GoogleCPA&currency=GBP&rates=MjE1fDIyMTQwfDEzODk1NWIwfDY1MzN8MTU2MTE1&tracking=&utm_content=GB&UserDevice=desktop&clickorigin=NOT-RBM&date_type=default&campaign_id=organic&googlesite=mapresults&tt_meta=gha&PPA3=FALSE&user_list_id="
+    },
+    {
+      "title": "Roomdi.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OswgPGCDKST_uk2WWDVYw06XMB5LGVRsejassD5N03LILG-gGNm8mh1wlFF9g9C9rLJLywwzq_e7qFY2KGnPS-WkhR7B99ENVO7rRZPEajjV7Ir76WSx&pcurl=https://www.roomdi.com/hotel/?hotel%3D627%26check_in%3D03/12/2023%26check_out%3D04/12/2023%26rooms%3D30,30%26market%3Duk%26client%3DgoogleAds%26utm_id%3D725%26rswid%3DepS4RXSmHs1jMK6nju6_EegBtzSGEvAqHonccmwQLYPtNJbp1P4iPmLBc0q%252BQg3FF0QFNgs1qufdnyOjbC1ODyDuHCVg%252B2H0TuSGA1zrxh5vm9tX7js3v5gBuoiYM8jT",
+      "isOfficialSite": false,
+      "price": "47 GBP",
+      "url": "https://www.roomdi.com/hotel/?hotel=627&check_in=03/12/2023&check_out=04/12/2023&rooms=30,30&market=uk&client=googleAds&utm_id=725&rswid=epS4RXSmHs1jMK6nju6_EegBtzSGEvAqHonccmwQLYPtNJbp1P4iPmLBc0q+Qg3FF0QFNgs1qufdnyOjbC1ODyDuHCVg+2H0TuSGA1zrxh5vm9tX7js3v5gBuoiYM8jT"
+    },
+    {
+      "title": "Booking.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OswxmL3Wraqr-kCsY5kKS5sVTR78CVHT04-wySAF5vJ0vr3qW8vHL8aN_kViDCoWv7qfklJBw5GkJtHE_ucEoHp7jwdCY4AY73rB_ti246_nFxWZEqkPYadtYOqObCvuU0QkxQ&pcurl=https://www.booking.com/hotel/es/villa-castejon.html?checkin%3D2023-12-03%26checkout%3D2023-12-04%26group_adults%3D2%26req_adults%3D2%26show_room%3D1394810_337654130_2_42_0%26lang%3Des%26selected_currency%3DGBP%26exrt%3D0.86515051%26ext_price_total%3D51.04%26ext_price_tax%3D4.64%26xfc%3DEUR%26hca%3Dm%26group_children%3D0%26req_children%3D0%26%26ts%3D1701255262%26no_rooms%3D1%26edgtid%3DIDbg__uSTGKJsEF6nwW98A%26efpc%3DWbAKWbAKHw%26utm_source%3Dmetagha%26utm_medium%3Dmapresults%26utm_campaign%3DGB%26utm_term%3Dhotel-13948%26utm_content%3Ddev-desktop_los-1_bw-4_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20231203_ppt-%26aid%3D2127496%26label%3Dmetagha-link-MRGB-hotel-13948_dev-desktop_los-1_bw-4_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20231203_ppt-",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.booking.com/hotel/es/villa-castejon.html?checkin=2023-12-03&checkout=2023-12-04&group_adults=2&req_adults=2&show_room=1394810_337654130_2_42_0&lang=es&selected_currency=GBP&exrt=0.86515051&ext_price_total=51.04&ext_price_tax=4.64&xfc=EUR&hca=m&group_children=0&req_children=0&&ts=1701255262&no_rooms=1&edgtid=IDbg__uSTGKJsEF6nwW98A&efpc=WbAKWbAKHw&utm_source=metagha&utm_medium=mapresults&utm_campaign=GB&utm_term=hotel-13948&utm_content=dev-desktop_los-1_bw-4_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20231203_ppt-&aid=2127496&label=metagha-link-MRGB-hotel-13948_dev-desktop_los-1_bw-4_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20231203_ppt-"
+    },
+    {
+      "title": "Agoda",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OszDfKhW6215Ych8IWarkmEEKXpHptvhQ85rV73_lqvQYLbbwSk9YEcyGOOUol4AoqfPz3a8yNxT72jSDLUG_6QLg_6x3pyXFaeeUWtoEUyJsnGmDQm-1Dp1BT_72g&pcurl=https://www.agoda.com/es-es/partners/partnersearch.aspx?site_id%3D1731317%26CkInDay%3D03%26CkInMonth%3D12%26CkInYear%3D2023%26CkOutDay%3D04%26campaignid%3D%26CkOutMonth%3D12%26CkOutYear%3D2023%26SearchDateType%3Ddefault%26NumberOfAdults%3D2%26LT%3D4%26NumberOfChildren%3D0%26childages%3D%26NumberOfRooms%3D1%26gsite%3Dmapresults%26los%3D1%26PartnerCurrency%3DEUR%26hid%3D88406%26RoomID%3D2942475%26PriceTax%3D4.64%26PriceTotal%3D51.04%26RatePlan%3D50da3d31-0f70-2165-6063-900c8959d613%26UserCountry%3DGB%26Currency%3DGBP%26UserDevice%3Ddesktop%26Verif%3Dfalse%26rr%3DLiveQuery%26audience_list%3D%26mcid%3D3038%26booking_source%3Dcpc%26adType%3D0%26push_id%3D",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.agoda.com/es-es/partners/partnersearch.aspx?site_id=1731317&CkInDay=03&CkInMonth=12&CkInYear=2023&CkOutDay=04&campaignid=&CkOutMonth=12&CkOutYear=2023&SearchDateType=default&NumberOfAdults=2&LT=4&NumberOfChildren=0&childages=&NumberOfRooms=1&gsite=mapresults&los=1&PartnerCurrency=EUR&hid=88406&RoomID=2942475&PriceTax=4.64&PriceTotal=51.04&RatePlan=50da3d31-0f70-2165-6063-900c8959d613&UserCountry=GB&Currency=GBP&UserDevice=desktop&Verif=false&rr=LiveQuery&audience_list=&mcid=3038&booking_source=cpc&adType=0&push_id="
+    },
+    {
+      "title": "Best Hotel Deals",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OswuueERw5EKdsf1dkfPBlaj5pI8qxS5NbMraAOnZrnQ_KTgXEZAwLcpKyIaovsJi7Cv71Jptx4UHQnNhNzEiCb-Vo4eWDt6esiwm3VMNYj1ulNYnHvSCXmEo1okPlDoMg&pcurl=https://besthoteldealsglobal.com/property/56680?rooms%3D1%26currency%3DGBP%26withTaxes%3D%26startDate%3D03-12-2023%26endDate%3D04-12-2023%26occupancies%3D%5B%7B%2522Adults%2522:2,%2522Children%2522:0%7D%5D%26utm_source%3Dgoogle%26utm_medium%3DHAC%26utm_content%3D03_12_2023_1_mapresults_56680_GB_desktop_default___2%26sup%3DHBMB%26flow%3DB2pNNvIVk%252BySrzeWY2sYMmulz%252BJwIm5nabKcFtRucv58zdhK2MTC%252FNBUlMEDfLD5wsipg3luIK69ow%252FTFgCfk9acYyOKbU%252FzX%252FzQRWcpJFQ%253D",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://besthoteldealsglobal.com/property/56680?rooms=1&currency=GBP&withTaxes=&startDate=03-12-2023&endDate=04-12-2023&occupancies=[{\"Adults\":2,\"Children\":0}]&utm_source=google&utm_medium=HAC&utm_content=03_12_2023_1_mapresults_56680_GB_desktop_default___2&sup=HBMB&flow=B2pNNvIVk+ySrzeWY2sYMmulz+JwIm5nabKcFtRucv58zdhK2MTC/NBUlMEDfLD5wsipg3luIK69ow/TFgCfk9acYyOKbU/zX/zQRWcpJFQ="
+    },
+    {
+      "title": "Centraldereservas.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Osy1i2S4UwhS_BPZgGHNukkraWlLOh9-euyFzz8wfa-XdSNjBsz15OGR3jd_IkbayMmavJY2i26JND4Lb3Cs0zkHCsX2I7aXEYhFCEJ3F1O_9f9pz-QXP_DxrVjLmHQyTg&pcurl=https://h.centraldereservas.com/search?i%3D7103%26rf%3DGOOGLEHOTELS%26lang%3Des%26auto%3D1%26tipo%3DS%26id%3D3436%26numero_habs%3D1%26no_adultos_hab1%3D2%26no_ninos_hab1%3D0%26fecha_entrada%3D03%252F12%252F2023%26fecha_salida%3D04%252F12%252F2023%26refp%3D50.96%26campaing-id%3D%26tp%3D%26moneda%3DGBP%26device%3Ddesktop%26pais_dom%3DGB%26sg%3Db%3D58.90,bhab%3D4,big%3D2023-11-29,bmid%3D56,bpd%3Des,bpt%3D5.35,bptf%3D0.1,breg%3D12/B:B36303DEF16CD5EC38DD94E0C9BABBCFB86A909C5B44A66EB4004F2D%26c3%3Dmode%3DP,d%3D2%26r%3DCAMPAIGN-ID%3D;TRACKING-PARAM%3D;CUSTOM1%3D;PRICE-DISPLAYED-TOTAL%3D50.96;DEFAULT-DATE%3D1;CLICK-TYPE%3Dhotel;USER-COUNTRY%3DGB;DEVICE%3Ddesktop;SITE%3Dmapresults;USER-LANGUAGE%3Des;USER-CURRENCY%3DGBP;POS%3DUE-ES-EUR-CDR;AD-CLICK%3D0;PAYMENT-ID%3Dfree;C2%3Db%3D58.90,bhab%3D4,big%3D2023-11-29,bmid%3D56,bpd%3Des,bpt%3D5.35,bptf%3D0.1,breg%3D12/B:B36303DEF16CD5EC38DD94E0C9BABBCFB86A909C5B44A66EB4004F2D;C3%3Dmode%3DP,d%3D2",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://h.centraldereservas.com/search?i=7103&rf=GOOGLEHOTELS&lang=es&auto=1&tipo=S&id=3436&numero_habs=1&no_adultos_hab1=2&no_ninos_hab1=0&fecha_entrada=03/12/2023&fecha_salida=04/12/2023&refp=50.96&campaing-id=&tp=&moneda=GBP&device=desktop&pais_dom=GB&sg=b=58.90,bhab=4,big=2023-11-29,bmid=56,bpd=es,bpt=5.35,bptf=0.1,breg=12/B:B36303DEF16CD5EC38DD94E0C9BABBCFB86A909C5B44A66EB4004F2D&c3=mode=P,d=2&r=CAMPAIGN-ID=;TRACKING-PARAM=;CUSTOM1=;PRICE-DISPLAYED-TOTAL=50.96;DEFAULT-DATE=1;CLICK-TYPE=hotel;USER-COUNTRY=GB;DEVICE=desktop;SITE=mapresults;USER-LANGUAGE=es;USER-CURRENCY=GBP;POS=UE-ES-EUR-CDR;AD-CLICK=0;PAYMENT-ID=free;C2=b=58.90,bhab=4,big=2023-11-29,bmid=56,bpd=es,bpt=5.35,bptf=0.1,breg=12/B:B36303DEF16CD5EC38DD94E0C9BABBCFB86A909C5B44A66EB4004F2D;C3=mode=P,d=2"
+    },
+    {
+      "title": "Traveluro",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OsxvQOf85FkkAV9zWp0ZzJElvU0MPUd3XWFKzBKl6PfIrb57ziHH3jYlv5S9YqW_nB2AO86fo4Cdn5go3KuPAhT5nxAM-W_RTWGrkGbtLTe7VpfRe6vpI5rX&pcurl=https://es.traveluro.com/hotel/348974?start_date%3D2023-12-03%26end_date%3D2023-12-04%26num_rooms%3D1%26ts%3DGoogle_UK%26curr%3DGBP%26data_key%3DNjVfVVNEXzRfNTRfRmluZEhvdGVsczJfMjAyMy0xMS0yOSAxMDo0NDoxMV9ST19ZX18wX0RFU0tUT1BfXzU0X1VTRF8yMDIzLTExLTI5IDEyOjA0OjQ1XzQ2X0dCUA%3D%3D%26mfa_data_key%3Dnh_1.0.8881.0%26PT%3D51.00%26PTF%3D5.00%26device%3Ddesktop%26party%3D%5B%7B%2522adults%2522:2,%2522children%2522:%5B%5D%7D%5D%26user_country%3DGB%26user_lang%3Des%26num_adults%3D2%26site%3Dmapresults%26rule%3DGoogle_UK%26ads%3D%26PPA%3D0%26DD%3D1",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://es.traveluro.com/hotel/348974?start_date=2023-12-03&end_date=2023-12-04&num_rooms=1&ts=Google_UK&curr=GBP&data_key=NjVfVVNEXzRfNTRfRmluZEhvdGVsczJfMjAyMy0xMS0yOSAxMDo0NDoxMV9ST19ZX18wX0RFU0tUT1BfXzU0X1VTRF8yMDIzLTExLTI5IDEyOjA0OjQ1XzQ2X0dCUA==&mfa_data_key=nh_1.0.8881.0&PT=51.00&PTF=5.00&device=desktop&party=[{\"adults\":2,\"children\":[]}]&user_country=GB&user_lang=es&num_adults=2&site=mapresults&rule=Google_UK&ads=&PPA=0&DD=1"
+    },
+    {
+      "title": "Stayforlong.co.uk",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OswVKrSxdcD48W054_VX8x2kIK0ShkVPRDZwbQEZG6T1HWYuLlNltLCbNTFPfjB7N55JAgl0G6clXNcJsGFP0T64PYoPmTXHqfVwY63FKiJb34ZvYV8VWwwUNVC8qQ&pcurl=https://www.stayforlong.co.uk/hotel-detail/5285?checkin%3D2023-12-03%26checkout%3D2023-12-04%26adults%3D2%26metadevice%3Ddesktop%26aid%3Dgha%26market%3Duk%26lang%3Des%26total%3D52%26query_type%3Dpull%26ch%3D0%26adclick%3Dfree%26defaultdate%3Dtrue%26googlesite%3Dmapresults%26p%3Dab4bfae9cfe70edd17f1cfd362bb82ae%26r%3Dd26bd7943b44bb4b392ebe07df52ee0c",
+      "isOfficialSite": false,
+      "price": "52 GBP",
+      "url": "https://www.stayforlong.co.uk/hotel-detail/5285?checkin=2023-12-03&checkout=2023-12-04&adults=2&metadevice=desktop&aid=gha&market=uk&lang=es&total=52&query_type=pull&ch=0&adclick=free&defaultdate=true&googlesite=mapresults&p=ab4bfae9cfe70edd17f1cfd362bb82ae&r=d26bd7943b44bb4b392ebe07df52ee0c"
+    },
+    {
+      "title": "Destinia",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OsxV5B3TL5oQN751_Z75WJk5q2Lv5wg50ryvMNQYe-Jh7y6H4qAtSEjJ8NUAwI8n92x5MLfh0waF1-tGseF-4UHTLfQDJfZeHdNAbPL4NhLdm2JPv60Wb_E&pcurl=https://kjn2.destinia.com/dynclick/destinia/?etf-publisher%3Dgooglehotels%26etf-name%3Dgooglehotels-hoteles%26etf-prdref%3DH_8297%26eseg-name%3Dprices%26eseg-item%3Dhoteles%26eurl%3Dhttps://destinia.com/www/r.php?remite%3Dgooglehotelfree_GB%26utm_source%3Dgooglehotels_free%26request_type%3D1%26multicon%3Dtrue%26num_rooms%3D1%26num_adults%3D2%26num_children%3D0%26action%3Dno_wait_page%26hotel_code%3D8297%26checkin_day%3D03%26checkin_month%3D12%26checkin_year%3D2023%26checkout_day%3D04%26checkout_month%3D12%26checkout_year%3D2023%26site%3Dmapresults%26country_code%3DGB%26currency_code%3DGBP%26language_code%3Des%26crawler%3Dfalse%26amount%3D50.72%26rate_plan_id%3D8297_216_nin_NRF_2%26rate_rule_id%3D%26partner_currency%3DEUR%26campaign_id%3D%26room_id%3D216%26ssd%3D35382e36327c7c35322e39%7C10469%7C%7C1701257445%7C216%7C0%7C%7C1701125999%7C1%26t%3D1701257446%26pid%3D10469%26s%3D3%26rate%3Dnin%257C0%257C30200%257C0",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://kjn2.destinia.com/dynclick/destinia/?etf-publisher=googlehotels&etf-name=googlehotels-hoteles&etf-prdref=H_8297&eseg-name=prices&eseg-item=hoteles&eurl=https://destinia.com/www/r.php?remite=googlehotelfree_GB&utm_source=googlehotels_free&request_type=1&multicon=true&num_rooms=1&num_adults=2&num_children=0&action=no_wait_page&hotel_code=8297&checkin_day=03&checkin_month=12&checkin_year=2023&checkout_day=04&checkout_month=12&checkout_year=2023&site=mapresults&country_code=GB&currency_code=GBP&language_code=es&crawler=false&amount=50.72&rate_plan_id=8297_216_nin_NRF_2&rate_rule_id=&partner_currency=EUR&campaign_id=&room_id=216&ssd=35382e36327c7c35322e39|10469||1701257445|216|0||1701125999|1&t=1701257446&pid=10469&s=3&rate=nin|0|30200|0"
+    },
+    {
+      "title": "Logitravel",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OszaPVs5L3U7zQdvfr2dhOs0zuddn3PpsIlbZc7C_0sEo8BfjkDI2riJvsrS_8GF_I9MOUjQFnmGcXRe5EWhCugQ9Nvqm3311K66f4eBmwrRGryGjMSJ1nWoHw&pcurl=https://www.logitravel.co.uk/hotels/hotel/?hotel%3D627%26check_in%3D03/12/2023%26check_out%3D04/12/2023%26rooms%3D30,30%26client%3DgoogleAds%26utm_id%3D27330%26rswid%3DQhFmUiQxy8ka4sUwA9KIBSw%252Bwcz56AWHdDVZ09FVTIWfpQuI3OfuSlwotbzT8TzmBlPzz1A97UwpCDBQZ48PGrDN990ocZy8NBCHVa4KLnvAIhA_Yfa_LSZhr7rqgsGA",
+      "isOfficialSite": false,
+      "price": "55 GBP",
+      "url": "https://www.logitravel.co.uk/hotels/hotel/?hotel=627&check_in=03/12/2023&check_out=04/12/2023&rooms=30,30&client=googleAds&utm_id=27330&rswid=QhFmUiQxy8ka4sUwA9KIBSw+wcz56AWHdDVZ09FVTIWfpQuI3OfuSlwotbzT8TzmBlPzz1A97UwpCDBQZ48PGrDN990ocZy8NBCHVa4KLnvAIhA_Yfa_LSZhr7rqgsGA"
+    },
+    {
+      "title": "Reservation Lodge",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OsyJhaoS3suIPXZzpcgk-YV4EyJux8fTmya47eL5DZEnaIfxgdbYiX5ckEY62sCw2Vpep0LMiu22vG_t8GjbYWBEdHFEGxoIEt4xAPRFKj3c9KROZc6zwW-11jaN&pcurl=https://www.reservationlodge.com/hotel/30138/?check_in%3D2023-12-03%26check_out%3D2023-12-04%26rate_rule_id%3D%26custom2%3D91000000000_17012461777421856_339899305698_0_0%26custom3%3DPUBLIC%26site%3Dmapresults%26verification%3D%26ad_click%3D%26base_rate%3D%26rate%3D50.85%26tax%3D0.00%26click_source%3Dgha--hotel-default-desktop-30138-mapresults-91000000000_17012461777421856_339899305698_0_0",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.reservationlodge.com/hotel/30138/?check_in=2023-12-03&check_out=2023-12-04&rate_rule_id=&custom2=91000000000_17012461777421856_339899305698_0_0&custom3=PUBLIC&site=mapresults&verification=&ad_click=&base_rate=&rate=50.85&tax=0.00&click_source=gha--hotel-default-desktop-30138-mapresults-91000000000_17012461777421856_339899305698_0_0"
+    },
+    {
+      "title": "Super.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OszfcpEXRuaAGZEWlXhfeuaIt3IsVxl0g1qcZPZNat1aIZQF8rmPb1pr3lwLOeZ7kEcFciXWcmzdRTIlzLhmJqvahcRQaWt2-zPM4Adif_xe-cfN53D56-MrEg&pcurl=https://www.super.com/travel/transition/?data%3Dprice%3D52.68%2526total_price%3D59.0%2526retail_price%3D52.68%2526retail_total_price%3D59.0%2526request_id%3D78188f48-bc43-4666-9d5d-97cff7eb84b6%2526ps%3D73774358001493850%2526pp%3Dxuxc8vnx-OLzosDrq2oGBA%2526pb%3DmFzkcbI5Oyukhb8X1RBgKaQSgXbkOXbUs_BMG4yREnV1eKxY9X3HRg23jZ061BdYSAQkM47gdgDzpJZ6R5lpc5cEGUokkLsK5YeXdW1fa6_CkkgYQKlSA0b4XtFsu14tzYiIPeHlKQ6GvZWDrkjJ1JOaX3wOVgfCpuSP-oCTUrK0BGWHf1RRTz1iB9wB7bm5%2526gha_pull_request%3DTrue%2526rtp%3DSdTUqdR7wIew8aRS9esAtw%25253D%25253D%2526risk_lk_1%3Dtrue%2526alwd_risk%3Dfalse%2526alwd_rand%3Dfalse%2526cache%3Dfalse%2526dynttl%3Dfalse%2526naread%3Dfalse%2526gt%3D1701258379%2526sg%3DVI6mC9%2526sg%3DVI6mC%26utm_source%3Dgha%26utm_content%3Dmapresults%26currency%3DEUR%26user_country%3DGB%26verification%3Dfalse%26rate_rule_ids%3D%26date_type%3Ddefault%26rate_rule_id%3Dsignedout_desktop%26utm_campaign%3D%26display_currency%3DGBP%26display_all_inclusive_price%3D51.04%26checkin_at%3D2023-12-03%26checkout_at%3D2023-12-04%26provider_hotel_id%3D369718%26provider%3Dean%26num_adults%3D2%26children%3D%5B%5D%26user_locale%3Des-GB%26user_list_id%3D%26utm_medium%3Dorganic%26utm_id%3Dgha_organic",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.super.com/travel/transition/?data=price=52.68&total_price=59.0&retail_price=52.68&retail_total_price=59.0&request_id=78188f48-bc43-4666-9d5d-97cff7eb84b6&ps=73774358001493850&pp=xuxc8vnx-OLzosDrq2oGBA&pb=mFzkcbI5Oyukhb8X1RBgKaQSgXbkOXbUs_BMG4yREnV1eKxY9X3HRg23jZ061BdYSAQkM47gdgDzpJZ6R5lpc5cEGUokkLsK5YeXdW1fa6_CkkgYQKlSA0b4XtFsu14tzYiIPeHlKQ6GvZWDrkjJ1JOaX3wOVgfCpuSP-oCTUrK0BGWHf1RRTz1iB9wB7bm5&gha_pull_request=True&rtp=SdTUqdR7wIew8aRS9esAtw%3D%3D&risk_lk_1=true&alwd_risk=false&alwd_rand=false&cache=false&dynttl=false&naread=false&gt=1701258379&sg=VI6mC9&sg=VI6mC&utm_source=gha&utm_content=mapresults&currency=EUR&user_country=GB&verification=false&rate_rule_ids=&date_type=default&rate_rule_id=signedout_desktop&utm_campaign=&display_currency=GBP&display_all_inclusive_price=51.04&checkin_at=2023-12-03&checkout_at=2023-12-04&provider_hotel_id=369718&provider=ean&num_adults=2&children=[]&user_locale=es-GB&user_list_id=&utm_medium=organic&utm_id=gha_organic"
+    },
+    {
+      "title": "eSky.es",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Osz9GIQn7r1izfhViNvIuHBO79tYQhRg3GfL0Nua7gHC6Iquu-kE3N-SVCX7zzJjHwFBARDAsOJch0ho0HyBThi3jWKxumP9iELWFPKuHO5VbKjnAGWb&pcurl=https://www2.esky.es/alojamientos/details?metaCode%3D501534%26checkInDate%3D2023-12-03%26checkOutDate%3D2023-12-04%26rooms%255B0%255D%255Badults%255D%3D2%26partner_id%3DGHSES%26ctags%3DadType:0",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www2.esky.es/alojamientos/details?metaCode=501534&checkInDate=2023-12-03&checkOutDate=2023-12-04&rooms[0][adults]=2&partner_id=GHSES&ctags=adType:0"
+    },
+    {
+      "title": "GoSplitty",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OswAzA39Gyi3zVct_zXLv3Sza6pEUq0097nC-IAp6TXuKMQqdJdYb3-W1q765vzBvV2hcBvGIjglQGy4BycxpztixmgMcZwB_BIxnTOFh60IjVsq8TTABoCPJqL2-Rc&pcurl=https://www.gosplitty.com/hotels/redirect?hotelId%3D348974%26checkin%3D2023-12-03%26checkout%3D2023-12-04%26numOfRooms%3D1%26campaignName%3DGoSplitty_Google_UK%26currency%3DGBP%26dealKey%3DNjVfVVNEXzRfNTRfRmluZEhvdGVsczJfMjAyMy0xMS0yOSAxMDo0NDoxMV9ST19ZX18wX0RFU0tUT1BfXzU0X1VTRF8yMDIzLTExLTI5IDEyOjAwOjU3XzQ2X0dCUA%3D%3D%26priceDisplayedTotal%3D51.00%26priceDisplayedTax%3D5.00%26device%3Ddesktop%26adults%3D2%26children%3D0%26userCountry%3DGB%26userLanguage%3Des%26site%3Dmapresults%26rule%3DGoogle_UK%26externalCampaignId%3D%26promoted%3D0%26defaultDate%3D1%26%26adType%3D0%26utm_source%3DGoSplitty_Google_UK%26nh_V%3Dnh_1.0.8881.0",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.gosplitty.com/hotels/redirect?hotelId=348974&checkin=2023-12-03&checkout=2023-12-04&numOfRooms=1&campaignName=GoSplitty_Google_UK&currency=GBP&dealKey=NjVfVVNEXzRfNTRfRmluZEhvdGVsczJfMjAyMy0xMS0yOSAxMDo0NDoxMV9ST19ZX18wX0RFU0tUT1BfXzU0X1VTRF8yMDIzLTExLTI5IDEyOjAwOjU3XzQ2X0dCUA==&priceDisplayedTotal=51.00&priceDisplayedTax=5.00&device=desktop&adults=2&children=0&userCountry=GB&userLanguage=es&site=mapresults&rule=Google_UK&externalCampaignId=&promoted=0&defaultDate=1&&adType=0&utm_source=GoSplitty_Google_UK&nh_V=nh_1.0.8881.0"
+    },
+    {
+      "title": "Trip.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OszEEn_gMOEqs4bmB0ggpX7B5UMV-AH7vVQL3M7_8Hhd5CVx0QWyajwLIgjzTUNljqWhdtAn6eEaGTN_DVert_7WSFYQOupsCi_WxtDfXCOkVOi-iu8&pcurl=https://uk.trip.com/hotels/redirect?hotelid%3D8306588%26city%3D482738%26shoppingid%3DM7UNbt-kouIz%26adult%3D2%26children%3D0%26ages%3D%26checkin%3D2023-12-03%26checkout%3D2023-12-04%26curr%3DGBP%26Allianceid%3D15214%26Sid%3D1349478%26prid%3DLANG_GB%26trip_sub1%3D03_12_2023_1_mapresults_8306588_GB_desktop_default___0_0-LANG_GB-landing%26hpaopts%3Dstand%5BH4sIAAAAAAAAAOPy5mKSYBJi4mCUcuSY0rRnDqsQu6GpmYGhgZHBcg6LO9EBHDMY5_z_xbyCkXEHI9NFxmqRde4Po7wcHjLacl1fXPDXx-EF447vT-4yLmBhlOLxNQ_1SyrRzc4v9axSYNS4fnTOajYPxiA2SyNzQ0OTKBkuZtfQIEEGMPhgL8Xs7hSg-HfPSo_Wja_tk1hT83TdnTJa-boYmTwYVzGyczEbGBkKMH1i5Ec2N97QAAAoorKbtgAAAA%5Dfgt%5B1%5D%26br%3D57.98%26tf%3D5.27%26display%3Dincavg%26locale%3Den_gb%26",
+      "isOfficialSite": false,
+      "price": "58 GBP",
+      "url": "https://uk.trip.com/hotels/redirect?hotelid=8306588&city=482738&shoppingid=M7UNbt-kouIz&adult=2&children=0&ages=&checkin=2023-12-03&checkout=2023-12-04&curr=GBP&Allianceid=15214&Sid=1349478&prid=LANG_GB&trip_sub1=03_12_2023_1_mapresults_8306588_GB_desktop_default___0_0-LANG_GB-landing&hpaopts=stand[H4sIAAAAAAAAAOPy5mKSYBJi4mCUcuSY0rRnDqsQu6GpmYGhgZHBcg6LO9EBHDMY5_z_xbyCkXEHI9NFxmqRde4Po7wcHjLacl1fXPDXx-EF447vT-4yLmBhlOLxNQ_1SyrRzc4v9axSYNS4fnTOajYPxiA2SyNzQ0OTKBkuZtfQIEEGMPhgL8Xs7hSg-HfPSo_Wja_tk1hT83TdnTJa-boYmTwYVzGyczEbGBkKMH1i5Ec2N97QAAAoorKbtgAAAA]fgt[1]&br=57.98&tf=5.27&display=incavg&locale=en_gb&"
+    },
+    {
+      "title": "EcoHotels.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OszY0fmc2QMAUfdvtJYqXB0VdHSMLdo2MZ-9kZulrGJttMisIGBa_rDt3xVXRXyFhLNiq79-IKlLGXyR7PIb7La8nQrcF7nAvl2onB6Jb46FOTtYRhcUsH_yCqs6tw&pcurl=https://ecohotels.com/search?checkin%3D2023-12-03%26checkout%3D2023-12-04%26rooms%3D2-%26searchtype%3D2%26googlehotelid%3D41823%26usercurrency%3DGBP%26free-booking-links-5d458b93-4768-4cc8-afda-0ac59be71aff",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://ecohotels.com/search?checkin=2023-12-03&checkout=2023-12-04&rooms=2-&searchtype=2&googlehotelid=41823&usercurrency=GBP&free-booking-links-5d458b93-4768-4cc8-afda-0ac59be71aff"
+    },
+    {
+      "title": "ZenHotels.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OszFgLyl01gifnOaDWG_J_hemdGyd3FZFd4AAtT4w2cZYrWLdz0GJEDZToZDzPgoVEDMdjgDBtLIDDqtCAq6tBA5Ow4psK6ghaVCIng3bWC4qVD8c4Q19McB&pcurl=https://www.zenhotels.com/go/rooms/7568178/?dates%3D03.12.2023-04.12.2023%26cur%3DGBP%26lang%3Des%26utm_source%3Dgoogle_hotelads%26utm_medium%3Dcpc-metasearch%26partner_slug%3Dgoogle%26guests%3D2%26from%3Dhotel_bed4u_castejon.59.EUR.h-f0b95e04-7154-547f-a147-959ab02e5ef8%26utm_campaign%3Des-GB%26room%3Ds-759b501d-4442-5056-8984-99210f03089a%26price%3Done%26scroll%3Dprices%26partner_data%3Ddgt1vQlr0TTJRIqMGc46XOIBWNgc4nAhm7XRgznz9e4Qvm-yonhAGimbr4wYNFgaui6QMDalEZB_DFzOsQ4NDnlivcuqHt0o1dYku51JlQjUKE5uSr6fUh5aQ0-_K1OCK_rewaBc%26utm_content%3DGoogleCPC%26utm_term%3Dgacid_.bw_4.los_1.dow_Sunday.dtype_default.hid_7568178.rid_90.aud_.d_desktop.ad_0.ctype_hotel.promo_0.apireqtype_deals%3Ddisabled%26showed_price%3D51.04%26showed_taxes%3D4.64%26deals%3Ddisabled",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.zenhotels.com/go/rooms/7568178/?dates=03.12.2023-04.12.2023&cur=GBP&lang=es&utm_source=google_hotelads&utm_medium=cpc-metasearch&partner_slug=google&guests=2&from=hotel_bed4u_castejon.59.EUR.h-f0b95e04-7154-547f-a147-959ab02e5ef8&utm_campaign=es-GB&room=s-759b501d-4442-5056-8984-99210f03089a&price=one&scroll=prices&partner_data=dgt1vQlr0TTJRIqMGc46XOIBWNgc4nAhm7XRgznz9e4Qvm-yonhAGimbr4wYNFgaui6QMDalEZB_DFzOsQ4NDnlivcuqHt0o1dYku51JlQjUKE5uSr6fUh5aQ0-_K1OCK_rewaBc&utm_content=GoogleCPC&utm_term=gacid_.bw_4.los_1.dow_Sunday.dtype_default.hid_7568178.rid_90.aud_.d_desktop.ad_0.ctype_hotel.promo_0.apireqtype_deals=disabled&showed_price=51.04&showed_taxes=4.64&deals=disabled"
+    },
+    {
+      "title": "Bluepillow.co.uk",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OsxyCRueD8LW0AuvxkeakC3IDLOXEugsUh5XlF2eOseg7QmQkyG3sN3Z5IZjpdmZcG3MclDqTKRFBSZRUyreWoiLpHP0bLgviROFhM8-M-zFuadJPw4qAEt2vw&pcurl=https://www.bluepillow.co.uk/checkout/5943832e7c00cb0e64321318?begin%3D2023-12-03%26end%3D2023-12-04%26block_id%3D-b1394810_337654130_2_42_0-p58.9-5.89-0-USD-bkng-Hotel%26adults%3D2%26childs%3D0%26infants%3D0%26country%3DGB%26currency%3DGBP%26language%3Des%26utm_campaign%3Dhotel%26prid%3D",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.bluepillow.co.uk/checkout/5943832e7c00cb0e64321318?begin=2023-12-03&end=2023-12-04&block_id=-b1394810_337654130_2_42_0-p58.9-5.89-0-USD-bkng-Hotel&adults=2&childs=0&infants=0&country=GB&currency=GBP&language=es&utm_campaign=hotel&prid="
+    },
+    {
+      "title": "Vio.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OsxKQoFYMyUSF_EZG35i2_FmAyO-2CxBHFZi9Vl93p1tj_sOB_87bp3ysjFCZst-hSqKPJBLjD9FrasOKXBU2chmkoavod7MlMC6lso6Qy-KSYirEafp9YSt&pcurl=https://deals.vio.com/?sig%3D73aca13c7f952d2641c156f3e69125e1eb497c325f122828ee5aa8797168b9a12d32303331333438363233%26turl%3Dhttps%253A%252F%252Fwww.vio.com%252FHotel%252FSearch%253FcheckIn%253D2023-12-03%2526checkOut%253D2023-12-04%2526curr%253DGBP%2526forceCurrencyChange%253D1%2526lang%253Des%2526forceLanguageChange%253D1%2526rooms%253D2%253A%2526utm_source%253Dgha%2526utm_medium%253Dcpc%2526hotelId%253D1356761%2526userCountry%253DGB%2526profile%253Dr2d2m73kn8%2526preferredRate%253D51.04%2526label%253Dsrc%25253Dgha%252526cltype%25253Dhotel%252526datype%25253Ddefault%252526gsite%25253Dmapresults%252526ucountry%25253DGB%252526udevice%25253Ddesktop%252526hotel%25253D1356761%252526day%25253D03%252526month%25253D12%252526year%25253D2023%252526los%25253D1%252526price%25253D51.04%252526currency%25253DGBP%252526cid%25253D%252526listid%25253D%252526rateid%25253DGB_Pull%252526closerateid%25253D%252526promo%25253D0%252526isPrivateRate%25253D0%252526isAudienceUser%25253D0%252526isPaidClick%25253D0%252526_th%25253D7d1866b053a94e4239f1917b50716aadae324ca0ff28d389%252526canPayLater%25253Dfalse%252526dts%25253D1701259071%252526olut%25253D1701254703%252526query%25253DPull%2526epv%253DMS4y%2526esd%253DP8bwxZLnzeqt8CzOP6zT32t6o7XF7VbHFseoMs-kW70-kWl1sL2oncznrw_tBD-BHfQ_sDVr2iO5m001RsSjeYl9qFIEILQHgBRxprnrAU7WmQoX1z4zMlavnQ%25253D%25253D%2526oti%253DVmIycgKw2EU",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://deals.vio.com/?sig=73aca13c7f952d2641c156f3e69125e1eb497c325f122828ee5aa8797168b9a12d32303331333438363233&turl=https://www.vio.com/Hotel/Search?checkIn=2023-12-03&checkOut=2023-12-04&curr=GBP&forceCurrencyChange=1&lang=es&forceLanguageChange=1&rooms=2:&utm_source=gha&utm_medium=cpc&hotelId=1356761&userCountry=GB&profile=r2d2m73kn8&preferredRate=51.04&label=src%3Dgha%26cltype%3Dhotel%26datype%3Ddefault%26gsite%3Dmapresults%26ucountry%3DGB%26udevice%3Ddesktop%26hotel%3D1356761%26day%3D03%26month%3D12%26year%3D2023%26los%3D1%26price%3D51.04%26currency%3DGBP%26cid%3D%26listid%3D%26rateid%3DGB_Pull%26closerateid%3D%26promo%3D0%26isPrivateRate%3D0%26isAudienceUser%3D0%26isPaidClick%3D0%26_th%3D7d1866b053a94e4239f1917b50716aadae324ca0ff28d389%26canPayLater%3Dfalse%26dts%3D1701259071%26olut%3D1701254703%26query%3DPull&epv=MS4y&esd=P8bwxZLnzeqt8CzOP6zT32t6o7XF7VbHFseoMs-kW70-kWl1sL2oncznrw_tBD-BHfQ_sDVr2iO5m001RsSjeYl9qFIEILQHgBRxprnrAU7WmQoX1z4zMlavnQ%3D%3D&oti=VmIycgKw2EU"
+    },
+    {
+      "title": "Expedia.es",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Oswv1nNpZkUgi7yfYbe0xkRbNwC2_eKpdSMVi6AiIfRmTfcLmcP1Sc3aua6fmmJMemDtxmuFkI81mxUtjeKzvWn73YQwbzPISFxC3y8GRZ_PB7_H02FuDfzBJlyFO4FC&pcurl=https://www.expedia.es/Hotel-Search?selected%3D1079793%26startDate%3D2023-12-03%26endDate%3D2023-12-04%26MDPCID%3DGB.META.HPA.HOTEL-ORGANIC-desktop.HOTEL%26adults%3D2%26children%3D%26MDPDTL%3DHTL.1079793.20231203.20231204.DDT.4.CID..AUDID..RRID.bex_uk_desktop%26mctc%3D10%26ct%3Dhotel%26exp_curr%3DGBP%26exp_dp%3D61.28%26exp_tx%3D5.57%26exp_pg%3Dgoogle%26langid%3Des%26ad%3D2%26tp%3D%26utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_term%3D1079793%26utm_content%3Dmapresults%26utm_campaign%3DHotelAds%26rateplanid%3D208708541",
+      "isOfficialSite": false,
+      "price": "61 GBP",
+      "url": "https://www.expedia.es/Hotel-Search?selected=1079793&startDate=2023-12-03&endDate=2023-12-04&MDPCID=GB.META.HPA.HOTEL-ORGANIC-desktop.HOTEL&adults=2&children=&MDPDTL=HTL.1079793.20231203.20231204.DDT.4.CID..AUDID..RRID.bex_uk_desktop&mctc=10&ct=hotel&exp_curr=GBP&exp_dp=61.28&exp_tx=5.57&exp_pg=google&langid=es&ad=2&tp=&utm_source=google&utm_medium=cpc&utm_term=1079793&utm_content=mapresults&utm_campaign=HotelAds&rateplanid=208708541"
+    },
+    {
+      "title": "goseek.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OswSKSLyIUboAd43AixYzZnmJQUYU10PRM_Rf8Tlewv3U00oKoYLyPsOpvUTM9xRbEH59PLKwr0UOa5rRBhI75o0-cnHenc9IZNmSioRfTXRCkXTbSWDB-XVDLh6thCFYA&pcurl=https://deals.goseek.com/?sig%3D34c47a49c3e8320dca5a5dda0da2a460c1bc23afde972e2894a4ff0b6052fb53383131303836353931%26turl%3Dhttps%253A%252F%252Fwww.goseek.com%252FHotel%252FSearch%253FcheckIn%253D2023-12-03%2526checkOut%253D2023-12-04%2526curr%253DGBP%2526forceCurrencyChange%253D1%2526lang%253Des%2526forceLanguageChange%253D1%2526rooms%253D2%253A%2526utm_source%253Dgha%2526utm_medium%253Dcpc%2526hotelId%253D1356761%2526userCountry%253DGB%2526profile%253Dr2d2m73kn8%2526preferredRate%253D51.04%2526label%253Dsrc%25253Dgha%252526cltype%25253Dhotel%252526datype%25253Ddefault%252526gsite%25253Dmapresults%252526ucountry%25253DGB%252526udevice%25253Ddesktop%252526hotel%25253D1356761%252526day%25253D03%252526month%25253D12%252526year%25253D2023%252526los%25253D1%252526price%25253D51.04%252526currency%25253DGBP%252526cid%25253D%252526listid%25253D%252526rateid%25253DGB_Pull%252526closerateid%25253D%252526promo%25253D0%252526isPrivateRate%25253D0%252526isAudienceUser%25253D0%252526isPaidClick%25253D0%252526_th%25253D7d5ddeb91a48ebaea272cbe5a98136de2c8bda680ea92f99%252526canPayLater%25253Dfalse%252526dts%25253D1701259129%252526olut%25253D1701254703%252526query%25253DPull%2526epv%253DMS4y%2526esd%253Dyl6r66HABa_aaxpLjL-jJQJgCDrJFSc7AWxkaMa33YIZBJ6HFjl5mLgChCetZ_CN_kCShWwEIG2PWbkmJFbgqY4wCICCbtFwPx0ONMZiMMLO1VUTz_zRuY_Maw%25253D%25253D%2526oti%253DVmIycgKw2EU",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://deals.goseek.com/?sig=34c47a49c3e8320dca5a5dda0da2a460c1bc23afde972e2894a4ff0b6052fb53383131303836353931&turl=https://www.goseek.com/Hotel/Search?checkIn=2023-12-03&checkOut=2023-12-04&curr=GBP&forceCurrencyChange=1&lang=es&forceLanguageChange=1&rooms=2:&utm_source=gha&utm_medium=cpc&hotelId=1356761&userCountry=GB&profile=r2d2m73kn8&preferredRate=51.04&label=src%3Dgha%26cltype%3Dhotel%26datype%3Ddefault%26gsite%3Dmapresults%26ucountry%3DGB%26udevice%3Ddesktop%26hotel%3D1356761%26day%3D03%26month%3D12%26year%3D2023%26los%3D1%26price%3D51.04%26currency%3DGBP%26cid%3D%26listid%3D%26rateid%3DGB_Pull%26closerateid%3D%26promo%3D0%26isPrivateRate%3D0%26isAudienceUser%3D0%26isPaidClick%3D0%26_th%3D7d5ddeb91a48ebaea272cbe5a98136de2c8bda680ea92f99%26canPayLater%3Dfalse%26dts%3D1701259129%26olut%3D1701254703%26query%3DPull&epv=MS4y&esd=yl6r66HABa_aaxpLjL-jJQJgCDrJFSc7AWxkaMa33YIZBJ6HFjl5mLgChCetZ_CN_kCShWwEIG2PWbkmJFbgqY4wCICCbtFwPx0ONMZiMMLO1VUTz_zRuY_Maw%3D%3D&oti=VmIycgKw2EU"
+    },
+    {
+      "title": "Clicktrip.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Osz5_jbZEqF-kxWVlAmZvT9UBHuzzkV9SW5NuihmDBceLt8mqNVKmOMUkIHYHbUqVr6LYqi4HVtwR4BZA02ghXIziO8oFh_OZll-1fXvjvY8NAVC4keXJWXp_X_RVeN0YdR8nd4PjMg&pcurl=https://clicktrip.com/hotels/details/FxlP1-QhWMogMr_B1FrgxkN0v6l-dfu2I6oAHTwAcGp0tVBwqTlB0cMUIva-oOJydlc7-RlCIA-7HYsy-YFhQXCSaEPe2pWDRcFKeDnRerQdKN90hDCvqQsGm7Ly6YqH0?locale%3Des%26currency%3DGBP%26pos%3DGB%26date_type%3Ddefault",
+      "isOfficialSite": false,
+      "price": "50 GBP",
+      "url": "https://clicktrip.com/hotels/details/FxlP1-QhWMogMr_B1FrgxkN0v6l-dfu2I6oAHTwAcGp0tVBwqTlB0cMUIva-oOJydlc7-RlCIA-7HYsy-YFhQXCSaEPe2pWDRcFKeDnRerQdKN90hDCvqQsGm7Ly6YqH0?locale=es&currency=GBP&pos=GB&date_type=default"
+    },
+    {
+      "title": "Next Day Hotels",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OszeNpipJLxCL7qHgZ1FS5T45pEDf79hujSE8C03StzC0zts81CNJBBNXuUuA2QQQ6d5Xdi-wS6AzsFwvNO8NwzEQAK5ZY992k9MSmADUE-66e_TObgYV9o&pcurl=https://www.nextdayhotels.com/hotel/30138/?check_in%3D2023-12-03%26check_out%3D2023-12-04%26rate_rule_id%3D%26custom2%3D91000000000_17012558697994856_339968608797_0_0%26custom3%3DPUBLIC%26site%3Dmapresults%26verification%3D%26ad_click%3D%26base_rate%3D%26rate%3D55.56%26tax%3D5.50%26click_source%3Dgha--hotel-default-desktop-30138-mapresults-91000000000_17012558697994856_339968608797_0_0",
+      "isOfficialSite": false,
+      "price": "56 GBP",
+      "url": "https://www.nextdayhotels.com/hotel/30138/?check_in=2023-12-03&check_out=2023-12-04&rate_rule_id=&custom2=91000000000_17012558697994856_339968608797_0_0&custom3=PUBLIC&site=mapresults&verification=&ad_click=&base_rate=&rate=55.56&tax=5.50&click_source=gha--hotel-default-desktop-30138-mapresults-91000000000_17012558697994856_339968608797_0_0"
+    },
+    {
+      "title": "priceline.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Osw6vEIXxpTyhAK_H18Bs-sEkAMUTDk7QpvJcmcVLm8eKLVG0gWw7WjOhaB7nTYpORGZKd0rlXGgeo0966bXs1kAamOnxnv9a4INxhSz4toMqhog2dKG2iTIqc0r6Nfi&pcurl=http://h.priceline.com/hotel/es/villa-castejon.html?aid%3D946468%26label%3Dotapcln-link-mapresultsGB-hotel-13948_dev-desktop_los-1_room-0_lang-es_curr-GBP_checkin-20231203_ddf-Y_camp-%26checkin%3D2023-12-03%26checkout%3D2023-12-04%26group_adults%3D2%26show_room%3D1394810%26lang%3Des%26selected_currency%3DGBP%26exrt%3D0.86515051%26xfc%3DEUR%26utm_source%3Dotapcln%26utm_medium%3Dmapresults%26utm_campaign%3DGB%26utm_term%3Dhotel-13948%26utm_content%3Dlos-1_lang-es_curr-GBP",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "http://h.priceline.com/hotel/es/villa-castejon.html?aid=946468&label=otapcln-link-mapresultsGB-hotel-13948_dev-desktop_los-1_room-0_lang-es_curr-GBP_checkin-20231203_ddf-Y_camp-&checkin=2023-12-03&checkout=2023-12-04&group_adults=2&show_room=1394810&lang=es&selected_currency=GBP&exrt=0.86515051&xfc=EUR&utm_source=otapcln&utm_medium=mapresults&utm_campaign=GB&utm_term=hotel-13948&utm_content=los-1_lang-es_curr-GBP"
+    },
+    {
+      "title": "hutchgo (Hutchison Travel Limited)",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Osy0rkCwA9i1fgsEYTT43SPFaqe43ELEm5Rmq7sRP_jiEqXq-3_dxBp7Hx9fwjwYoaK36s8XEjY7jNKtzOI32VZiJJIspxl1ZkM8HM3Ae2cBf2Uj3l0A99UBLN_qDx5TjTv23XQ_MpGv&pcurl=https://www.hutchgo.com/affiliate/r.aspx?region%3DCA%26lang_id%3D1%26product%3DRH%26currency%3DGBP%26check_in%3D03/12/2023%26check_out%3D04/12/2023%26affiliate_id%3D210034%26banner_id%3D860018%26u_id%3D%26room%3D2_0_0%26searchtype%3DHOTEL%26code%3D1435702%26tid%3D1e15d50c-5f4f-4f16-a8d5-ad84093587c9",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.hutchgo.com/affiliate/r.aspx?region=CA&lang_id=1&product=RH&currency=GBP&check_in=03/12/2023&check_out=04/12/2023&affiliate_id=210034&banner_id=860018&u_id=&room=2_0_0&searchtype=HOTEL&code=1435702&tid=1e15d50c-5f4f-4f16-a8d5-ad84093587c9"
+    },
+    {
+      "title": "Good Hotel Club",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OszLxx9ShLCxbQg7nSja-r3U_Fn7g_CEwwU4JLXlNLSl3hNWmjr1oLV8hH1x7FLIgZ2Kg3yeCZTMry4GIS_BHmP_i3tEYMx2VT8TILlT3RFo2c39a4i8Oc-ZWnO85ayS&pcurl=https://www.goodhotelclub.com/hotel/30138/?check_in%3D2023-12-03%26check_out%3D2023-12-04%26rate_rule_id%3D%26custom2%3D91000000000_17012492275986220_339922822647_0_0%26custom3%3DPUBLIC%26site%3Dmapresults%26verification%3D%26ad_click%3D%26base_rate%3D%26rate%3D50.85%26tax%3D0.00%26click_source%3Dgha--hotel-default-desktop-30138-mapresults-91000000000_17012492275986220_339922822647_0_0",
+      "isOfficialSite": false,
+      "price": "51 GBP",
+      "url": "https://www.goodhotelclub.com/hotel/30138/?check_in=2023-12-03&check_out=2023-12-04&rate_rule_id=&custom2=91000000000_17012492275986220_339922822647_0_0&custom3=PUBLIC&site=mapresults&verification=&ad_click=&base_rate=&rate=50.85&tax=0.00&click_source=gha--hotel-default-desktop-30138-mapresults-91000000000_17012492275986220_339922822647_0_0"
+    },
+    {
+      "title": "Hotels.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Osw_03CHaNkurL7PduOgMRRTZczEr2I2vPafBpjBY_Q_m6EWgs_VU1su7w1uEPlNpV8I7l-FCSy8k9zry7RK8WxhqvBfI3THrOp4aoOOC18uctyyvuHGMOTFhVqe5tM&pcurl=https://www.hoteles.com/Hotel-Search?selected%3D1079793%26startDate%3D2023-12-03%26endDate%3D2023-12-04%26mdpcid%3DHCOM-GB.META.HPA.HOTEL-ORGANIC-desktop.HOTEL%26MDPDTL%3DHTL.1079793.20231203.20231204.DDT.4.CID..AUDID.%26adults%3D2%26children%3D%26mctc%3D10%26mpf%3D61.28%26mpg%3DGBP%26mpl%3DGBP%26mpj%3D5.57%26rateplanid%3D208708541%26rffrid%3Dsem.hcom.GB.156.024.mapresults.02.desktop-1.kwrd%3DGGMETA.1079793GBes-20231203-D-ABW%3D4-camp%3D-aud%3D-N",
+      "isOfficialSite": false,
+      "price": "61 GBP",
+      "url": "https://www.hoteles.com/Hotel-Search?selected=1079793&startDate=2023-12-03&endDate=2023-12-04&mdpcid=HCOM-GB.META.HPA.HOTEL-ORGANIC-desktop.HOTEL&MDPDTL=HTL.1079793.20231203.20231204.DDT.4.CID..AUDID.&adults=2&children=&mctc=10&mpf=61.28&mpg=GBP&mpl=GBP&mpj=5.57&rateplanid=208708541&rffrid=sem.hcom.GB.156.024.mapresults.02.desktop-1.kwrd=GGMETA.1079793GBes-20231203-D-ABW=4-camp=-aud=-N"
+    },
+    {
+      "title": "eDreams",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80OsyC84WVm_iYcmYZfj6nkaMYL4ZUeZeelI9AcWyt9LXV-sbhtnnxCRpz5B2bY64uGK-ZwRR_ncDLWL_CIZAc9Ykl2ebfY2KakgstNSXLSEjfWSwku30B&pcurl=https://accommodation.edreams.co.uk/search.do?f-hotel-id%3D369718%26destination-id%3D443994%26q-check-out%3D2023-12-04%26q-room-0-adults%3D2%26q-rooms%3D1%26q-check-in%3D2023-12-03%26q-room-0-children%3D0%26mpf%3D61.28%26cur%3DGBP%26mpj%3D5.57%26wapb3%3D%7Cc.506952%7Cl.en_GB%7Ct.meta%7Cs.ghs%26mpl%3DGBP%26numberOfRooms%3D1%26locale%3Den_GB%26rffrid%3Dh4p.hcom.GB.ghaodigeo.000.000.kwrd%3D%26pos%3DEDREAMS_UK%26rateplanid%3D208708541%26utm_medium%3Dmetasearch%26utm_campaign%3D369718%26utm_term%3Dhotel%26utm_source%3DFREEBOOKING",
+      "isOfficialSite": false,
+      "price": "61 GBP",
+      "url": "https://accommodation.edreams.co.uk/search.do?f-hotel-id=369718&destination-id=443994&q-check-out=2023-12-04&q-room-0-adults=2&q-rooms=1&q-check-in=2023-12-03&q-room-0-children=0&mpf=61.28&cur=GBP&mpj=5.57&wapb3=|c.506952|l.en_GB|t.meta|s.ghs&mpl=GBP&numberOfRooms=1&locale=en_GB&rffrid=h4p.hcom.GB.ghaodigeo.000.000.kwrd=&pos=EDREAMS_UK&rateplanid=208708541&utm_medium=metasearch&utm_campaign=369718&utm_term=hotel&utm_source=FREEBOOKING"
+    },
+    {
+      "title": "ebookers",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Oswqzbx4YlQ9p819oVZwvoDhYp9KeztyddVtFy_MHhKE_Dp2I5gDada8qZUKLmJvPYdANrq7mUWW3HsWRuMav6EArTEheD7nM8Ea5yL-NJRzTiTPmC5Bbh4v_sF8lRNQcQ&pcurl=https://www.ebookers.ie/Hotel-Search?selected%3D1079793%26startDate%3D2023-12-03%26endDate%3D2023-12-04%26adults%3D2%26children%3D%26langid%3Des%26MDPCID%3DEBOOKERS-ES.META.GOOGLE.ORGANIC-desktop.HOTEL%26MDPDTL%3DHTL.1079793.20231203.20231204.DDT.4.CID..AUDID..mapresults%26mctc%3D10%26exp_curr%3DGBP%26exp_dp%3D61.28%26exp_tx%3D5.57",
+      "isOfficialSite": false,
+      "price": "61 GBP",
+      "url": "https://www.ebookers.ie/Hotel-Search?selected=1079793&startDate=2023-12-03&endDate=2023-12-04&adults=2&children=&langid=es&MDPCID=EBOOKERS-ES.META.GOOGLE.ORGANIC-desktop.HOTEL&MDPDTL=HTL.1079793.20231203.20231204.DDT.4.CID..AUDID..mapresults&mctc=10&exp_curr=GBP&exp_dp=61.28&exp_tx=5.57"
+    }
+  ],
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [
+    {
+      "title": "Comer y beber",
+      "count": 1
+    }
+  ],
+  "reviewsTags": [
+    {
+      "title": "sendaviva, parque de la naturaleza de navarra",
+      "count": 57
+    },
+    {
+      "title": "boda",
+      "count": 51
+    },
+    {
+      "title": "camioneros",
+      "count": 30
+    },
+    {
+      "title": "bardenas reales",
+      "count": 21
+    },
+    {
+      "title": "karting",
+      "count": 20
+    },
+    {
+      "title": "marisco",
+      "count": 20
+    },
+    {
+      "title": "estancia",
+      "count": 17
+    },
+    {
+      "title": "buffet libre",
+      "count": 11
+    },
+    {
+      "title": "autopista",
+      "count": 10
+    },
+    {
+      "title": "lotería",
+      "count": 7
+    }
+  ],
+  "additionalInfo": {
+    "Amenities": [
+      {
+        "Wi‑Fi gratuito": true
+      },
+      {
+        "Desayuno de pago": true
+      },
+      {
+        "Aparcamiento gratuito": true
+      },
+      {
+        "Accesible para personas en silla de ruedas": true
+      },
+      {
+        "Piscina": false
+      },
+      {
+        "Aire acondicionado": true
+      },
+      {
+        "Centro de negocios": true
+      },
+      {
+        "Se admiten mascotas": true
+      },
+      {
+        "Adecuado para niños": true
+      },
+      {
+        "Restaurante": true
+      },
+      {
+        "Traslado al aeropuerto": true
+      },
+      {
+        "Bar": true
+      },
+      {
+        "Libre de humos": false
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": {
+    "question": "(Traducido por Google) ¿HAY CAMAS INDIVIDUALES EN LAS HABITACIONES PARA 2?\n\n(Texto original)\nY A T IL DES LITS SIMPLES DANS LES CHAMBRES POUR 2",
+    "answer": "(Traducido por Google) Sí, tenemos habitaciones dobles con camas separadas.\n\n(Texto original)\nOui, nous avons des chambres pour deux personnes avec des lits séparés",
+    "askDate": "Hace un año",
+    "askedBy": {
+      "name": "Marie-José Fécourt",
+      "url": "https://www.google.com/maps/contrib/103232636231800298813"
+    },
+    "answerDate": "Hace un año",
+    "answeredBy": {}
+  },
+  "updatesFromCustomers": {
+    "text": "No es caro. Muy caro.\nUna tostada 2.50😡😡😡.",
+    "language": "es",
+    "postDate": "Hace un año",
+    "postedBy": {
+      "name": "m hakuna",
+      "url": "https://www.google.com/maps/contrib/117346668257569528953?hl=es",
+      "title": "Local Guide",
+      "totalReviews": 38
+    },
+    "media": []
+  },
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Restaurante+Buffet+el+Villa+Castej%C3%B3n/@42.1347971,-1.6984377,17z/data=!3m1!4b1!4m6!3m5!1s0xd5a5b689d40bb55:0x26c2c21b734c86d0!8m2!3d42.1347971!4d-1.6984377!16s%2Fg%2F1ptyzrd7m?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 14,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.146820715657924,-1.6933521666203062,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee+places/@42.1468207,-1.6933522,16z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Restaurante Buffet el Villa Castejón",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Restaurante",
+  "address": "N-232, Km. 83.4, 31590 Castejón, España",
+  "neighborhood": null,
+  "street": "N-232, Km. 83.4",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Navarra",
+  "countryCode": "ES",
+  "website": "https://www.elvillacastejon.com/es/restauracion/",
+  "phone": "+34 948 84 20 12",
+  "phoneUnformatted": "+34948842012",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1347971,
+    "lng": -1.6984377
+  },
+  "locatedIn": "Se encuentra en: Luze El Villa",
+  "plusCode": "48M2+WJ Castejón, España",
+  "menu": null,
+  "totalScore": 4.1,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJVbtAnWhbWg0R0IZMcxvCwiY",
+  "categories": [
+    "Restaurante",
+    "Buffet libre",
+    "Cafetería"
+  ],
+  "cid": "2793008142077429456",
+  "reviewsCount": 833,
+  "reviewsDistribution": {
+    "oneStar": 55,
+    "twoStar": 35,
+    "threeStar": 104,
+    "fourStar": 232,
+    "fiveStar": 407
+  },
+  "imagesCount": 728,
+  "imageCategories": [
+    "Todas",
+    "Más recientes",
+    "Vídeos",
+    "Comida y bebida",
+    "Ambiente",
+    "Comida de mar",
+    "Del propietario",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:24:39.767Z",
+  "reserveTableUrl": "https://www.google.com/maps/reserve/v/dine/c/lCMMB75B5Tw?source=pa&opi=79508299&hl=es-US&gei=fy1nZZWDM8zhkPIPho6duAI&sourceurl=http://www.google.com/service/MapsPlaceService/GetPlace?hl%3Des%26authuser%3D0%26gl%3Dus%26q%3DCoffee%2Bplaces",
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "miércoles",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    },
+    {
+      "day": "viernes",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "1 to 4 PM, 8 to 10 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "1 to 4 PM, 8 to 10 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Cafetería el Villa Castejón",
+      "reviewsCount": 21,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Luze El Villa",
+      "reviewsCount": 3512,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "CASA WANG WOK BUFFET",
+      "reviewsCount": 717,
+      "totalScore": 3.6
+    },
+    {
+      "category": "También se buscó",
+      "title": "Castejon",
+      "reviewsCount": 18,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Restaurante Chino Casa Wang",
+      "reviewsCount": 333,
+      "totalScore": 3.8
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "postres",
+      "count": 25
+    },
+    {
+      "title": "plancha",
+      "count": 18
+    },
+    {
+      "title": "marisco",
+      "count": 16
+    },
+    {
+      "title": "hotel",
+      "count": 15
+    },
+    {
+      "title": "aparcamiento",
+      "count": 15
+    },
+    {
+      "title": "transportistas",
+      "count": 9
+    },
+    {
+      "title": "brasa",
+      "count": 8
+    },
+    {
+      "title": "camión",
+      "count": 7
+    },
+    {
+      "title": "fin de semana",
+      "count": 6
+    },
+    {
+      "title": "rico",
+      "count": 6
+    }
+  ],
+  "additionalInfo": {
+    "Información proporcionada por la empresa": [
+      {
+        "Se identifica como mujer empresaria": true
+      }
+    ],
+    "Opciones de servicio": [
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Aspectos destacados": [
+      {
+        "Deportes": true
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      },
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      },
+      {
+        "Estacionamiento accesible para personas en silla de ruedas": true
+      },
+      {
+        "Sanitarios accesibles para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Aperitivos": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Platos saludables": true
+      },
+      {
+        "Tenedor libre": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Desayuno-almuerzo": true
+      },
+      {
+        "Almuerzo": true
+      },
+      {
+        "Cena": true
+      },
+      {
+        "Servicio de catering": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Amigable con LGBTQ+": true
+      },
+      {
+        "Espacio seguro para personas transgénero": true
+      },
+      {
+        "Grupos": true
+      },
+      {
+        "Recomendable para ir en familia": true
+      }
+    ],
+    "Planificación": [
+      {
+        "Se aceptan reservas": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Pagos con dispositivos móviles mediante NFC": true
+      },
+      {
+        "Tarjetas de crédito": true
+      },
+      {
+        "Tarjetas de débito": true
+      },
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      },
+      {
+        "Menú para niños": true
+      },
+      {
+        "Sillas altas": true
+      }
+    ],
+    "Estacionamiento": [
+      null,
+      {
+        "Estacionamiento gratuito": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": {
+    "question": "Cuánto cuesta el buffet, vamos a pasar unos días en navarra y estamos mirando sitios para comer y cenar baratos",
+    "answer": "15 o 17 euros ... pero esta bien hay mucha variedad !",
+    "askDate": "Hace 4 años",
+    "askedBy": {
+      "name": "mireya sanchez",
+      "url": "https://www.google.com/maps/contrib/110630071940115452562"
+    },
+    "answerDate": "Hace 4 años",
+    "answeredBy": {
+      "name": "Los Nosotros",
+      "url": "https://www.google.com/maps/contrib/110287037257276723968"
+    }
+  },
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [
+    {
+      "name": "elvillacastejon.com",
+      "url": "https://www.elvillacastejon.com/es/restauracion/"
+    }
+  ],
+  "imageUrls": [],
+  "reviews": []
+}]

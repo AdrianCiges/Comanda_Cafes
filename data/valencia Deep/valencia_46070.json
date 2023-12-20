@@ -1,0 +1,1663 @@
+[{
+  "url": "https://www.google.com/maps/place/Starbucks+On+The+Go/@42.1368962,-1.6999547,17z/data=!3m1!4b1!4m6!3m5!1s0xd5a5b2dec1dd6b3:0x6ee3aed28761a211!8m2!3d42.1368962!4d-1.6999547!16s%2Fg%2F11q7dzdy7s?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 18,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.183270109541205,-1.712917202090829,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee+places/@42.1832701,-1.7129172,16z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Starbucks On The Go",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Cafetería",
+  "address": "N-232, 82, 31590 Castejón, Teruel, España",
+  "neighborhood": null,
+  "street": "N-232, 82",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Teruel",
+  "countryCode": "ES",
+  "website": "https://www.repsol.es/es/productos-y-servicios/estaciones-de-servicio/servicios/tienda/starbucks-on-the-go/index.cshtml",
+  "phone": null,
+  "phoneUnformatted": null,
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1368962,
+    "lng": -1.6999547
+  },
+  "locatedIn": null,
+  "plusCode": "48P2+Q2 Castejón, España",
+  "menu": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJs9Yd7C1bWg0REaJhh9Ku424",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "7990422383123079697",
+  "reviewsCount": 0,
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 0,
+    "fiveStar": 0
+  },
+  "imagesCount": 4,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Café",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:21:07.491Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Museo de Castejón",
+      "reviewsCount": 85,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Adif Castejón de Ebro",
+      "reviewsCount": 1,
+      "totalScore": 3
+    },
+    {
+      "category": "También se buscó",
+      "title": "Castejon",
+      "reviewsCount": 18,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Bar Restaurante Los Chopos Hadda",
+      "reviewsCount": 181,
+      "totalScore": 4.1
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería el Villa Castejón",
+      "reviewsCount": 21,
+      "totalScore": 4.2
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      },
+      {
+        "Estacionamiento accesible para personas en silla de ruedas": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Cafeter%C3%ADa+el+Villa+Castej%C3%B3n/@42.1347976,-1.6984333,17z/data=!3m1!4b1!4m9!3m8!1s0xd5a5cc70398c735:0x85bdf6303a09eb46!5m2!4m1!1i2!8m2!3d42.1347976!4d-1.6984333!16s%2Fg%2F11c54dp0hm?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 8,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.183270109541205,-1.712917202090829,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee+places/@42.1832701,-1.7129172,16z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Cafetería el Villa Castejón",
+  "subTitle": null,
+  "description": null,
+  "price": "$62",
+  "categoryName": "Cafetería",
+  "address": "Ctra Nacional 232 km. 83,400, 31590 Castejón, Navarra, España",
+  "neighborhood": null,
+  "street": "Ctra Nacional 232 km. 83,400",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Navarra",
+  "countryCode": "ES",
+  "website": "https://www.elvillacastejon.com/es/restauracion/",
+  "phone": "+34 948 84 20 12",
+  "phoneUnformatted": "+34948842012",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1347976,
+    "lng": -1.6984333
+  },
+  "locatedIn": null,
+  "plusCode": "48M2+WJ Castejón, España",
+  "menu": null,
+  "totalScore": 4.2,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJNceYA8dcWg0RRusJOjD2vYU",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "9637129464635321158",
+  "reviewsCount": 21,
+  "reviewsDistribution": {
+    "oneStar": 3,
+    "twoStar": 0,
+    "threeStar": 1,
+    "fourStar": 3,
+    "fiveStar": 14
+  },
+  "imagesCount": 34,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Vídeos",
+    "Ambiente",
+    "Del propietario",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:21:18.959Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": "2023-12-03",
+  "checkOutDate": "2023-12-04",
+  "similarHotelsNearby": [
+    {
+      "name": "Hotel HM Alfaro",
+      "rating": 4,
+      "reviews": 466,
+      "description": "Incluye Wi-Fi y estacionamiento",
+      "price": "$46"
+    },
+    {
+      "name": "Luze El Villa",
+      "rating": 4.2,
+      "reviews": 3512,
+      "description": "Incluye Wi-Fi y estacionamiento",
+      "price": "$52"
+    },
+    {
+      "name": "Hotel Palacios, Alfaro, La Rioja",
+      "rating": 4.1,
+      "reviews": 1655,
+      "description": "Incluye desayuno, Wi-Fi y estacionamiento",
+      "price": "$56"
+    },
+    {
+      "name": "Hotel Ciudad de Corella",
+      "rating": 3.4,
+      "reviews": 720,
+      "description": "Incluye Wi-Fi y estacionamiento",
+      "price": "$73"
+    },
+    {
+      "name": "Hostal Europa",
+      "rating": 4.2,
+      "reviews": 142,
+      "description": "Incluye Wi-Fi y estacionamiento",
+      "price": null
+    },
+    {
+      "name": "La Alcoholera",
+      "rating": 4.6,
+      "reviews": 45,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "Casa Rural el convento",
+      "rating": 3.7,
+      "reviews": 6,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "Casa Rural Sancho El Fuerte",
+      "rating": 4.3,
+      "reviews": 24,
+      "description": null,
+      "price": null
+    },
+    {
+      "name": "Hostel La Huertica",
+      "rating": 4.8,
+      "reviews": 72,
+      "description": "Incluye Wi-Fi",
+      "price": null
+    }
+  ],
+  "hotelReviewSummary": null,
+  "hotelAds": [
+    {
+      "title": "Atrapalo.com",
+      "googleUrl": "http://www.google.com/travel/clk?pc=AA80Osz1u7DOpUwmIYoeGAti5MN40Yh5FGZLSDjmLigytzYVKODRzw8eEyDu_GQDEtGYUJsyE4Mgae7oJtgi0ILNrKQLZnbWcsX3AG9-1GUYCu20sLQns2zC2bE&pcurl=https://www.atrapalo.com/tracking/A6-6524-HO-12082_0312202304122023_5112_1500_800_5660_31/hoteles/12082-0_x?atoken%3Dn2f32x6c3x6c4xax0x2zzzzzzzzzzzzzz%26utoken%3D1%253A1%253A77778020%253A0%253A72c56%26canonical_hash%3Dd0cab934b7c48d566def629cec503145%26odata%3Dqx69ygbw4A8khr25lj9wql1Afw0tbwdb41hfkgvvkvbv80r8lsdq%26utm_source%3Dgoogle_hotel%26utm_medium%3Dmetabuscadores%26utm_campaign%3Dhoteles-afiliacion",
+      "isOfficialSite": false,
+      "price": "$62",
+      "url": "https://www.atrapalo.com/tracking/A6-6524-HO-12082_0312202304122023_5112_1500_800_5660_31/hoteles/12082-0_x?atoken=n2f32x6c3x6c4xax0x2zzzzzzzzzzzzzz&utoken=1:1:77778020:0:72c56&canonical_hash=d0cab934b7c48d566def629cec503145&odata=qx69ygbw4A8khr25lj9wql1Afw0tbwdb41hfkgvvkvbv80r8lsdq&utm_source=google_hotel&utm_medium=metabuscadores&utm_campaign=hoteles-afiliacion"
+    }
+  ],
+  "popularTimesLiveText": "Ahora: Por lo general, está un poco concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 4,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 80
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 0
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 4,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 30
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 4,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 0
+      }
+    ],
+    "We": [
+      {
+        "hour": 4,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 80
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 80
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 70
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 10
+      }
+    ],
+    "Th": [
+      {
+        "hour": 4,
+        "occupancyPercent": 90
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 70
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 100
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 4,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 70
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 30
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 4,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 0
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "miércoles",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "jueves",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "viernes",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "sábado",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "domingo",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "lunes",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "martes",
+      "hours": "Abierto las 24 horas"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Bucle magnético de asistencia": true
+      },
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      },
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      },
+      {
+        "Sanitarios accesibles para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Aperitivos": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Cócteles": true
+      },
+      {
+        "Comida preparada": true
+      },
+      {
+        "Comidas durante la madrugada": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Almuerzo": true
+      },
+      {
+        "Cena": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      },
+      {
+        "Recomendable para ir en familia": true
+      }
+    ],
+    "Planificación": [
+      {
+        "Se aceptan reservas": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      },
+      {
+        "Menú para niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": {
+    "text": "Está muy bien tranquilo buena atención",
+    "language": "es",
+    "postDate": "Hace 2 meses",
+    "postedBy": {
+      "name": "Evelyn Zuniga",
+      "url": "https://www.google.com/maps/contrib/105134745042462569052?hl=es-419",
+      "title": "Local Guide",
+      "totalReviews": 18
+    },
+    "media": []
+  },
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Cafeter%C3%ADa+Classic/@42.1703442,-1.6919833,17z/data=!3m1!4b1!4m6!3m5!1s0xd5a5db10ddcbf4b:0xbc9f921ee64233f1!8m2!3d42.1703442!4d-1.6919833!16s%2Fg%2F11s82v900w?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 5,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.17054096984707,-1.712917202090829,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee+places/@42.170541,-1.7129172,16z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Cafetería Classic",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Cafetería",
+  "address": "C. las Merindades, 31590 Castejón, Navarra, España",
+  "neighborhood": null,
+  "street": "C. las Merindades",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Navarra",
+  "countryCode": "ES",
+  "website": null,
+  "phone": null,
+  "phoneUnformatted": null,
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1703442,
+    "lng": -1.6919833
+  },
+  "locatedIn": null,
+  "plusCode": "58C5+46 Castejón, España",
+  "menu": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJS7_cDbFdWg0R8TNC5h6Sn7w",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "13591742861837218801",
+  "reviewsCount": 0,
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 0,
+    "fiveStar": 0
+  },
+  "imagesCount": 1,
+  "imageCategories": [
+    "Todas",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:21:19.260Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "miércoles",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "jueves",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "viernes",
+      "hours": "6 PM to 12 AM"
+    },
+    {
+      "day": "sábado",
+      "hours": "6 PM to 12 AM"
+    },
+    {
+      "day": "domingo",
+      "hours": "10 AM to 3 PM, 6 to 11 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "martes",
+      "hours": "Cerrado"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Cafetería el Villa Castejón",
+      "reviewsCount": 21,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Avenida",
+      "reviewsCount": 48,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Bar Amanecer",
+      "reviewsCount": 352,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Alex",
+      "reviewsCount": 61,
+      "totalScore": 4.5
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Postres": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Restaurante+Buffet+el+Villa+Castej%C3%B3n/@42.1347971,-1.6984377,17z/data=!3m1!4b1!4m6!3m5!1s0xd5a5b689d40bb55:0x26c2c21b734c86d0!8m2!3d42.1347971!4d-1.6984377!16s%2Fg%2F1ptyzrd7m?hl=es&entry=ttu",
+  "searchString": "Coffee places",
+  "rank": 16,
+  "searchPageUrl": "https://www.google.com/maps/search/Coffee%20places/@42.132353550764655,-1.712917202090829,16z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/Coffee+places/@42.1323536,-1.7129172,16z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Restaurante Buffet el Villa Castejón",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Restaurante",
+  "address": "N-232, Km. 83.4, 31590 Castejón, España",
+  "neighborhood": null,
+  "street": "N-232, Km. 83.4",
+  "city": "Castejón",
+  "postalCode": "31590",
+  "state": "Navarra",
+  "countryCode": "ES",
+  "website": "https://www.elvillacastejon.com/es/restauracion/",
+  "phone": "+34 948 84 20 12",
+  "phoneUnformatted": "+34948842012",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 42.1347971,
+    "lng": -1.6984377
+  },
+  "locatedIn": "Se encuentra en: Luze El Villa",
+  "plusCode": "48M2+WJ Castejón, España",
+  "menu": null,
+  "totalScore": 4.1,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJVbtAnWhbWg0R0IZMcxvCwiY",
+  "categories": [
+    "Restaurante",
+    "Buffet libre",
+    "Cafetería"
+  ],
+  "cid": "2793008142077429456",
+  "reviewsCount": 833,
+  "reviewsDistribution": {
+    "oneStar": 55,
+    "twoStar": 35,
+    "threeStar": 104,
+    "fourStar": 232,
+    "fiveStar": 407
+  },
+  "imagesCount": 728,
+  "imageCategories": [
+    "Todas",
+    "Más recientes",
+    "Vídeos",
+    "Comida y bebida",
+    "Ambiente",
+    "Comida de mar",
+    "Del propietario",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-29T12:22:53.404Z",
+  "reserveTableUrl": "https://www.google.com/maps/reserve/v/dine/c/lCMMB75B5Tw?source=pa&opi=79508299&hl=es-US&gei=Fi1nZaHLFJK6qtsPouCAYA&sourceurl=http://www.google.com/service/MapsPlaceService/GetPlace?hl%3Des%26authuser%3D0%26gl%3Dus%26q%3DCoffee%2Bplaces",
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "miércoles",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    },
+    {
+      "day": "viernes",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "1 to 4 PM, 8 to 10 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "1 to 4 PM, 8 to 10 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "1 to 3:30 PM, 8 to 10 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Cafetería el Villa Castejón",
+      "reviewsCount": 21,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Luze El Villa",
+      "reviewsCount": 3512,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "CASA WANG WOK BUFFET",
+      "reviewsCount": 717,
+      "totalScore": 3.6
+    },
+    {
+      "category": "También se buscó",
+      "title": "Castejon",
+      "reviewsCount": 18,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Restaurante Chino Casa Wang",
+      "reviewsCount": 333,
+      "totalScore": 3.8
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "postres",
+      "count": 25
+    },
+    {
+      "title": "plancha",
+      "count": 18
+    },
+    {
+      "title": "marisco",
+      "count": 16
+    },
+    {
+      "title": "hotel",
+      "count": 15
+    },
+    {
+      "title": "aparcamiento",
+      "count": 15
+    },
+    {
+      "title": "transportistas",
+      "count": 9
+    },
+    {
+      "title": "brasa",
+      "count": 8
+    },
+    {
+      "title": "camión",
+      "count": 7
+    },
+    {
+      "title": "fin de semana",
+      "count": 6
+    },
+    {
+      "title": "rico",
+      "count": 6
+    }
+  ],
+  "additionalInfo": {
+    "Información proporcionada por la empresa": [
+      {
+        "Se identifica como mujer empresaria": true
+      }
+    ],
+    "Opciones de servicio": [
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Aspectos destacados": [
+      {
+        "Deportes": true
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      },
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      },
+      {
+        "Estacionamiento accesible para personas en silla de ruedas": true
+      },
+      {
+        "Sanitarios accesibles para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Aperitivos": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Platos saludables": true
+      },
+      {
+        "Tenedor libre": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Desayuno-almuerzo": true
+      },
+      {
+        "Almuerzo": true
+      },
+      {
+        "Cena": true
+      },
+      {
+        "Servicio de catering": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Amigable con LGBTQ+": true
+      },
+      {
+        "Espacio seguro para personas transgénero": true
+      },
+      {
+        "Grupos": true
+      },
+      {
+        "Recomendable para ir en familia": true
+      }
+    ],
+    "Planificación": [
+      {
+        "Se aceptan reservas": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Pagos con dispositivos móviles mediante NFC": true
+      },
+      {
+        "Tarjetas de crédito": true
+      },
+      {
+        "Tarjetas de débito": true
+      },
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      },
+      {
+        "Menú para niños": true
+      },
+      {
+        "Sillas altas": true
+      }
+    ],
+    "Estacionamiento": [
+      null,
+      {
+        "Estacionamiento gratuito": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": {
+    "question": "Cuánto cuesta el buffet, vamos a pasar unos días en navarra y estamos mirando sitios para comer y cenar baratos",
+    "answer": "15 o 17 euros ... pero esta bien hay mucha variedad !",
+    "askDate": "Hace 4 años",
+    "askedBy": {
+      "name": "mireya sanchez",
+      "url": "https://www.google.com/maps/contrib/110630071940115452562"
+    },
+    "answerDate": "Hace 4 años",
+    "answeredBy": {
+      "name": "Los Nosotros",
+      "url": "https://www.google.com/maps/contrib/110287037257276723968"
+    }
+  },
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [
+    {
+      "name": "elvillacastejon.com",
+      "url": "https://www.elvillacastejon.com/es/restauracion/"
+    }
+  ],
+  "imageUrls": [],
+  "reviews": []
+}]
