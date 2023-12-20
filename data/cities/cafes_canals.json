@@ -1,0 +1,7794 @@
+[{
+  "url": "https://www.google.com/maps/place/Abierto+25+horas/@38.9640415,-0.5850997,17z/data=!3m1!4b1!4m6!3m5!1s0xd619f89d233b219:0x2abb691b63a76e0c!8m2!3d38.9640415!4d-0.5850997!16s%2Fg%2F11p5lvrgrl?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 18,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.9603826502849,-0.5805405572489422,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9603827,-0.5805406,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Abierto 25 horas",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Restaurante de comida para llevar",
+  "address": "Calle Maestro Serrano, 13, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Calle Maestro Serrano, 13",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": "http://www.eravending.es/",
+  "phone": "+34 902 43 16 68",
+  "phoneUnformatted": "+34902431668",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 38.9640415,
+    "lng": -0.5850997
+  },
+  "locatedIn": null,
+  "plusCode": "XC77+JX Canals, España",
+  "menu": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJGbIz0omfYQ0RDG6nYxtpuyo",
+  "categories": [
+    "Restaurante de comida para llevar",
+    "Cafetería",
+    "Restaurante de comida rápida",
+    "Hamburguesería",
+    "Heladería",
+    "Quiosco",
+    "Pizza para llevar",
+    "Distribuidor de máquinas expendedoras automáticas"
+  ],
+  "cid": "3079170336594816524",
+  "reviewsCount": 0,
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 0,
+    "fiveStar": 0
+  },
+  "imagesCount": 11,
+  "imageCategories": [
+    "Todas",
+    "Menú",
+    "Del propietario",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:26:57.701Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, no está tan concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 4,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 83
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 75
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 58
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 4,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 16
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 4,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 16
+      }
+    ],
+    "We": [
+      {
+        "hour": 4,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 91
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 8
+      }
+    ],
+    "Th": [
+      {
+        "hour": 4,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 83
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 83
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 58
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 4,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 75
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 4,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 5,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 75
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 2,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 3,
+        "occupancyPercent": 33
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "sábado",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "domingo",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "lunes",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "martes",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "miércoles",
+      "hours": "Abierto las 24 horas"
+    },
+    {
+      "day": "jueves",
+      "hours": "Abierto las 24 horas"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Bon Menjar",
+      "reviewsCount": 92,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "La Cuina",
+      "reviewsCount": 42,
+      "totalScore": 4.6
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería~Bar Treserres",
+      "reviewsCount": 13,
+      "totalScore": 4.5
+    },
+    {
+      "category": "También se buscó",
+      "title": "Solopizza Canals",
+      "reviewsCount": 34,
+      "totalScore": 4
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Café": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Postres": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Arcimafe+S+L/@38.9626647,-0.5852765,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fc1076a8abd:0x41502159e21a857a!8m2!3d38.9626647!4d-0.5852765!16s%2Fg%2F1z44cbn7w?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 12,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.953703783428296,-0.6062910137552894,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9537038,-0.606291,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Arcimafe S L",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Cafetería",
+  "address": "Av. Vicente Ferri, 7, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Av. Vicente Ferri, 7",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": "+34 962 24 11 27",
+  "phoneUnformatted": "+34962241127",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 38.9626647,
+    "lng": -0.5852765
+  },
+  "locatedIn": null,
+  "plusCode": "XC77+3V Canals, España",
+  "menu": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJvYpqB8GfYQ0ReoUa4lkhUEE",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "4706298280531363194",
+  "reviewsCount": 0,
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 0,
+    "fiveStar": 0
+  },
+  "imagesCount": 1,
+  "imageCategories": [
+    "Todas",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:27:08.211Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "cafeteria candela",
+      "reviewsCount": 90,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafeteria Somnis",
+      "reviewsCount": 425,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "BUTIQ Café",
+      "reviewsCount": 36,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería café en llet",
+      "reviewsCount": 159,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería Roccolo",
+      "reviewsCount": 35,
+      "totalScore": 4.5
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Informal": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/nueva+vida/@38.9641366,-0.5784234,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fbe14366a5b:0xe1b57b2033fc73a8!8m2!3d38.9641366!4d-0.5784234!16s%2Fg%2F11g72fmy6w?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 9,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.953703783428296,-0.6062910137552894,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9537038,-0.606291,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "nueva vida",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Cafetería",
+  "address": "Carrer Cronista Pareja, 64, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Carrer Cronista Pareja, 64",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": "+34 642 19 06 22",
+  "phoneUnformatted": "+34642190622",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 38.9641366,
+    "lng": -0.5784234
+  },
+  "locatedIn": null,
+  "plusCode": "XC7C+MJ Canals, España",
+  "menu": null,
+  "totalScore": 3.7,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJW2o2FL6fYQ0RqHP8MyB7teE",
+  "categories": [
+    "Cafetería",
+    "Bar",
+    "Restaurante"
+  ],
+  "cid": "16264041007559766952",
+  "reviewsCount": 15,
+  "reviewsDistribution": {
+    "oneStar": 2,
+    "twoStar": 1,
+    "threeStar": 3,
+    "fourStar": 2,
+    "fiveStar": 7
+  },
+  "imagesCount": 8,
+  "imageCategories": [
+    "Todas",
+    "Menú",
+    "Comida y bebida",
+    "Café",
+    "Jardín",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:27:17.322Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, está un poco concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 38
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 46
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 10
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 48
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 42
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 22
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 55
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 67
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 83
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 73
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 42
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 44
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 40
+      }
+    ],
+    "We": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 44
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 59
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 59
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 63
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 65
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 10
+      }
+    ],
+    "Th": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 55
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 44
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 73
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 91
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 73
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 48
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 48
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 55
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 42
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 55
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 61
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 59
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 55
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 59
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 61
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 55
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 44
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 30
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 38
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 18
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "6 AM to 11 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Vermut",
+      "reviewsCount": 134,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "La Brújula Gourmet",
+      "reviewsCount": 25,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Bar Las Postas",
+      "reviewsCount": 243,
+      "totalScore": 4.5
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cervecería Tívoli",
+      "reviewsCount": 79,
+      "totalScore": 4.1
+    },
+    {
+      "category": "También se buscó",
+      "title": "L'andana",
+      "reviewsCount": 52,
+      "totalScore": 4.3
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Aperitivos": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Almuerzo": true
+      },
+      {
+        "Cena": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Panader%C3%ADa+Serra/@38.962569,-0.5845637,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fc0fe547ec3:0xa526b45e3ef177c2!8m2!3d38.962569!4d-0.5845637!16s%2Fg%2F11c4jcqpdm?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 8,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.9603826502849,-0.5805405572489422,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9603827,-0.5805406,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Panadería Serra",
+  "subTitle": null,
+  "description": null,
+  "price": "$",
+  "categoryName": "Panadería",
+  "address": "Plaça Pont del Riu, 5, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Plaça Pont del Riu, 5",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": "+34 962 24 40 93",
+  "phoneUnformatted": "+34962244093",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 38.962569,
+    "lng": -0.5845637
+  },
+  "locatedIn": null,
+  "plusCode": "XC78+25 Canals, España",
+  "menu": null,
+  "totalScore": 3.8,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJw35U_sCfYQ0RwnfxPl60JqU",
+  "categories": [
+    "Panadería",
+    "Cafetería"
+  ],
+  "cid": "11900397382249052098",
+  "reviewsCount": 162,
+  "reviewsDistribution": {
+    "oneStar": 17,
+    "twoStar": 12,
+    "threeStar": 26,
+    "fourStar": 38,
+    "fiveStar": 69
+  },
+  "imagesCount": 41,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Ambiente",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:27:24.459Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, no está tan concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 59
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 89
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 87
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 68
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 54
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 38
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 61
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "We": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 48
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 55
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 46
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Th": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 42
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 38
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 49
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 68
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 54
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 46
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 46
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 70
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 45
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 62
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 75
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "8 AM to 1 PM, 5 to 8 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "8 AM to 1 PM, 5 to 8 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "8 AM to 1 PM, 5 to 8 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "8 AM to 1 PM, 5 to 8 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "8 AM to 1 PM, 5 to 8 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "8 AM to 1 PM, 5 to 8 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "8 AM to 1 PM, 5 to 8 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "LAPASTISSERIA",
+      "reviewsCount": 33,
+      "totalScore": 4.7
+    },
+    {
+      "category": "También se buscó",
+      "title": "Horno Ribelles S.L",
+      "reviewsCount": 24,
+      "totalScore": 4.5
+    },
+    {
+      "category": "También se buscó",
+      "title": "SANTS DE LA PEDRA S.L.",
+      "reviewsCount": 47,
+      "totalScore": 4.7
+    },
+    {
+      "category": "También se buscó",
+      "title": "Camarena",
+      "reviewsCount": 28,
+      "totalScore": 4.8
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "productos",
+      "count": 9
+    },
+    {
+      "title": "dulces",
+      "count": 9
+    },
+    {
+      "title": "churros",
+      "count": 8
+    },
+    {
+      "title": "salado",
+      "count": 6
+    },
+    {
+      "title": "cafetería",
+      "count": 6
+    },
+    {
+      "title": "almorzar",
+      "count": 5
+    },
+    {
+      "title": "merendar",
+      "count": 4
+    },
+    {
+      "title": "precio",
+      "count": 4
+    },
+    {
+      "title": "chocolate",
+      "count": 3
+    }
+  ],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Retiro en tienda": true
+      },
+      {
+        "Compras en tienda": true
+      },
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Pagos con dispositivos móviles mediante NFC": true
+      },
+      {
+        "Tarjetas de débito": true
+      },
+      {
+        "Tarjetas de crédito": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Cafeter%C3%ADa~Bar+Treserres/@38.9656601,-0.5871871,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fea018a8419:0x7db99b79e8baa92b!8m2!3d38.9656601!4d-0.5871871!16s%2Fg%2F11c5zpts1t?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 8,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.953703783428296,-0.6062910137552894,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9537038,-0.606291,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Cafetería~Bar Treserres",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Bar",
+  "address": "Av. Vicente Ferri, 57, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Av. Vicente Ferri, 57",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": null,
+  "phoneUnformatted": null,
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 38.9656601,
+    "lng": -0.5871871
+  },
+  "locatedIn": null,
+  "plusCode": "XC87+74 Canals, España",
+  "menu": null,
+  "totalScore": 4.5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJGYSKAeqfYQ0RK6m66HmbuX0",
+  "categories": [
+    "Bar",
+    "Cafetería"
+  ],
+  "cid": "9059443073330358571",
+  "reviewsCount": 13,
+  "reviewsDistribution": {
+    "oneStar": 1,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 3,
+    "fiveStar": 9
+  },
+  "imagesCount": 2,
+  "imageCategories": [
+    "Todas",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:27:27.744Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, está menos concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 68
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "We": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Th": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 62
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 75
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 68
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 68
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 62
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "9 AM to 10 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "9 AM to 10 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "9 AM to 10 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "9 AM to 10 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "9 AM to 10 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "9 AM to 10 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "cafeteria candela",
+      "reviewsCount": 90,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Bar Moments Canals",
+      "reviewsCount": 84,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería café en llet",
+      "reviewsCount": 159,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafeteria Somnis",
+      "reviewsCount": 425,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "nueva vida",
+      "reviewsCount": 15,
+      "totalScore": 3.7
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Aspectos destacados": [
+      {
+        "Deportes": true
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Comida": true
+      },
+      {
+        "Comida en el bar": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Cafeteria+Somnis/@38.9660992,-0.5830407,17z/data=!3m1!4b1!4m6!3m5!1s0xd619feab0508667:0x398c8d39751d4d82!8m2!3d38.9660992!4d-0.5830407!16s%2Fg%2F11bwyv42k0?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 1,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.953703783428296,-0.6062910137552894,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9537038,-0.606291,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Cafeteria Somnis",
+  "subTitle": null,
+  "description": null,
+  "price": "$",
+  "categoryName": "Cafetería",
+  "address": "Carrer Cronista Pareja, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Carrer Cronista Pareja",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": "+34 961 06 28 50",
+  "phoneUnformatted": "+34961062850",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 38.9660992,
+    "lng": -0.5830407
+  },
+  "locatedIn": null,
+  "plusCode": "XC88+CQ Canals, España",
+  "menu": null,
+  "totalScore": 4,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJZ4ZQsOqfYQ0Rgk0ddTmNjDk",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "4146844634818891138",
+  "reviewsCount": 425,
+  "reviewsDistribution": {
+    "oneStar": 26,
+    "twoStar": 14,
+    "threeStar": 65,
+    "fourStar": 128,
+    "fiveStar": 192
+  },
+  "imagesCount": 115,
+  "imageCategories": [
+    "Todas",
+    "Más recientes",
+    "Menú",
+    "Comida y bebida",
+    "Ambiente",
+    "Comida para llevar",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:27:34.860Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, no está tan concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 49
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 71
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 83
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 78
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 45
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 45
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 44
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 17
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 23
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 38
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "We": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 42
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 45
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Th": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 23
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 38
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 42
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 38
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 19
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 54
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 66
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 63
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 23
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 52
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 63
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 65
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 52
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 74
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 85
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 86
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 71
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 42
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 63
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 85
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 92
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "8 AM to 11 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Bar Moments Canals",
+      "reviewsCount": 84,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Pa I Café",
+      "reviewsCount": 59,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "BUTIQ Café",
+      "reviewsCount": 36,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería café en llet",
+      "reviewsCount": 159,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Arcimafe S L",
+      "reviewsCount": 0,
+      "totalScore": 0
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "precio",
+      "count": 20
+    },
+    {
+      "title": "cerveza",
+      "count": 17
+    },
+    {
+      "title": "bocadillos",
+      "count": 14
+    },
+    {
+      "title": "almuerzo",
+      "count": 14
+    },
+    {
+      "title": "camareros",
+      "count": 12
+    },
+    {
+      "title": "tapas",
+      "count": 8
+    },
+    {
+      "title": "calamares",
+      "count": 3
+    },
+    {
+      "title": "terraza",
+      "count": 3
+    },
+    {
+      "title": "cocina",
+      "count": 3
+    }
+  ],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Aspectos destacados": [
+      {
+        "Deportes": true
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      },
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      },
+      {
+        "Sanitarios accesibles para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Aperitivos": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Cócteles": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Desayuno-almuerzo": true
+      },
+      {
+        "Almuerzo": true
+      },
+      {
+        "Cena": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Planificación": [
+      {
+        "Se aceptan reservas": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/BUTIQ+Caf%C3%A9/@38.9649241,-0.5856734,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fc42f41be47:0x133f58d9d7d0e5e9!8m2!3d38.9649241!4d-0.5856734!16s%2Fg%2F11fqzsdyld?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 6,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.9603826502849,-0.5805405572489422,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9603827,-0.5805406,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "BUTIQ Café",
+  "subTitle": null,
+  "description": null,
+  "price": "$",
+  "categoryName": "Cafetería",
+  "address": "Carrer Reverend J.B.Pla, 7, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Carrer Reverend J.B.Pla, 7",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": null,
+  "phoneUnformatted": null,
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 38.9649241,
+    "lng": -0.5856734
+  },
+  "locatedIn": null,
+  "plusCode": "XC77+XP Canals, España",
+  "menu": null,
+  "totalScore": 4.4,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJR75BL8SfYQ0R6eXQ19lYPxM",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "1386924902905341417",
+  "reviewsCount": 36,
+  "reviewsDistribution": {
+    "oneStar": 2,
+    "twoStar": 0,
+    "threeStar": 1,
+    "fourStar": 12,
+    "fiveStar": 21
+  },
+  "imagesCount": 22,
+  "imageCategories": [
+    "Todas",
+    "Menú",
+    "Comida y bebida",
+    "Ambiente",
+    "Café",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:27:43.451Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "8 AM to 8 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "8 AM to 8 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "9 AM to 2 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "8 AM to 8 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "8 AM to 8 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "8 AM to 8 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "8 AM to 8 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Bar Moments Canals",
+      "reviewsCount": 84,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafeteria Somnis",
+      "reviewsCount": 425,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "cafeteria candela",
+      "reviewsCount": 90,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Pa I Café",
+      "reviewsCount": 59,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería café en llet",
+      "reviewsCount": 159,
+      "totalScore": 4.2
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Pagos con dispositivos móviles mediante NFC": true
+      },
+      {
+        "Tarjetas de crédito": true
+      },
+      {
+        "Tarjetas de débito": true
+      },
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Cafeter%C3%ADa+caf%C3%A9+en+llet/@38.9641997,-0.5862462,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fc1ea714295:0x4f03efc5f8e5f5b6!8m2!3d38.9641997!4d-0.5862462!16s%2Fg%2F11b75fmk87?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 5,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.9603826502849,-0.5805405572489422,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9603827,-0.5805406,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Cafetería café en llet",
+  "subTitle": null,
+  "description": null,
+  "price": "$",
+  "categoryName": "Cafetería",
+  "address": "Av. Vicente Ferri, 28, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Av. Vicente Ferri, 28",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": "+34 676 19 88 07",
+  "phoneUnformatted": "+34676198807",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 38.9641997,
+    "lng": -0.5862462
+  },
+  "locatedIn": null,
+  "plusCode": "XC77+MG Canals, España",
+  "menu": null,
+  "totalScore": 4.2,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJlUJx6sGfYQ0RtvXl-MXvA08",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "5693657987489854902",
+  "reviewsCount": 159,
+  "reviewsDistribution": {
+    "oneStar": 7,
+    "twoStar": 5,
+    "threeStar": 22,
+    "fourStar": 46,
+    "fiveStar": 79
+  },
+  "imagesCount": 20,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Ambiente",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:27:47.143Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, está menos concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [],
+    "Mo": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 49
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 90
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 83
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 49
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 7
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 5
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 5
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "We": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 69
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 67
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 9
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 7
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 5
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Th": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 62
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 67
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 62
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 5
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 3
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 7
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 58
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 49
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 52
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 75
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 88
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 86
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 62
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 3
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 3
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "8 AM to 9 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "8 AM to 9 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "lunes",
+      "hours": "8 AM to 9 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "8 AM to 9 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "8 AM to 9 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "8 AM to 9 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "cafeteria candela",
+      "reviewsCount": 90,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Pa I Café",
+      "reviewsCount": 59,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería~Bar Treserres",
+      "reviewsCount": 13,
+      "totalScore": 4.5
+    },
+    {
+      "category": "También se buscó",
+      "title": "BUTIQ Café",
+      "reviewsCount": 36,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafeteria Somnis",
+      "reviewsCount": 425,
+      "totalScore": 4
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "terraza",
+      "count": 4
+    }
+  ],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      },
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      },
+      {
+        "Sanitarios accesibles para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Pagos con dispositivos móviles mediante NFC": true
+      },
+      {
+        "Tarjetas de crédito": true
+      },
+      {
+        "Tarjetas de débito": true
+      },
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Bar+Moments+Canals/@38.9648652,-0.5863356,17z/data=!3m1!4b1!4m6!3m5!1s0xd619f7e03fcd75b:0x65a3fb61e79f2bed!8m2!3d38.9648652!4d-0.5863356!16s%2Fg%2F11fk2ghp98?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 4,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.9603826502849,-0.5805405572489422,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9603827,-0.5805406,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Bar Moments Canals",
+  "subTitle": null,
+  "description": null,
+  "price": "$",
+  "categoryName": "Cafetería",
+  "address": "Av. Vicente Ferri, 34, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Av. Vicente Ferri, 34",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": "+34 656 58 69 33",
+  "phoneUnformatted": "+34656586933",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 38.9648652,
+    "lng": -0.5863356
+  },
+  "locatedIn": null,
+  "plusCode": "XC77+WF Canals, España",
+  "menu": null,
+  "totalScore": 4.2,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJW9f8A36fYQ0R7Suf52H7o2U",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "7323973816950926317",
+  "reviewsCount": 84,
+  "reviewsDistribution": {
+    "oneStar": 5,
+    "twoStar": 5,
+    "threeStar": 7,
+    "fourStar": 17,
+    "fiveStar": 50
+  },
+  "imagesCount": 25,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Ambiente",
+    "Comida para llevar",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:27:53.261Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, no está tan concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 54
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 76
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 80
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 73
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 46
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 46
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 13
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 19
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 10
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 60
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 19
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 32
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 6
+      }
+    ],
+    "We": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 48
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 52
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 45
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 19
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 17
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 24
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 19
+      }
+    ],
+    "Th": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 23
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 48
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 40
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 17
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 19
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 15
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 51
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 59
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 63
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 59
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 26
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 23
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 34
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 67
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 70
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 54
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 53
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 79
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 92
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 84
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 62
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 91
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 85
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "8 AM to 12 a.m."
+    },
+    {
+      "day": "sábado",
+      "hours": "8 AM to 12 a.m."
+    },
+    {
+      "day": "domingo",
+      "hours": "8 AM to 12 a.m."
+    },
+    {
+      "day": "lunes",
+      "hours": "8 AM to 12 a.m."
+    },
+    {
+      "day": "martes",
+      "hours": "8 AM to 12 a.m."
+    },
+    {
+      "day": "miércoles",
+      "hours": "8 AM to 12 a.m."
+    },
+    {
+      "day": "jueves",
+      "hours": "8 AM to 12 a.m."
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Cafeteria Somnis",
+      "reviewsCount": 425,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "BUTIQ Café",
+      "reviewsCount": 36,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "cafeteria candela",
+      "reviewsCount": 90,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería~Bar Treserres",
+      "reviewsCount": 13,
+      "totalScore": 4.5
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería Roccolo",
+      "reviewsCount": 35,
+      "totalScore": 4.5
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "camareros",
+      "count": 9
+    },
+    {
+      "title": "precio",
+      "count": 9
+    },
+    {
+      "title": "cenar",
+      "count": 5
+    },
+    {
+      "title": "ambiente",
+      "count": 4
+    },
+    {
+      "title": "terraza",
+      "count": 4
+    },
+    {
+      "title": "almorzar",
+      "count": 4
+    },
+    {
+      "title": "tapa",
+      "count": 3
+    }
+  ],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Para llevar": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      },
+      {
+        "Sanitarios accesibles para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Desayuno-almuerzo": true
+      },
+      {
+        "Almuerzo": true
+      },
+      {
+        "Cena": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Pagos con dispositivos móviles mediante NFC": true
+      },
+      {
+        "Tarjetas de crédito": true
+      },
+      {
+        "Tarjetas de débito": true
+      },
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/cafeteria+candela/@38.9625776,-0.5853419,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fc10731fca1:0x33abc76e5f10a0b2!8m2!3d38.9625776!4d-0.5853419!16s%2Fg%2F11dxs2vn1t?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 3,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.9603826502849,-0.5805405572489422,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9603827,-0.5805406,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "cafeteria candela",
+  "subTitle": null,
+  "description": null,
+  "price": "$",
+  "categoryName": "Cafetería",
+  "address": "Av. Vicente Ferri, 5, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Av. Vicente Ferri, 5",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": "+34 606 09 17 78",
+  "phoneUnformatted": "+34606091778",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 38.9625776,
+    "lng": -0.5853419
+  },
+  "locatedIn": null,
+  "plusCode": "XC77+2V Canals, España",
+  "menu": null,
+  "totalScore": 4,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJofwxB8GfYQ0RsqAQX27HqzM",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "3723288793807102130",
+  "reviewsCount": 90,
+  "reviewsDistribution": {
+    "oneStar": 7,
+    "twoStar": 5,
+    "threeStar": 13,
+    "fourStar": 22,
+    "fiveStar": 43
+  },
+  "imagesCount": 64,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Vídeos",
+    "Ambiente",
+    "Del propietario",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:28:01.259Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, no está tan concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Mo": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "We": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 78
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 85
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Th": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 42
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 21
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 85
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 28
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 42
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 71
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 85
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 78
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 57
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "8 AM to 10 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "8 AM to 10 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "8 AM to 2 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "8 AM to 1 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "8 AM to 1 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "8 AM to 1 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "8 AM to 1 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "Pa I Café",
+      "reviewsCount": 59,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Bar Moments Canals",
+      "reviewsCount": 84,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería café en llet",
+      "reviewsCount": 159,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Brasilia Bar-Restaurante",
+      "reviewsCount": 729,
+      "totalScore": 4.3
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería Roccolo",
+      "reviewsCount": 35,
+      "totalScore": 4.5
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "niños",
+      "count": 5
+    }
+  ],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Entrada accesible para personas en silla de ruedas": true
+      },
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      },
+      {
+        "Sanitarios accesibles para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Planificación": [
+      {
+        "Se aceptan reservas": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Cafeter%C3%ADa+Roccolo/@38.9628798,-0.5850894,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fc1aa4e07f7:0x5bbd2c520f88c4df!8m2!3d38.9628798!4d-0.5850894!16s%2Fg%2F11c20bfbc4?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 2,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.9603826502849,-0.5805405572489422,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9603827,-0.5805406,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Cafetería Roccolo",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Cafetería",
+  "address": "Av. Vicente Ferri, 6, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Av. Vicente Ferri, 6",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": "+34 637 32 73 60",
+  "phoneUnformatted": "+34637327360",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 38.9628798,
+    "lng": -0.5850894
+  },
+  "locatedIn": null,
+  "plusCode": "XC77+5X Canals, España",
+  "menu": null,
+  "totalScore": 4.5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJ9wdOqsGfYQ0R38SID1IsvVs",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "6610488559009318111",
+  "reviewsCount": 35,
+  "reviewsDistribution": {
+    "oneStar": 1,
+    "twoStar": 1,
+    "threeStar": 4,
+    "fourStar": 4,
+    "fiveStar": 25
+  },
+  "imagesCount": 6,
+  "imageCategories": [
+    "Todas",
+    "Comida y bebida",
+    "Ambiente",
+    "Café",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:28:09.693Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, está menos concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 83
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 91
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 69
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 30
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Mo": [],
+    "Tu": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 5
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 19
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "We": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 5
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 5
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Th": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 19
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 5
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 6,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 36
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 19
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 13
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 11
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 0
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "8 AM to 1:30 PM, 5 to 9 PM"
+    },
+    {
+      "day": "sábado",
+      "hours": "8 AM to 1:30 PM, 5 to 9 PM"
+    },
+    {
+      "day": "domingo",
+      "hours": "8 AM to 1:30 PM, 5 to 9 PM"
+    },
+    {
+      "day": "lunes",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "martes",
+      "hours": "8 AM to 1:30 PM, 5 to 9 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "8 AM to 1:30 PM, 5 to 9 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "8 AM to 1:30 PM, 5 to 9 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "cafeteria candela",
+      "reviewsCount": 90,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Bar Moments Canals",
+      "reviewsCount": 84,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Pa I Café",
+      "reviewsCount": 59,
+      "totalScore": 4.4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Panadería Serra",
+      "reviewsCount": 173,
+      "totalScore": 3.8
+    },
+    {
+      "category": "También se buscó",
+      "title": "nueva vida",
+      "reviewsCount": 15,
+      "totalScore": 3.7
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+},
+{
+  "url": "https://www.google.com/maps/place/Pa+I+Caf%C3%A9/@38.9626514,-0.5849794,17z/data=!3m1!4b1!4m6!3m5!1s0xd619fc1e8db21b7:0xd9148a25e2a66374!8m2!3d38.9626514!4d-0.5849794!16s%2Fg%2F11f04l5svl?hl=es&entry=ttu",
+  "searchString": "coffee places",
+  "rank": 1,
+  "searchPageUrl": "https://www.google.com/maps/search/coffee%20places/@38.9603826502849,-0.5805405572489422,17z?hl=es",
+  "searchPageLoadedUrl": "https://www.google.com/maps/search/coffee+places/@38.9603827,-0.5805406,17z?hl=es&entry=ttu",
+  "isAdvertisement": false,
+  "title": "Pa I Café",
+  "subTitle": null,
+  "description": null,
+  "price": "$",
+  "categoryName": "Cafetería",
+  "address": "Av. Vicente Ferri, 46650 Canals, Valencia, España",
+  "neighborhood": null,
+  "street": "Av. Vicente Ferri",
+  "city": "Canals",
+  "postalCode": "46650",
+  "state": "Valencia",
+  "countryCode": "ES",
+  "website": null,
+  "phone": null,
+  "phoneUnformatted": null,
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 38.9626514,
+    "lng": -0.5849794
+  },
+  "locatedIn": null,
+  "plusCode": "XC78+32 Canals, España",
+  "menu": null,
+  "totalScore": 4.4,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJtyHb6MGfYQ0RdGOm4iWKFNk",
+  "categories": [
+    "Cafetería"
+  ],
+  "cid": "15642279301085553524",
+  "reviewsCount": 59,
+  "reviewsDistribution": {
+    "oneStar": 1,
+    "twoStar": 1,
+    "threeStar": 9,
+    "fourStar": 11,
+    "fiveStar": 37
+  },
+  "imagesCount": 15,
+  "imageCategories": [
+    "Todas",
+    "Ambiente",
+    "Street View y 360°"
+  ],
+  "scrapedAt": "2023-11-24T16:28:17.073Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "popularTimesLiveText": "Ahora: Por lo general, no está tan concurrido",
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {
+    "Su": [],
+    "Mo": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 39
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 4
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 4
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 4
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 2
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 29
+      }
+    ],
+    "Tu": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 45
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 12
+      }
+    ],
+    "We": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 14
+      }
+    ],
+    "Th": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 31
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 27
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 8
+      }
+    ],
+    "Fr": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 54
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 43
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 6
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 8
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 14
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 68
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 64
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 52
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 37
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 25
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 14
+      }
+    ],
+    "Sa": [
+      {
+        "hour": 5,
+        "occupancyPercent": 0
+      },
+      {
+        "hour": 6,
+        "occupancyPercent": 10
+      },
+      {
+        "hour": 7,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 8,
+        "occupancyPercent": 47
+      },
+      {
+        "hour": 9,
+        "occupancyPercent": 56
+      },
+      {
+        "hour": 10,
+        "occupancyPercent": 41
+      },
+      {
+        "hour": 11,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 12,
+        "occupancyPercent": 16
+      },
+      {
+        "hour": 13,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 14,
+        "occupancyPercent": 22
+      },
+      {
+        "hour": 15,
+        "occupancyPercent": 18
+      },
+      {
+        "hour": 16,
+        "occupancyPercent": 12
+      },
+      {
+        "hour": 17,
+        "occupancyPercent": 20
+      },
+      {
+        "hour": 18,
+        "occupancyPercent": 29
+      },
+      {
+        "hour": 19,
+        "occupancyPercent": 35
+      },
+      {
+        "hour": 20,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 21,
+        "occupancyPercent": 33
+      },
+      {
+        "hour": 22,
+        "occupancyPercent": 50
+      },
+      {
+        "hour": 23,
+        "occupancyPercent": 85
+      },
+      {
+        "hour": 0,
+        "occupancyPercent": 100
+      },
+      {
+        "hour": 1,
+        "occupancyPercent": 77
+      }
+    ]
+  },
+  "openingHours": [
+    {
+      "day": "viernes",
+      "hours": "6:30 AM to 2 a.m."
+    },
+    {
+      "day": "sábado",
+      "hours": "6:30 AM to 2 a.m."
+    },
+    {
+      "day": "domingo",
+      "hours": "Cerrado"
+    },
+    {
+      "day": "lunes",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "martes",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "miércoles",
+      "hours": "6 AM to 11 PM"
+    },
+    {
+      "day": "jueves",
+      "hours": "6 AM to 11 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "También se buscó",
+      "title": "cafeteria candela",
+      "reviewsCount": 90,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "Pub Tau",
+      "reviewsCount": 163,
+      "totalScore": 4.6
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafetería café en llet",
+      "reviewsCount": 159,
+      "totalScore": 4.2
+    },
+    {
+      "category": "También se buscó",
+      "title": "Cafeteria Somnis",
+      "reviewsCount": 425,
+      "totalScore": 4
+    },
+    {
+      "category": "También se buscó",
+      "title": "BUTIQ Café",
+      "reviewsCount": 36,
+      "totalScore": 4.4
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "pan",
+      "count": 3
+    }
+  ],
+  "additionalInfo": {
+    "Opciones de servicio": [
+      {
+        "Asientos al aire libre": true
+      },
+      {
+        "Consumo en el lugar": true
+      },
+      {
+        "Entrega a domicilio": false
+      }
+    ],
+    "Accesibilidad": [
+      {
+        "Espacio accesible para personas en silla de ruedas": true
+      },
+      {
+        "Sanitarios accesibles para personas en silla de ruedas": true
+      }
+    ],
+    "Qué ofrece": [
+      {
+        "Alcohol": true
+      },
+      {
+        "Café": true
+      },
+      {
+        "Cerveza": true
+      },
+      {
+        "Cócteles": true
+      },
+      {
+        "Licor fuerte": true
+      },
+      {
+        "Vino": true
+      }
+    ],
+    "Opciones del local": [
+      {
+        "Desayunos": true
+      },
+      {
+        "Desayuno-almuerzo": true
+      },
+      {
+        "Postres": true
+      },
+      {
+        "Espacio con asientos": true
+      }
+    ],
+    "Servicios": [
+      {
+        "Sanitario": true
+      },
+      {
+        "Tiene bar": true
+      }
+    ],
+    "Ambiente": [
+      {
+        "Agradable": true
+      },
+      {
+        "Informal": true
+      }
+    ],
+    "Público usual": [
+      {
+        "Grupos": true
+      }
+    ],
+    "Pagos": [
+      {
+        "Pagos con dispositivos móviles mediante NFC": true
+      },
+      {
+        "Tarjetas de crédito": true
+      },
+      {
+        "Tarjetas de débito": true
+      },
+      {
+        "Tarjetas de crédito": true
+      }
+    ],
+    "Menores": [
+      {
+        "Ideal para ir con niños": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": null,
+  "updatesFromCustomers": null,
+  "webResults": [],
+  "orderBy": [],
+  "imageUrls": [],
+  "reviews": []
+}]
