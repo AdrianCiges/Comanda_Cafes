@@ -272,7 +272,7 @@ from email.mime.text import MIMEText
 
 # Taking inputs
 email_sender = 'cafes.mailer@gmail.com'
-email_receiver = 'adrian.c.ciges@gmail.com'
+email_receiver = 'cafes.mailer@gmail.com'
 subject = st.text_input('Subject')
 body = st.text_area('Body')
 password = 'dummypassword1.'
@@ -280,8 +280,8 @@ password = 'dummypassword1.'
 if st.button("Send Email"):
     try:
         msg = MIMEText(body)
-        # msg['From'] = email_sender
-        # msg['To'] = email_receiver
+        msg['From'] = email_sender
+        msg['To'] = email_receiver
         msg['Subject'] = subject
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
