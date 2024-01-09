@@ -76,42 +76,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-tab1, tab2 = st.tabs(["Open Street Map", "Google Maps API"])
     
 # ------------------------------------------------------------------------------------CONFIG⬆️-------------------------------------
 # ---------------------------------------------------------------------------------FUNCIONES⬇️-------------------------------------
-
-# def extract_cafeterias_in_madrid():
-#     api = overpy.Overpass()
-
-#     # Definimos una consulta para extraer las cafeterías en Madrid
-#     query = f"""
-#     area["name"="{city}"];
-#     node["amenity"="cafe"](area);
-#     out;
-#     """
-
-#     result = api.query(query)
-
-#     cafes = []
-
-#     for node in result.nodes:
-#         cafe_info = {
-#             "Name": node.tags.get("name", "No especificado"),
-#             "Tlf": node.tags.get("phone", "-"),
-#             "Web": node.tags.get("website", "-"),
-#             "Facebook": node.tags.get("contact:facebook", "-"),
-#             "Calle": node.tags.get("addr:street", "-"),
-#             "Numero": node.tags.get("addr:housenumber", ""),
-#             "Horario": node.tags.get("opening_hours", "No especificado"),
-#             "Terraza": node.tags.get("outdoor_seating", "No especificado").capitalize(),
-#             "Latitude": float(node.lat),
-#             "Longitude": float(node.lon)
-#         }
-#         cafes.append(cafe_info)
-
-#     return cafes
-
 
 def convert_coordinates(input_string):
     # Dividir las coordenadas en latitud y longitud
@@ -224,105 +191,97 @@ def buscar_cafeterias(latitud, longitud, key, radio=10000):
 
         return df_cafeterias
 
-    # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
-    # --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
+# ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
+# --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
 
 loc = get_geolocation()
+    
+num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
 
-with tab1:
-    
-    num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_value=1, max_value=1000, step=1, format="%i")
-    
-    from_pc = st.sidebar.checkbox('Vista para ordenador')
-    
-    
-    if num_cafeterias != 1:
-        st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
-    else:
-        st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tu cafetería más cercana</h2>", unsafe_allow_html=True)
-        
-    
-    if st.checkbox('📍 Usar mi ubicación'):
-        location = [loc]
-        latitud = location[0]['coords']['latitude']
-        longitud = location[0]['coords']['longitude']
-    try:
-        latitud = round(float(latitud), 4)
-        longitud = round(float(longitud), 4)
-    except:
-        latitud = 40.4336
-        longitud = -3.7043
-    
-    
-    # # MAPEAR
-    # with st.expander('**📍ENCONTRAR MI UBICACIÓN**', expanded=expander_expanded):   
-    
-    #     m = leafmap.Map(locate_control=True, latlon_control=True, draw_export=False, minimap_control=True)
-    #     m.to_streamlit(height=600, width=685)
-    
-    df = get_data()
-    
-    if latitud == 40.4336 and longitud == -3.7043:
-        st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
-    
-    latitude = latitud
-    longitude = longitud
+from_pc = st.sidebar.checkbox('Vista para ordenador')
 
 
-    m = folium.Map(location=[latitude, longitude], zoom_start=15)
-    red_icon = folium.Icon(color='red')
+if num_cafeterias != 1:
+    st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
+else:
+    st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tu cafetería más cercana</h2>", unsafe_allow_html=True)
+    
+
+if st.checkbox('📍 Usar mi ubicación'):
+    location = [loc]
+    latitud = location[0]['coords']['latitude']
+    longitud = location[0]['coords']['longitude']
+try:
+    latitud = round(float(latitud), 4)
+    longitud = round(float(longitud), 4)
+except:
+    latitud = 40.4336
+    longitud = -3.7043
+
+
+df = get_data()
+
+if latitud == 40.4336 and longitud == -3.7043:
+    st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
+
+latitude = latitud
+longitude = longitud
+
+
+m = folium.Map(location=[latitude, longitude], zoom_start=15)
+red_icon = folium.Icon(color='red')
+folium.Marker(
+    [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
+).add_to(m)
+
+df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
+df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
+df['dif_sum'] = df['lat_dif'] + df['lon_dif']
+
+sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
+sorted_df = sorted_df.reset_index(drop=True)
+sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+
+coords = []
+for i,e in enumerate(sorted_df['Latitude']):
+    coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+sorted_df['coords'] = coords
+sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+
+for index, row in sorted_df.iterrows():
+    # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
+    
+    link = sorted_df["Cómo llegar"][index].replace('"', '%22')
+    popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
+
     folium.Marker(
-        [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
+        location=[row["Latitude"], row["Longitude"]],
+        popup=popup_content,
     ).add_to(m)
-    
-    df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
-    df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
-    df['dif_sum'] = df['lat_dif'] + df['lon_dif']
-    
-    sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
-    sorted_df = sorted_df.reset_index(drop=True)
-    sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
-    
-    coords = []
-    for i,e in enumerate(sorted_df['Latitude']):
-        coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
-    sorted_df['coords'] = coords
-    sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
-    
-    for index, row in sorted_df.iterrows():
-        # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
-        
-        link = sorted_df["Cómo llegar"][index].replace('"', '%22')
-        popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
-    
-        folium.Marker(
-            location=[row["Latitude"], row["Longitude"]],
-            popup=popup_content,
-        ).add_to(m)
-    
-    if from_pc:
-        folium_static(m, width=1025)
-    else:
-        folium_static(m, width=380)
 
-    # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
-    # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
+if from_pc:
+    folium_static(m, width=1025)
+else:
+    folium_static(m, width=380)
+
+# ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
+# --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
 
 import smtplib
 from email.mime.text import MIMEText
 
 # Taking inputs
-email_sender = st.text_input('From')
-email_receiver = st.text_input('To')
+email_sender = 'cafes.mailer@gmail.com'
+email_receiver = 'cafes.mailer@gmail.com'
 subject = st.text_input('Subject')
 body = st.text_area('Body')
-password = st.text_input('Password', type="password") 
+password = 'dummypassword1.'
 
 if st.button("Send Email"):
     try:
         msg = MIMEText(body)
-        msg['From'] = email_sender
-        msg['To'] = email_receiver
+        # msg['From'] = email_sender
+        # msg['To'] = email_receiver
         msg['Subject'] = subject
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -331,6 +290,6 @@ if st.button("Send Email"):
         server.sendmail(email_sender, email_receiver, msg.as_string())
         server.quit()
 
-        st.success('Email sent successfully! 🚀')
+        st.success('¡Email enviado con éxito! 🚀')
     except Exception as e:
-        st.error(f"Erreur lors de l’envoi de l’e-mail : {e}")
+        st.error(f"Error al enviar el mail : {e}")
