@@ -272,13 +272,13 @@ import smtplib
 from email.mime.text import MIMEText
 
 # Taking inputs
-email_sender = st.text_input('From', 'summittradingcard@gmail.com', disabled=True)
+email_sender = st.text_input('From', 'cafes.mailer@gmail.com', disabled=True)
 email_receiver = st.text_input('To')
 subject = st.text_input('Subject')
 body = st.text_area('Body')
 
 # Hide the password input
-password = st.text_input('Password', type="password", disabled=True)  
+password = 'dummypassword1.' 
 
 if st.button("Send Email"):
     try:
