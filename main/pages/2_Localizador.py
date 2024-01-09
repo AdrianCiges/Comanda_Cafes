@@ -272,7 +272,7 @@ from email.mime.text import MIMEText
 
 # Taking inputs
 email_sender = 'cafes.mailer@gmail.com'
-email_receiver = 'cafes.mailer@gmail.com'
+email_receiver = 'adrian.c.ciges@gmail.com'
 subject = st.text_input('Subject')
 body = st.text_area('Body')
 password = 'dummypassword1.'
