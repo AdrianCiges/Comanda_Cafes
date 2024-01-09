@@ -267,15 +267,16 @@ else:
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
 
+import streamlit as st
 import smtplib
 from email.mime.text import MIMEText
 
 # Taking inputs
-email_sender = 'cafes.mailer@gmail.com'
-email_receiver = 'cafes.mailer@gmail.com'
+email_sender = st.text_input('From')
+email_receiver = st.text_input('To')
 subject = st.text_input('Subject')
 body = st.text_area('Body')
-password = 'dummypassword1.'
+password = st.text_input('Password', type="password") 
 
 if st.button("Send Email"):
     try:
@@ -290,6 +291,6 @@ if st.button("Send Email"):
         server.sendmail(email_sender, email_receiver, msg.as_string())
         server.quit()
 
-        st.success('¡Email enviado con éxito! 🚀')
+        st.success('Email sent successfully! 🚀')
     except Exception as e:
-        st.error(f"Error al enviar el mail : {e}")
+        st.error(f"Erreur lors de l’envoi de l’e-mail : {e}")
