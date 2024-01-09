@@ -13,3 +13,5 @@ streamlit_js_eval
 #------------------------
 streamlit-js-eval==0.1.5
 googlemaps==4.10.0
+sendgrid
+Pillow
