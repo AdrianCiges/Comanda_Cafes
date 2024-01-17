@@ -273,12 +273,14 @@ else:
 st.write('')
 st.write('')
 st.write('')
-st.write('## Información sobre los datos')
+st.write('## 🏙️ Información sobre los datos')
 st.write('###### En el mapa encontrarás datos de diferentes municipios. Principalmente se han seleccionado aquellas localidades con más de 75.000 habitantes en España. Los municipios incluidos son los siguientes:')
 st.selectbox('Busca tu municipio',('A Coruña', 'Albacete', 'Alcázar de San Juan', 'Alcobendas', 'Alcorcón', 'Algeciras', 'Alicante', 'Almería', 'Ávila', 'Avilés', 'Badajoz', 'Badalona', 'Barakaldo', 'Barcelona', 'Bilbao', 'Burgos', 'Cáceres', 'Cádiz', 'Canals', 'Cartagena', 'Castellón', 'Ciudad Real', 'Córdoba', 'Cornellà de Llobregat', 'Coslada', 'Cuenca', 'Donosti', 'Dos Hermanas', 'Elche', 'Ferrol', 'Fuenlabrada', 'Getafe', 'Gijón', 'Girona', 'Granada', 'Guadalajara', 'Guetxo', 'Herencia', 'Huelva', 'Huesca', 'Jaén', 'Jerez de la Frontera', 'Las Palmas de Gran Canaria', 'Leganés', 'León', 'Lincoln (UK)', 'Lleida', 'Logroño', 'Londres (UK)', 'Lorca', 'Lugo', 'Madrid', 'Málaga', 'Marbella', 'Mataró', 'Mérida', 'Móstoles', 'Oporto (PT)', 'Ourense', 'Oviedo', 'Palencia', 'Palma de Mallorca', 'Pamplona', 'Parla', 'Pontevedra', 'Reus', 'Roma (IT)', 'Sabadell', 'Salamanca', 'San Fernando', 'Santander', 'Sant Boi de Llobregat', 'Santiago de Compostela', 'Santa Cruz de Tenerife', 'Santa Coloma de Gramanet', 'San Cristóbal de la Laguna', 'Segovia', 'Sevilla', 'Soria', 'Tarragona', 'Tavalera de la Reina', 'Telde', 'Terrassa', 'Teruel', 'Toledo', 'Torrejón de Ardoz', 'Torrevieja', 'Valencia', 'Valladolid', 'Vigo', 'Vitoria-Gasteiz', 'Xàtiva', 'Zamora', 'Zaragoza'))
 
 
 st.write('')
+st.write('###### Si tu municipio no se encuentra en la lista, puedes enviarnos un mensaje con la petición para incluir tu pueblo o ciudad')
+
     
 # email_sender = st.text_input('From', 'cafes.mailer@gmail.com', disabled=True)
 email_sender = 'cafes.mailer@gmail.com'
@@ -293,7 +295,7 @@ body = st.text_area('Petición de inclusión de pueblo/ciudad:')
 # Hide the password input
 password = 'nptu ware vlmy lqvr'
 
-if st.button("Enviar petición"):
+if st.button("✉️ Enviar petición"):
     try:
         msg = MIMEText(body)
         msg['From'] = email_sender
