@@ -272,13 +272,17 @@ import smtplib
 from email.mime.text import MIMEText
 
 # Taking inputs
-email_sender = st.text_input('From', 'cafes.mailer@gmail.com', disabled=True)
-email_receiver = st.text_input('To')
-subject = st.text_input('Subject')
-body = st.text_area('Body')
+# email_sender = st.text_input('From', 'cafes.mailer@gmail.com', disabled=True)
+email_sender = 'cafes.mailer@gmail.com'
+
+# email_receiver = st.text_input('To')
+email_receiver = 'cafes.mailer@gmail.com'
+
+# subject = st.text_input('Asunto')
+
+body = st.text_area('Petición de inclusión de pueblo/ciudad:')
 
 # Hide the password input
-password_nope = 'dummypassword1.' 
 password = 'nptu ware vlmy lqvr'
 
 if st.button("Send Email"):
@@ -294,6 +298,6 @@ if st.button("Send Email"):
         server.sendmail(email_sender, email_receiver, msg.as_string())
         server.quit()
 
-        st.success('Email sent successfully! 🚀')
+        st.success('Enviado con éxito! 🚀')
     except Exception as e:
-        st.error(f"Failed to send email: {e}")
+        st.error(f"Error al enviar tu petición: {e}")
