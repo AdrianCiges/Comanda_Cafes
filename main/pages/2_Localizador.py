@@ -274,7 +274,7 @@ st.write('')
 st.write('')
 st.write('')
 st.write('## Información sobre los datos')
-st.write('#### En el mapa encontrarás datos de diferentes municipios. Principalmente se han seleccionado aquellas localidades con más de 75.000 habitantes en España. Los municipios incluidos son los siguientes:')
+st.write('###### En el mapa encontrarás datos de diferentes municipios. Principalmente se han seleccionado aquellas localidades con más de 75.000 habitantes en España. Los municipios incluidos son los siguientes:')
 
 
 st.write('')
