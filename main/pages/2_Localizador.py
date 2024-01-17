@@ -270,7 +270,12 @@ else:
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
 
-st.write('\n')
+
+st.write('## Información sobre los datos')
+st.write('')
+st.write('')
+st.write('')
+    
 # email_sender = st.text_input('From', 'cafes.mailer@gmail.com', disabled=True)
 email_sender = 'cafes.mailer@gmail.com'
 
