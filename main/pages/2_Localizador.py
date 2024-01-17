@@ -274,6 +274,9 @@ st.write('')
 st.write('')
 st.write('')
 st.write('## Información sobre los datos')
+st.write('#### En el mapa encontrarás datos de diferentes municipios. Principalmente se han seleccionado aquellas localidades con más de 75.000 habitantes en España. Los municipios incluidos son los siguientes:')
+
+
 st.write('')
     
 # email_sender = st.text_input('From', 'cafes.mailer@gmail.com', disabled=True)
@@ -294,7 +297,7 @@ if st.button("Enviar petición"):
         msg = MIMEText(body)
         msg['From'] = email_sender
         msg['To'] = email_receiver
-        msg['Subject'] = f"Petición desde {loc['coords']['latitude']}, {loc['coords']['latitude']}"
+        msg['Subject'] = f"Petición desde {loc['coords']['latitude']}, {loc['coords']['longitude']}"
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
