@@ -24,6 +24,9 @@ import leafmap.foliumap as leafmap
 from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share_link, get_geolocation
 import json
 import googlemaps
+import streamlit as st
+import smtplib
+from email.mime.text import MIMEText
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -267,11 +270,7 @@ else:
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
 
-import streamlit as st
-import smtplib
-from email.mime.text import MIMEText
-
-# Taking inputs
+st.write('\n')
 # email_sender = st.text_input('From', 'cafes.mailer@gmail.com', disabled=True)
 email_sender = 'cafes.mailer@gmail.com'
 
@@ -285,7 +284,7 @@ body = st.text_area('Petición de inclusión de pueblo/ciudad:')
 # Hide the password input
 password = 'nptu ware vlmy lqvr'
 
-if st.button("Send Email"):
+if st.button("Enviar petición"):
     try:
         msg = MIMEText(body)
         msg['From'] = email_sender
