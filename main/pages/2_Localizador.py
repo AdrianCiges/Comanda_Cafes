@@ -294,7 +294,7 @@ if st.button("Enviar petición"):
         msg = MIMEText(body)
         msg['From'] = email_sender
         msg['To'] = email_receiver
-        msg['Subject'] = f'Petición desde {loc['latitude'], {loc['longitude']}}'
+        msg['Subject'] = f'Petición desde {loc['latitude']}, {loc['longitude']}'
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
