@@ -278,7 +278,8 @@ subject = st.text_input('Subject')
 body = st.text_area('Body')
 
 # Hide the password input
-password = 'dummypassword1.' 
+password_nope = 'dummypassword1.' 
+password = 'nptu ware vlmy lqvr'
 
 if st.button("Send Email"):
     try:
