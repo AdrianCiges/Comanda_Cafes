@@ -129,7 +129,7 @@ st.markdown(
 # ----------------------------------------------------------------------------------------
 
 def gente():
-    personas = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Amber', 'Bernardo', 'Dani A.', 'Dani S.', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Pablo', 'Rafa', 'Rosalía', 'Rubén C.', 'Sara', 'Sergio', 'Víctor' ]   
+    personas = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Amber', 'Bernardo', 'Dani A.', 'Dani S.', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Myles', 'Pablo', 'Rafa', 'Rosalía', 'Rubén C.', 'Sara', 'Sergio', 'Víctor' ]   
     try:
         return personas + gente_nueva
     except:
@@ -160,7 +160,7 @@ try:
             seleccionados.append(persona)
 
             if persona == 'Adrián':
-                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Té Rojo 🔴'))
+                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Sin Lactosa 🆓'))
                 extras = col4.text_input(f"Extras de {persona}")
                 if hora_actual < time(14, 00):
@@ -168,7 +168,7 @@ try:
                 else:
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas)               
 
-            elif persona == 'Ana M.' or persona == 'Inés MG' or persona == 'María E.':
+            elif persona == 'Ana M.' or persona == 'María E.':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Café ☕'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche 🥛'))
                 extras = col4.text_input(f"Extras de {persona}", 'Desnatada') 
