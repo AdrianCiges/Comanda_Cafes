@@ -136,6 +136,7 @@ for persona2 in clean_user_input():
     try:
 
         col10, col20, col30, col40, col50 = st.columns(5)
+        st.write('-----------------')
 
         seleccion2 = col10.checkbox(persona2)
 
