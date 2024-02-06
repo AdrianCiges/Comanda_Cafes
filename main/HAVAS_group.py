@@ -224,7 +224,7 @@ try:
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
 
             elif persona == 'Lucía':
-                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Descafeinado ☕'))
+                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Té Negro ⚫'))
                 con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche 🥛'))
                 extras = col4.text_input(f"Extras de {persona}") 
                 barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
