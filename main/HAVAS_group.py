@@ -129,7 +129,7 @@ st.markdown(
 # ----------------------------------------------------------------------------------------
 
 def gente():
-    personas = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Amber', 'Bernardo', 'Dani A.', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Myles', 'Pablo', 'Rafa', 'Rosalía', 'Rubén C.', 'Sara', 'Sergio', 'Víctor' ]   
+    personas = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Amber', 'Bernardo', 'Dani A.', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Myles', 'Pablo', 'Rafa', 'Rosalía', 'Rubén Cidón', 'Rubén Carrillo', 'Sara', 'Sergio', 'Víctor' ]   
     try:
         return personas + gente_nueva
     except:
