@@ -226,7 +226,7 @@ df = get_data()
 
 nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Sirve aperitivos', 'Tiene terraza', 'Sirve Cerveza', 'Sirve desayunos/almuerzos', 'Puedes sentarte', 'Para llevar', 'Sirve posters', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'Sirve vino']
 df.columns = nuevos_nombres
-st.dataframe(sorted_df)
+st.dataframe(df)
 # df = df.drop_duplicates()
 
 if latitud == 40.4336 and longitud == -3.7043:
