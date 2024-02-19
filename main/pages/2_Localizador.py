@@ -137,7 +137,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     return int(distance)
 
 
-@st.cache_data
+# @st.cache_data
 def get_data():
     data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'conjunto_cafes_nodup.xlsx')
     df = pd.read_excel(data_url)
@@ -268,7 +268,7 @@ if from_pc:
 else:
     folium_static(m, width=380)
 
-st.table(sorted_df)
+st.dataframe(sorted_df)
 
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
