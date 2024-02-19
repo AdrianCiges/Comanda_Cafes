@@ -223,6 +223,10 @@ except:
 
 
 df = get_data()
+
+nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Sirve aperitivos', 'Tiene terraza', 'Sirve Cerveza', 'Sirve desayunos/almuerzos', 'Puedes sentarte', 'Para llevar', 'Sirve posters', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'Sirve vino']
+df.columns = nuevos_nombres
+st.dataframe(sorted_df)
 # df = df.drop_duplicates()
 
 if latitud == 40.4336 and longitud == -3.7043:
@@ -231,20 +235,19 @@ if latitud == 40.4336 and longitud == -3.7043:
 latitude = latitud
 longitude = longitud
 
-
 m = folium.Map(location=[latitude, longitude], zoom_start=15)
 red_icon = folium.Icon(color='red')
 folium.Marker(
     [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
 ).add_to(m)
 
-df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['latitud'])]
-df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['longitud'])]
+df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitud'])]
+df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitud'])]
 df['dif_sum'] = df['lat_dif'] + df['lon_dif']
 
 sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
 sorted_df = sorted_df.reset_index(drop=True)
-sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['longitud'][i]) for i,e in enumerate(sorted_df['latitud'])]
+sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitud'][i]) for i,e in enumerate(sorted_df['Latitud'])]
 
 coords = []
 for i,e in enumerate(sorted_df['latitud']):
@@ -256,7 +259,7 @@ for index, row in sorted_df.iterrows():
     # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
     
     link = sorted_df["url"][index].replace('"', '%22')
-    popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["nombre"]}</a></strong></div>'
+    popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Nombre"]}</a></strong></div>'
 
     folium.Marker(
         location=[row["latitud"], row["longitud"]],
@@ -267,8 +270,6 @@ if from_pc:
     folium_static(m, width=1025)
 else:
     folium_static(m, width=380)
-
-st.dataframe(sorted_df)
 
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
