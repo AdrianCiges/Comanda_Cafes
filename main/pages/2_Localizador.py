@@ -141,7 +141,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 def get_data():
     data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'conjunto_cafes_nodups.xlsx')
     df = pd.read_excel(data_url)
-    df = df.drop('Unnamed: 0', axis=1)
+    df = df.drop('Columna1', axis=1)
     return df
 
 # def buscar_cafeterias(latitud, longitud, key, radio=10000):
