@@ -223,6 +223,7 @@ except:
 
 
 df = get_data()
+df = df.drop_duplicates()
 
 if latitud == 40.4336 and longitud == -3.7043:
     st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
