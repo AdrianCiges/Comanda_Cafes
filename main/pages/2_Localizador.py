@@ -139,7 +139,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 
 @st.cache_data
 def get_data():
-    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'conjunto_cafes.xlsx')
+    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'conjunto_cafes_nodups.xlsx')
     df = pd.read_excel(data_url)
     df = df.drop('Unnamed: 0', axis=1)
     return df
@@ -223,7 +223,7 @@ except:
 
 
 df = get_data()
-df = df.drop_duplicates()
+# df = df.drop_duplicates()
 
 if latitud == 40.4336 and longitud == -3.7043:
     st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
