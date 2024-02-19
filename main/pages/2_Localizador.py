@@ -175,8 +175,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 )
                 df = df[df[column].isin(user_cat_input)]
             elif is_numeric_dtype(df[column]):
-                _min = int(df[column].min())
-                _max = int(df[column].max())
+                _min = float(df[column].min())
+                _max = float(df[column].max())
                 step = (_max - _min) / 100
                 user_num_input = right.slider(
                     f"{column}",
