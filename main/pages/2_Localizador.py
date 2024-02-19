@@ -262,7 +262,7 @@ for index, row in sorted_df.iterrows():
     popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Nombre"]}</a></strong></div>'
 
     folium.Marker(
-        location=[row["latitud"], row["longitud"]],
+        location=[row["Latitud"], row["Longitud"]],
         popup=popup_content,
     ).add_to(m)
 
