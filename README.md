@@ -20,4 +20,4 @@
 ⏫ Deployamos el código en Streamlit.app, con las liberías y dependencias necesarias y... ¡a disfrutar!
 
 ## 3 - WEB (STREAMLIT) 🌐 <a name="WEB"/>
-👉🏼 https://comanda-cafes.streamlit.app/
+👉🏼 [https://comanda-cafes.streamlit.app/](https://ruta-del-cafe.streamlit.app/)https://ruta-del-cafe.streamlit.app/
