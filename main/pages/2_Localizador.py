@@ -139,60 +139,60 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 
 @st.cache_data
 def get_data():
-    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_espana.xlsx')
+    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'conjunto_cafes.xlsx')
     df = pd.read_excel(data_url)
     df = df.drop('Unnamed: 0', axis=1)
     return df
 
-def buscar_cafeterias(latitud, longitud, key, radio=10000):
-    # Configurar la clave de API
+# def buscar_cafeterias(latitud, longitud, key, radio=10000):
+#     # Configurar la clave de API
 
-    gmaps = googlemaps.Client(key=key)
+#     gmaps = googlemaps.Client(key=key)
 
-    # Realizar la búsqueda
-    resultados = gmaps.places_nearby(location=(latitud, longitud), radius=radio, type='cafe')
+#     # Realizar la búsqueda
+#     resultados = gmaps.places_nearby(location=(latitud, longitud), radius=radio, type='cafe')
 
-    # Extraer la información deseada
-    cafeterias = []
-    for lugar in resultados['results']:
-        # Detalles básicos
-        place_id = lugar.get('place_id', None)
-        nombre = lugar.get('name', None)
-        latitud = lugar.get('geometry', {}).get('location', None).get('lat')
-        longitud = lugar.get('geometry', {}).get('location', None).get('lng')
-        rating = lugar.get('rating', None)
-        opiniones = lugar.get('user_ratings_total', None)
+#     # Extraer la información deseada
+#     cafeterias = []
+#     for lugar in resultados['results']:
+#         # Detalles básicos
+#         place_id = lugar.get('place_id', None)
+#         nombre = lugar.get('name', None)
+#         latitud = lugar.get('geometry', {}).get('location', None).get('lat')
+#         longitud = lugar.get('geometry', {}).get('location', None).get('lng')
+#         rating = lugar.get('rating', None)
+#         opiniones = lugar.get('user_ratings_total', None)
 
-        # Obtener detalles del lugar
-        detalles = gmaps.place(place_id=place_id)
-        abierto_ahora = detalles.get('result', {}).get('current_opening_hours', {}).get('open_now', None)
-        wheelchair_accessible_entrance = detalles.get('result', {}).get('wheelchair_accessible_entrance', None) 
-        price_level = detalles.get('result', {}).get('price_level', None)
-        reservable = detalles.get('result', {}).get('reservable', None)
+#         # Obtener detalles del lugar
+#         detalles = gmaps.place(place_id=place_id)
+#         abierto_ahora = detalles.get('result', {}).get('current_opening_hours', {}).get('open_now', None)
+#         wheelchair_accessible_entrance = detalles.get('result', {}).get('wheelchair_accessible_entrance', None) 
+#         price_level = detalles.get('result', {}).get('price_level', None)
+#         reservable = detalles.get('result', {}).get('reservable', None)
         
-        # Más detalles
-        serves_breakfast = detalles.get('result', {}).get('serves_breakfast', None)
-        serves_brunch = detalles.get('result', {}).get('serves_brunch', None)
-        serves_lunch = detalles.get('result', {}).get('serves_lunch', None)
-        serves_dinner = detalles.get('result', {}).get('serves_dinner', None)
-        serves_vegetarian_food = detalles.get('result', {}).get('serves_vegetarian_food', None)
-        serves_beer = detalles.get('result', {}).get('serves_beer', None)
-        serves_wine = detalles.get('result', {}).get('serves_wine', None)
-        takeout = detalles.get('result', {}).get('takeout', None)
-        url = detalles.get('result', {}).get('url')
+#         # Más detalles
+#         serves_breakfast = detalles.get('result', {}).get('serves_breakfast', None)
+#         serves_brunch = detalles.get('result', {}).get('serves_brunch', None)
+#         serves_lunch = detalles.get('result', {}).get('serves_lunch', None)
+#         serves_dinner = detalles.get('result', {}).get('serves_dinner', None)
+#         serves_vegetarian_food = detalles.get('result', {}).get('serves_vegetarian_food', None)
+#         serves_beer = detalles.get('result', {}).get('serves_beer', None)
+#         serves_wine = detalles.get('result', {}).get('serves_wine', None)
+#         takeout = detalles.get('result', {}).get('takeout', None)
+#         url = detalles.get('result', {}).get('url')
 
-        cafeterias.append([nombre, abierto_ahora, latitud, longitud, rating, 
-                           opiniones, wheelchair_accessible_entrance, reservable, price_level,
-                           serves_breakfast, serves_brunch, serves_lunch, serves_dinner,
-                           serves_vegetarian_food, serves_beer, serves_wine, takeout, url])
+#         cafeterias.append([nombre, abierto_ahora, latitud, longitud, rating, 
+#                            opiniones, wheelchair_accessible_entrance, reservable, price_level,
+#                            serves_breakfast, serves_brunch, serves_lunch, serves_dinner,
+#                            serves_vegetarian_food, serves_beer, serves_wine, takeout, url])
 
-        # Convertir a DataFrame
-        df_cafeterias = pd.DataFrame(cafeterias, columns=['nombre', 'abierto_ahora', 'latitud', 'longitud', 'rating', 
-                                                          'opiniones', 'wheelchair_accessible_entrance', 'reservable','price_level',
-                                                          'serves_breakfast', 'serves_brunch', 'serves_lunch', 'serves_dinner',
-                                                          'serves_vegetarian_food', 'serves_beer', 'serves_wine', 'takeout', 'url'])
+#         # Convertir a DataFrame
+#         df_cafeterias = pd.DataFrame(cafeterias, columns=['nombre', 'abierto_ahora', 'latitud', 'longitud', 'rating', 
+#                                                           'opiniones', 'wheelchair_accessible_entrance', 'reservable','price_level',
+#                                                           'serves_breakfast', 'serves_brunch', 'serves_lunch', 'serves_dinner',
+#                                                           'serves_vegetarian_food', 'serves_beer', 'serves_wine', 'takeout', 'url'])
 
-        return df_cafeterias
+#         return df_cafeterias
 
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
@@ -237,24 +237,24 @@ folium.Marker(
     [latitude, longitude], popup='<div style="white-space: nowrap;">Tu ubicación</div>', tooltip="Tu ubicación", icon=red_icon
 ).add_to(m)
 
-df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitude'])]
-df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitude'])]
+df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['latitud'])]
+df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['longitud'])]
 df['dif_sum'] = df['lat_dif'] + df['lon_dif']
 
 sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
 sorted_df = sorted_df.reset_index(drop=True)
-sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitude'][i]) for i,e in enumerate(sorted_df['Latitude'])]
+sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['longitud'][i]) for i,e in enumerate(sorted_df['latitud'])]
 
 coords = []
-for i,e in enumerate(sorted_df['Latitude']):
-    coords.append(str(e) + ", " +str(sorted_df['Longitude'][i]))
+for i,e in enumerate(sorted_df['latitud']):
+    coords.append(str(e) + ", " +str(sorted_df['longitud'][i]))
 sorted_df['coords'] = coords
-sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
+# sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
 
 for index, row in sorted_df.iterrows():
     # Crea el popup con el enlace clickeable que se abrirá en una nueva ventana
     
-    link = sorted_df["Cómo llegar"][index].replace('"', '%22')
+    link = sorted_df["url"][index].replace('"', '%22')
     popup_content = f'<div style="white-space: nowrap;">A {row["Metros"]} metros: <strong><a href="{link}" target="_blank" style="text-decoration: underline; cursor: pointer;">{row["Name"]}</a></strong></div>'
 
     folium.Marker(
