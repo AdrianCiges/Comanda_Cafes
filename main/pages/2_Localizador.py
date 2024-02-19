@@ -180,8 +180,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 step = (_max - _min) / 100
                 user_num_input = right.slider(
                     f"{column}",
-                    min_value=_min,
-                    max_value=_max,
+                    min_value=int(_min),
+                    max_value=int(_max),
                     value=(_min, _max),
                     step=step,
                 )
