@@ -250,8 +250,8 @@ sorted_df = sorted_df.reset_index(drop=True)
 sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitud'][i]) for i,e in enumerate(sorted_df['Latitud'])]
 
 coords = []
-for i,e in enumerate(sorted_df['latitud']):
-    coords.append(str(e) + ", " +str(sorted_df['longitud'][i]))
+for i,e in enumerate(sorted_df['Latitud']):
+    coords.append(str(e) + ", " +str(sorted_df['Longitud'][i]))
 sorted_df['coords'] = coords
 # sorted_df['Cómo llegar'] = ['https://www.google.com/maps/search/'+convert_coordinates(e) for e in sorted_df['coords']]
 
