@@ -148,7 +148,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 def get_data():
     my_bar = st.progress(0)
     for percent_complete in range(100):
-        time.sleep(0.1)
+        timee.sleep(0.1)
         my_bay.progress(percent_complete +1)
     
     data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'conjunto_cafes_nodupl.xlsx')
