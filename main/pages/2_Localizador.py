@@ -161,9 +161,10 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     modification_container = st.container()
 
     with modification_container:
-        columnas_filtro = ['Nombre', 'Ciudad','Nivel de precios','Puntuación', 'Nº Comentarios','Horario','Ocupación Ahora', 'LGBT+ friendly', 
-                           'Sirve aperitivos', 'Tiene terraza', 'Sirve Cerveza', 'Sirve desayunos/almuerzos', 'Puedes sentarte', 'Para llevar', 
-                           'Sirve posters', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'Sirve vino',
+        columnas_filtro = ['Nombre', 'Ciudad','Nivel de precios','Puntuación', 'Nº Comentarios',
+                             'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 
+                             'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
+                             'Horario hoy', 'Ocupación Ahora'
                           ]
         to_filter_columns = st.multiselect("Filtrar tabla por:", columnas_filtro, placeholder="Selecciona un campo")
         for column in to_filter_columns:
