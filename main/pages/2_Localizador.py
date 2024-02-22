@@ -381,7 +381,7 @@ df_conjunto = df
 horarios_hoy = []
 
 for h in df_conjunto['Horario']:
-    h = json.loads(cadena_json_h)
+    h = json.loads(h)
     horario_hoy = next((e['hours'] for e in h if e['day'] == dia_semana_es), "Desconocido")
     horarios_hoy.append(horario_hoy)
 
