@@ -380,7 +380,7 @@ df_conjunto = df
 
 horarios_hoy = []
 
-for h_str in df_conjunto['horarios']:
+for h_str in df_conjunto['Horario']:
     if len(h) > 0:
         h = json.loads(h_str)
         for dia in h:
