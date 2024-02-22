@@ -310,7 +310,7 @@ nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longi
 df.columns = nuevos_nombres
 
 # Reordenamos el dataframe
-df = df['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Puedes sentarte', 'Para llevar', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis']
+df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Puedes sentarte', 'Para llevar', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis']]
 
 df = filter_dataframe(df)
 st.dataframe(df.drop(['Link','Latitud','Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente',], axis=1))
