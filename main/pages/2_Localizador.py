@@ -387,6 +387,7 @@ columna_ocupacion_ahora = []
 
 for o in df[columna_ocupacion_hoy]:
     try:
+        json.loads(o.replace("'", '"'))
         for h in o:
             if h['hour'] == hora_actual:
                 columna_ocupacion_ahora.append(h['occupancyPercent'])
