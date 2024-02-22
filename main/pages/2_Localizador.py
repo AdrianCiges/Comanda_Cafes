@@ -381,8 +381,8 @@ df_conjunto = df
 horarios_hoy = []
 
 for h_str in df_conjunto['Horario']:
+    h = json.loads(h_str)
     if len(h) > 0:
-        h = json.loads(h_str)
         for dia in h:
             print(dia)
             if dia['day'] == dia_semana_es:
