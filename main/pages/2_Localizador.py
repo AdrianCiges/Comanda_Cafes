@@ -393,13 +393,13 @@ for o in df[columna_ocupacion_hoy]:
     except:
         columna_ocupacion_ahora.append('Desconocido') # Quizá mejor ponerlo a 0 para que el filtro pueda ser numeral ??? ❗❗❗❗❗❗
 
-df['columna_ocupacion_ahora'] = columna_ocupacion_ahora
+df['Ocupacion Ahora'] = columna_ocupacion_ahora
 
 # Reordenamos el dataframe
 df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 
          'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 
          'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
-         columna_dia_hoy_raw, columna_dia_hoy, columna_ocupacion_hoy #, columna_ocupacion_ahora
+         columna_dia_hoy_raw, columna_dia_hoy, columna_ocupacion_hoy, 'Ocupacion Ahora'
         ]]
 
 #❗Intentamos generar una columna con el horario actual ----------------------------------------------------------------------------------------------------------
