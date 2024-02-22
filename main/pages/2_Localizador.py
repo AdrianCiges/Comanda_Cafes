@@ -147,7 +147,18 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 @st.cache_data
 def get_data():
     data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_horarios_ocupacion.xlsx')
-    df = pd.read_excel(data_url)
+    df = pd.read_excel(data_url, engine='openpyxl', usecols= [ 'Columna1', 'url', 'nombre', 'ciudad', 'precio', 'latitud', 'longitud',
+                                                               'rating', 'reviews', 'cerrado', 'cerrado_temporal', 'horarios',
+                                                               'ocupacion', 'lgbt', 'aperitivos', 'terraza', 'cerveza',
+                                                               'desayuno_almuerzo', 'sentarse', 'llevar', 'postres', 'acepta_reserva',
+                                                               'perros', 'perros_fuera', 'wifi', 'wifi_gratis', 'vino',
+                                                               'horario_raw_lunes', 'horario_raw', 'horario_raw_martes',
+                                                               'horario_martes', 'horario_raw_miércoles', 'horario_miércoles',
+                                                               'horario_raw_jueves', 'horario_jueves', 'horario_raw_viernes',
+                                                               'horario_viernes', 'horario_raw_sábado', 'horario_sábado',
+                                                               'horario_raw_domingo', 'horario_domingo', 'ocupacion_lunes',
+                                                               'ocupacion_martes', 'ocupacion_miércoles', 'ocupacion_jueves',
+                                                               'ocupacion_viernes', 'ocupacion_sábado', 'ocupacion_domingo' ])
     df = df.drop('Columna1', axis=1)
     return df
 
