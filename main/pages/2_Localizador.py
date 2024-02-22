@@ -355,7 +355,7 @@ df = get_data()
 
 # Obtener la fecha y hora actual
 ahora = datetime.now()
-hora_actual_float = datetime.now().hour + datetime.now().minute / 60
+hora_actual_float = datetime.now().hour + datetime.now().minute / 60 + 1
 hora_actual = datetime.now().hour + 1
 st.write(hora_actual_float)
 
