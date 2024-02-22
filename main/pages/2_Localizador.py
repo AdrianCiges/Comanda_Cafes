@@ -338,16 +338,7 @@ else:
     st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tu cafetería más cercana</h2>", unsafe_allow_html=True)
     
 
-if st.checkbox('📍 Usar mi ubicación'):
-    location = [loc]
-    latitud = location[0]['coords']['latitude']
-    longitud = location[0]['coords']['longitude']
-try:
-    latitud = round(float(latitud), 4)
-    longitud = round(float(longitud), 4)
-except:
-    latitud = 40.4336
-    longitud = -3.7043
+
 
 
 # Cargamos el dataframe (necesitamos optimizar esto)
@@ -357,7 +348,6 @@ df = get_data()
 ahora = datetime.now()
 hora_actual_float = datetime.now().hour + datetime.now().minute / 60 + 1
 hora_actual = datetime.now().hour + 1
-st.write(hora_actual_float)
 
 # Obtener el nombre del día de la semana en inglés
 dia_semana_ing = ahora.strftime("%A")
@@ -471,6 +461,17 @@ df.columns = nuevos_nombres
 df = filter_dataframe(df)
 st.dataframe(df.drop(['Link','Latitud','Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente',], axis=1))
 # df = df.drop_duplicates()
+
+if st.checkbox('📍 Usar mi ubicación'):
+    location = [loc]
+    latitud = location[0]['coords']['latitude']
+    longitud = location[0]['coords']['longitude']
+try:
+    latitud = round(float(latitud), 4)
+    longitud = round(float(longitud), 4)
+except:
+    latitud = 40.4336
+    longitud = -3.7043
 
 if latitud == 40.4336 and longitud == -3.7043:
     st.warning('Estás utilizando la ubicación predeterminada en Glorieta de Quevedo. Para usar tu ubicación, marca la casilla de "📍 Usar mi ubicación"')
