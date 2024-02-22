@@ -405,6 +405,9 @@ for o in df[columna_ocupacion_hoy]:
 df['Ocupación Ahora'] = columna_ocupacion_ahora
 
 # ------------------------------------------------------
+lista = list(df[columna_dia_hoy])
+st.write(lista)
+
 st.write(df[columna_dia_hoy])
 # ------------------------------------------------------
 
