@@ -380,7 +380,7 @@ df_conjunto = df
 
 horarios_hoy = []
 
-for h in df_conjunto['horarios']:
+for h in df_conjunto['Horario']:
     horario_hoy = next((e['hours'] for e in h if e['day'] == dia_semana_es), "Desconocido")
     horarios_hoy.append(horario_hoy)
 
