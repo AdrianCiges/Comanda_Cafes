@@ -378,19 +378,32 @@ dia_semana_es = dias_semana_es.get(dia_semana_ing, "Desconocido")
 # renombramos df
 df_conjunto = df
 
+def cargar_json_con_escape(cadena):
+    """Intenta cargar una cadena JSON, escapando secuencias inválidas."""
+    try:
+        # Intenta decodificar el JSON directamente
+        return json.loads(cadena)
+    except json.decoder.JSONDecodeError:
+        # Intenta reparar la cadena escapando las barras invertidas y reintenta
+        cadena_escapada = cadena.replace('\\', '\\\\')
+        return json.loads(cadena_escapada)
+
 horarios_hoy = []
 
 for h_str in df_conjunto['Horario']:
-    h = json.loads(h_str.replace("'", '"'))  # Convertir de JSON a lista de diccionarios
-    if len(h) > 0:
+    # Usa la función de carga segura que maneja secuencias de escape inválidas
+    h = cargar_json_con_escape(h_str.replace("'", '"'))
+    
+    horario_hoy = "Desconocido"  # Valor predeterminado
+    if h:
         for dia in h:
-            print(dia)
-            if dia['day'] == dia_semana_es:
-                horario_hoy = str(dia['hours'])
-        
-    else:
-        horario_hoy = "Desconocido"
+            print(dia)  # Solo para depuración; quitar o comentar en producción
+            if dia.get('day') == dia_semana_es:
+                horario_hoy = str(dia.get('hours', "Desconocido"))
+                break  # Asegura salir del bucle una vez que encuentres el día correspondiente
+    horarios_hoy.append(horario_hoy)
 
+# Asegúrate de que esta línea se ejecute fuera del bucle para llenar la columna correctamente
 df_conjunto['horario_raw'] = horarios_hoy
 
 horarios_hoy = procesar_horarios(horarios_hoy) # Cazamos el horario de hoy
