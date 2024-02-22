@@ -158,7 +158,8 @@ def get_data():
                                                                'horario_viernes', 'horario_raw_sábado', 'horario_sábado',
                                                                'horario_raw_domingo', 'horario_domingo', 'ocupacion_lunes',
                                                                'ocupacion_martes', 'ocupacion_miércoles', 'ocupacion_jueves',
-                                                               'ocupacion_viernes', 'ocupacion_sábado', 'ocupacion_domingo' ])
+                                                               'ocupacion_viernes', 'ocupacion_sábado', 'ocupacion_domingo' ],
+                      nrows=20000)
     df = df.drop('Columna1', axis=1)
     return df
 
