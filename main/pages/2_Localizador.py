@@ -25,6 +25,7 @@ from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share
 import json
 import googlemaps
 import streamlit as st
+import ast
 import smtplib
 from email.mime.text import MIMEText
 import streamlit.components.v1 as components
@@ -404,41 +405,37 @@ for o in df[columna_ocupacion_hoy]:
 
 df['Ocupación Ahora'] = columna_ocupacion_ahora
 
-# ------------------------------------------------------
-lista = list(df[columna_dia_hoy])
-st.write(lista)
-
-st.write(df[columna_dia_hoy])
-# ------------------------------------------------------
-
 output = []
 
-for horario in df[columna_dia_hoy]:
+for horario_str in df[columna_dia_hoy]:
+    try:
+        # Convertir el string que representa una lista a una lista real
+        horario = ast.literal_eval(horario_str)
+    except (ValueError, SyntaxError):
+        # Si hay un error en la conversión, establecer horario a una lista vacía
+        horario = []
+
     horario_dict = {}
-    
+
     if len(horario) > 1:
         for i, sublista in enumerate(horario):
-            if i == 0:
+            if len(sublista) == 2:
                 inicio, fin = sublista
                 duracion = fin - inicio
                 if duracion < 0:
-                    duracion += 12
+                    duracion += 12 if i == 0 else 24
                 horario_dict[inicio] = duracion
-            if i == 1:
+    else:
+        for sublista in horario:
+            if len(sublista) == 2:
                 inicio, fin = sublista
                 duracion = fin - inicio
                 if duracion < 0:
                     duracion += 24
                 horario_dict[inicio] = duracion
-            
-    else:
-        for sublista in horario:
-            inicio, fin = sublista
-            duracion = fin - inicio
-            if duracion < 0:
-                duracion += 24
-            horario_dict[inicio] = duracion
+                
     output.append(horario_dict)
+
 
 abierto_ahora = []
 
