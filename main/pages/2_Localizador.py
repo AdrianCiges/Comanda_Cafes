@@ -146,7 +146,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 
 @st.cache_data
 def get_data():
-    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'conjunto_cafes_nodupl.xlsx')
+    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_horarios_ocupacionxlsx')
     df = pd.read_excel(data_url)
     df = df.drop('Columna1', axis=1)
     return df
@@ -258,53 +258,53 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 #         return df_cafeterias
 
 
-def convertir_a_decimal(hora_str):
-    # Normalizar la cadena para unificar los formatos de AM/PM y eliminar espacios no estándar
-    hora_str = re.sub(r'\s+', ' ', hora_str)  # Convierte todos los espacios a espacios estándar
-    hora_str = hora_str.replace('\xa0', ' ').upper()  # Reemplaza espacios no separables y normaliza a mayúsculas
-    hora_str = re.sub(r'([AP])\.?\s*M\.?', r'\1M', hora_str)  # Normaliza las marcas de AM/PM
+# def convertir_a_decimal(hora_str):
+#     # Normalizar la cadena para unificar los formatos de AM/PM y eliminar espacios no estándar
+#     hora_str = re.sub(r'\s+', ' ', hora_str)  # Convierte todos los espacios a espacios estándar
+#     hora_str = hora_str.replace('\xa0', ' ').upper()  # Reemplaza espacios no separables y normaliza a mayúsculas
+#     hora_str = re.sub(r'([AP])\.?\s*M\.?', r'\1M', hora_str)  # Normaliza las marcas de AM/PM
 
-    # Extraer horas, minutos y periodo (AM/PM) utilizando una expresión regular
-    match = re.match(r'(\d+):?(\d*)\s*([AP]M)?', hora_str)
-    if match:
-        horas, minutos, periodo = match.groups()
-        horas = int(horas)
-        minutos = int(minutos) if minutos else 0
-        if periodo == 'PM' and horas < 12:
-            horas += 12
-        elif periodo == 'AM' and horas == 12:
-            horas = 0
+#     # Extraer horas, minutos y periodo (AM/PM) utilizando una expresión regular
+#     match = re.match(r'(\d+):?(\d*)\s*([AP]M)?', hora_str)
+#     if match:
+#         horas, minutos, periodo = match.groups()
+#         horas = int(horas)
+#         minutos = int(minutos) if minutos else 0
+#         if periodo == 'PM' and horas < 12:
+#             horas += 12
+#         elif periodo == 'AM' and horas == 12:
+#             horas = 0
         
-        # Convertir horas y minutos a formato decimal
-        hora_decimal = horas + minutos / 60
+#         # Convertir horas y minutos a formato decimal
+#         hora_decimal = horas + minutos / 60
         
-        return round(hora_decimal, 2)
-    return None
+#         return round(hora_decimal, 2)
+#     return None
 
-def procesar_horarios(horarios):
-    intervalos_finales = []
-    for horario in horarios:
-        # Inicializar una lista para este horario, que podría contener uno o dos intervalos
-        intervalos_de_este_horario = []
-        partes = horario.split(',')
-        for parte in partes:
-            # Usar expresión regular para dividir en 'inicio' y 'fin', manejando posibles errores
-            match = re.match(r'(.*?)(?:\s+to\s+)(.*)', parte.strip(), re.IGNORECASE)
-            if match:
-                inicio, fin = match.groups()
-                inicio_decimal = convertir_a_decimal(inicio)
-                fin_decimal = convertir_a_decimal(fin)
-                # Ajuste por cruce de medianoche si es necesario
-                if fin_decimal < inicio_decimal:
-                    fin_decimal += 24
-                intervalos_de_este_horario.append([inicio_decimal, fin_decimal])
-            else:
-#                 print(f"No se pudo procesar el intervalo: {parte}")
-#                 intervalos_de_este_horario.append('Desconocido')
-                pass
-        # Añadir los intervalos procesados para este horario a la lista final
-        intervalos_finales.append(intervalos_de_este_horario)
-    return intervalos_finales
+# def procesar_horarios(horarios):
+#     intervalos_finales = []
+#     for horario in horarios:
+#         # Inicializar una lista para este horario, que podría contener uno o dos intervalos
+#         intervalos_de_este_horario = []
+#         partes = horario.split(',')
+#         for parte in partes:
+#             # Usar expresión regular para dividir en 'inicio' y 'fin', manejando posibles errores
+#             match = re.match(r'(.*?)(?:\s+to\s+)(.*)', parte.strip(), re.IGNORECASE)
+#             if match:
+#                 inicio, fin = match.groups()
+#                 inicio_decimal = convertir_a_decimal(inicio)
+#                 fin_decimal = convertir_a_decimal(fin)
+#                 # Ajuste por cruce de medianoche si es necesario
+#                 if fin_decimal < inicio_decimal:
+#                     fin_decimal += 24
+#                 intervalos_de_este_horario.append([inicio_decimal, fin_decimal])
+#             else:
+# #                 print(f"No se pudo procesar el intervalo: {parte}")
+# #                 intervalos_de_este_horario.append('Desconocido')
+#                 pass
+#         # Añadir los intervalos procesados para este horario a la lista final
+#         intervalos_finales.append(intervalos_de_este_horario)
+#     return intervalos_finales
 
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # ------------------------------------------------------------------------------------TABLA ⬇️-------------------------------------
