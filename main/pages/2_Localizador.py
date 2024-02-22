@@ -386,15 +386,25 @@ columna_ocupacion_hoy = "ocupacion_"+dia_semana_es
 columna_ocupacion_ahora = []
 
 for o in df[columna_ocupacion_hoy]:
-    # try:
-    json.loads(o.replace("'", '"'))
-    for h in o:
-        if h['hour'] == hora_actual:
-            columna_ocupacion_ahora.append(h['occupancyPercent'])
-    # except:
-    #     columna_ocupacion_ahora.append('Desconocido') # Quizá mejor ponerlo a 0 para que el filtro pueda ser numeral ??? ❗❗❗❗❗❗
+    try:
+        # Decodificar el JSON una sola vez
+        ocupacion = json.loads(o.replace("'", '"'))
+        # Buscar la hora actual dentro de los objetos decodificados
+        encontrado = False
+        for h in ocupacion:
+            if h['hour'] == hora_actual:
+                columna_ocupacion_ahora.append(h['occupancyPercent'])
+                encontrado = True
+                break  # Salir del bucle una vez encontrada la hora actual
+        if not encontrado:
+            # Si no se encuentra la hora actual, agregar 'Desconocido' o un valor por defecto
+            columna_ocupacion_ahora.append('Desconocido')
+    except json.JSONDecodeError:
+        # Manejar cadenas vacías, malformadas o valores None
+        columna_ocupacion_ahora.append('Desconocido')
 
 df['Ocupacion Ahora'] = columna_ocupacion_ahora
+
 
 # Reordenamos el dataframe
 df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 
