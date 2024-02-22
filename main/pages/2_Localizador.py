@@ -411,7 +411,6 @@ df['Ocupación Ahora'] = columna_ocupacion_ahora
 
 # Reordenamos el dataframe
 df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', columna_dia_hoy_raw, columna_dia_hoy, 'Ocupación Ahora', # columna_ocupacion_hoy
-
          'Cerrado permanentemene', 'Cerrado temporalmente', #'Horario','Porcentaje de Ocupación', 
          'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve postres', 'Para llevar', 
          'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
@@ -419,7 +418,7 @@ df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Pun
 
 
 # Renombramos las columnas
-nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Horario hoy', 'Horario hoy base_10', 'Ocupación Ahora'
+nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Horario hoy', 'Horario hoy base_10', 'Ocupación Ahora',
                   'Cerrado permanentemene', 'Cerrado temporalmente', #'Horario','Porcentaje de Ocupación', 
                   'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve postres', 'Para llevar', 
                   'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
