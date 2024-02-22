@@ -380,26 +380,16 @@ df_conjunto = df
 
 horarios_hoy = []
 
-
-for h_str in df_conjunto['Horario']:
-    horario_hoy = "Desconocido"  # Valor predeterminado
-    
-    # Intentamos convertir la cadena JSON a una estructura de datos de Python
-    if h_str:
-        try:
-            h = json.loads(h_str)
-            # Buscamos el horario para 'dia_semana_es'
-            for dia in h:
-                if dia['day'] == dia_semana_es:
-                    horario_hoy = dia['hours']
-                    break  # Salimos del bucle si encontramos el día
-        except (json.JSONDecodeError, TypeError):
-            # Manejamos tanto errores de decodificación como intentos de indexación en tipos incorrectos
-            pass
-    
-    # Aseguramos que el valor sea una cadena
-    horarios_hoy.append(str(horario_hoy))
-
+for h_str in df_conjunto['horarios']:
+    if len(h) > 0:
+        h = json.loads(h_str)
+        for dia in h:
+            print(dia)
+            if dia['day'] == dia_semana_es:
+                horario_hoy = str(dia['hours'])
+        
+    else:
+        horario_hoy = "Desconocido"
 
 df_conjunto['horario_raw'] = horarios_hoy
 
