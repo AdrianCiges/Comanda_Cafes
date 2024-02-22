@@ -354,17 +354,9 @@ except:
 # Cargamos el dataframe (necesitamos optimizar esto)
 df = get_data()
 
-# Renombramos las columnas
-nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Sirve aperitivos', 'Tiene terraza', 'Sirve Cerveza', 'Sirve desayunos/almuerzos', 'Puedes sentarte', 'Para llevar', 'Sirve posters', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'Sirve vino']
-df.columns = nuevos_nombres
-
-# Reordenamos el dataframe
-df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly']]
-
-#❗Intentamos generar una columna con el horario actual ----------------------------------------------------------------------------------------------------------
-
 # Obtener la fecha y hora actual
 ahora = datetime.now()
+hora_actual = datetime.now().hour
 
 # Obtener el nombre del día de la semana en inglés
 dia_semana_ing = ahora.strftime("%A")
@@ -374,6 +366,38 @@ dias_semana_es = {"Monday": "lunes", "Tuesday": "martes", "Wednesday": "miércol
 
 # Traducir el día de la semana al español
 dia_semana_es = dias_semana_es.get(dia_semana_ing, "Desconocido")
+
+# Renombramos las columnas
+nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Sirve aperitivos', 'Tiene terraza', 'Sirve Cerveza', 'Sirve desayunos/almuerzos', 'Puedes sentarte', 'Para llevar', 'Sirve posters', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'Sirve vino', 
+                   'horario_raw_lunes', 'horario_lunes', 
+                   'horario_raw_martes', 'horario_martes', 
+                   'horario_raw_miércoles', 'horario_miércoles',
+                   'horario_raw_jueves', 'horario_jueves', 
+                   'horario_raw_viernes', 'horario_viernes', 
+                   'horario_raw_sábado', 'horario_sábado',
+                   'horario_raw_domingo', 'horario_domingo', 
+                   'ocupacion_lunes', 'ocupacion_martes', 'ocupacion_miércoles', 'ocupacion_jueves', 'ocupacion_viernes', 'ocupacion_sábado', 'ocupacion_domingo']
+
+df.columns = nuevos_nombres
+
+columna_dia_hoy_raw = "horario_raw_"+dia_semana_es
+columna_dia_hoy = "horario_"+dia_semana_es
+columna_ocupacion_hoy = "ocupacion_"+dia_semana_es
+
+# Reordenamos el dataframe
+df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 
+         'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 
+         'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
+         columna_dia_hoy_raw, columna_dia_hoy, columna_ocupacion_hoy
+        ]]
+
+#❗Intentamos generar una columna con el horario actual ----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
