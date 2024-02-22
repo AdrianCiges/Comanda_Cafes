@@ -383,12 +383,23 @@ df.columns = nuevos_nombres
 columna_dia_hoy_raw = "horario_raw_"+dia_semana_es
 columna_dia_hoy = "horario_"+dia_semana_es
 columna_ocupacion_hoy = "ocupacion_"+dia_semana_es
+columna_ocupacion_ahora = []
+
+for o in df[columna_ocupacion_hoy]:
+    try:
+        for h in o:
+            if h['hour'] == hora_actual:
+                columna_ocupacion_ahora.append(h['occupancyPercent'])
+    except:
+        columna_ocupacion_ahora.append('Desconocido') # Quizá mejor ponerlo a 0 para que el filtro pueda ser numeral ??? ❗❗❗❗❗❗
+
+df['columna_ocupacion_ahora'] = columna_ocupacion_ahora
 
 # Reordenamos el dataframe
 df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 
          'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 
          'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
-         columna_dia_hoy_raw, columna_dia_hoy, columna_ocupacion_hoy
+         columna_dia_hoy_raw, columna_dia_hoy, columna_ocupacion_hoy, columna_ocupacion_ahora
         ]]
 
 #❗Intentamos generar una columna con el horario actual ----------------------------------------------------------------------------------------------------------
