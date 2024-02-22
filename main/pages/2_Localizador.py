@@ -302,10 +302,16 @@ except:
     longitud = -3.7043
 
 
+# Cargamos el dataframe (necesitamos optimizar esto)
 df = get_data()
 
+# Renombramos las columnas
 nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Sirve aperitivos', 'Tiene terraza', 'Sirve Cerveza', 'Sirve desayunos/almuerzos', 'Puedes sentarte', 'Para llevar', 'Sirve posters', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'Sirve vino']
 df.columns = nuevos_nombres
+
+# Reordenamos el dataframe
+df = df['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Puedes sentarte', 'Para llevar', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis']
+
 df = filter_dataframe(df)
 st.dataframe(df.drop(['Link','Latitud','Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente',], axis=1))
 # df = df.drop_duplicates()
