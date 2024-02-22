@@ -436,7 +436,7 @@ df.columns = nuevos_nombres
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 df = filter_dataframe(df)
-st.dataframe(df.drop(['Link','Latitud','Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario hoy base_10'], axis=1))
+st.dataframe(df.drop(['Link','Latitud','Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente',], axis=1))
 # df = df.drop_duplicates()
 
 if latitud == 40.4336 and longitud == -3.7043:
