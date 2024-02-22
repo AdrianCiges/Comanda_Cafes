@@ -356,7 +356,7 @@ df = get_data()
 
 # Obtener la fecha y hora actual
 ahora = datetime.now()
-hora_actual = datetime.now().hour
+hora_actual = datetime.now().hour + 1
 
 # Obtener el nombre del día de la semana en inglés
 dia_semana_ing = ahora.strftime("%A")
