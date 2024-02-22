@@ -173,7 +173,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     modification_container = st.container()
 
     with modification_container:
-        columnas_filtro = ['Nombre', 'Ciudad','Nivel de precios','Puntuación', 'Nº Comentarios', 'Horario hoy', '% Ocupación Ahora',
+        columnas_filtro = ['Nombre', 'Ciudad', 'Abierto Ahora', 'Nivel de precios','Puntuación', 'Nº Comentarios', 'Horario hoy', '% Ocupación Ahora',
                              'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve postres', 'Para llevar', 
                              'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
                           ]
@@ -354,6 +354,7 @@ df = get_data()
 
 # Obtener la fecha y hora actual
 ahora = datetime.now()
+hora_actual_float = datetime.now().hour + datetime.now().minute / 60
 hora_actual = datetime.now().hour + 1
 
 # Obtener el nombre del día de la semana en inglés
@@ -403,9 +404,50 @@ for o in df[columna_ocupacion_hoy]:
 
 df['Ocupación Ahora'] = columna_ocupacion_ahora
 
+output = []
+
+for horario in df[columna_dia_hoy]:
+    horario_dict = {}
+    
+    if len(horario) > 1:
+        for i, sublista in enumerate(horario):
+            if i == 0:
+                inicio, fin = sublista
+                duracion = fin - inicio
+                if duracion < 0:
+                    duracion += 12
+                horario_dict[inicio] = duracion
+            if i == 1:
+                inicio, fin = sublista
+                duracion = fin - inicio
+                if duracion < 0:
+                    duracion += 24
+                horario_dict[inicio] = duracion
+            
+    else:
+        for sublista in horario:
+            inicio, fin = sublista
+            duracion = fin - inicio
+            if duracion < 0:
+                duracion += 24
+            horario_dict[inicio] = duracion
+    output.append(horario_dict)
+
+abierto_ahora = []
+
+for horario_dict in output:
+    abierto = False  # Asumimos que inicialmente no está abierto
+    for inicio, duracion in horario_dict.items():
+        # Calcular si la hora actual está dentro del rango de apertura
+        if inicio <= hora_actual_float < (inicio + duracion):
+            abierto = True
+            break  # No necesitamos seguir revisando otros horarios si ya encontramos uno que está abierto
+    abierto_ahora.append(abierto)
+
+df['Abierto Ahora'] = abierto_ahora
 
 # Reordenamos el dataframe
-df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', columna_dia_hoy_raw, columna_dia_hoy, 'Ocupación Ahora', # columna_ocupacion_hoy
+df = df[['Link', 'Nombre', 'Ciudad',,'Abierto Ahora', 'Nivel de precios','Latitud','Longitud', 'Puntuación', 'Nº Comentarios', columna_dia_hoy_raw, columna_dia_hoy, 'Ocupación Ahora', # columna_ocupacion_hoy
          'Cerrado permanentemene', 'Cerrado temporalmente', #'Horario','Porcentaje de Ocupación', 
          'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve postres', 'Para llevar', 
          'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
@@ -413,7 +455,7 @@ df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Pun
 
 
 # Renombramos las columnas
-nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Horario hoy', 'Horario hoy base_10', '% Ocupación Ahora',
+nuevos_nombres = ['Link', 'Nombre', 'Ciudad', 'Abierto Ahora', 'Nivel de precios','Latitud','Longitud', 'Puntuación', 'Nº Comentarios', 'Horario hoy', 'Horario hoy base_10', '% Ocupación Ahora',
                   'Cerrado permanentemene', 'Cerrado temporalmente', #'Horario','Porcentaje de Ocupación', 
                   'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve postres', 'Para llevar', 
                   'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
