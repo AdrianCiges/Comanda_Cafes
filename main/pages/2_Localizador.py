@@ -173,7 +173,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     modification_container = st.container()
 
     with modification_container:
-        columnas_filtro = ['Nombre', 'Ciudad','Nivel de precios','Puntuación', 'Nº Comentarios', 'Horario hoy', 'Ocupación Ahora'
+        columnas_filtro = ['Nombre', 'Ciudad','Nivel de precios','Puntuación', 'Nº Comentarios', 'Horario hoy', 'Ocupación Ahora',
                              'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve postres', 'Para llevar', 
                              'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
                           ]
