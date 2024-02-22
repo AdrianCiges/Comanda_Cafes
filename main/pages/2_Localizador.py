@@ -257,6 +257,55 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
 #         return df_cafeterias
 
+
+def convertir_a_decimal(hora_str):
+    # Normalizar la cadena para unificar los formatos de AM/PM y eliminar espacios no estándar
+    hora_str = re.sub(r'\s+', ' ', hora_str)  # Convierte todos los espacios a espacios estándar
+    hora_str = hora_str.replace('\xa0', ' ').upper()  # Reemplaza espacios no separables y normaliza a mayúsculas
+    hora_str = re.sub(r'([AP])\.?\s*M\.?', r'\1M', hora_str)  # Normaliza las marcas de AM/PM
+
+    # Extraer horas, minutos y periodo (AM/PM) utilizando una expresión regular
+    match = re.match(r'(\d+):?(\d*)\s*([AP]M)?', hora_str)
+    if match:
+        horas, minutos, periodo = match.groups()
+        horas = int(horas)
+        minutos = int(minutos) if minutos else 0
+        if periodo == 'PM' and horas < 12:
+            horas += 12
+        elif periodo == 'AM' and horas == 12:
+            horas = 0
+        
+        # Convertir horas y minutos a formato decimal
+        hora_decimal = horas + minutos / 60
+        
+        return round(hora_decimal, 2)
+    return None
+
+def procesar_horarios(horarios):
+    intervalos_finales = []
+    for horario in horarios:
+        # Inicializar una lista para este horario, que podría contener uno o dos intervalos
+        intervalos_de_este_horario = []
+        partes = horario.split(',')
+        for parte in partes:
+            # Usar expresión regular para dividir en 'inicio' y 'fin', manejando posibles errores
+            match = re.match(r'(.*?)(?:\s+to\s+)(.*)', parte.strip(), re.IGNORECASE)
+            if match:
+                inicio, fin = match.groups()
+                inicio_decimal = convertir_a_decimal(inicio)
+                fin_decimal = convertir_a_decimal(fin)
+                # Ajuste por cruce de medianoche si es necesario
+                if fin_decimal < inicio_decimal:
+                    fin_decimal += 24
+                intervalos_de_este_horario.append([inicio_decimal, fin_decimal])
+            else:
+#                 print(f"No se pudo procesar el intervalo: {parte}")
+#                 intervalos_de_este_horario.append('Desconocido')
+                pass
+        # Añadir los intervalos procesados para este horario a la lista final
+        intervalos_finales.append(intervalos_de_este_horario)
+    return intervalos_finales
+
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # ------------------------------------------------------------------------------------TABLA ⬇️-------------------------------------
 
@@ -310,7 +359,89 @@ nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longi
 df.columns = nuevos_nombres
 
 # Reordenamos el dataframe
-df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Puedes sentarte', 'Para llevar', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis']]
+df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly']]
+
+#❗Intentamos generar una columna con el horario actual ----------------------------------------------------------------------------------------------------------
+
+# Obtener la fecha y hora actual
+ahora = datetime.now()
+
+# Obtener el nombre del día de la semana en inglés
+dia_semana_ing = ahora.strftime("%A")
+
+# Diccionario para traducir el día de la semana al español
+dias_semana_es = {"Monday": "lunes", "Tuesday": "martes", "Wednesday": "miércoles", "Thursday": "jueves", "Friday": "viernes", "Saturday": "sábado", "Sunday": "`domingo"}
+
+# Traducir el día de la semana al español
+dia_semana_es = dias_semana_es.get(dia_semana_ing, "Desconocido")
+
+# renombramos df
+df_conjunto = df
+
+horarios_hoy = []
+
+for h in df_conjunto['horarios']:
+    horario_hoy = next((e['hours'] for e in h if e['day'] == dia_semana_es), "Desconocido")
+    horarios_hoy.append(horario_hoy)
+
+df_conjunto['horario_raw'] = horarios_hoy
+
+horarios_hoy = procesar_horarios(horarios_hoy) # Cazamos el horario de hoy
+
+
+arreglo = [] # Arreglamos valores > 25
+
+for e in horarios_hoy:
+    sub_arreglo = []
+    
+    for sub_e in e:
+        sub_sub_arreglo = []
+        
+        for sub_sub_e in sub_e:
+            try:
+                if sub_sub_e >= 25:
+                    sub_sub_arreglo.append(float(sub_sub_e)-24)
+                else:
+                    sub_sub_arreglo.append(sub_sub_e)
+            except:
+                sub_sub_arreglo.append(sub_sub_e)
+        sub_arreglo.append(sub_sub_arreglo)
+    arreglo.append(sub_arreglo)
+    
+horarios_hoy = arreglo
+
+arreglo_modificado = []
+
+for sublista in arreglo:
+    sublista_modificada = []
+    for elemento in sublista:
+        # Verificar si el elemento es una lista de 2 listas
+        if len(sublista) == 2:
+            primer_elemento_segunda_lista = sublista[1][0]
+            # Comprobar si el primer elemento de la segunda lista es menor de 12
+            if primer_elemento_segunda_lista < 12.0:
+                # Sumar 12 al primer elemento de la segunda lista
+                elemento_modificado = [sublista[1][0] + 12 if i == 0 else sublista[1][i] for i in range(len(sublista[1]))]
+                # Reemplazar la segunda lista en sublista_modificada con el elemento modificado
+                if elemento == sublista[1]:
+                    sublista_modificada.append(elemento_modificado)
+                else:
+                    sublista_modificada.append(elemento)
+            else:
+                sublista_modificada.append(elemento)
+                
+        elif len(sublista) == 3:
+            sublista_modificada.append('Desconocido')
+        else:
+            sublista_modificada.append(elemento)
+    arreglo_modificado.append(sublista_modificada)
+
+df_conjunto['horario_hoy'] = arreglo_modificado
+
+# Volvemos al nombre original
+df = df_conjunto
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 df = filter_dataframe(df)
 st.dataframe(df.drop(['Link','Latitud','Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente',], axis=1))
