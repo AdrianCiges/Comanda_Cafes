@@ -406,7 +406,7 @@ for o in df[columna_ocupacion_hoy]:
         # Manejar cadenas vacías, malformadas o valores None
         columna_ocupacion_ahora.append(0)
 
-df['Ocupación ahora'] = columna_ocupacion_ahora
+df['Ocupación Ahora'] = columna_ocupacion_ahora
 
 
 # Reordenamos el dataframe
