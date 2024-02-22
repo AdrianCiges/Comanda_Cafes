@@ -382,23 +382,17 @@ horarios_hoy = []
 
 
 for h_str in df_conjunto['Horario']:
-    # Inicializamos 'horario_hoy' con "Desconocido" para manejar los casos en que 'h' esté vacío o la conversión falle
-    horario_hoy = "Desconocido"
-    
-    # Verificamos que 'h_str' no esté vacío y sea una cadena válida para convertir
-    if h_str and isinstance(h_str, str):
+    horario_hoy = "Desconocido"  # Valor predeterminado
+    if h_str:  # Asegurarse de que h_str no está vacío
         try:
-            # Convertimos la cadena JSON en una lista de diccionarios
-            h = json.loads(h_str.replace("'", '"'))  # Aseguramos que las comillas simples sean dobles para JSON válido
+            h = json.loads(h_str.replace("'", '"'))  # Convertir de JSON a lista de diccionarios
+            for dia in h:
+                if dia.get('day') == dia_semana_es:  # Usar .get() para evitar KeyError si 'day' no existe
+                    horario_hoy = dia.get('hours', "Desconocido")
+                    break  # Salir del bucle si encontramos el día
         except json.JSONDecodeError:
-            # Si hay un error en la conversión, continuamos con el siguiente elemento
-            continue
-        
-        # Ahora 'h' debe ser una lista de diccionarios, podemos iterar sobre ella seguramente
-        for dia in h:
-            if dia['day'] == dia_semana_es:
-                horario_hoy = dia['hours']
-                break  # Salimos del bucle una vez encontrado el horario para 'dia_semana_es'
+            pass  # Manejar el caso en que h_str no sea un JSON válido
+    horarios_hoy.append(horario_hoy)
 
 
 df_conjunto['horario_raw'] = horarios_hoy
