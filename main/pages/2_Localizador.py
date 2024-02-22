@@ -375,72 +375,72 @@ dias_semana_es = {"Monday": "lunes", "Tuesday": "martes", "Wednesday": "miércol
 # Traducir el día de la semana al español
 dia_semana_es = dias_semana_es.get(dia_semana_ing, "Desconocido")
 
-# renombramos df
-df_conjunto = df
+# # renombramos df
+# df_conjunto = df
 
-horarios_hoy = []
+# horarios_hoy = []
 
-for h in df_conjunto['Horario']:
-    h = json.loads(h)
-    horario_hoy = next((e['hours'] for e in h if e['day'] == dia_semana_es), "Desconocido")
-    horarios_hoy.append(horario_hoy)
+# for h in df_conjunto['Horario']:
+#     h = json.loads(h)
+#     horario_hoy = next((e['hours'] for e in h if e['day'] == dia_semana_es), "Desconocido")
+#     horarios_hoy.append(horario_hoy)
 
-df_conjunto['horario_raw'] = horarios_hoy
+# df_conjunto['horario_raw'] = horarios_hoy
 
-horarios_hoy = procesar_horarios(horarios_hoy) # Cazamos el horario de hoy
+# horarios_hoy = procesar_horarios(horarios_hoy) # Cazamos el horario de hoy
 
 
-arreglo = [] # Arreglamos valores > 25
+# arreglo = [] # Arreglamos valores > 25
 
-for e in horarios_hoy:
-    sub_arreglo = []
+# for e in horarios_hoy:
+#     sub_arreglo = []
     
-    for sub_e in e:
-        sub_sub_arreglo = []
+#     for sub_e in e:
+#         sub_sub_arreglo = []
         
-        for sub_sub_e in sub_e:
-            try:
-                if sub_sub_e >= 25:
-                    sub_sub_arreglo.append(float(sub_sub_e)-24)
-                else:
-                    sub_sub_arreglo.append(sub_sub_e)
-            except:
-                sub_sub_arreglo.append(sub_sub_e)
-        sub_arreglo.append(sub_sub_arreglo)
-    arreglo.append(sub_arreglo)
+#         for sub_sub_e in sub_e:
+#             try:
+#                 if sub_sub_e >= 25:
+#                     sub_sub_arreglo.append(float(sub_sub_e)-24)
+#                 else:
+#                     sub_sub_arreglo.append(sub_sub_e)
+#             except:
+#                 sub_sub_arreglo.append(sub_sub_e)
+#         sub_arreglo.append(sub_sub_arreglo)
+#     arreglo.append(sub_arreglo)
     
-horarios_hoy = arreglo
+# horarios_hoy = arreglo
 
-arreglo_modificado = []
+# arreglo_modificado = []
 
-for sublista in arreglo:
-    sublista_modificada = []
-    for elemento in sublista:
-        # Verificar si el elemento es una lista de 2 listas
-        if len(sublista) == 2:
-            primer_elemento_segunda_lista = sublista[1][0]
-            # Comprobar si el primer elemento de la segunda lista es menor de 12
-            if primer_elemento_segunda_lista < 12.0:
-                # Sumar 12 al primer elemento de la segunda lista
-                elemento_modificado = [sublista[1][0] + 12 if i == 0 else sublista[1][i] for i in range(len(sublista[1]))]
-                # Reemplazar la segunda lista en sublista_modificada con el elemento modificado
-                if elemento == sublista[1]:
-                    sublista_modificada.append(elemento_modificado)
-                else:
-                    sublista_modificada.append(elemento)
-            else:
-                sublista_modificada.append(elemento)
+# for sublista in arreglo:
+#     sublista_modificada = []
+#     for elemento in sublista:
+#         # Verificar si el elemento es una lista de 2 listas
+#         if len(sublista) == 2:
+#             primer_elemento_segunda_lista = sublista[1][0]
+#             # Comprobar si el primer elemento de la segunda lista es menor de 12
+#             if primer_elemento_segunda_lista < 12.0:
+#                 # Sumar 12 al primer elemento de la segunda lista
+#                 elemento_modificado = [sublista[1][0] + 12 if i == 0 else sublista[1][i] for i in range(len(sublista[1]))]
+#                 # Reemplazar la segunda lista en sublista_modificada con el elemento modificado
+#                 if elemento == sublista[1]:
+#                     sublista_modificada.append(elemento_modificado)
+#                 else:
+#                     sublista_modificada.append(elemento)
+#             else:
+#                 sublista_modificada.append(elemento)
                 
-        elif len(sublista) == 3:
-            sublista_modificada.append('Desconocido')
-        else:
-            sublista_modificada.append(elemento)
-    arreglo_modificado.append(sublista_modificada)
+#         elif len(sublista) == 3:
+#             sublista_modificada.append('Desconocido')
+#         else:
+#             sublista_modificada.append(elemento)
+#     arreglo_modificado.append(sublista_modificada)
 
-df_conjunto['horario_hoy'] = arreglo_modificado
+# df_conjunto['horario_hoy'] = arreglo_modificado
 
-# Volvemos al nombre original
-df = df_conjunto
+# # Volvemos al nombre original
+# df = df_conjunto
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
