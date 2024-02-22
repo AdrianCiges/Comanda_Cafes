@@ -404,6 +404,10 @@ for o in df[columna_ocupacion_hoy]:
 
 df['Ocupación Ahora'] = columna_ocupacion_ahora
 
+# ------------------------------------------------------
+st.write(df[columna_dia_hoy])
+# ------------------------------------------------------
+
 output = []
 
 for horario in df[columna_dia_hoy]:
