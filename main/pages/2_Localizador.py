@@ -399,7 +399,7 @@ df['columna_ocupacion_ahora'] = columna_ocupacion_ahora
 df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 
          'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 
          'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
-         columna_dia_hoy_raw, columna_dia_hoy, columna_ocupacion_hoy, columna_ocupacion_ahora
+         columna_dia_hoy_raw, columna_dia_hoy, columna_ocupacion_hoy #, columna_ocupacion_ahora
         ]]
 
 #❗Intentamos generar una columna con el horario actual ----------------------------------------------------------------------------------------------------------
