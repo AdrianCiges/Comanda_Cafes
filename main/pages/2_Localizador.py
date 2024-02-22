@@ -380,7 +380,7 @@ df_conjunto = df
 
 horarios_hoy = []
 
-for h in df_conjunto['horarios']:
+for h in df_conjunto['Horario']:
     if len(h) > 0:
         for dia in h:
             if dia['day'] == dia_semana_es:
