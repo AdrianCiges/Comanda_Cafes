@@ -381,7 +381,7 @@ df_conjunto = df
 horarios_hoy = []
 
 for h_str in df_conjunto['Horario']:
-    h = json.loads(h_str)
+    h = json.loads(h_str.replace("'", '"'))  # Convertir de JSON a lista de diccionarios
     if len(h) > 0:
         for dia in h:
             print(dia)
