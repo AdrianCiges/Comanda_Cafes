@@ -386,13 +386,13 @@ columna_ocupacion_hoy = "ocupacion_"+dia_semana_es
 columna_ocupacion_ahora = []
 
 for o in df[columna_ocupacion_hoy]:
-    try:
-        json.loads(o.replace("'", '"'))
-        for h in o:
-            if h['hour'] == hora_actual:
-                columna_ocupacion_ahora.append(h['occupancyPercent'])
-    except:
-        columna_ocupacion_ahora.append('Desconocido') # Quizá mejor ponerlo a 0 para que el filtro pueda ser numeral ??? ❗❗❗❗❗❗
+    # try:
+    json.loads(o.replace("'", '"'))
+    for h in o:
+        if h['hour'] == hora_actual:
+            columna_ocupacion_ahora.append(h['occupancyPercent'])
+    # except:
+    #     columna_ocupacion_ahora.append('Desconocido') # Quizá mejor ponerlo a 0 para que el filtro pueda ser numeral ??? ❗❗❗❗❗❗
 
 df['Ocupacion Ahora'] = columna_ocupacion_ahora
 
