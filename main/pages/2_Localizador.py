@@ -161,7 +161,10 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     modification_container = st.container()
 
     with modification_container:
-        columnas_filtro = ['Nombre', 'Ciudad','Nivel de precios','Puntuación', 'Nº Comentarios','Horario','Porcentaje de Ocupación', 'LGBT+ friendly', 'Sirve aperitivos', 'Tiene terraza', 'Sirve Cerveza', 'Sirve desayunos/almuerzos', 'Puedes sentarte', 'Para llevar', 'Sirve posters', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'Sirve vino']
+        columnas_filtro = ['Nombre', 'Ciudad','Nivel de precios','Puntuación', 'Nº Comentarios','Horario','Ocupación Ahora', 'LGBT+ friendly', 
+                           'Sirve aperitivos', 'Tiene terraza', 'Sirve Cerveza', 'Sirve desayunos/almuerzos', 'Puedes sentarte', 'Para llevar', 
+                           'Sirve posters', 'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'Sirve vino',
+                          ]
         to_filter_columns = st.multiselect("Filtrar tabla por:", columnas_filtro, placeholder="Selecciona un campo")
         for column in to_filter_columns:
             left, right = st.columns((1, 20))
@@ -398,21 +401,29 @@ for o in df[columna_ocupacion_hoy]:
                 break  # Salir del bucle una vez encontrada la hora actual
         if not encontrado:
             # Si no se encuentra la hora actual, agregar 'Desconocido' o un valor por defecto
-            columna_ocupacion_ahora.append('Desconocido')
+            columna_ocupacion_ahora.append(0)
     except json.JSONDecodeError:
         # Manejar cadenas vacías, malformadas o valores None
-        columna_ocupacion_ahora.append('Desconocido')
+        columna_ocupacion_ahora.append(0)
 
-df['Ocupacion Ahora'] = columna_ocupacion_ahora
+df['Ocupación ahora'] = columna_ocupacion_ahora
 
 
 # Reordenamos el dataframe
 df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 
          'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 
          'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
-         columna_dia_hoy_raw, columna_dia_hoy, columna_ocupacion_hoy, 'Ocupacion Ahora'
+         columna_dia_hoy_raw, columna_dia_hoy, 'Ocupación Ahora', # columna_ocupacion_hoy
         ]]
 
+
+# Renombramos las columnas
+nuevos_nombres = ['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Puntuación', 'Nº Comentarios', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario','Porcentaje de Ocupación', 
+         'Puedes sentarte', 'Tiene terraza', 'Sirve Cerveza', 'Sirve vino', 'Sirve desayunos/almuerzos', 'Sirve aperitivos', 'Sirve posters', 'Para llevar', 
+         'Acepta reserva', 'Acepta perros', 'Acepta perros fuera', 'Tiene Wifi','Tiene Wifi Gratis', 'LGBT+ friendly',
+         'Horario hoy', 'Horario hoy base_10', 'Ocupación Ahora']
+
+df.columns = nuevos_nombres
 #❗Intentamos generar una columna con el horario actual ----------------------------------------------------------------------------------------------------------
 
 
@@ -424,7 +435,7 @@ df = df[['Link', 'Nombre', 'Ciudad','Nivel de precios','Latitud','Longitud','Pun
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 df = filter_dataframe(df)
-st.dataframe(df.drop(['Link','Latitud','Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente',], axis=1))
+st.dataframe(df.drop(['Link','Latitud','Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'Horario hoy base_10'], axis=1))
 # df = df.drop_duplicates()
 
 if latitud == 40.4336 and longitud == -3.7043:
