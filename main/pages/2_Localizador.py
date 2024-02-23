@@ -525,7 +525,10 @@ else:
 st.data_editor(
     sorted_df_show,
     column_config={ "Link": st.column_config.LinkColumn(
-            "Cómo Llegar", display_text="🌍" ), }, hide_index=True,)
+            "Cómo Llegar", 
+            # display_text="🌍" 
+                ), 
+                  }, hide_index=True,)
 
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
     st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1))
