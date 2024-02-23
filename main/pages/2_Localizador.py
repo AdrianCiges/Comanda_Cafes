@@ -567,6 +567,13 @@ with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
                 min_value=0,
                 max_value=5,
             ),
+            "📊 % Ocupación Ahora": st.column_config.ProgressColumn(
+                "📊 % Ocupación Ahora",
+                help="Los valores a 0 pueden ser sitios sin información de ocupación",
+                format="%f%",
+                min_value=0,
+                max_value=100,
+            ),
         },
         hide_index=True,
     )
