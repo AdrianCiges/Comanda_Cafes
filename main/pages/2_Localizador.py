@@ -531,7 +531,6 @@ st.data_editor(
             help="Click para visitar",
             validate="^https://.+",
             max_chars=100,
-            display_text="☕ Nombre"
         ),
         "Nombre": st.column_config.LinkColumn(
             "Nombre Clicable",
