@@ -322,6 +322,15 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 #         intervalos_finales.append(intervalos_de_este_horario)
 #     return intervalos_finales
 
+# Función para sustituir valores
+def sustituir_valor(val):
+    if val == True:
+        return "✅"
+    elif val == False:
+        return "❌"
+    else:
+        return val 
+        
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
 
@@ -345,6 +354,9 @@ else:
 
 # Cargamos el dataframe (necesitamos optimizar esto)
 df = get_data()
+
+# Sustituir True o False
+df = df.applymap(sustituir_valor)
 
 # Obtener la fecha y hora actual
 ahora = datetime.now()
@@ -522,12 +534,14 @@ if from_pc:
 else:
     folium_static(m, width=380)
 
+
+
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
     st.data_editor(
         sorted_df_show.drop(['Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1),
         column_config={
             "Link": st.column_config.LinkColumn(
-                "🔗 Link", display_text = "➡ Cómo llegar"
+                "🔗 Link", display_text = "🌐 Cómo llegar"
             ),
             "⭐ Puntuación": st.column_config.ProgressColumn(
                 "⭐ Puntuación",
