@@ -522,13 +522,14 @@ if from_pc:
 else:
     folium_static(m, width=380)
 
-st.data_editor(
-    sorted_df_show,
-    column_config={ "Link": st.column_config.LinkColumn(
-            "Cómo Llegar", 
-            # display_text="🌍" 
-                ), 
-                  }, hide_index=True,)
+# Crear una nueva columna 'Nombre Clicable' que combina 'Nombre' y 'Link' en un enlace HTML
+sorted_df['Nombre Clicable'] = sorted_df.apply(lambda row: f"<a href='{row['Link']}' target='_blank'>{row['Nombre']}</a>", axis=1)
+
+# Convertir el DataFrame a HTML, seleccionando solo la columna 'Nombre Clicable', y evitando escapar caracteres HTML
+html_result = sorted_df.to_html(escape=False, index=False, columns=['Nombre Clicable'])
+
+# Mostrar el resultado en Streamlit
+st.markdown(html_result, unsafe_allow_html=True)
 
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
     st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1))
