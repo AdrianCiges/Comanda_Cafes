@@ -529,11 +529,7 @@ st.data_editor(
         "Link": st.column_config.LinkColumn(
             "URL",
             help="Click para visitar",
-            validate="^https://.+",
-            max_chars=100,
-        ),
-        "Nombre": st.column_config.LinkColumn(
-            "Nombre Clicable",
+            max_chars=10,
         ),
     },
     hide_index=True,
