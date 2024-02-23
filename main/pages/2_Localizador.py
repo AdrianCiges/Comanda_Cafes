@@ -527,7 +527,7 @@ st.data_editor(
     sorted_df,
     column_config={
         "Link": st.column_config.LinkColumn(
-            "Cómo llegar", display_text = df: df['☕ Nombre'] #"Google Maps"
+            "Cómo llegar", display_text = lambda df: df['☕ Nombre'] #"Google Maps"
         ),
     },
     hide_index=True,
