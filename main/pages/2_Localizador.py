@@ -541,8 +541,7 @@ st.data_editor(
     sorted_df,
     column_config={
         "Nombre_Clicable": st.column_config.LinkColumn(
-            title="Cómo llegar",
-            display_text="Nombre_Clicable"  # Utilizar la nueva columna directamente
+            "Cómo llegar", display_text="Nombre_Clicable"  # Utilizar la nueva columna directamente
         ),
     },
     hide_index=True,
