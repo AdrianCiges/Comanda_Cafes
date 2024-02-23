@@ -526,7 +526,7 @@ else:
 st.data_editor(
     sorted_df,
     column_config={
-        "☕ Nombre": st.column_config.LinkColumn(
+        "Link": st.column_config.LinkColumn(
             "☕Cafetería",
             help="Clica para ver cómo llegar",
             max_chars=100,
