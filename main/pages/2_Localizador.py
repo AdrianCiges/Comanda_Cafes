@@ -529,7 +529,13 @@ st.data_editor(
         "Link": st.column_config.LinkColumn(
             "URL",
             help="Click para visitar",
-            max_chars=10,
+            validate="^https://.+",
+            max_chars=100,
+            display_text="Nombre"
+        ),
+        "Nombre": st.column_config.LinkColumn(
+            "Nombre Clicable",
+            display_text=lambda df: df["Nombre"]
         ),
     },
     hide_index=True,
