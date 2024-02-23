@@ -459,8 +459,12 @@ for horario_dict in output:
 
 df['Abierto Ahora'] = abierto_ahora
 
-# Sustituir True o False
-df = df.applymap(sustituir_valor)
+columnas_a_modificar = ['🔓 Abierto Ahora',
+                  '🪑 Puedes sentarte', '☀️ Tiene terraza', '🍺 Sirve Cerveza', '🍷 Sirve vino', '🥪 Sirve desayunos/almuerzos', '🫒 Sirve aperitivos', '🍪 Sirve postres', '🚶‍♂️ Para llevar', 
+                  '🙋‍♀️ Acepta reserva', '🐕‍🦺 Acepta perros', '🐕 Acepta perros fuera', '🛜 Tiene Wifi','🛜 Tiene Wifi Gratis', '🏳️‍🌈 LGBT+ friendly',
+                 ]
+for columna in columnas_a_modificar:
+    df[columna] = df[columna].apply(sustituir_valor)
 
 # Reordenamos el dataframe
 df = df[['Link', 'Nombre', 'Ciudad','Abierto Ahora', 'Nivel de precios','Latitud','Longitud', 'Puntuación', 'Nº Comentarios', columna_dia_hoy_raw, 'Ocupación Ahora', # columna_ocupacion_hoy
