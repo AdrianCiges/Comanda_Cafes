@@ -522,20 +522,20 @@ if from_pc:
 else:
     folium_static(m, width=380)
 
-
-st.data_editor(
-    sorted_df,
-    column_config={
-        "Link": st.column_config.LinkColumn(
-            "🔗 Link", display_text = "Cómo llegar"
-        ),
-    },
-    hide_index=True,
-)
-
-
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
-    st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1))
+    st.data_editor(
+        sorted_df_show.drop(['Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1),
+        column_config={
+            "Link": st.column_config.LinkColumn(
+                "🔗 Link", display_text = "Cómo llegar"
+            ),
+        },
+        hide_index=True,
+    )
+
+
+# with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
+#     st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1))
     
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
