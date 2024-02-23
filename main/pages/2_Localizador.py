@@ -325,12 +325,19 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 # Función para sustituir valores
 def sustituir_valor(val):
     if val == True:
-        return "✅"
+        return "Sí"
     elif val == False:
+        return "No"
+    else:
+        return val 
+
+def sustituir_valor_emoji(val):
+    if val == Sí:
+        return "✅"
+    elif val == No:
         return "❌"
     else:
         return val 
-        
 # ---------------------------------------------------------------------------------FUNCIONES⬆️-------------------------------------
 # --------------------------------------------------------------------------------------UBI ⬇️-------------------------------------
 
@@ -354,9 +361,6 @@ else:
 
 # Cargamos el dataframe (necesitamos optimizar esto)
 df = get_data()
-
-# Sustituir True o False
-df = df.applymap(sustituir_valor)
 
 # Obtener la fecha y hora actual
 ahora = datetime.now()
@@ -455,6 +459,9 @@ for horario_dict in output:
 
 df['Abierto Ahora'] = abierto_ahora
 
+# Sustituir True o False
+df = df.applymap(sustituir_valor)
+
 # Reordenamos el dataframe
 df = df[['Link', 'Nombre', 'Ciudad','Abierto Ahora', 'Nivel de precios','Latitud','Longitud', 'Puntuación', 'Nº Comentarios', columna_dia_hoy_raw, 'Ocupación Ahora', # columna_ocupacion_hoy
          'Cerrado permanentemene', 'Cerrado temporalmente', #'Horario','Porcentaje de Ocupación', 
@@ -535,6 +542,12 @@ else:
     folium_static(m, width=380)
 
 
+columnas_a_modificar = ['🔓 Abierto Ahora',
+                  '🪑 Puedes sentarte', '☀️ Tiene terraza', '🍺 Sirve Cerveza', '🍷 Sirve vino', '🥪 Sirve desayunos/almuerzos', '🫒 Sirve aperitivos', '🍪 Sirve postres', '🚶‍♂️ Para llevar', 
+                  '🙋‍♀️ Acepta reserva', '🐕‍🦺 Acepta perros', '🐕 Acepta perros fuera', '🛜 Tiene Wifi','🛜 Tiene Wifi Gratis', '🏳️‍🌈 LGBT+ friendly',
+                 ]
+for columna in columnas_a_modificar:
+    sorted_df[columna] = sorted_df[columna].apply(sustituir_valores_emoji)
 
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
     st.data_editor(
