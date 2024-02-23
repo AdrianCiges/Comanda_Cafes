@@ -530,11 +530,12 @@ with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
                 "🔗 Link", display_text = "Cómo llegar"
             ),
             "⭐ Puntuación": st.column_config.ProgressColumn(
-            "⭐ Puntuación",
-            help="Los valores a 0 son sitios sin votos",
-            format="$%f",
-            min_value=0,
-            max_value=5,
+                "⭐ Puntuación",
+                help="Los valores a 0 son sitios sin votos",
+                format="$%f",
+                min_value=0,
+                max_value=5,
+            ),
         },
         hide_index=True,
     )
