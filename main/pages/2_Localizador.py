@@ -522,20 +522,38 @@ if from_pc:
 else:
     folium_static(m, width=380)
 
-# Utilizar st.data_editor para mostrar el DataFrame con enlaces clicables
+import pandas as pd
+import streamlit as st
+
+data_df = pd.DataFrame(
+    {
+        "apps": [
+            "https://roadmap.streamlit.app",
+            "https://extras.streamlit.app",
+            "https://issues.streamlit.app",
+            "https://30days.streamlit.app",
+        ],
+        "creator": [
+            "https://github.com/streamlit",
+            "https://github.com/arnaudmiribel",
+            "https://github.com/streamlit",
+            "https://github.com/streamlit",
+        ],
+    }
+)
+
 st.data_editor(
-    sorted_df,
+    data_df,
     column_config={
-        "Link": st.column_config.LinkColumn(
-            "URL",
-            help="Click para visitar",
-            validate="^https://.+",
+        "apps": st.column_config.LinkColumn(
+            "Trending apps",
+            help="The top trending Streamlit apps",
+            validate="^https://[a-z]+\.streamlit\.app$",
             max_chars=100,
-            display_text="Nombre"
+            display_text="https://(.*?)\.streamlit\.app"
         ),
-        "Nombre": st.column_config.LinkColumn(
-            "Nombre Clicable",
-            display_text=lambda df: df["Nombre"]
+        "creator": st.column_config.LinkColumn(
+            "App Creator", display_text="Open profile"
         ),
     },
     hide_index=True,
