@@ -461,9 +461,9 @@ nuevos_nombres = ['Link', '☕ Nombre', '🏙️ Ciudad', '🔓 Abierto Ahora', 
 df.columns = nuevos_nombres
 
 df = filter_dataframe(df)
-st.write('')
-with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
-    st.dataframe(df.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente'], axis=1))# df = df.drop_duplicates()
+# st.write('')
+# with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
+#     st.dataframe(df.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente'], axis=1))# df = df.drop_duplicates()
 
 st.write('')
 if st.checkbox('📍 Usar mi ubicación'):
@@ -493,9 +493,12 @@ df['lat_dif'] = [abs(float(lt) - latitude) for i,lt in enumerate(df['Latitud'])]
 df['lon_dif'] = [abs(float(lg) - longitude) for i,lg in enumerate(df['Longitud'])]
 df['dif_sum'] = df['lat_dif'] + df['lon_dif']
 
-sorted_df = df.sort_values(by='dif_sum', ascending=True)[:num_cafeterias]
+sorted_df = df.sort_values(by='dif_sum', ascending=True) #[:num_cafeterias]
 sorted_df = sorted_df.reset_index(drop=True)
 sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitud'][i]) for i,e in enumerate(sorted_df['Latitud'])]
+
+sorted_df_show = sorted_df
+sorted_df = sorted_df[:num_cafeterias]
 
 coords = []
 for i,e in enumerate(sorted_df['Latitud']):
@@ -518,8 +521,9 @@ if from_pc:
     folium_static(m, width=1025)
 else:
     folium_static(m, width=380)
-
-st.dataframe(sorted_df)
+    
+with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
+    st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros', 'coords'], axis=1))
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
 
