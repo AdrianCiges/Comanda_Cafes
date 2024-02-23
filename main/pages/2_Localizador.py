@@ -526,12 +526,12 @@ else:
 st.data_editor(
     sorted_df,
     column_config={
-        "☕ Nombre": st.column_config.LinkColumn(
-            "☕Cafetería",
-            help="Clica para ver cómo llegar",
-            max_chars=100,
-            display_text=lambda sorted_df: sorted_df["☕ Nombre"]
-        ),
+        # "☕ Nombre": st.column_config.LinkColumn(
+        #     "☕Cafetería",
+        #     help="Clica para ver cómo llegar",
+        #     max_chars=100,
+        #     display_text=lambda sorted_df: sorted_df["☕ Nombre"]
+        # ),
         "Link": st.column_config.LinkColumn(
             "Cómo llegar", display_text="🌍"
         ),
