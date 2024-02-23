@@ -532,7 +532,7 @@ html_result = sorted_df.to_html(escape=False, index=False, columns=['Nombre Clic
 st.markdown(html_result, unsafe_allow_html=True)
 
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
-    st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1), index=False)
+    st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1, index=False))
     
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
