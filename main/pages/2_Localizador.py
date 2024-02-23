@@ -570,7 +570,7 @@ with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
             "📊 % Ocupación Ahora": st.column_config.ProgressColumn(
                 "📊 % Ocupación Ahora",
                 help="Los valores a 0 pueden ser sitios sin información de ocupación",
-                format="%f%",
+                format="%f",
                 min_value=0,
                 max_value=100,
             ),
