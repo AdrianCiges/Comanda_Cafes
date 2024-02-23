@@ -522,19 +522,24 @@ if from_pc:
 else:
     folium_static(m, width=380)
 
-# Crear la columna 'Nombre Clicable' que transforma 'Nombre' en un enlace HTML usando 'Link'
-sorted_df['Nombre Clicable'] = sorted_df.apply(lambda row: f"<a href='{row['Link']}' target='_blank'>{row['☕ Nombre']}</a>", axis=1)
-
-# Opción 1: Mostrar todo el DataFrame incluyendo 'Nombre Clicable', excluyendo 'Link'
-# Convertir el DataFrame a HTML, permitiendo HTML en 'Nombre Clicable'
-html_result = sorted_df.drop(columns=['Link']).to_html(escape=False, index=False)
-
-# Opción 2: Si deseas mantener también la columna 'Link' visible:
-# Podrías optar por no incluir el 'Link' directamente y solo mostrar 'Nombre Clicable' como enlace,
-# o simplemente mostrar ambas columnas si es relevante para tus usuarios.
-
-# Mostrar el resultado en Streamlit, permitiendo HTML
-st.markdown(html_result, unsafe_allow_html=True)
+# Utilizar st.data_editor para mostrar el DataFrame con enlaces clicables
+st.data_editor(
+    sorted_df,
+    column_config={
+        "Link": st.column_config.LinkColumn(
+            "URL",
+            help="Click para visitar",
+            validate="^https://.+",
+            max_chars=100,
+            display_text="☕ Nombre"
+        ),
+        "Nombre": st.column_config.LinkColumn(
+            "Nombre Clicable",
+            display_text=lambda df: df["☕ Nombre"]
+        ),
+    },
+    hide_index=True,
+)
 
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
     st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1, index=False))
