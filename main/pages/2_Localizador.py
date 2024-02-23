@@ -332,9 +332,9 @@ def sustituir_valor(val):
         return val 
 
 def sustituir_valor_emoji(val):
-    if val == Sí:
+    if val == "Sí":
         return "✅"
-    elif val == No:
+    elif val == "No":
         return "❌"
     else:
         return val 
