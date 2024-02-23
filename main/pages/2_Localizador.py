@@ -523,29 +523,16 @@ else:
     folium_static(m, width=380)
 
 
-# st.data_editor(
-#     sorted_df,
-#     column_config={
-#         "Link": st.column_config.LinkColumn(
-#             "Cómo llegar", display_text = lambda df: df['☕ Nombre'] #"Google Maps"
-#         ),
-#     },
-#     hide_index=True,
-# )
-
-# Pre-procesar DataFrame para incluir el texto clicable directamente
-sorted_df['Nombre_Clicable'] = sorted_df['☕ Nombre'].apply(lambda x: f"[{x}]({sorted_df['Link']})")
-
-# Configurar st.data_editor usando la nueva columna 'Nombre_Clicable'
 st.data_editor(
     sorted_df,
     column_config={
-        "Nombre_Clicable": st.column_config.LinkColumn(
-            "Cómo llegar", display_text="Nombre_Clicable"  # Utilizar la nueva columna directamente
+        "Link": st.column_config.LinkColumn(
+            "🔗 Link", display_text = "Cómo llegar"
         ),
     },
     hide_index=True,
 )
+
 
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
     st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1))
