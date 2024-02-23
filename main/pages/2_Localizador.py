@@ -462,7 +462,7 @@ df.columns = nuevos_nombres
 
 df = filter_dataframe(df)
 # st.write('')
-# with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
+# with st.expander("👀 Ver detalle de cafeterías por cercanía"):
 #     st.dataframe(df.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente'], axis=1))# df = df.drop_duplicates()
 
 st.write('')
@@ -521,9 +521,15 @@ if from_pc:
     folium_static(m, width=1025)
 else:
     folium_static(m, width=380)
-    
+
+st.data_editor(
+    sorted_df_show,
+    column_config={ "Link": st.column_config.LinkColumn(
+            "Cómo Llegar", display_text="🌍" ), }, hide_index=True,)
+
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
     st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1))
+    
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
 
