@@ -535,14 +535,13 @@ st.data_editor(
         ),
         "Nombre": st.column_config.LinkColumn(
             "Nombre Clicable",
-            display_text=lambda df: df["☕ Nombre"]
         ),
     },
     hide_index=True,
 )
 
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
-    st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1, index=False))
+    st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1))
     
 # ---------------------------------------------------------------------------------------UBI ⬆️-------------------------------------
 # --------------------------------------------------------------------------------------MAIL ⬇️-------------------------------------
