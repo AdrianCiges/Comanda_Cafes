@@ -547,7 +547,7 @@ columnas_a_modificar = ['🔓 Abierto Ahora',
                   '🙋‍♀️ Acepta reserva', '🐕‍🦺 Acepta perros', '🐕 Acepta perros fuera', '🛜 Tiene Wifi','🛜 Tiene Wifi Gratis', '🏳️‍🌈 LGBT+ friendly',
                  ]
 for columna in columnas_a_modificar:
-    sorted_df[columna] = sorted_df[columna].apply(sustituir_valor_emoji)
+    sorted_df_show[columna] = sorted_df_show[columna].apply(sustituir_valor_emoji)
 
 with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
     st.data_editor(
