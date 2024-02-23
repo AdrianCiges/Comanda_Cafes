@@ -523,7 +523,7 @@ else:
     folium_static(m, width=380)
 
 # Crear la columna 'Nombre Clicable' que transforma 'Nombre' en un enlace HTML usando 'Link'
-sorted_df['Nombre Clicable'] = sorted_df.apply(lambda row: f"<a href='{row['Link']}' target='_blank'>{row['Nombre']}</a>", axis=1)
+sorted_df['Nombre Clicable'] = sorted_df.apply(lambda row: f"<a href='{row['Link']}' target='_blank'>{row['☕ Nombre']}</a>", axis=1)
 
 # Opción 1: Mostrar todo el DataFrame incluyendo 'Nombre Clicable', excluyendo 'Link'
 # Convertir el DataFrame a HTML, permitiendo HTML en 'Nombre Clicable'
