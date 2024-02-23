@@ -553,7 +553,8 @@ columnas_a_modificar = ['🔓 Abierto Ahora',
 for columna in columnas_a_modificar:
     sorted_df_show[columna] = sorted_df_show[columna].apply(sustituir_valor_emoji)
 
-with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
+num_cafes_filtradas = len(sorted_df_show)
+with st.expander(f"👀 Ver detalle {num_cafes_filtradas} cafeterías (por proximidad)"):
     st.data_editor(
         sorted_df_show.drop(['Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1),
         column_config={
