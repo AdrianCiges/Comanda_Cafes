@@ -527,12 +527,12 @@ with st.expander("👀 Ver detalle de todas las cafeterías en base de datos"):
         sorted_df_show.drop(['Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1),
         column_config={
             "Link": st.column_config.LinkColumn(
-                "🔗 Link", display_text = "Cómo llegar"
+                "🔗 Link", display_text = "➡️ Cómo llegar"
             ),
             "⭐ Puntuación": st.column_config.ProgressColumn(
                 "⭐ Puntuación",
                 help="Los valores a 0 son sitios sin votos",
-                format="$%f",
+                format="%f",
                 min_value=0,
                 max_value=5,
             ),
