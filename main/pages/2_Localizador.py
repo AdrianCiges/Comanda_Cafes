@@ -371,7 +371,7 @@ hora_actual = datetime.now().hour + 1
 dia_semana_ing = ahora.strftime("%A")
 
 # Diccionario para traducir el día de la semana al español
-dias_semana_es = {"Monday": "lunes", "Tuesday": "martes", "Wednesday": "miércoles", "Thursday": "jueves", "Friday": "viernes", "Saturday": "sábado", "Sunday": "`domingo"}
+dias_semana_es = {"Monday": "lunes", "Tuesday": "martes", "Wednesday": "miércoles", "Thursday": "jueves", "Friday": "viernes", "Saturday": "sábado", "Sunday": "domingo"}
 
 # Traducir el día de la semana al español
 dia_semana_es = dias_semana_es.get(dia_semana_ing, "Desconocido")
