@@ -159,7 +159,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 
 @st.cache_data
 def get_data():
-    data_url = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'cafeterias_horarios_ocupacion.xlsx')
+    data_url = os.path.join(os.path.dirname(__file__), '..', 'data', 'cafeterias_horarios_ocupacion.xlsx')
     df = pd.read_excel(data_url, engine='openpyxl', usecols= [ 'Columna1', 'url', 'nombre', 'ciudad', 'precio', 'latitud', 'longitud',
                                                                'rating', 'reviews', 'cerrado', 'cerrado_temporal', 'horarios',
                                                                'ocupacion', 'lgbt', 'aperitivos', 'terraza', 'cerveza',
