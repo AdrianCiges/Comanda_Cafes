@@ -610,7 +610,7 @@ if st.checkbox('📍 Usar mi ubicación'):
         location = [loc]
         latitud = location[0]['coords']['latitude']
         longitud = location[0]['coords']['longitude']
-        st.write(10/0) # Provocamos el error
+        # st.write(10/0) # Provocamos el error
     except:
         st.error('No hemos podido acceder a tu ubicación. Selecciona tu municipio en el siguiente desplegable para buscar tu cafetería ideal:', icon="⚠️")
         ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()),placeholder="Busca tu ubicación más cercana para un relaxing cup of café con leche", index=87)
