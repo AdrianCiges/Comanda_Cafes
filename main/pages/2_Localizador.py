@@ -601,7 +601,7 @@ with st.expander(f"👀 Ver {num_cafes_filtradas} cafeterías (por proximidad)")
         hide_index=True,
     )
 
-
+st.write('--------------------------------')
 # with st.expander("👀 Ver detalle de todas las cafeterías por proximidad"):
 #     st.dataframe(sorted_df_show.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1))
     
