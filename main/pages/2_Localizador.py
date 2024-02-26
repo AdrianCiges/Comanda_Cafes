@@ -574,7 +574,7 @@ for columna in columnas_a_modificar:
     sorted_df_show[columna] = sorted_df_show[columna].apply(sustituir_valor_emoji)
 
 st.write('')
-st.markworn('#### Tabla detalle de las cafeterías')
+st.markdown('#### Tabla detalle de las cafeterías')
 num_cafes_filtradas = len(sorted_df_show)
 with st.expander(f"👀 Ver {num_cafes_filtradas} cafeterías (por proximidad)"):
     st.data_editor(
