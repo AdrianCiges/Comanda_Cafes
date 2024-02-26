@@ -911,3 +911,6 @@ perc_hab = int((len(seleccionados)/media_habitual)*100)
 col3.metric("% Hoy vs Habitual", f'{perc_hab}%', f"{perc_hab-100}% de lo habitual")
 
 #col4.metric("Media habitual", 6)
+
+from st_radial import st_radial
+st_radial('Metric 1', value=88)
