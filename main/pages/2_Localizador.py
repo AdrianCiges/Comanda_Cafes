@@ -184,7 +184,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             if column == '💬 Nº Comentarios':
                 left, right = st.columns((1, 20))
                 left.write("↳")
-                user_num_input = st.number_input(
+                user_num_input = right.number_input(
                     f"{column} mínimo",
                     min_value=int(df[column].min()),
                     max_value=int(df[column].max()),
