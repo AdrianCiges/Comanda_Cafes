@@ -267,7 +267,6 @@ try:
     </style>
     """, unsafe_allow_html=True)
 
-    st.write('-------------------')
 
     # Utilizando Markdown para añadir estilo al título
     st.markdown('#### ¿Para llevar?')
@@ -880,6 +879,8 @@ try:
         output.append('Muchas gracias! 🙂')
 
         st.code('\n'.join(output), language='plaintext')
+
+    st.write('-----------')
     
 except: 
     pass
