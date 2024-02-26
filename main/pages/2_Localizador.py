@@ -573,12 +573,17 @@ columnas_a_modificar = ['🔓 Abierto Ahora',
 for columna in columnas_a_modificar:
     sorted_df_show[columna] = sorted_df_show[columna].apply(sustituir_valor_emoji)
 
+
+sorted_df_show = sorted_df_show[['Link', 'Metros', '☕ Nombre', '🏙️ Ciudad', '🔓 Abierto Ahora', '💲 Nivel de precios', '⭐ Puntuación', '💬 Nº Comentarios', '🕐 Horario hoy', '📊 % Ocupación Ahora', 
+                  '🪑 Puedes sentarte', '☀️ Tiene terraza', '🍺 Sirve Cerveza', '🍷 Sirve vino', '🥪 Sirve desayunos/almuerzos', '🫒 Sirve aperitivos', '🍪 Sirve postres', '🚶‍♂️ Para llevar', 
+                  '🙋‍♀️ Acepta reserva', '🐕‍🦺 Acepta perros', '🐕 Acepta perros fuera', '🛜 Tiene Wifi','🛜 Tiene Wifi Gratis', '🏳️‍🌈 LGBT+ friendly',
+                 ]]
 st.write('')
 st.markdown('#### Tabla detalle de las cafeterías')
 num_cafes_filtradas = len(sorted_df_show)
 with st.expander(f"👀 Ver {num_cafes_filtradas} cafeterías (por proximidad)"):
     st.data_editor(
-        sorted_df_show.drop(['Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum'], axis=1),
+        sorted_df_show.drop(['lat_dif', 'lon_dif', 'dif_sum'], axis=1),
         column_config={
             "Link": st.column_config.LinkColumn(
                 "🔗 Link", display_text = "🌐 Cómo llegar"
