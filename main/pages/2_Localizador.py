@@ -837,7 +837,8 @@ with tab2:
     
     horas_restantes2 = tiempo_restante2.seconds // 3600
     minutos_restantes2 = (tiempo_restante2.seconds % 3600) // 60
-    
+
+    st.sidebar.write('')
     if hora_actual > time(18, 00):
         st.sidebar.write(f'¿Un ☕ calentito para una tarde intensa?')
     elif hora_actual < primer_cafe:
@@ -850,22 +851,22 @@ with tab2:
         st.sidebar.write('Nunca es mala hora para un ☕')
     
     
-    # Ruta de la imagen del logo
-    LOGO_IMAGE = "./img/granos.png"
+    # # Ruta de la imagen del logo
+    # LOGO_IMAGE = "./img/granos.png"
     
-    # Texto principal
-    texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
+    # # Texto principal
+    # texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
         
-    # Leer la imagen del logo y codificarla en base64
-    with open(LOGO_IMAGE, "rb") as image_file:
-        encoded_image = base64.b64encode(image_file.read()).decode()
+    # # Leer la imagen del logo y codificarla en base64
+    # with open(LOGO_IMAGE, "rb") as image_file:
+    #     encoded_image = base64.b64encode(image_file.read()).decode()
     
-    # Mostrar el texto principal y el logo
-    st.markdown(estilos_css, unsafe_allow_html=True)
-    st.markdown(
-        f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
-        unsafe_allow_html=True
-    )
+    # # Mostrar el texto principal y el logo
+    # st.markdown(estilos_css, unsafe_allow_html=True)
+    # st.markdown(
+    #     f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
+    #     unsafe_allow_html=True
+    # )
     
     st.header("¿Quién quiere café?")
     user_input = st.text_input("Nombres aquí (separados por , )", "")
