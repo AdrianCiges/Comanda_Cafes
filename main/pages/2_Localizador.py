@@ -803,7 +803,7 @@ with tab1:
 
 
 with tab2:
-    st.write('En desarrollo...')
+    st.write('En desarrollo 2...')
     st.write('')
 
     hora_actual = datetime.now().time()
@@ -861,4 +861,44 @@ with tab2:
     
         return clean
         
+    st.write('')
+    bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro 🤔']
+    con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Soja 🌿', 'Leche Almendra 🌰','Leche Avena 🥣','Cortado ✂️', 'Solo ❌', '']
+    tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
+    
+    x_bebidas = []
+    x_con = []
+    x_extras = []
+    x_tostadas = []
+    
+    seleccionados = []
+    
+    # try:
+    
+    for persona2 in clean_user_input():
+    
+        try:
+    
+            col10, col20, col30, col40, col50 = st.columns(5)
+            st.write('-----------------')
+    
+            seleccion2 = col10.checkbox(persona2)
+    
+            if seleccion2:
+                seleccionados.append(persona2)
+    
+                bebida_seleccionada = col20.selectbox(f"Bebida de {persona2}", bebidas)
+                con_seleccionada = col30.selectbox(f"'Con' de {persona2}", con)
+                extras = col40.text_input(f"Extras de {persona2}")
+                barrita = col50.selectbox(f"Tostada de {persona2}", tostadas)
+    
+                x_bebidas.append(bebida_seleccionada)
+                x_con.append(con_seleccionada)
+                x_extras.append(extras)
+                x_tostadas.append(barrita)
+    
+        except:
+            st.warning(f'**{persona2.strip()}** ya ha sido añadido a la lista previamente. Prueba con otro nombre.')
+    
+    st.write('')
     st.write('')
