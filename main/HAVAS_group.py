@@ -125,7 +125,17 @@ st.markdown(
     f'<div class="logo-container">{texto_principal}<img src="data:image/png;base64,{encoded_image}" class="logo-img"></div>',
     unsafe_allow_html=True
 )
-    
+
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background.jpg");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 # ----------------------------------------------------------------------------------------
 
 def gente():
