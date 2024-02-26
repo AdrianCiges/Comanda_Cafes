@@ -183,7 +183,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             # Si la columna es '💬 Nº Comentarios', usa un widget especial en la barra lateral
             if column == '💬 Nº Comentarios':
                 left, right = st.columns((1, 20))
-                left.write("↳")
+                # left.write("↳")
                 user_num_input = right.number_input(
                     f"{column} mínimo",
                     min_value=int(df[column].min()),
@@ -194,7 +194,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 df = df[df[column] >= user_num_input]
             else:
                 left, right = st.columns((1, 20))
-                left.write("↳")
+                # left.write("↳")
                 # Trata las columnas con < 10 valores únicos como categóricas
                 if is_categorical_dtype(df[column]) or df[column].nunique() < 10:
                     user_cat_input = right.multiselect(
