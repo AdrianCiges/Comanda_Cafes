@@ -947,8 +947,8 @@ with tab2:
     # Utilizando Markdown para añadir estilo al título
     st.markdown('#### ¿Para llevar?')
     
-    # Widget de selección sin formato específico en la pregunta
-    para_llevar = st.radio("", ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
+    # # Widget de selección sin formato específico en la pregunta
+    # para_llevar = st.radio("", ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
     
     # st.write('-------------------')
     
