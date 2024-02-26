@@ -38,17 +38,17 @@ from pandas.api.types import (
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
-# Cambiar el tema de la página principal
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #e9ecef;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# # Cambiar el tema de la página principal
+# st.markdown(
+#     """
+#     <style>
+#     .stApp {
+#         background-color: #e9ecef;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 # Texto principal
 texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
@@ -87,16 +87,18 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background.jpg?raw=true");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# Cambiar el fondo de la página principal a una imagen
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # ------------------------------------------------------------------------------------CONFIG⬆️-------------------------------------
 # ---------------------------------------------------------------------------------FUNCIONES⬇️-------------------------------------
 
