@@ -578,10 +578,15 @@ st.markdown('#### Tabla detalle de las cafeterías')
 num_cafes_filtradas = len(sorted_df_show)
 with st.expander(f"👀 Ver {num_cafes_filtradas} cafeterías (por proximidad)"):
     st.data_editor(
-        sorted_df_show.drop(['Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1),
+        sorted_df_show.drop(['Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum'], axis=1),
         column_config={
             "Link": st.column_config.LinkColumn(
                 "🔗 Link", display_text = "🌐 Cómo llegar"
+            ),
+            "Metros": st.column_config.NumberColumn(
+            "📏 Distancia",
+            help="Medida en metros desde tu ubicación",
+            format="%d m",
             ),
             "⭐ Puntuación": st.column_config.ProgressColumn(
                 "⭐ Puntuación",
