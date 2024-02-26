@@ -91,7 +91,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background.jpg");
+        background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background.jpg?raw=true");
         background-size: cover;
     }
     </style>
