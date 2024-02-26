@@ -868,7 +868,8 @@ with tab2:
     #     unsafe_allow_html=True
     # )
     
-    st.header("¿Quién quiere café?")
+    st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>¿Quién quiere café?</h2>", unsafe_allow_html=True)
+    
     user_input = st.text_input("Nombres aquí (separados por , )", "")
     user_input = user_input.split(',')
     
