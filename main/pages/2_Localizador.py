@@ -508,11 +508,115 @@ df = filter_dataframe(df)
 # with st.expander("👀 Ver detalle de cafeterías por cercanía"):
 #     st.dataframe(df.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente'], axis=1))# df = df.drop_duplicates()
 
+dictio_coords_saviour = {    'A Coruña': '43.35931967283019, -8.408809210188679',
+                             'Albacete': '38.99396769451219, -1.8604693884146342',
+                             'Alcázar de San Juan': '39.39237252352941, -3.2141288529411765',
+                             'Alcobendas': '40.537532506249995, -3.644522027083333',
+                             'Alcorcón': '40.346937623076926, -3.8246613384615387',
+                             'Algeciras': '36.129599940909095, -5.451225079545455',
+                             'Alicante': '38.351139425, -0.4825341448275862',
+                             'Almería': '36.842224141358024, -2.444184687037037',
+                             'Ávila': '40.65386369111111, -4.692828448888889',
+                             'Avilés': '43.55286543295455, -5.921562445454546',
+                             'Badajoz': '38.874810194594595, -6.976294775675676',
+                             'Badalona': '41.44967363469387, 2.236860312244898',
+                             'Barakaldo': '43.292550786585366, -2.989846254878049',
+                             'Barcelona': '41.39942715652174, 2.1666052008152175',
+                             'Bilbao': '43.26211947838983, -2.9337297305084746',
+                             'Burgos': '42.34686996533333, -3.686416834',
+                             'Cáceres': '39.47134537816092, -6.376309583908046',
+                             'Cádiz': '36.526413873563214, -6.274857685057471',
+                             'Canals': '38.963939075, -0.5847714166666667',
+                             'Cartagena': '37.621564778527606, -0.9785270920245399',
+                             'Castellón de la Plana': '39.98502614605263, -0.0428149125',
+                             'Ciudad Real': '38.988141775, -3.9126477033333336',
+                             'Córdoba': '37.88608491962617, -4.781265535514019',
+                             'Cornellà de Llobregat': '41.3555910125, 2.0773028333333334',
+                             'Coslada': '40.42620416756757, -3.5517938',
+                             'Cuenca': '40.068779464705884, -2.1353676686274508',
+                             'Donostia-San Sebastian': '43.313913859124085, -1.9806090014598539',
+                             'Dos Hermanas': '37.29192572666667, -5.927649404',
+                             'Elche': '38.26780385649351, -0.6967227350649351',
+                             'Ferrol': '43.48838615607477, -8.225633858878505',
+                             'Fuenlabrada': '40.287100390361445, -3.797767201204819',
+                             'Getafe': '40.308838217857144, -3.7264821589285715',
+                             'Gijón': '43.5338167045977, -5.667527423371647',
+                             'Girona': '41.97899764090909, 2.818326618939394',
+                             'Granada': '37.17808149240506, -3.6034549312236286',
+                             'Guadalajara': '40.632373856, -3.1647458360000003',
+                             'Getxo': '43.34240160967742, -3.010334016129032',
+                             'Herencia': '39.36755, -3.3540527599999996',
+                             'Huelva': '37.26272268157895, -6.9426139289473685',
+                             'Huesca': '42.149762525, -0.392696121875',
+                             'Jaén': '37.78014886506024, -3.7918087891566263',
+                             'Jerez de la Frontera': '36.686790102912624, -6.131552945631069',
+                             'Las Palmas de Gran Canaria': '28.129645660162602, -15.430950703252032',
+                             'Leganés': '40.333947937000005, -3.757634225',
+                             'León': '42.599584804651165, -5.575564213953489',
+                             'Lincoln': '53.22896717439024, -0.5418955',
+                             'Lleida': '41.61688401521739, 0.6256506760869565',
+                             'Logroño': '42.462202311695904, -2.4483244959064328',
+                             'London': '51.50008564821429, -0.13242266535714287',
+                             'Lorca': '37.6701947442623, -1.6944428196721313',
+                             'Lugo': '43.00738203163265, -7.556781552040817',
+                             'Madrid': '40.424607675123156, -3.685111448522167',
+                             'Málaga': '36.71417034545454, -4.443067285521885',
+                             'Marbella': '36.50773136569343, -4.895492078832117',
+                             'Mataró': '41.541815953333334, 2.43999132',
+                             'Mérida': '38.91681533529412, -6.344387509803921',
+                             'Móstoles': '40.324170957142854, -3.864314089010989',
+                             'Oporto': '41.1659195, -8.5950563',
+                             'Ourense': '42.3419908415493, -7.862884305633802',
+                             'Oviedo': '43.36508059897436, -5.84789066',
+                             'Palencia': '42.00696751967214, -4.527581191803279',
+                             'Palma': '39.573502170903005, 2.659054004013378',
+                             'Pamplona': '42.81446789268293, -1.6490197115853658',
+                             'Parla': '40.238003463157895, -3.7672410868421053',
+                             'Pontevedra': '42.42860158333333, -8.639992716666667',
+                             'Reus': '41.153498245544554, 1.1084743',
+                             'Roma': '41.8931647, 12.616129166666667',
+                             'Sabadell': '41.547663493, 2.103674539',
+                             'Salamanca': '40.968435578472224, -5.663365422916666',
+                             'San Fernando': '36.46337692461539, -6.200236218461538',
+                             'Santander': '43.461207507738095, -3.8160376904761906',
+                             'Sant Boi de Llobregat': '41.34503951290323, 2.0368827032258063',
+                             'Santiago de Compostela': '42.8788086, -8.540962632666666',
+                             'Santa Cruz de Tenerife': '28.460063417877095, -16.2673412',
+                             'Santa Coloma de Gramenet': '41.44995064074074, 2.211956114814815',
+                             'San Cristóbal de la Laguna': '28.485085,-16.3169423',
+                             'Segovia': '40.943489794444446, -4.116228702777778',
+                             'Sevilla': '37.38350618552279, -5.971737966219839',
+                             'Soria': '41.76694795, -2.4730200583333333',
+                             'Tarragona': '41.11999216492537, 1.2463097619402983',
+                             'Talavera de la Reina': '39.96184175538461, -4.832533472307692',
+                             'Telde': '27.996769147222224, -15.406813934722221',
+                             'Terrassa': '41.56336119652174, 2.0170197269565215',
+                             'Teruel': '40.33803205882353, -1.1047350676470589',
+                             'Toledo': '39.864105225609755, -4.014731767073171',
+                             'Torrejón de Ardoz': '40.45818753157894, -3.4699243245614033',
+                             'Torrevieja': '37.98031777575758, -0.6828376313131314',
+                             'Valencia': '39.46725873569024, -0.3711913144781145',
+                             'Valladolid': '41.64477447202072, -4.730428651295337',
+                             'Vigo': '42.22457425679013, -8.72090796728395',
+                             'Vitoria-Gasteiz': '42.85090934021739, -2.677926666304348',
+                             'Xàtiva': '38.991189223333336, -0.5234018166666667',
+                             'Zamora': '41.504066815277774, -5.737835669444444',
+                             'Zaragoza': '41.65224518603175, -0.8914068428571429'}
+
+
 st.write('')
 if st.checkbox('📍 Usar mi ubicación'):
-    location = [loc]
-    latitud = location[0]['coords']['latitude']
-    longitud = location[0]['coords']['longitude']
+    try:
+        location = [loc]
+        latitud = location[0]['coords']['latitude']
+        longitud = location[0]['coords']['longitude']
+        st.write(10/0) # Provocamos el error
+    except:
+        st.error('No hemos podido acceder a tu ubicación. Selecciona tu municipio en el siguiente desplegable para buscar tu cafetería ideal:', icon="⚠️")
+        ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()))
+        if ciudad_seleccionada:
+            latitud = round(float(dictio_coords[ciudad_seleccionada].split(', ')[0]), 4)
+            longitud = round(float(dictio_coords[ciudad_seleccionada].split(', ')[0]), 4)
 try:
     latitud = round(float(latitud), 4)
     longitud = round(float(longitud), 4)
@@ -642,7 +746,7 @@ municipios_incluidos = ['A Arnoia', 'A Bergueira', 'A Coruña', 'A Groba', 'A Gu
                         'Cascón de la Nava', 'Castejón', 'Castejón de Sos', 'Castel Romano', 'Castellar de Santiago', 'Castellón de la Plana', 'Castillazuelo', 'Castrillo de Don Juan', 'Castrillo de la Ribera', 'Castro Caldelas', 'Castro de Ribeiras', 'Catarroja', 
                         'Cazorla', 'Ceclavín', 'Cedofeita', 'Cedrillas', 'Celanova', 'Cella', 'Cerro Muriano', 'Cervera de Pisuerga', 'Chantada', 'Chapela', 'Chessington', 'Chiclana de la Frontera', 'Chilluévar', 'Chillón', 'Chipiona', 'Chislehurst', 'Ciampino', 'Cifuentes', 'Cilleros', 'Cimanes de la Vega', 'Cisneros', 'Cistierna', 'Ciudad Quesada', 'Ciudad Real', 'Cogolludo', 'Coles', 'Collado Villalba', 'Collonades', 'Colloto', 'Colungo', 'Conchel', 'Congosto', 'Conil de la Frontera', 'Coria', 'Cornellà de Llobregat', 'Corredoria', 'Cortes', 'Cortijos Nuevos', 'Coslada', 'Coto de Bornos', 'Coto-Ríos', 'Coulsdon', 'Covaleda', 'Coy', 'Cp', 'Cretas', 'Croydon', 'Ctra. Acceso Central Térmica N: S/N', 'Cualedro', 'Cuenca', 'Cuesta Blanca', 'Cuevas de Almudén', 'Curbe', 'Cáceres', 'Cádiz', 'Córdoba', 'Dacón', 'Dagenham', 'Daimiel', 'Dartford', 'Donadío', 'Donostia-San Sebastian', 'Dos Hermanas', 'Duruelo de la Sierra', 'El Albujón', 'El Algar', 'El Alquián', 'El Arenal', 'El Burgo Ranero', 'El Burgo de Osma', 'El Casar', 'El Casar de Talavera', 'El Chaparral', 'El Cuervo', 'El Gastor', 'El Grado', 'El Grao de Castellón', 'El Higueron', 'El Pinar', 'El Poblenou', 'El Portal', 'El Poyo del Cid', 'El Puerto de Sta María', 'El Robledo', 'El Rosario', 'El Torno', 'El Zabal', 'El pilar', 'Elche', 'Elche Parque Industrial', 'Enfield', 'Entrimo', 'Erith', 'Es Pil·larí', 'Es Secar de la Real', 'Escarrilla', 'Esgos', 'Espera', 'Estación', 'Estación Linares-Baeza', 'Estación de Medinaceli', 'Estadilla', 'Estella del Marqués', 'Esteras de Medinaceli', 'Estrecho de San Gines', 'Fabero', 'Facinas', 'Fariza', 'Feltham', 'Fermoselle', 'Ferreira de Pantón', 'Ferrol', "Foia d'Elx", 'Foios', 'Fontanar', 'Formigal', 'Fortanete', 'Fraga', 'Fresno de la Ribera', 'Friamonde', 'Frómista', 'Fuenlabrada', 'Fuenllana', 'Fuente el Fresno', 'Fuentelahiguera de Albatages', 'Fuentelapeña', 'Fuentes de Nava', 'Galapagar', 'Galisteo', 'Galiñáns', 'Gargüera', 'Garrovillas', 'Gata', 'Germans Sàbat', 'Getafe', 'Getxo', 'Gijón', 'Girona', 'Godella', 'Golmayo', 'Gordoncillo', 'Granada', 'Graus', 'Grazalema', 'Grañén', 'Greater', 'Greenford', 'Guadacorte', 'Guadalajara', 'Guadalcacín', 'Guamasa', 'Guardo', 'Guarromán', 'Gustei', 'Hampton', 'Hanwell', 'Harrow', 'Hayes', 'Herencia', 'Herrera de Pisuerga', 'Hervás', 'Hinojares', 'Hontoria', 'Horcajo de los Montes', 'Hornchurch', 'Hornos', 'Hospital de Órbigo', "Hospitalet de Llobregat (L')", 'Hounslow', 'Huelva', 'Huergas de Babia', 'Huesca', 'Humanes', 'IMEPE', 'Ibros', 'Igüeña', 'Ilford', 'Isla Plana', 'Isla de', 'Isleworth', 'Iznatoraf', 'Jabalquinto', 'Jaca', 'Jadraque', 'Jarandilla de la Vera', 'Jaraíz de la Vera', 'Jarilla', 'Jaén', 'Jerez de la Frontera', 'Jerte', 'Josa', 'Jubilee', 'Jódar', 'Keston', 'Kingston upon Thames', "L'Altet", 'La Aljorra', 'La Aparecida', 'La Barca de la Florida', 'La Bañeza', 'La Bóveda de Toro', 'La Camocha', 'La Carolina', 'La Cañada', 'La Escucha', 'La Estación', 'La Fortuna', 'La Garita', 'La Herradura', 'La Hoya', 'La Iruela', 'La Laguna', 'La Línea de la Concepción', 'La Magdalena', 'La Manga', 'La Manga Club', 'La Martina', 'La Mata', 'La Palma', 'La Pardilla', 'La Puebla', 'La Puebla de Valverde', 'La Puerta de Segura', 'La Solana', 'La Virgen del Camino', 'Lampaza', 'Langa de Duero', 'Larouco', 'Las Campas', 'Las Huesas', 'Las Medianias', 'Las Mercedes', 'Las Palmas de Gran Canaria', 'Las Remudas', 'Las Rozas de Madrid', 'Laza', 'Leganés', 'Leiro', 'Les Baies', 'Leystonstone', 'León', 'Linares', 'Lincoln', 'Lleida', 'Lodares', 'Logroño', 'Lombillo de los Barrios', 'London', 'Londres', 'Loporzano', 'Lorca', 'Los Barrios', 'Los Belones', 'Los Cortijillos', 'Los Moriscos', 'Los Nietos', 'Los Rábanos', 'Los Villares', 'Losar de la Vera', 'Lubián', 'Lugo', 'Láncara', 'Lérida', 'Línea De La Concepción ( La )', 'Maceda', 'Madrid', 'Madridanos', 'Madrigal de la Vera', 'Majadahonda', 'Malagón', 'Maliaño', 'Malpartida de Plasencia', 'Mancha Real', 'Manises', 'Mansilla de las Mulas', 'Mantiel', 'Manzanal del Puerto', 'Manzanares', 'Manzaneda', 'Maqueda', 'Marbella', 'Marchamalo', 'Marpequeña', 'Martos', 'Martín del Río', 'Marín', 'Mas de las Matas', 'Masegoso de Tajuña', 'Maside', 'Massanassa', 'Matarrosa del Sil', 'Mataró', 'Matas-Pinar-Monte Rozas ( Las )', 'Matola', 'Medina-Sidonia', 'Medinaceli', 'Meliana', 'Membrilla', 'Membrío', 'Mengíbar', 'Miajadas', 'Middlesex', 'Miguelturra', 'Mirabel', 'Miranda', 'Mislata', 'Mitcham', 'Mogón', 'Mohedas de Granadilla', 'Molina de Aragón', 'Moncada', 'Mondéjar', 'Monfarracinos', 'Monforte de Lemos', 'Monreal del Campo', 'Montalbán', 'Montamarta', 'Monteagudo de las Vicarías', 'Montehermoso', 'Montejos del Camino', 'Montequinto', 'Monterde de Albarracín', 'Monterroso', 'Montiel', 'Monzón', 'Mora de Rubielos', 'Moraleja', 'Moraleja del Vino', 'Morales de Toro', 'Morales del Vino', 'Moralina', 'Morden', 'Moreiras', 'Morón de Almazán', 'Mugueimes', 'Murcia', 'Museros', 'Mutilva', 'Málaga', 'Mérida', 'Móstoles', 'Narón', 'Navalmoral de la Mata', 'Navas de San Juan', 'Navas del Madroño', 'New Malden', 'Noceda', 'Northwood', 'Nueno', 'Nueva Jarilla', 'Nuñomoral', 'O Barco', 'O Carballiño', 'O Corgo', 'O Cotón', 'Ofra', 'Oia', 'Ojos Negros', 'Ojos de Garza', 'Olleros de Sabero', 'Olvera','Ólvega', 'Onzonilla', 'Oporto', 'Orbón', 'Orcera', 'Orpington', 'Ortigal', 'Osorno', 'Ostia', 'Ostia Antica', 'Otero de Bodas', 'Ourense', 'Outeiro de Rei', 'Outomuro', 'Oviedo', 'Padornelo', 'Padrenda', 'Padrenda de Abaixo', 'Paiporta', 'Palas de Rei', 'Palencia', 'Palma', 'Palmones', 'Pamplona', 'Panticosa', 'Paradela', 'Paredes de Nava', 'Pareja', 'Parla', 'Parque de La Laguna', 'Parquelagos', 'Pastrana', 'Paterna', 'Peal de Becerro', 'Pedrafita do Cebreiro', 'Pedro Muñoz', 'Peque', 'Peracense', 'Peraleda de San Román', 'Peralejos', 'Perales de Tajuña', 'Perazancas', 'Perleta', 'Peñarroya de Tastavíns', 'Picanya', 'Piedrabuena', 'Pielas', 'Pinner', 'Pinofranqueado', 'Piornal', 'Pioz', 'Plasencia', 'Plasencia del Monte', 'Poblado de Sancti Petri', 'Pobladura de Pelayo Garcia, Leon', 'Pobladura del Valle', 'Poblete', 'Pol. Ind. El Goro', 'Pol. Ind. Pla de la Vallonga', 'Poligono Industrial de Constantí', 'Ponferrada', 'Ponte Galeria-la Pisana', 'Pontevedra', 'Port Saplaya', 'Porto', 'Portomarín', 'Porzuna', 'Pozo Alcón', 'Pozo Estrecho', 'Pozuelo de Alarcón', 'Pozuelo de Calatrava', 'Pozuelo de Vidriales', 'Prado del Rey', 'Puebla de Sanabria', 'Puebla de Trives', 'Puebla del Príncipe', 'Puente Villarente', 'Puente de Domingo Flórez', 'Puente de Génave', 'Puenteareas', 'Puerto Lápice', 'Puerto Real', 'Puerto Serrano', 'Puerto de la Cruz', 'Puertollano', 'Pumarejo de Tera', 'Punta Prima', 'Punta del Hidalgo', 'Purias', 'Purley', 'Quart de Poblet', 'Quesada', 'Quintana del Marco', 'Quintela', 'Quiroga', 'Rabanal de Arriba', 'Rafal', 'Rainham', 'Raíces Nuevo', 'Real', 'Reboredo', 'Retamar', 'Reus', 'Ribadavia', 'Ribadelago Nuevo', 'Ribadumia', 'Richmond', 'Rio Tinto', 'Riolobos', 'Rioseco de Soria', 'Rioseco de Tapia', 'Risco Negro', 'Rivas-Vaciamadrid', 'Rocafort', 'Rochela', 'Roma', 'Rome', 'Romford', 'Rota', 'Ruidera', 'Ruislip', 'Rábade', 'S. Leonardo de Yagüe', 'Sa Indioteria', 'Sa Vileta-Son Rapinya', 'Sabadell', 'SabesteCoffee', 'Sabiote', 'Sabiñánigo', 'Sabucedo', 'Sacedón', 'Sagunto', 'Sainsbury', 'Salamanca', 'Saldaña', 'Salinetas', 'Sallent de Gállego', 'Salt', 'Samos', 'San Andrés', 'San Andrés del Rabanedo', 'San Carlos del Valle', 'San Cibrao das Viñas', 'San Cristóbal de Entreviñas', 'San Fernando', 'San Fernando de Henares', 'San Gregorio', 'San Jose', 'San Juan', 'San Juan de Mozarrifar', 'San Juan de Ortega', 'San Martín de Trevejo', 'San Matias', 'San Pedro Alcántara', 'San Pedro Bercianos', 'San Pedro de Ceque', 'San Pedro de Olleros', 'San Pedro.', 'San Román', 'San Roque', 'San Sebastián', 'San Sebastián de los Reyes', 'San Vitero', 'San Xulián', 'San cristovo de cea', 'Sancedo', 'Sande', 'Sandiás', 'Sanlúcar de Barrameda', 'Sant Boi de Llobregat', 'Sant Joan Despí', 'Sant Jordi', 'Sant Salvador', 'Sant Vicent del Raspeig', 'Santa Ana', 'Santa Coloma de Gramenet', 'Santa Cruz de Mudela', 'Santa Cruz de Tenerife', 'Santa Cruz de Yanguas', 'Santa Maria de', 'Santa María de Huerta', 'Santa María de Trassierra', 'Santa María del Mar', 'Santander', 'Santiago de Compostela', 'Santiago del Campo', 'Santibañez de la Peña', 'Santibáñez de Vidriales', 'Santibáñez el Bajo', 'Santillana de Campos', 'Santo Tomé', 'Santovenia de la Valdoncina', 'Saravillo', 'Sarreaus', 'Sarria', 'Sarrión', 'Sedaví', 'Segovia', 'Segura de la Sierra', 'Selcetta', 'Serradilla', 'Ses Cadenes', 'Sesué', 'Setenil de las Bodegas', 'Sevilla', 'Sidcup', 'Sigüeiro', 'Sigüenza', 'Siles', 'Siresa', 'Sobradelo', 'Socuéllamos', 'Son Castelló', 'Son Ferriol', 'Son Sardina', 'Son Serra Perera', 'Soria', 'Sotiello', 'South Croydon', 'Southall', 'Souto', 'Sta Coloma de Gramanet', 'Stamford', 'Surbiton', 'Surrey', 'Sutton', 'Tabarca', 'Taboada', 'Taboadela', 'Taco', 'Talavera de la Reina', 'Talayuela', 'Tamajón', 'Tangel', 'Taraguilla', 'Tardesillas', 'Tardienta', 'Tarifa', 'Tarragona', 'Tavernes Blanques', 'Teddington', 'Tejina', 'Telde', 'Tendilla', 'Tenerife', 'Tercia', 'Terrassa', 'Teruel', 'Thornton Heath', 'Toledo', 'Tomelloso', 'Toral de Merayo', 'Toral de los Vados', 'Toreno', 'Torla-Ordesa', 'Toro', 'Torquemada', 'Torre de Juan Abad', 'Torre del Bierzo', 'Torre-romeu', 'Torreblascopedro', 'Torrecera', 'Torredelcampo', 'Torredonjimeno', 'Torrejoncillo', 'Torrejón de Ardoz', 'Torrejón del Rey', 'Torrellano', 'Torrelodones', 'Torremenga', 'Torrente de Cinca', 'Torrenueva', 'Torreorgaz', 'Torreperogil', 'Torres', 'Torres de Albánchez', 'Torrevieja', 'Trabazos', 'Tramacastilla', 'Trasmiras', 'Trebujena', 'Triacastela', 'Trobajo del Camino', 'Trubia', 'Trévago', 'Twickenham', 'Úbeda', 'Ubrique', 'Upminster', 'Urb. Cdad. del Golf', 'Urb. Novo Santi Petri', 'Urb. las Camaretas', 'Urb. los Vergeles', 'Usanos', 'Utebo', 'Utrillas', 'Uxbridge', 'Vadillo', 'Valcabado', 'Valdecabras', 'Valdepeñas', 'Valderas', 'Valderrobres', 'Valdesalor', 'Valencia', 'Valencia de Don Juan', 'Valladolid', 'Valverde de la Virgen', 'Valverde del Fresno', 'Varea', 'Vega de Espinareda', 'Vegaviana', 'Veguellina de Órbigo', 'Vejer de la Frontera', 'Velamazán', 'Velilla del Río Carrión', 'Venta Gaspar', 'Venta de Baños', 'Venta de los Santos', 'Venta del Aire', 'Verín', 'Viana do Bolo', 'Vicolozano', 'Vigo', 'Vila Da Area', 'Vila-seca', 'Vilachá', 'Vilagarcía de Arousa', 'Vilamartín de Valdeorras', 'Vilamor', 'Vilanova de Arousa', 'Vilar', 'Vilarchao', 'Vilasante', 'Vilches', 'Villablino', 'Villabuena del Puente', 'Villacarrillo', 'Villadangos del Paramo', 'Villaestrigo del Páramo', 'Villafranca del Bierzo', 'Villafranca del Campo', 'Villafría', 'Villagarcía de la Vega', 'Villahibiera', 'Villahán', 'Villalpando', 'Villamandos', 'Villamañán', 'Villamuriel de Cerrato', 'Villanueva de la Sierra', 'Villanueva de la Torre', 'Villanueva de los Infantes', 'Villanueva del Arzobispo', 'Villanueva del Campo', 'Villar del Cobo', 'Villaralbo', 'Villardeciervos', 'Villarente', 'Villarramiel', 'Villarrubia de los Ojos', 'Villarta de San Juan', 'Villasabariego', 'Villaseca de Laciana', 'Villel', 'Viloira', 'Vinalesa', 'Vinuesa', 'Viso del Marqués', 'Vitinia', 'Vitoria-Gasteiz', 'Vivel del Río Martín', 'Vrins', 'Wallington', 'Welling', 'Wembley', 'West Drayton', 'West Wickham', 'Westerham', 'Woodford Green', 'Worcester Park', 'Xinzo de Limia', 'Xirivella', 'Xunqueira de Ambía', 'Xàtiva', 'Zahara de los Atunes', 'Zamora', 'Zaragoza', 'Zarcilla de Ramos', 'Zarza de Granadilla', 'Zubieta']
 
-# municipios_incluidos = ['A Coruña', 'Albacete', 'Alcázar de San Juan', 'Alcobendas', 'Alcorcón', 'Algeciras', 'Alicante', 'Almería', 'Ávila', 'Avilés', 'Badajoz', 'Badalona', 'Barakaldo', 'Barcelona', 'Bilbao', 'Burgos', 'Cáceres', 'Cádiz', 'Canals', 'Cartagena', 'Castelló de la Plana', 'Ciudad Real', 'Córdoba', 'Cornellà de Llobregat', 'Coslada', 'Cuenca', 'Donosti', 'Dos Hermanas', 'Elche', 'Ferrol', 'Fuenlabrada', 'Getafe', 'Gijón', 'Girona', 'Granada', 'Guadalajara', 'Getxo', 'Herencia', 'Huelva', 'Huesca', 'Jaén', 'Jerez de la Frontera', 'Las Palmas de Gran Canaria', 'Leganés', 'León', 'Lincoln (UK)', 'Lleida', 'Logroño', 'Londres (UK)', 'Lorca', 'Lugo', 'Madrid', 'Málaga', 'Marbella', 'Mataró', 'Mérida', 'Móstoles', 'Oporto (PT)', 'Ourense', 'Oviedo', 'Palencia', 'Palma de Mallorca', 'Pamplona', 'Parla', 'Pontevedra', 'Reus', 'Roma (IT)', 'Sabadell', 'Salamanca', 'San Fernando', 'Santander', 'Sant Boi de Llobregat', 'Santiago de Compostela', 'Santa Cruz de Tenerife', 'Santa Coloma de Gramanet', 'San Cristóbal de la Laguna', 'Segovia', 'Sevilla', 'Soria', 'Tarragona', 'Tavalera de la Reina', 'Telde', 'Terrassa', 'Teruel', 'Toledo', 'Torrejón de Ardoz', 'Torrevieja', 'València', 'Valladolid', 'Vigo', 'Vitoria-Gasteiz', 'Xàtiva', 'Zamora', 'Zaragoza']
+# municipios_incluidos = ['A Coruña', 'Albacete', 'Alcázar de San Juan', 'Alcobendas', 'Alcorcón', 'Algeciras', 'Alicante', 'Almería', 'Ávila', 'Avilés', 'Badajoz', 'Badalona', 'Barakaldo', 'Barcelona', 'Bilbao', 'Burgos', 'Cáceres', 'Cádiz', 'Canals', 'Cartagena', 'Castelló de la Plana', 'Ciudad Real', 'Córdoba', 'Cornellà de Llobregat', 'Coslada', 'Cuenca', 'Donosti', 'Dos Hermanas', 'Elche', 'Ferrol', 'Fuenlabrada', 'Getafe', 'Gijón', 'Girona', 'Granada', 'Guadalajara', 'Getxo', 'Herencia', 'Huelva', 'Huesca', 'Jaén', 'Jerez de la Frontera', 'Las Palmas de Gran Canaria', 'Leganés', 'León', 'Lincoln (UK)', 'Lleida', 'Logroño', 'Londres (UK)', 'Lorca', 'Lugo', 'Madrid', 'Málaga', 'Marbella', 'Mataró', 'Mérida', 'Móstoles', 'Oporto (PT)', 'Ourense', 'Oviedo', 'Palencia', 'Palma de Mallorca', 'Pamplona', 'Parla', 'Pontevedra', 'Reus', 'Roma (IT)', 'Sabadell', 'Salamanca', 'San Fernando', 'Santander', 'Sant Boi de Llobregat', 'Santiago de Compostela', 'Santa Cruz de Tenerife', 'Santa Coloma de Gramanet', 'San Cristóbal de la Laguna', 'Segovia', 'Sevilla', 'Soria', 'Tarragona', 'Talavera de la Reina', 'Telde', 'Terrassa', 'Teruel', 'Toledo', 'Torrejón de Ardoz', 'Torrevieja', 'València', 'Valladolid', 'Vigo', 'Vitoria-Gasteiz', 'Xàtiva', 'Zamora', 'Zaragoza']
 
 st.write('## 🏙️ Información sobre los datos')
 st.write('###### En el mapa encontrarás datos de diferentes municipios. Principalmente se han seleccionado aquellas localidades con más de 75.000 habitantes en España (y sus alrrededores). Los municipios incluidos se muestran en el siguiente desplegable:')
