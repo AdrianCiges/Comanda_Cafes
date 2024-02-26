@@ -390,6 +390,7 @@ num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_val
 from_pc = st.sidebar.checkbox('Vista para ordenador')
 
 with tab1:
+    st.write('')
 
     if num_cafeterias != 1:
         st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
@@ -810,7 +811,8 @@ with tab1:
 
 
 with tab2:
-    
+    st.write('')
+
     hora_actual = datetime.now().time()
     hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
     hora_sumada = hora_actual_dt + timedelta(hours=2)
