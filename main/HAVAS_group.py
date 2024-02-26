@@ -140,7 +140,7 @@ st.markdown(
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMS1hb20tMDAzLXdvb2QuanBn.jpg");
+background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background2.jpg?raw=true");
 background-size: cover;
 }
 </style>
