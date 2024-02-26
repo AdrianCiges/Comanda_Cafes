@@ -212,7 +212,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 # Trata las columnas con < 10 valores únicos como categóricas
                 if is_categorical_dtype(df[column]) or df[column].nunique() < 10:
                     user_cat_input = right.multiselect(
-                        f"Valores de {column}",
+                        f"{column}",
                         sorted(df[column].unique()),
                         default=sorted(list(df[column].unique())),
                     )
@@ -233,7 +233,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].between(*user_num_input)]
                 elif is_datetime64_any_dtype(df[column]):
                     user_date_input = right.date_input(
-                        f"Valores de {column}",
+                        f"{column}",
                         value=(
                             df[column].min(),
                             df[column].max(),
