@@ -246,7 +246,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                         df = df.loc[df[column].between(start_date, end_date)]
                 else:
                     user_text_input = right.text_input(
-                        f"Buscar {column}",
+                        f"{column}",
                     )
                     st.write('-----------')
                     if user_text_input:
