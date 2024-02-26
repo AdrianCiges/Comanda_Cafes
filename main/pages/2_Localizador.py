@@ -35,15 +35,6 @@ from pandas.api.types import (
     is_numeric_dtype,
     is_object_dtype,
 )
-from collections import Counter
-from PIL import Image
-import base64
-import io
-import datetime
-from datetime import datetime, time, timedelta
-import re
-import streamlit.components.v1 as components
-import time as timee
 
 st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/cafe5.png")
 
@@ -390,7 +381,6 @@ num_cafeterias = st.sidebar.number_input("Nº de cafeterías", value=10, min_val
 from_pc = st.sidebar.checkbox('Vista para ordenador')
 
 with tab1:
-    st.write('')
 
     if num_cafeterias != 1:
         st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>Tus {num_cafeterias} cafeterías más cercanas</h2>", unsafe_allow_html=True)
@@ -808,9 +798,3 @@ with tab1:
             st.success('Enviado con éxito! 🚀')
         except Exception as e:
             st.error(f"Error al enviar tu petición: {e}")
-
-
-with tab2:
-    st.write('')
-
-
