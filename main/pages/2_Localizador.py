@@ -813,7 +813,7 @@ with tab1:
 
 
 with tab2:
-    # st.write('')
+    st.write('')
 
     # hora_actual = datetime.now().time()
     # hora_actual_dt = datetime.combine(datetime.today(), hora_actual)
