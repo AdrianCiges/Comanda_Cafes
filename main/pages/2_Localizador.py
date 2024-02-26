@@ -950,26 +950,26 @@ with tab2:
     # Widget de selección sin formato específico en la pregunta
     para_llevar = st.radio("", ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
     
-    st.write('-------------------')
+    # st.write('-------------------')
     
-    # st.write(x_bebidas, x_con, x_extras)
+    # # st.write(x_bebidas, x_con, x_extras)
     
-    coffees = []
-    for i,e in enumerate(x_bebidas):
-        if e == 'Café ☕' and x_con[i] == '':
-            coffees.append(f'{e} Solo {x_extras[i]}')
+    # coffees = []
+    # for i,e in enumerate(x_bebidas):
+    #     if e == 'Café ☕' and x_con[i] == '':
+    #         coffees.append(f'{e} Solo {x_extras[i]}')
         
-        elif x_con[i] != 'Cortado ✂️' and x_con[i] != 'Solo ❌' and x_con[i] != '' and x_extras[i] != '':
-            coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
+    #     elif x_con[i] != 'Cortado ✂️' and x_con[i] != 'Solo ❌' and x_con[i] != '' and x_extras[i] != '':
+    #         coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
     
-        elif x_con[i] != 'Cortado ✂️' and x_con[i] != 'Solo ❌' and x_con[i] != '':
-            coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
+    #     elif x_con[i] != 'Cortado ✂️' and x_con[i] != 'Solo ❌' and x_con[i] != '':
+    #         coffees.append(f'{e} con {x_con[i]} {x_extras[i]}')
     
-        elif e == 'Otro 🤔':
-            coffees.append(f'{x_extras[i]}')
+    #     elif e == 'Otro 🤔':
+    #         coffees.append(f'{x_extras[i]}')
     
-        else:
-            coffees.append(f'{e} {x_con[i]} {x_extras[i]}')
+    #     else:
+    #         coffees.append(f'{e} {x_con[i]} {x_extras[i]}')
             
     
     # st.write(sorted(coffees))
