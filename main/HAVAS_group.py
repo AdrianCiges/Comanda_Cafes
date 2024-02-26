@@ -880,7 +880,7 @@ try:
 
         st.code('\n'.join(output), language='plaintext')
 
-    st.write('-----------')
+        st.write('-----------')
     
 except: 
     pass
