@@ -158,8 +158,28 @@ for persona2 in clean_user_input():
 
 st.write('')
 st.write('')
-with st.container():
-    para_llevar = st.radio('¿PARA LLEVAR? ', ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
+# Inyectar CSS personalizado para ajustar el margen
+st.markdown("""
+<style>
+/* Reducir el margen inferior del título Markdown */
+div[data-testid="stMarkdownContainer"] {
+    margin-bottom: -20px !important;
+}
+/* Reducir el margen superior del widget radio para acercarlo al título */
+.stRadio > div {
+    margin-top: -20px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
+# Utilizando Markdown para añadir estilo al título
+st.markdown('#### ¿Para llevar?')
+
+# Widget de selección sin formato específico en la pregunta
+para_llevar = st.radio("", ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
+
+st.write('-------------------')
 
 # st.write(x_bebidas, x_con, x_extras)
 
@@ -763,6 +783,8 @@ if len(seleccionados) > 0:
     output.append('Muchas gracias! 🙂')
 
     st.code('\n'.join(output), language='plaintext')
+
+    st.write('----------------')
 
 # except: 
 #     pass
