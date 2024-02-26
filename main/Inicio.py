@@ -772,17 +772,17 @@ with tab1:
     
         
     # email_sender = st.text_input('From', 'cafes.mailer@gmail.com', disabled=True)
-    email_sender = 'cafes.mailer@gmail.com'
+    email_sender = st.secrets["email_sender"]
     
     # email_receiver = st.text_input('To')
-    email_receiver = 'cafes.mailer@gmail.com'
+    email_receiver = st.secrets["email_receiver"]
     
     # subject = st.text_input('Asunto')
     
     body = st.text_area('Petición de inclusión de pueblo/ciudad 📥')
     
     # Hide the password input
-    password = 'nptu ware vlmy lqvr'
+    password = st.secrets["password"]
     
     if st.button("✉️ Enviar petición"):
         try:
