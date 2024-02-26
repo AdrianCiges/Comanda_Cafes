@@ -559,7 +559,7 @@ dictio_coords_saviour = {    'A Coruña': '43.35931967283019, -8.408809210188679
                              'London': '51.50008564821429, -0.13242266535714287',
                              'Lorca': '37.6701947442623, -1.6944428196721313',
                              'Lugo': '43.00738203163265, -7.556781552040817',
-                             'Madrid': '40.424607675123156, -3.685111448522167',
+                             'Madrid': '40.4153429,-3.7074007',
                              'Málaga': '36.71417034545454, -4.443067285521885',
                              'Marbella': '36.50773136569343, -4.895492078832117',
                              'Mataró': '41.541815953333334, 2.43999132',
@@ -613,7 +613,7 @@ if st.checkbox('📍 Usar mi ubicación'):
         st.write(10/0) # Provocamos el error
     except:
         st.error('No hemos podido acceder a tu ubicación. Selecciona tu municipio en el siguiente desplegable para buscar tu cafetería ideal:', icon="⚠️")
-        ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()))
+        ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()),placeholder="Choose an option")
         if ciudad_seleccionada:
             latitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
             longitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[1]), 4)
