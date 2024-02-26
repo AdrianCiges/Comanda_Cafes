@@ -791,6 +791,8 @@ with tab1:
     
     # Hide the password input
     password = 'nptu ware vlmy lqvr'
+
+    st.button('Prueba')
     
     if st.button("✉️ Enviar petición"):
         try:
