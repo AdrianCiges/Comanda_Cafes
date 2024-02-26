@@ -87,7 +87,16 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-    
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background.jpg");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 # ------------------------------------------------------------------------------------CONFIG⬆️-------------------------------------
 # ---------------------------------------------------------------------------------FUNCIONES⬇️-------------------------------------
 
