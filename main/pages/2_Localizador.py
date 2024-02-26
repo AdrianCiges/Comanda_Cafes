@@ -798,3 +798,7 @@ with tab1:
             st.success('Enviado con éxito! 🚀')
         except Exception as e:
             st.error(f"Error al enviar tu petición: {e}")
+
+
+with tab2:
+    st.write('')
