@@ -251,9 +251,24 @@ try:
 
     st.write('')
     st.write('')
-    
+
+
+    # Inyectar CSS personalizado para ajustar el margen
+    st.markdown("""
+    <style>
+    /* Reducir el margen inferior del título Markdown */
+    div[data-testid="stMarkdownContainer"] {
+        margin-bottom: -20px !important;
+    }
+    /* Reducir el margen superior del widget radio para acercarlo al título */
+    .stRadio > div {
+        margin-top: -20px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     # Utilizando Markdown para añadir estilo al título
-    st.markdown('### ¿PARA LLEVAR?')
+    st.markdown('## ¿Para llevar?')
     
     # Widget de selección sin formato específico en la pregunta
     para_llevar = st.radio("", ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
