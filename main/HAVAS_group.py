@@ -895,7 +895,7 @@ for n in seleccionados:
     s += "- " + n.replace('*','') + "\n"
 st.markdown(s)
 st.write('')
-st.write('')
+# st.write('')
 
 n_cafeteros = len(seleccionados)
 perc_total = int((len(seleccionados)/len(gente()))*100)
