@@ -74,19 +74,30 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Cambiar el tema de la página principal
+# # Cambiar el tema de la página principal
+# st.markdown(
+#     """
+#     <style>
+#     .stApp {
+#         background-color: #e9ecef;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+
+# Cambiar el fondo de la página principal a una imagen
 st.markdown(
     """
     <style>
     .stApp {
-        background-color: #e9ecef;
+        background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background.jpg");
+        background-size: cover;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
-
-
 # -------------------------------------------------------------------------------------------------------------------
 
 
