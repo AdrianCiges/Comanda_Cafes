@@ -180,46 +180,56 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                           ]
         to_filter_columns = st.multiselect("Filtrar tabla por:", columnas_filtro, placeholder="Selecciona un campo")
         for column in to_filter_columns:
-            left, right = st.columns((1, 20))
-            left.write("↳")
-            # Treat columns with < 10 unique values as categorical
-            if is_categorical_dtype(df[column]) or df[column].nunique() < 10:
-                user_cat_input = right.multiselect(
-                    f"Valores de {column}",
-                    df[column].unique(),
-                    default=list(df[column].unique()),
+            # Si la columna es '💬 Nº Comentarios', usa un widget especial en la barra lateral
+            if column == '💬 Nº Comentarios':
+                user_num_input = st.sidebar.number_input(
+                    f"{column} mínimo",
+                    min_value=int(df[column].min()),
+                    max_value=int(df[column].max()),
+                    value=int(df[column].min()),
                 )
-                df = df[df[column].isin(user_cat_input)]
-            elif is_numeric_dtype(df[column]):
-                _min = float(df[column].min())
-                _max = float(df[column].max())
-                step = (_max - _min) / 100
-                user_num_input = right.slider(
-                    f"{column}",
-                    min_value=_min,
-                    max_value=_max,
-                    value=(_min, _max),
-                    step=step,
-                )
-                df = df[df[column].between(*user_num_input)]
-            elif is_datetime64_any_dtype(df[column]):
-                user_date_input = right.date_input(
-                    f"Valores de {column}",
-                    value=(
-                        df[column].min(),
-                        df[column].max(),
-                    ),
-                )
-                if len(user_date_input) == 2:
-                    user_date_input = tuple(map(pd.to_datetime, user_date_input))
-                    start_date, end_date = user_date_input
-                    df = df.loc[df[column].between(start_date, end_date)]
+                df = df[df[column] >= user_num_input]
             else:
-                user_text_input = right.text_input(
-                    f"Buscar {column}",
-                )
-                if user_text_input:
-                    df = df[df[column].astype(str).str.contains(user_text_input)]
+                left, right = st.columns((1, 20))
+                left.write("↳")
+                # Trata las columnas con < 10 valores únicos como categóricas
+                if is_categorical_dtype(df[column]) or df[column].nunique() < 10:
+                    user_cat_input = right.multiselect(
+                        f"Valores de {column}",
+                        df[column].unique(),
+                        default=list(df[column].unique()),
+                    )
+                    df = df[df[column].isin(user_cat_input)]
+                elif is_numeric_dtype(df[column]):
+                    _min = float(df[column].min())
+                    _max = float(df[column].max())
+                    step = (_max - _min) / 100
+                    user_num_input = right.slider(
+                        f"{column}",
+                        min_value=_min,
+                        max_value=_max,
+                        value=(_min, _max),
+                        step=step,
+                    )
+                    df = df[df[column].between(*user_num_input)]
+                elif is_datetime64_any_dtype(df[column]):
+                    user_date_input = right.date_input(
+                        f"Valores de {column}",
+                        value=(
+                            df[column].min(),
+                            df[column].max(),
+                        ),
+                    )
+                    if len(user_date_input) == 2:
+                        user_date_input = tuple(map(pd.to_datetime, user_date_input))
+                        start_date, end_date = user_date_input
+                        df = df.loc[df[column].between(start_date, end_date)]
+                else:
+                    user_text_input = right.text_input(
+                        f"Buscar {column}",
+                    )
+                    if user_text_input:
+                        df = df[df[column].astype(str).str.contains(user_text_input)]
 
     return df
 
