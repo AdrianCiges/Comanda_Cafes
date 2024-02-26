@@ -870,35 +870,35 @@ with tab2:
     # #     unsafe_allow_html=True
     # # )
     
-    st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>¿Quién quiere café?</h2>", unsafe_allow_html=True)
+    # st.markdown(f"<h2 style='margin-top: 0px; margin-bottom: -10px;'>¿Quién quiere café?</h2>", unsafe_allow_html=True)
     
-    user_input = st.text_input("Nombres aquí (separados por , )", "")
-    user_input = user_input.split(',')
+    # user_input = st.text_input("Nombres aquí (separados por , )", "")
+    # user_input = user_input.split(',')
     
-    def clean_user_input():
-        patron = r'[a-zA-Z]'
-        clean = []
-        for persona in user_input:
-            if re.search(patron, persona) and persona.strip() != "":
-                if persona.strip() in ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]:
-                    clean.append(persona.strip().title().replace('  ',' ')+" ")
-                else:
-                    clean.append(persona.strip().title().replace('  ',' '))
+    # def clean_user_input():
+    #     patron = r'[a-zA-Z]'
+    #     clean = []
+    #     for persona in user_input:
+    #         if re.search(patron, persona) and persona.strip() != "":
+    #             if persona.strip() in ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Ana M.', 'Dani A.', 'Dani S.', 'Dasha', 'Inés MG', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Rafa', 'Rosalía', 'Rubén C.', 'Rubén I.', 'Sergio', 'Víctor' ]:
+    #                 clean.append(persona.strip().title().replace('  ',' ')+" ")
+    #             else:
+    #                 clean.append(persona.strip().title().replace('  ',' '))
     
-        return clean
+    #     return clean
         
-    st.write('')
+    # st.write('')
     
-    bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro 🤔']
-    con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Soja 🌿', 'Leche Almendra 🌰','Leche Avena 🥣','Cortado ✂️', 'Solo ❌', '']
-    tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
+    # bebidas = ['Café ☕',  'Descafeinado ☕', 'Té Rojo 🔴', 'Té Verde 🟢', 'Té Negro ⚫', 'Manzanilla 🍵', 'Zumo 🍊', 'Cola Cao 🥜', 'Otro 🤔']
+    # con = ['Leche 🥛', 'Sin Lactosa 🆓', 'Leche Soja 🌿', 'Leche Almendra 🌰','Leche Avena 🥣','Cortado ✂️', 'Solo ❌', '']
+    # tostadas = ['', 'Cereales 🌾', 'Blanco 🥖', 'Integral 🥔']
     
-    x_bebidas = []
-    x_con = []
-    x_extras = []
-    x_tostadas = []
+    # x_bebidas = []
+    # x_con = []
+    # x_extras = []
+    # x_tostadas = []
     
-    seleccionados = []
+    # seleccionados = []
     
     # # try:
     
