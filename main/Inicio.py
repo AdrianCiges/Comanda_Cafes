@@ -190,7 +190,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                              '🪑 Puedes sentarte', '☀️ Tiene terraza', '🍺 Sirve Cerveza', '🍷 Sirve vino', '🥪 Sirve desayunos/almuerzos', '🫒 Sirve aperitivos', '🍪 Sirve postres', '🚶‍♂️ Para llevar', 
                              '🙋‍♀️ Acepta reserva', '🐕‍🦺 Acepta perros', '🐕 Acepta perros fuera', '🛜 Tiene Wifi','🛜 Tiene Wifi Gratis', '🏳️‍🌈 LGBT+ friendly',
                           ]
-        to_filter_columns = st.multiselect("Filtrar tabla por:", columnas_filtro, placeholder="Selecciona un campo")
+        to_filter_columns = st.multiselect("Filtrar cafeterías por:", columnas_filtro, placeholder="Selecciona un campo")
         st.write('-----------')
         
         for column in to_filter_columns:
