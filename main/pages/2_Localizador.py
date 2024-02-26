@@ -615,8 +615,8 @@ if st.checkbox('📍 Usar mi ubicación'):
         st.error('No hemos podido acceder a tu ubicación. Selecciona tu municipio en el siguiente desplegable para buscar tu cafetería ideal:', icon="⚠️")
         ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()))
         if ciudad_seleccionada:
-            latitud = round(float(dictio_coords[ciudad_seleccionada].split(', ')[0]), 4)
-            longitud = round(float(dictio_coords[ciudad_seleccionada].split(', ')[0]), 4)
+            latitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
+            longitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
 try:
     latitud = round(float(latitud), 4)
     longitud = round(float(longitud), 4)
