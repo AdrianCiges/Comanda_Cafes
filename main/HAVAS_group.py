@@ -267,6 +267,8 @@ try:
     </style>
     """, unsafe_allow_html=True)
 
+    st.write('-------------------')
+
     # Utilizando Markdown para añadir estilo al título
     st.markdown('#### ¿Para llevar?')
     
