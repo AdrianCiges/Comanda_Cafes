@@ -201,8 +201,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 if is_categorical_dtype(df[column]) or df[column].nunique() < 10:
                     user_cat_input = right.multiselect(
                         f"Valores de {column}",
-                        df[column].unique(),
-                        default=list(df[column].unique()),
+                        sorted(df[column].unique()),
+                        default=sorted(list(df[column].unique())),
                     )
                     st.write('-----------')
                     df = df[df[column].isin(user_cat_input)]
