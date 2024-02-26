@@ -182,6 +182,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         for column in to_filter_columns:
             # Si la columna es '💬 Nº Comentarios', usa un widget especial en la barra lateral
             if column == '💬 Nº Comentarios':
+                left, right = st.columns((1, 20))
+                left.write("↳")
                 user_num_input = st.number_input(
                     f"{column} mínimo",
                     min_value=int(df[column].min()),
