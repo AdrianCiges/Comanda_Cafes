@@ -912,7 +912,7 @@ with tab2:
     # }
     /* Reducir el margen superior del widget radio para acercarlo al título */
     .stRadio > div {
-        margin-top: -20px !important;
+        margin-top: -30px !important;
     }
     </style>
     """, unsafe_allow_html=True)
