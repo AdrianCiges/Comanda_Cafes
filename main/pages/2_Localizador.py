@@ -583,7 +583,7 @@ st.markdown('#### Tabla detalle de las cafeterías')
 num_cafes_filtradas = len(sorted_df_show)
 with st.expander(f"👀 Ver {num_cafes_filtradas} cafeterías (por proximidad)"):
     st.data_editor(
-        sorted_df_show.drop(['lat_dif', 'lon_dif', 'dif_sum'], axis=1),
+        sorted_df_show,
         column_config={
             "Link": st.column_config.LinkColumn(
                 "🔗 Link", display_text = "🌐 Cómo llegar"
