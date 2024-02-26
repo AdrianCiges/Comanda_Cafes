@@ -612,8 +612,8 @@ st.write('')
 st.write('')
 st.write('')
 
-ciudades = sorted(sorted_df_show['🏙️ Ciudad'].unique())
-st.write(f'{ciudades}')
+# ciudades = sorted(sorted_df_show['🏙️ Ciudad'].unique())
+# st.write(f'{ciudades}')
 
 municipios_incluidos = ['A Arnoia', 'A Bergueira', 'A Coruña', 'A Groba', 'A Gudiña', 'A Manchica', 'A Pobra de Trives', 'A Pobra do Brollón', 'A Porriña', 'A Rúa', 'A Silva', 'A Valenza', 'Abejar', 'Acebo', 'Adahuesca', 'Aeropuerto de los Rodeos', 'Aguas Nuevas', 'Ágreda',
                         'Aguilar de Campoo', 'Aínsa', 'Alaquàs', 'Alar del Rey', 'Albacete', 'Albaladejo', 'Albalat dels Sorells', 'Albalate de Zorita', 'Albalate del Arzobispo', 'Albarellos', 'Albarracín', 'Albentosa', 'Alboraya', 'Alcalá de los Gazules', 'Alcalá del Obispo', 
