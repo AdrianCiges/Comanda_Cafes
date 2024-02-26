@@ -853,7 +853,7 @@ perc_hab = int((len(seleccionados)/media_habitual)*100) if media_habitual > 0 el
 col1, col2, col3, col4 = st.columns(4)
 
 # Usar input de usuario para media habitual en col4
-media_habitual = col4.number_input('Media habitual: ', value=media_habitual)
+media_habitual = col4.number_input('Media habitual:  ', value=media_habitual)
 
 # Gráfico para "Cafeteros hoy vs. Media habitual"
 fig1, ax1 = plt.subplots()
