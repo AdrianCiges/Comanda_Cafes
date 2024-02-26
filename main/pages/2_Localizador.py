@@ -179,6 +179,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                              '🙋‍♀️ Acepta reserva', '🐕‍🦺 Acepta perros', '🐕 Acepta perros fuera', '🛜 Tiene Wifi','🛜 Tiene Wifi Gratis', '🏳️‍🌈 LGBT+ friendly',
                           ]
         to_filter_columns = st.multiselect("Filtrar tabla por:", columnas_filtro, placeholder="Selecciona un campo")
+        st.write('-----------')
+        
         for column in to_filter_columns:
             # Si la columna es '💬 Nº Comentarios', usa un widget especial en la barra lateral
             if column == '💬 Nº Comentarios':
