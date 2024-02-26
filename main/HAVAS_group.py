@@ -74,17 +74,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Cambiar el tema de la página principal
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #e9ecef;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# # Cambiar el tema de la página principal
+# st.markdown(
+#     """
+#     <style>
+#     .stApp {
+#         background-color: #e9ecef;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 # # Cambiar el fondo de la página principal a una imagen
 # st.markdown(
@@ -140,7 +140,7 @@ st.markdown(
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background2.jpg?raw=true");
+background-image: url("https://raw.githubusercontent.com/AdrianCiges/Comanda_Cafes/main/img/wood_background2.jpg");
 background-size: cover;
 }
 </style>
