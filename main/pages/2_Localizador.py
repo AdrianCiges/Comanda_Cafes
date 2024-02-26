@@ -503,6 +503,7 @@ nuevos_nombres = ['Link', '☕ Nombre', '🏙️ Ciudad', '🔓 Abierto Ahora', 
 df.columns = nuevos_nombres
 
 df = filter_dataframe(df)
+
 # st.write('')
 # with st.expander("👀 Ver detalle de cafeterías por cercanía"):
 #     st.dataframe(df.drop(['Link', 'Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente'], axis=1))# df = df.drop_duplicates()
@@ -572,8 +573,10 @@ columnas_a_modificar = ['🔓 Abierto Ahora',
 for columna in columnas_a_modificar:
     sorted_df_show[columna] = sorted_df_show[columna].apply(sustituir_valor_emoji)
 
+st.write('')
+st.markworn('#### Tabla detalle de las cafeterías')
 num_cafes_filtradas = len(sorted_df_show)
-with st.expander(f"👀 Ver detalle de {num_cafes_filtradas} cafeterías (por proximidad)"):
+with st.expander(f"👀 Ver {num_cafes_filtradas} cafeterías (por proximidad)"):
     st.data_editor(
         sorted_df_show.drop(['Latitud', 'Longitud', 'Cerrado permanentemene', 'Cerrado temporalmente', 'lat_dif', 'lon_dif', 'dif_sum', 'Metros'], axis=1),
         column_config={
