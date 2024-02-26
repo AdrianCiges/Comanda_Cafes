@@ -833,3 +833,45 @@ col3.metric("% Hoy vs Habitual", f'{perc_hab}%', f"{perc_hab-100}% de lo habitua
 
 # col4.metric("Media habitual", 6)
 # col4.metric("Media habitual", insert_number)
+
+# ---------------------------------------------------------------------------------------
+
+import streamlit as st
+import matplotlib.pyplot as plt
+
+# Suposiciones para las variables, reemplaza estos valores con los reales
+# n_cafeteros = 10  # Número de personas que tomaron café hoy
+# media_habitual = 6  # Valor obtenido del input de usuario en Streamlit
+# total_posible = 50  # Total de personas que podrían tomar café
+# seleccionados = range(n_cafeteros)  # Lista de personas que tomaron café hoy, para el ejemplo
+
+# Cálculo de métricas
+perc_total = int((len(seleccionados)/len(clean_user_input()))*100) if total_posible > 0 else 0
+perc_hab = int((len(seleccionados)/media_habitual)*100) if media_habitual > 0 else 0
+
+# Creación de columnas en Streamlit
+col1, col2, col3, col4 = st.columns(4)
+
+# Usar input de usuario para media habitual en col4
+media_habitual = col4.number_input('Media habitual: ', value=media_habitual)
+
+# Gráfico para "Cafeteros hoy vs. Media habitual"
+fig1, ax1 = plt.subplots()
+ax1.bar(['Cafeteros hoy', 'Media habitual'], [n_cafeteros, media_habitual], color=['blue', 'orange'])
+ax1.set_title('Cafeteros hoy vs. Media habitual')
+col1.pyplot(fig1)
+
+# Gráfico para "% Hoy vs Total", con manejo de excepciones
+try:
+    fig2, ax2 = plt.subplots()
+    ax2.bar(['% Hoy', '% Total'], [perc_total, 100], color=['green', 'red'])
+    ax2.set_title('% Hoy vs Total')
+    col2.pyplot(fig2)
+except Exception as e:
+    col2.warning('Métrica no disponible')
+
+# Gráfico para "% Hoy vs Habitual"
+fig3, ax3 = plt.subplots()
+ax3.bar(['% Hoy', '% Habitual'], [perc_hab, 100], color=['purple', 'brown'])
+ax3.set_title('% Hoy vs Habitual')
+col3.pyplot(fig3)
