@@ -251,23 +251,15 @@ try:
 
     st.write('')
     st.write('')
-    # Inyectar CSS personalizado
-    st.markdown("""
-    <style>
-    /* Cambiar el estilo de la etiqueta del radio button */
-    .css-1vs9lp7 .st-bx {
-        font-size: 16px;
-        font-weight: bold;
-        color: #4A4A4A;
-    }
-    </style>
-    """, unsafe_allow_html=True)
     
-    # Widget de selección
-    para_llevar = st.radio('¿PARA LLEVAR?', ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
+    # Utilizando Markdown para añadir estilo al título
+    st.markdown('### ¿PARA LLEVAR?')
+    
+    # Widget de selección sin formato específico en la pregunta
+    para_llevar = st.radio("", ["Sí, el trabajo nos reclama 💻", "No, necesitamos un descanso 🤯"], index=1)
 
     st.write('-------------------')
-    st.write('...................')
+
 
     # st.write(x_bebidas, x_con, x_extras)
 
