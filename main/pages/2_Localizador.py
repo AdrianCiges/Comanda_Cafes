@@ -616,7 +616,7 @@ if st.checkbox('📍 Usar mi ubicación'):
         ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()))
         if ciudad_seleccionada:
             latitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
-            longitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
+            longitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[1]), 4)
 try:
     latitud = round(float(latitud), 4)
     longitud = round(float(longitud), 4)
