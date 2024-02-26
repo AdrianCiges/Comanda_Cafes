@@ -842,11 +842,11 @@ import matplotlib.pyplot as plt
 # Suposiciones para las variables, reemplaza estos valores con los reales
 # n_cafeteros = 10  # Número de personas que tomaron café hoy
 # media_habitual = 6  # Valor obtenido del input de usuario en Streamlit
-# total_posible = 50  # Total de personas que podrían tomar café
+total_posible = len(clean_user_input())  # Total de personas que podrían tomar café
 # seleccionados = range(n_cafeteros)  # Lista de personas que tomaron café hoy, para el ejemplo
 
 # Cálculo de métricas
-perc_total = int((len(seleccionados)/len(clean_user_input()))*100) if total_posible > 0 else 0
+perc_total = int((len(seleccionados)/total_posible)*100) if total_posible > 0 else 0
 perc_hab = int((len(seleccionados)/media_habitual)*100) if media_habitual > 0 else 0
 
 # Creación de columnas en Streamlit
