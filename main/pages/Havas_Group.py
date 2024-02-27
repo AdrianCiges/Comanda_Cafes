@@ -106,14 +106,14 @@ if "themes" not in ms:
                     "refreshed": True,
                     
                     "light": {"theme.base": "dark",
-                              "theme.backgroundColor": "#ebedf0",
+                              "theme.backgroundColor": "white",
                               "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "#ebedf0",
                               "theme.textColor": "black",
                               "button_face": "🌜"},
 
                     "dark":  {"theme.base": "light",
-                              "theme.backgroundColor": "#ebedf0",
+                              "theme.backgroundColor": "white",
                               "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "#ebedf0",
                               "theme.textColor": "black",
