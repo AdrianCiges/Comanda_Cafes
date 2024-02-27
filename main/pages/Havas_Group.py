@@ -117,6 +117,7 @@ if "themes" not in ms:
                               "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "#ebedf0",
                               "theme.textColor": "black",
+                              "background-image": url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
                               "button_face": "🌞"},
                     }
   
