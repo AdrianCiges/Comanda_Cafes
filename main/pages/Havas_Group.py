@@ -109,14 +109,14 @@ if "themes" not in ms:
                               "theme.backgroundColor": "white",
                               "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "#ebedf0",
-                              "theme.textColor": "black",
+                              "theme.textColor": "white",
                               "button_face": "🌜"},
 
                     "dark":  {"theme.base": "light",
-                              "theme.backgroundColor": "black",
+                              "theme.backgroundColor": "#ebedf0",
                               "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "#ebedf0",
-                              "theme.textColor": "blue",
+                              "theme.textColor": "black",
                               "button_face": "🌞"},
                     }
   
