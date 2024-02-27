@@ -107,7 +107,7 @@ if "themes" not in ms:
                     
                     "light": {"theme.base": "dark",
                               "theme.backgroundColor": "#dfe2e8",
-                              "theme.primaryColor": "white",
+                              "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "white",
                               "theme.textColor": "black",
                               "button_face": "🌜"},
