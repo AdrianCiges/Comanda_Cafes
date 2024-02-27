@@ -99,7 +99,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-import streamlit as st
 
 ms = st.session_state
 if "themes" not in ms: 
@@ -107,17 +106,17 @@ if "themes" not in ms:
                     "refreshed": True,
                     
                     "light": {"theme.base": "dark",
-                              # "theme.backgroundColor": "black",
-                              # "theme.primaryColor": "#c98bdb",
-                              # "theme.secondaryBackgroundColor": "#5591f5",
+                              "theme.backgroundColor": "black",
+                              "theme.primaryColor": "#c98bdb",
+                              "theme.secondaryBackgroundColor": "#5591f5",
                               "theme.textColor": "black",
                               "theme.textColor": "black",
                               "button_face": "🌜"},
 
                     "dark":  {"theme.base": "light",
-                              # "theme.backgroundColor": "white",
-                              # "theme.primaryColor": "#5591f5",
-                              # "theme.secondaryBackgroundColor": "#82E1D7",
+                              "theme.backgroundColor": "white",
+                              "theme.primaryColor": "#5591f5",
+                              "theme.secondaryBackgroundColor": "#82E1D7",
                               "theme.textColor": "#0a1464",
                               "button_face": "🌞"},
                     }
@@ -135,7 +134,7 @@ def ChangeTheme():
 
 
 btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
-# st.button(btn_face, on_click=ChangeTheme)
+st.button(btn_face, on_click=ChangeTheme)
 
 if ms.themes["refreshed"] == False:
   ms.themes["refreshed"] = True
