@@ -141,10 +141,32 @@ if st.button(btn_face, on_click=ChangeTheme):
 # Aquí puedes realizar más lógica condicional basada en el tema actual fuera de la función ChangeTheme
 if ms.themes["current_theme"] == "dark":
     # Implementa lógica específica del tema oscuro aquí
-    st.write('dark')
+    # Cambiar el fondo de la página principal a una imagen
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3_negativo.jpg?raw=true");
+            background-size: cover;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 elif ms.themes["current_theme"] == "light":
     # Implementa lógica específica del tema claro aquí
-    st.write('light')
+    # Cambiar el fondo de la página principal a una imagen
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
+            background-size: cover;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 # -------------------------------------------------------------------------------------------------------------------
 
 
