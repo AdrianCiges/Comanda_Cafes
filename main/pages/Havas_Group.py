@@ -100,106 +100,44 @@ st.markdown(
 )
 
 
-# ms = st.session_state
-# if "themes" not in ms: 
-#   ms.themes = {"current_theme": "light",
-#                     "refreshed": True,
+ms = st.session_state
+if "themes" not in ms: 
+  ms.themes = {"current_theme": "light",
+                    "refreshed": True,
                     
-#                     "light": {"theme.base": "dark",
-#                               "theme.backgroundColor": "white",
-#                               "theme.primaryColor": "red",
-#                               "theme.secondaryBackgroundColor": "#ebedf0",
-#                               "theme.textColor": "black",
-#                               "button_face": "🌜"},
+                    "light": {"theme.base": "dark",
+                              "theme.backgroundColor": "white",
+                              "theme.primaryColor": "red",
+                              "theme.secondaryBackgroundColor": "#ebedf0",
+                              "theme.textColor": "black",
+                              "button_face": "🌜"},
 
-#                     "dark":  {"theme.base": "light",
-#                               "theme.backgroundColor": "white",
-#                               "theme.primaryColor": "red",
-#                               "theme.secondaryBackgroundColor": "#ebedf0",
-#                               "theme.textColor": "black",
-#                               "button_face": "🌞"},
-#                     }
+                    "dark":  {"theme.base": "light",
+                              "theme.backgroundColor": "white",
+                              "theme.primaryColor": "red",
+                              "theme.secondaryBackgroundColor": "#ebedf0",
+                              "theme.textColor": "black",
+                              "button_face": "🌞"},
+                    }
   
 
-# def ChangeTheme():
-#   previous_theme = ms.themes["current_theme"]
-#   tdict = ms.themes["light"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]
-#   for vkey, vval in tdict.items(): 
-#     if vkey.startswith("theme"): st._config.set_option(vkey, vval)
-
-#   ms.themes["refreshed"] = False
-#   if previous_theme == "dark": ms.themes["current_theme"] = "light"
-#   elif previous_theme == "light": ms.themes["current_theme"] = "dark"
-
-
-# btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
-# # st.button(btn_face, on_click=ChangeTheme)
-
-# if ms.themes["refreshed"] == False:
-#   ms.themes["refreshed"] = True
-#   st.rerun()
-
-import streamlit as st
-
-# Inicialización de la configuración de temas en el estado de la sesión si aún no se ha hecho
-if "themes" not in st.session_state:
-    st.session_state.themes = {
-        "current_theme": "light",
-        "refreshed": True,
-        "light": {
-            "theme.base": "light",
-            "theme.backgroundColor": "white",
-            "theme.primaryColor": "red",
-            "theme.secondaryBackgroundColor": "#ebedf0",
-            "theme.textColor": "black",
-            "button_face": "🌜",
-            "background_image": "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true"
-        },
-        "dark": {
-            "theme.base": "dark",
-            "theme.backgroundColor": "black",
-            "theme.primaryColor": "blue",
-            "theme.secondaryBackgroundColor": "#010101",
-            "theme.textColor": "white",
-            "button_face": "🌞",
-            "background_image": "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3_negativo.jpg?raw=true"
-        },
-    }
-
 def ChangeTheme():
-    # Cambio del tema actual y actualización de las configuraciones de tema en Streamlit
-    previous_theme = st.session_state.themes["current_theme"]
-    new_theme = "dark" if previous_theme == "light" else "light"
-    st.session_state.themes["current_theme"] = new_theme
-    for key, value in st.session_state.themes[new_theme].items():
-        if key.startswith("theme"):
-            st._config.set_option(key, value)
-    st.session_state.themes["refreshed"] = False
-    apply_background_image()  # Llamar a la función para aplicar la imagen de fondo después de cambiar el tema
+  previous_theme = ms.themes["current_theme"]
+  tdict = ms.themes["light"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]
+  for vkey, vval in tdict.items(): 
+    if vkey.startswith("theme"): st._config.set_option(vkey, vval)
 
-def apply_background_image():
-    # Aplicación de la imagen de fondo basada en el tema actual
-    current_theme = st.session_state.themes["current_theme"]
-    background_image = st.session_state.themes[current_theme]["background_image"]
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url({background_image});
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+  ms.themes["refreshed"] = False
+  if previous_theme == "dark": ms.themes["current_theme"] = "light"
+  elif previous_theme == "light": ms.themes["current_theme"] = "dark"
 
-apply_background_image()  # Llamada inicial para aplicar la imagen de fondo
 
-btn_face = st.session_state.themes[st.session_state.themes["current_theme"]]["button_face"]
-if st.button(btn_face, on_click=ChangeTheme):
-    if st.session_state.themes["refreshed"] == False:
-        st.session_state.themes["refreshed"] = True
-        st.experimental_rerun()
+btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
+# st.button(btn_face, on_click=ChangeTheme)
+
+if ms.themes["refreshed"] == False:
+  ms.themes["refreshed"] = True
+  st.rerun()
 
 # -------------------------------------------------------------------------------------------------------------------
 
