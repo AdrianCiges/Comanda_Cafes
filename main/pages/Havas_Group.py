@@ -100,45 +100,103 @@ st.markdown(
 )
 
 
-ms = st.session_state
-if "themes" not in ms: 
-  ms.themes = {"current_theme": "light",
-                    "refreshed": True,
+# ms = st.session_state
+# if "themes" not in ms: 
+#   ms.themes = {"current_theme": "light",
+#                     "refreshed": True,
                     
-                    "light": {"theme.base": "dark",
-                              "theme.backgroundColor": "white",
-                              "theme.primaryColor": "red",
-                              "theme.secondaryBackgroundColor": "#ebedf0",
-                              "theme.textColor": "black",
-                              "button_face": "🌜"},
+#                     "light": {"theme.base": "dark",
+#                               "theme.backgroundColor": "white",
+#                               "theme.primaryColor": "red",
+#                               "theme.secondaryBackgroundColor": "#ebedf0",
+#                               "theme.textColor": "black",
+#                               "button_face": "🌜"},
 
-                    "dark":  {"theme.base": "light",
-                              "theme.backgroundColor": "white",
-                              "theme.primaryColor": "red",
-                              "theme.secondaryBackgroundColor": "#ebedf0",
-                              "theme.textColor": "black",
-                              "background-image": url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
-                              "button_face": "🌞"},
-                    }
+#                     "dark":  {"theme.base": "light",
+#                               "theme.backgroundColor": "white",
+#                               "theme.primaryColor": "red",
+#                               "theme.secondaryBackgroundColor": "#ebedf0",
+#                               "theme.textColor": "black",
+#                               "button_face": "🌞"},
+#                     }
   
 
+# def ChangeTheme():
+#   previous_theme = ms.themes["current_theme"]
+#   tdict = ms.themes["light"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]
+#   for vkey, vval in tdict.items(): 
+#     if vkey.startswith("theme"): st._config.set_option(vkey, vval)
+
+#   ms.themes["refreshed"] = False
+#   if previous_theme == "dark": ms.themes["current_theme"] = "light"
+#   elif previous_theme == "light": ms.themes["current_theme"] = "dark"
+
+
+# btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
+# # st.button(btn_face, on_click=ChangeTheme)
+
+# if ms.themes["refreshed"] == False:
+#   ms.themes["refreshed"] = True
+#   st.rerun()
+
+ms = st.session_state
+if "themes" not in ms: 
+    ms.themes = {
+        "current_theme": "light",
+        "refreshed": True,
+        "light": {
+            "theme.base": "light",
+            "theme.backgroundColor": "white",
+            "theme.primaryColor": "red",
+            "theme.secondaryBackgroundColor": "#ebedf0",
+            "theme.textColor": "black",
+            "button_face": "🌜",
+            "background_image": "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true"  # Añade la URL de tu imagen de fondo para el tema claro
+        },
+        "dark": {
+            "theme.base": "dark",
+            "theme.backgroundColor": "black",
+            "theme.primaryColor": "blue",
+            "theme.secondaryBackgroundColor": "#010101",
+            "theme.textColor": "white",
+            "button_face": "🌞",
+            "background_image": "https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3_negativo.jpg?raw=true"  # Añade la URL de tu imagen de fondo para el tema oscuro
+        },
+    }
+
 def ChangeTheme():
-  previous_theme = ms.themes["current_theme"]
-  tdict = ms.themes["light"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]
-  for vkey, vval in tdict.items(): 
-    if vkey.startswith("theme"): st._config.set_option(vkey, vval)
+    previous_theme = ms.themes["current_theme"]
+    tdict = ms.themes["dark"] if previous_theme == "light" else ms.themes["light"]
+    for vkey, vval in tdict.items(): 
+        if vkey.startswith("theme"):
+            st._config.set_option(vkey, vval)
+    ms.themes["current_theme"] = "dark" if previous_theme == "light" else "light"
+    ms.themes["refreshed"] = False
 
-  ms.themes["refreshed"] = False
-  if previous_theme == "dark": ms.themes["current_theme"] = "light"
-  elif previous_theme == "light": ms.themes["current_theme"] = "dark"
+def apply_background_image():
+    current_theme = ms.themes["current_theme"]
+    background_image = ms.themes[current_theme]["background_image"]
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url({background_image});
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
+apply_background_image()
 
-btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
-# st.button(btn_face, on_click=ChangeTheme)
+btn_face = ms.themes[ms.themes["current_theme"]]["button_face"]
+if st.button(btn_face, on_click=ChangeTheme):
+    apply_background_image()
 
 if ms.themes["refreshed"] == False:
-  ms.themes["refreshed"] = True
-  st.rerun()
+    ms.themes["refreshed"] = True
+    st.experimental_rerun()
 # -------------------------------------------------------------------------------------------------------------------
 
 
