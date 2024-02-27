@@ -106,16 +106,16 @@ if "themes" not in ms:
                     "refreshed": True,
                     
                     "light": {"theme.base": "dark",
-                              "theme.backgroundColor": "#dfe2e8",
+                              "theme.backgroundColor": "#ebedf0",
                               "theme.primaryColor": "red",
-                              "theme.secondaryBackgroundColor": "white",
+                              "theme.secondaryBackgroundColor": "#ebedf0",
                               "theme.textColor": "black",
                               "button_face": "🌜"},
 
                     "dark":  {"theme.base": "light",
-                              "theme.backgroundColor": "#dfe2e8",
-                              "theme.primaryColor": "white",
-                              "theme.secondaryBackgroundColor": "white",
+                              "theme.backgroundColor": "#ebedf0",
+                              "theme.primaryColor": "red",
+                              "theme.secondaryBackgroundColor": "#ebedf0",
                               "theme.textColor": "black",
                               "button_face": "🌞"},
                     }
