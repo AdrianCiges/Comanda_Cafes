@@ -116,7 +116,7 @@ if "themes" not in ms:
                               "theme.backgroundColor": "black",
                               "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "#ebedf0",
-                              "theme.textColor": "white",
+                              "theme.textColor": "blue",
                               "button_face": "🌞"},
                     }
   
