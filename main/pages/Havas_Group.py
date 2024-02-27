@@ -102,7 +102,7 @@ st.markdown(
 
 ms = st.session_state
 if "themes" not in ms: 
-  ms.themes = {"current_theme": "light",
+    ms.themes = {"current_theme": "light",
                     "refreshed": True,
                     
                     "light": {"theme.base": "dark",
