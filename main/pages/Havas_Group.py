@@ -132,13 +132,19 @@ def ChangeTheme():
   elif previous_theme == "light": ms.themes["current_theme"] = "dark"
 
 
-btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
-# st.button(btn_face, on_click=ChangeTheme)
+btn_face = ms.themes[ms.themes["current_theme"]]["button_face"]
+if st.button(btn_face, on_click=ChangeTheme):
+    if not ms.themes["refreshed"]:
+        ms.themes["refreshed"] = True
+        st.rerun()
 
-if ms.themes["refreshed"] == False:
-  ms.themes["refreshed"] = True
-  st.rerun()
-
+# Aquí puedes realizar más lógica condicional basada en el tema actual fuera de la función ChangeTheme
+if ms.themes["current_theme"] == "dark":
+    # Implementa lógica específica del tema oscuro aquí
+    st.write('dark')
+elif ms.themes["current_theme"] == "light":
+    # Implementa lógica específica del tema claro aquí
+    st.write('light')
 # -------------------------------------------------------------------------------------------------------------------
 
 
