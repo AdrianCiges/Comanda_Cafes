@@ -86,18 +86,18 @@ st.markdown(
 #     unsafe_allow_html=True
 # )
 
-# Cambiar el fondo de la página principal a una imagen
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# # Cambiar el fondo de la página principal a una imagen
+# st.markdown(
+#     """
+#     <style>
+#     .stApp {
+#         background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
+#         background-size: cover;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 
 ms = st.session_state
@@ -113,10 +113,10 @@ if "themes" not in ms:
                               "button_face": "🌜"},
 
                     "dark":  {"theme.base": "light",
-                              "theme.backgroundColor": "white",
+                              "theme.backgroundColor": "black",
                               "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "#ebedf0",
-                              "theme.textColor": "black",
+                              "theme.textColor": "white",
                               "button_face": "🌞"},
                     }
   
