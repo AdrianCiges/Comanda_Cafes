@@ -106,9 +106,9 @@ if "themes" not in ms:
                     "refreshed": True,
                     
                     "light": {"theme.base": "dark",
-                              "theme.backgroundColor": "white",
+                              "theme.backgroundColor": "#535454",
                               "theme.primaryColor": "red",
-                              "theme.secondaryBackgroundColor": "#ebedf0",
+                              "theme.secondaryBackgroundColor": "#9b9c9e",
                               "theme.textColor": "white",
                               "button_face": "🌜"},
 
