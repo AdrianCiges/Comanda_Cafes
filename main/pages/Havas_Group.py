@@ -108,15 +108,14 @@ if "themes" not in ms:
                     "light": {"theme.base": "dark",
                               "theme.backgroundColor": "black",
                               "theme.primaryColor": "white",
-                              "theme.secondaryBackgroundColor": "#dfedec",
-                              "theme.textColor": "black",
+                              "theme.secondaryBackgroundColor": "white",
                               "theme.textColor": "black",
                               "button_face": "🌜"},
 
                     "dark":  {"theme.base": "light",
                               "theme.backgroundColor": "white",
-                              "theme.primaryColor": "black",
-                              "theme.secondaryBackgroundColor": "#dfedec",
+                              "theme.primaryColor": "white",
+                              "theme.secondaryBackgroundColor": "white",
                               "theme.textColor": "#black",
                               "button_face": "🌞"},
                     }
