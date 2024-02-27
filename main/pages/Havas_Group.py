@@ -106,17 +106,17 @@ if "themes" not in ms:
                     "refreshed": True,
                     
                     "light": {"theme.base": "dark",
-                              "theme.backgroundColor": "black",
+                              "theme.backgroundColor": "#dfe2e8",
                               "theme.primaryColor": "white",
                               "theme.secondaryBackgroundColor": "white",
                               "theme.textColor": "black",
                               "button_face": "🌜"},
 
                     "dark":  {"theme.base": "light",
-                              "theme.backgroundColor": "white",
+                              "theme.backgroundColor": "#dfe2e8",
                               "theme.primaryColor": "white",
                               "theme.secondaryBackgroundColor": "white",
-                              "theme.textColor": "#black",
+                              "theme.textColor": "black",
                               "button_face": "🌞"},
                     }
   
