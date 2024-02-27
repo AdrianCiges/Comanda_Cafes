@@ -86,18 +86,18 @@ st.markdown(
 #     unsafe_allow_html=True
 # )
 
-# # Cambiar el fondo de la página principal a una imagen
-# st.markdown(
-#     """
-#     <style>
-#     .stApp {
-#         background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
-#         background-size: cover;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+# Cambiar el fondo de la página principal a una imagen
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 ms = st.session_state
@@ -106,14 +106,14 @@ if "themes" not in ms:
                     "refreshed": True,
                     
                     "light": {"theme.base": "dark",
-                              "theme.backgroundColor": "#535454",
+                              "theme.backgroundColor": "white",
                               "theme.primaryColor": "red",
-                              "theme.secondaryBackgroundColor": "#9b9c9e",
-                              "theme.textColor": "white",
+                              "theme.secondaryBackgroundColor": "#ebedf0",
+                              "theme.textColor": "black",
                               "button_face": "🌜"},
 
                     "dark":  {"theme.base": "light",
-                              "theme.backgroundColor": "#ebedf0",
+                              "theme.backgroundColor": "white",
                               "theme.primaryColor": "red",
                               "theme.secondaryBackgroundColor": "#ebedf0",
                               "theme.textColor": "black",
@@ -132,41 +132,12 @@ def ChangeTheme():
   elif previous_theme == "light": ms.themes["current_theme"] = "dark"
 
 
-btn_face = ms.themes[ms.themes["current_theme"]]["button_face"]
-if st.button(btn_face, on_click=ChangeTheme):
-    if not ms.themes["refreshed"]:
-        ms.themes["refreshed"] = True
-        st.rerun()
+btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
+# st.button(btn_face, on_click=ChangeTheme)
 
-# Aquí puedes realizar más lógica condicional basada en el tema actual fuera de la función ChangeTheme
-if ms.themes["current_theme"] == "dark":
-    # Implementa lógica específica del tema oscuro aquí
-    # Cambiar el fondo de la página principal a una imagen
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3_negativo.jpg?raw=true");
-            background-size: cover;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-elif ms.themes["current_theme"] == "light":
-    # Implementa lógica específica del tema claro aquí
-    # Cambiar el fondo de la página principal a una imagen
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background-image: url("https://github.com/AdrianCiges/Comanda_Cafes/blob/main/img/wood_background3.jpg?raw=true");
-            background-size: cover;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+if ms.themes["refreshed"] == False:
+  ms.themes["refreshed"] = True
+  st.rerun()
 # -------------------------------------------------------------------------------------------------------------------
 
 
