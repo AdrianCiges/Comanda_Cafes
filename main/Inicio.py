@@ -713,7 +713,7 @@ with tab1:
     
     st.write('## 🏙️ Información sobre los datos')
     st.write('###### En el mapa encontrarás datos de diferentes municipios. Principalmente se han seleccionado aquellas localidades con más de 75.000 habitantes en España (y sus alrrededores). Los municipios incluidos se muestran en el siguiente desplegable:')
-    st.selectbox('Busca tu municipio 👇',(municipios_incluidos), index=None, placeholder='Encuéntralo aquí')
+    st.selectbox('Busca tu municipio 👇',(list(dictio_coords_saviour.keys())), index=None, placeholder='Encuéntralo aquí')
     
     
     st.write('')
