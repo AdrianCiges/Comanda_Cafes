@@ -669,6 +669,11 @@ with tab1:
             if ciudad_seleccionada:
                 latitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
                 longitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[1]), 4)
+    else:
+        ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()),placeholder="Busca tu ubicación más cercana para un relaxing cup of café con leche", index=87)
+        if ciudad_seleccionada:
+            latitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
+            longitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[1]), 4)
     try:
         latitud = round(float(latitud), 4)
         longitud = round(float(longitud), 4)
@@ -827,7 +832,10 @@ with tab1:
             msg = MIMEText(body)
             msg['From'] = email_sender
             msg['To'] = email_receiver
-            msg['Subject'] = f"Petición desde {loc['coords']['latitude']}, {loc['coords']['longitude']}"
+            try:
+                msg['Subject'] = f"Petición desde {loc['coords']['latitude']}, {loc['coords']['longitude']}"
+            except:
+                msg['Subject'] = "Desconocido"
     
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
