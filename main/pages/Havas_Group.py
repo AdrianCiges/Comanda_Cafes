@@ -144,7 +144,7 @@ if ms.themes["refreshed"] == False:
 
 
 # Ruta de la imagen del logo
-LOGO_IMAGE = "../img/havas.png"
+LOGO_IMAGE = "./img/havas.png"
 
 # Texto principal
 texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
