@@ -180,7 +180,7 @@ st.markdown(
 # ----------------------------------------------------------------------------------------
 
 def gente():
-    personas = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Amber', 'Bernardo', 'Dani A.', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Mercedes', 'Myles', 'Pablo', 'Rafa', 'Rosalía', 'Rubén Ci.', 'Rubén Ca.', 'Sara', 'Sergio', 'Víctor' ]   
+    personas = ['Adrián', 'Álvaro D.', 'Álvaro S.', 'Ana G.', 'Amber', 'Bernardo', 'Dani A.', 'Inés ML', 'Javi B.', 'Javi N.', 'Lucas', 'Lucía', 'María E.', 'María L.', 'Maxi', 'Myles', 'Pablo', 'Rafa', 'Rosalía', 'Rubén Ci.', 'Rubén Ca.', 'Sara', 'Sergio', 'Víctor' ]   
     try:
         return personas + gente_nueva
     except:
@@ -261,12 +261,6 @@ try:
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas, index=tostadas.index('Blanco 🥖'))
                 else:
                     barrita = col5.selectbox(f"Tostada de {persona}", tostadas)  
-
-            elif persona == 'Mercedes':
-                bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Cola Cao 🥜'))
-                con_seleccionada = col3.selectbox(f"'Con' de {persona}", con, index=con.index('Leche 🥛'))
-                extras = col4.text_input(f"Extras de {persona}") 
-                barrita = col5.selectbox(f"Tostada de {persona}", tostadas)
              
             elif persona == 'Javi N.':
                 bebida_seleccionada = col2.selectbox(f"Bebida de {persona}", bebidas, index=bebidas.index('Zumo 🍊'))
