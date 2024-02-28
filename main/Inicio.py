@@ -1571,12 +1571,12 @@ with tab1:
             # st.write(10/0) # Provocamos el error
         except:
             st.error('No hemos podido acceder a tu ubicación. Selecciona tu municipio en el siguiente desplegable para buscar tu cafetería ideal:', icon="⚠️")
-            ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()),placeholder="Busca tu ubicación más cercana para un relaxing cup of café con leche", index=87)
+            ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()),placeholder="Busca tu ubicación más cercana para un relaxing cup of café con leche", index=909)
             if ciudad_seleccionada:
                 latitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
                 longitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[1]), 4)
     else:
-        ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()),placeholder="Busca tu ubicación más cercana para un relaxing cup of café con leche", index=87)
+        ciudad_seleccionada = st.selectbox('Selecciona una ciudad', options=list(dictio_coords_saviour.keys()),placeholder="Busca tu ubicación más cercana para un relaxing cup of café con leche", index=909)
         if ciudad_seleccionada:
             latitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[0]), 4)
             longitud = round(float(dictio_coords_saviour[ciudad_seleccionada].split(', ')[1]), 4)
