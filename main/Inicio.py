@@ -644,7 +644,7 @@ with tab1:
     sorted_df_show = sorted_df_show[['Link', 'Metros', '☕ Nombre', '🏙️ Ciudad', '🔓 Abierto Ahora', '💲 Nivel de precios', '⭐ Puntuación', '💬 Nº Comentarios', '🕐 Horario hoy', '📊 % Ocupación Ahora', 
                       '🪑 Puedes sentarte', '☀️ Tiene terraza', '🍺 Sirve Cerveza', '🍷 Sirve vino', '🥪 Sirve desayunos/almuerzos', '🫒 Sirve aperitivos', '🍪 Sirve postres', '🚶‍♂️ Para llevar', 
                       '🙋‍♀️ Acepta reserva', '🐕‍🦺 Acepta perros', '🐕 Acepta perros fuera', '🛜 Tiene Wifi','🛜 Tiene Wifi Gratis', '🏳️‍🌈 LGBT+ friendly',
-                     ]]
+                     ]].sort_values(by='Metros', ascending=True)
     st.write('')
     st.markdown('#### Tabla detalle de las cafeterías')
     num_cafes_filtradas = len(sorted_df_show)
