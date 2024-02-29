@@ -51,7 +51,7 @@ st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/
 # )
 
 # Texto principal
-texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
+texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u> LA RUTA DEL CAFÉ</u></h1>'
 
 # Estilos CSS para el logo y el contenedor
 estilos_css = f"""
