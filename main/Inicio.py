@@ -128,8 +128,12 @@ def ChangeTheme():
     if vkey.startswith("theme"): st._config.set_option(vkey, vval)
 
   ms.themes["refreshed"] = False
-  if previous_theme == "dark": ms.themes["current_theme"] = "light"
-  elif previous_theme == "light": ms.themes["current_theme"] = "dark"
+  if previous_theme == "dark": 
+      ms.themes["current_theme"] = "light"
+  elif previous_theme == "light": 
+      ms.themes["current_theme"] = "dark"
+  else:
+      ms.themes["current_theme"] = "light"
 
 
 btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
