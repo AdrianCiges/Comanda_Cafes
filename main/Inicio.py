@@ -50,8 +50,8 @@ st.set_page_config(layout="wide", page_title="Ruta del Café", page_icon="./img/
 #     unsafe_allow_html=True
 # )
 
-# Texto principal
-texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u> LA RUTA DEL CAFÉ</u></h1>'
+# # Texto principal
+# texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕ </span> <u>LA RUTA DEL CAFÉ</u></h1>'
 
 # Estilos CSS para el logo y el contenedor
 estilos_css = f"""
@@ -74,7 +74,7 @@ estilos_css = f"""
 LOGO_IMAGE = "./img/mapa.png"
 
 # Texto principal
-texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕</span> <u>LA RUTA DEL CAFÉ</u></h1>'
+texto_principal = '<h1 style="text-align:center"><span style="font-size: 40px;">☕ </span> <u>LA RUTA DEL CAFÉ</u></h1>'
     
 # Leer la imagen del logo y codificarla en base64
 with open(LOGO_IMAGE, "rb") as image_file:
