@@ -132,12 +132,12 @@ def ChangeTheme():
       ms.themes["current_theme"] = "light"
   elif previous_theme == "light": 
       ms.themes["current_theme"] = "dark"
-  else:
-      ms.themes["current_theme"] = "light"
+  # else:
+  #     ms.themes["current_theme"] = "light"
 
 
 btn_face = ms.themes["light"]["button_face"] if ms.themes["current_theme"] == "light" else ms.themes["dark"]["button_face"]
-# st.button(btn_face, on_click=ChangeTheme)
+st.button(btn_face, on_click=ChangeTheme)
 
 if ms.themes["refreshed"] == False:
   ms.themes["refreshed"] = True
