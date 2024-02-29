@@ -606,7 +606,7 @@ with tab1:
     sorted_df = df.sort_values(by='dif_sum', ascending=True) #[:num_cafeterias]
     sorted_df = sorted_df.reset_index(drop=True)
     sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitud'][i]) for i,e in enumerate(sorted_df['Latitud'])]
-    sorted_df = df.sort_values(by='Metros', ascending=True)
+    sorted_df = sorted_df.sort_values(by='Metros', ascending=True)
     
     sorted_df_show = sorted_df
     sorted_df = sorted_df[:num_cafeterias]
