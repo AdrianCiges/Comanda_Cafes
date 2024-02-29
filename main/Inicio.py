@@ -606,6 +606,7 @@ with tab1:
     sorted_df = df.sort_values(by='dif_sum', ascending=True) #[:num_cafeterias]
     sorted_df = sorted_df.reset_index(drop=True)
     sorted_df['Metros'] = [haversine_distance(latitude, longitude, e, sorted_df['Longitud'][i]) for i,e in enumerate(sorted_df['Latitud'])]
+    sorted_df = df.sort_values(by='Metros', ascending=True)
     
     sorted_df_show = sorted_df
     sorted_df = sorted_df[:num_cafeterias]
@@ -640,8 +641,6 @@ with tab1:
     for columna in columnas_a_modificar:
         sorted_df_show[columna] = sorted_df_show[columna].apply(sustituir_valor_emoji)
     
-    sorted_df_show = sorted_df_show.sort_values(by='Metros', ascending=True)
-    sorted_df_show = sorted_df_show.style.hide(axis="index")
     sorted_df_show = sorted_df_show[['Link', 'Metros', '☕ Nombre', '🏙️ Ciudad', '🔓 Abierto Ahora', '💲 Nivel de precios', '⭐ Puntuación', '💬 Nº Comentarios', '🕐 Horario hoy', '📊 % Ocupación Ahora', 
                       '🪑 Puedes sentarte', '☀️ Tiene terraza', '🍺 Sirve Cerveza', '🍷 Sirve vino', '🥪 Sirve desayunos/almuerzos', '🫒 Sirve aperitivos', '🍪 Sirve postres', '🚶‍♂️ Para llevar', 
                       '🙋‍♀️ Acepta reserva', '🐕‍🦺 Acepta perros', '🐕 Acepta perros fuera', '🛜 Tiene Wifi','🛜 Tiene Wifi Gratis', '🏳️‍🌈 LGBT+ friendly',
