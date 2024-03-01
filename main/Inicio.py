@@ -788,17 +788,17 @@ with tab2:
     horas_restantes2 = tiempo_restante2.seconds // 3600
     minutos_restantes2 = (tiempo_restante2.seconds % 3600) // 60
 
-    st.sidebar.write('')
-    if hora_actual > time(18, 00):
-        st.sidebar.write(f'¿Un ☕ calentito para una tarde intensa?')
-    elif hora_actual < primer_cafe:
-        st.sidebar.write(f"Aún tienes {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de la mañana (12:00)")
-    elif hora_actual < time(12, 00):
-        st.sidebar.write('¿Aún no te has tomado tu café matutino?')
-    elif hora_actual < segundo_cafe:
-        st.sidebar.write(f"Quedan {horas_restantes2} horas y {minutos_restantes2} minutos para el ☕ post-comida (14:00)")
-    else:
-        st.sidebar.write('Nunca es mala hora para un ☕')
+    # st.sidebar.write('')
+    # if hora_actual > time(18, 00):
+    #     st.sidebar.write(f'¿Un ☕ calentito para una tarde intensa?')
+    # elif hora_actual < primer_cafe:
+    #     st.sidebar.write(f"Aún tienes {horas_restantes} horas y {minutos_restantes} minutos para el ☕ de la mañana (12:00)")
+    # elif hora_actual < time(12, 00):
+    #     st.sidebar.write('¿Aún no te has tomado tu café matutino?')
+    # elif hora_actual < segundo_cafe:
+    #     st.sidebar.write(f"Quedan {horas_restantes2} horas y {minutos_restantes2} minutos para el ☕ post-comida (14:00)")
+    # else:
+    #     st.sidebar.write('Nunca es mala hora para un ☕')
 
     st.header("¿Quién quiere café?")
     user_input = st.text_input("Nombres aquí (separados por , )", "")
